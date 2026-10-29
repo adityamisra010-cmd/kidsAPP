@@ -1,1 +1,85 @@
-{}
+{
+  "title": "Resources",
+  "search": "Search guides, videos and links",
+  "filters": "Filters",
+  "filtersCount": "Filters ({{count}})",
+  "add": "Add",
+  "count_one": "{{count}} resource",
+  "count_other": "{{count}} resources",
+  "therapyType": "Therapy type",
+  "domain": "Area",
+  "school": "Your school",
+  "global": "Shared library",
+  "emptyTitle": "No resources found",
+  "emptyBody": "Try a different word, or clear the filters.",
+  "emptyStaffTitle": "Start your school's library",
+  "emptyStaffBody": "Add guides, videos and links so every therapist can use them and share them with families.",
+  "kind": {
+    "all": "All",
+    "pdf": "PDF",
+    "image": "Image",
+    "video": "Video",
+    "link": "Link"
+  },
+  "audienceOpt": {
+    "staff": "Staff only",
+    "parents": "Parents",
+    "all": "Everyone"
+  },
+  "parent": {
+    "shared": "Shared with you",
+    "sharedBy": "Shared by {{name}}",
+    "sharedEmpty": "Nothing shared with you yet. Therapists can send you guides and videos here.",
+    "school": "From your school",
+    "schoolHint": "Helpful material for all families",
+    "emptyTitle": "Nothing here yet",
+    "emptyBody": "Guides and videos your child's therapists share with you will appear here."
+  },
+  "detail": {
+    "open": {
+      "pdf": "Open PDF",
+      "image": "View image",
+      "link": "Open link",
+      "video": "Play video"
+    },
+    "openFailed": "This couldn't be opened. Please try again.",
+    "share": "Share with a family",
+    "useInTask": "Use in a home practice activity",
+    "ageBand": "Ages {{band}}",
+    "tags": "Tags"
+  },
+  "share": {
+    "title": "Share with a family",
+    "child": "Choose a child",
+    "note": "Add a note (optional)",
+    "notePlaceholder": "e.g. Try this together before bedtime",
+    "send": "Share",
+    "sent": "Shared with {{name}}'s family",
+    "staffOnly": "This resource is marked Staff only. Sharing it makes it visible to this family."
+  },
+  "new": {
+    "title": "Add resource",
+    "titleLabel": "Title",
+    "description": "Short description",
+    "kind": "Type",
+    "url": "Link",
+    "urlHelper": "Paste a link to a PDF, video or web page.",
+    "therapyTypes": "Therapy types",
+    "domains": "Areas",
+    "ageBand": "Age band (optional)",
+    "audience": "Who can see it",
+    "tags": "Tags",
+    "tagsHint": "Words that help people find it, like \"bedtime\" or \"turn-taking\".",
+    "save": "Save resource",
+    "saved": "Resource added",
+    "errors": {
+      "title": "Add a title",
+      "kind": "Choose a type",
+      "url": "Enter a full link starting with https://"
+    }
+  },
+  "picker": {
+    "title": "Choose from library",
+    "subtitle": "Parent-friendly resources are shown first"
+  }
+}

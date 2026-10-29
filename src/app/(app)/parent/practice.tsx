@@ -1,6 +1,6 @@
-// Owner: W5. Placeholder until the feature lands.
-import { Placeholder } from '@/components/Placeholder';
+// Owner: W5 (practice). Parent "Practice" tab.
+import { ParentPracticeScreen } from '@/features/practice/screens/ParentPracticeScreen';
 
 export default function Screen() {
-  return <Placeholder title="Practice" back={false} />;
+  return <ParentPracticeScreen />;
 }

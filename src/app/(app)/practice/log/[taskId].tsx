@@ -1,6 +1,9 @@
-// Owner: W5. Placeholder until the feature lands.
-import { Placeholder } from '@/components/Placeholder';
+// Owner: W5 (practice). Log home practice (outcome, difficulty, note, optional private video).
+import { useLocalSearchParams } from 'expo-router';
+
+import { LogPracticeScreen } from '@/features/practice/screens/LogPracticeScreen';
 
 export default function Screen() {
-  return <Placeholder title="Log practice" back={true} />;
+  const { taskId } = useLocalSearchParams<{ taskId: string }>();
+  return <LogPracticeScreen taskId={taskId} />;
 }

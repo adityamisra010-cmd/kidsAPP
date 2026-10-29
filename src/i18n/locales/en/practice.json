@@ -1,1 +1,241 @@
-{}
+{
+  "tab": {
+    "title": "Home practice",
+    "subtitle": "Activities for {{name}}"
+  },
+  "week": {
+    "title": "This week",
+    "count": "{{done}} of {{expected}} done",
+    "msg": {
+      "none": "No practice planned this week. Enjoy the time together.",
+      "notStarted": "A few minutes together is a great start.",
+      "started": "Good start. Every little bit of practice helps.",
+      "halfway": "More than halfway there. Lovely work.",
+      "complete": "All done for this week. Thank you for practising together."
+    }
+  },
+  "list": {
+    "tasksTitle": "Practice activities",
+    "emptyTitle": "No practice activities yet",
+    "emptyBody": "When {{name}}'s therapist adds an activity to try at home, it will appear here with simple steps.",
+    "noChildTitle": "No child linked yet",
+    "noChildBody": "Once the school links your child to your account, home practice will appear here.",
+    "feedbackTitle": "Feedback from therapists",
+    "feedbackSubtitle": "What the therapists said about your practice",
+    "resourcesLink": "Guides and activity ideas",
+    "resourcesHint": "Shared by your child's therapists and school"
+  },
+  "task": {
+    "screenTitle": "Home practice",
+    "frequency_one": "Once a week",
+    "frequency_other": "{{count}} times a week",
+    "duration_one": "{{count}} min",
+    "duration_other": "{{count}} min",
+    "thisWeek": "{{done}} of {{expected}} this week",
+    "steps": "Steps",
+    "stepLabel": "Step {{n}}",
+    "assignedBy": "Added by {{name}}",
+    "activeRange": "{{from}} – {{to}}",
+    "logToday": "Log today's practice",
+    "logShort": "Log practice",
+    "history": "Practice history",
+    "historyEmpty": "No practice logged yet. Your first log will appear here.",
+    "demo": "Watch how to do it",
+    "resource": "Helpful guide",
+    "edit": "Edit",
+    "archive": "Archive",
+    "archiveTitle": "Archive this activity?",
+    "archiveBody": "The family will no longer see it in their Practice tab. Past logs and feedback are kept.",
+    "archived": "Activity archived",
+    "waitingSync": "Waiting to send",
+    "status": {
+      "active": "Active",
+      "completed": "Completed",
+      "archived": "Archived"
+    }
+  },
+  "outcome": {
+    "done": "Done",
+    "partly": "Partly",
+    "could_not": "Couldn't do"
+  },
+  "difficulty": {
+    "easy": "Easy",
+    "ok": "OK",
+    "hard": "Hard"
+  },
+  "difficultyBadge": {
+    "easy": "Felt easy",
+    "ok": "Felt OK",
+    "hard": "Felt hard"
+  },
+  "reaction": {
+    "great_job": "Great job",
+    "good_effort": "Good effort",
+    "try_next_time": "Try this next time",
+    "lets_discuss": "Let's discuss"
+  },
+  "log": {
+    "title": "Log practice",
+    "howDidItGo": "How did it go?",
+    "howHard": "How hard was it?",
+    "note": "Anything to share? (optional)",
+    "notePlaceholder": "For example: he enjoyed the song part and asked for more.",
+    "noteHelper": "Tip: tap the microphone on your keyboard to speak instead of typing.",
+    "submit": "Save practice",
+    "needChoices": "Please choose how it went and how hard it was.",
+    "waitVideo": "Getting the video ready. This takes a few seconds.",
+    "savedTitle": "Saved",
+    "savedBody": "Thank you. {{name}}'s therapist will see this.",
+    "savedVideo": "Saved. The video will upload in the background. You can close the app.",
+    "savedVideoWifi": "Saved. The video will upload when you're on Wi-Fi.",
+    "savedOffline": "Saved on this phone. It will send when you're online."
+  },
+  "video": {
+    "title": "Short video (optional)",
+    "hint": "Up to 60 seconds. Videos are private: only your child's therapists can watch them, and they are deleted automatically later.",
+    "record": "Record video",
+    "gallery": "Choose from gallery",
+    "remove": "Remove video",
+    "preparing": "Getting the video ready…",
+    "compressing": "Making the video smaller to save data… {{percent}}%",
+    "ready": "Video ready · {{seconds}} sec",
+    "readyNoLength": "Video ready",
+    "badge": "Video",
+    "playerLabel": "Practice video",
+    "loading": "Loading video…",
+    "error": "This video couldn't be played right now.",
+    "private": "Private video. Never shared publicly.",
+    "privateRetention": "Private video. Deleted automatically after {{days}} days.",
+    "uploading": "Uploading video · {{percent}}%",
+    "waitingWifi": "Video waiting for Wi-Fi",
+    "openSettings": "Open settings",
+    "consentOff": "Video sharing is turned off for your account, so only your notes are sent.",
+    "consentLink": "Change in Consent & privacy",
+    "permissionTitle": "Use the camera?",
+    "permissionBody": "To record a short practice video, the app needs your camera. Videos stay private between you and your child's therapists.",
+    "permissionAllow": "Continue",
+    "problem": {
+      "too_long": "This video is longer than 60 seconds. Please record a shorter clip. 30 to 60 seconds is perfect.",
+      "too_large": "This video is still too large to send, even after making it smaller. Please try a shorter clip.",
+      "failed": "We couldn't use this video. Please try again or choose another one.",
+      "camera_denied": "The camera wasn't allowed. You can try again, or choose a video from your gallery.",
+      "camera_blocked": "Camera access is turned off for this app. You can turn it on in Settings, or choose a video from your gallery."
+    }
+  },
+  "uploads": {
+    "title": "Sending your practice",
+    "item": "Practice log",
+    "waiting": "Waiting to send",
+    "offline": "Saved on this phone. Will send when you're online.",
+    "saving": "Almost done…",
+    "failed": "Didn't send. Tap Try again."
+  },
+  "reviews": {
+    "title": "Reviews",
+    "subtitle_one": "{{count}} practice update to review",
+    "subtitle_other": "{{count}} practice updates to review",
+    "emptyTitle": "All caught up",
+    "emptyBody": "New practice updates and videos from families will appear here.",
+    "by": "by {{name}}"
+  },
+  "entry": {
+    "title": "Practice update",
+    "loggedBy": "Logged by {{name}} · {{when}}",
+    "note": "Note from the family",
+    "noNote": "No note added",
+    "quickReaction": "Quick reaction",
+    "comment": "Add a comment (optional)",
+    "commentPlaceholder": "A short, kind note for the family",
+    "useInSession": "Use this video in the next session",
+    "useInSessionHint": "It will show in the Handover Brief.",
+    "send": "Send feedback",
+    "chooseReaction": "Choose a quick reaction to send",
+    "sent": "Feedback sent. Here's the next one.",
+    "allDone": "Feedback sent. You're all caught up.",
+    "therapistFeedback": "Feedback from {{name}}",
+    "awaitingFeedback": "The therapist will look at this soon.",
+    "flaggedForSession": "Will be used in the next session"
+  },
+  "assign": {
+    "title": "Assign home practice",
+    "editTitle": "Edit home practice",
+    "child": "Child",
+    "chooseChild": "Choose a child",
+    "searchChild": "Search by name",
+    "noChildren": "No children found.",
+    "goal": "Linked goal (optional)",
+    "noGoal": "No specific goal",
+    "fromLibrary": "Start from library",
+    "fromLibraryHint": "Attach a guide or demo video from the resource library.",
+    "resource": "Attached guide",
+    "changeResource": "Change",
+    "removeResource": "Remove",
+    "titleLabel": "Activity name",
+    "titlePlaceholder": "e.g. Blow bubbles and wait for \"more\"",
+    "steps": "Steps",
+    "stepsHint": "Short, simple lines. Parents follow these while doing the activity.",
+    "stepPlaceholder": "Step {{n}}",
+    "addStep": "Add step",
+    "moveUp": "Up",
+    "moveDown": "Down",
+    "removeStep": "Remove",
+    "frequency": "How often",
+    "frequencyChip_one": "Once a week",
+    "frequencyChip_other": "{{count}}× a week",
+    "duration": "How long each time",
+    "from": "Starts",
+    "to": "Ends",
+    "save": "Assign activity",
+    "saveEdit": "Save changes",
+    "notifyHint": "The parent will see this in their Practice tab.",
+    "saved": "Activity added. The parent will see this in their Practice tab.",
+    "savedEdit": "Changes saved",
+    "errors": {
+      "child": "Choose a child",
+      "title": "Add a short name for the activity",
+      "steps": "Add at least one step",
+      "dates": "The end date must be on or after the start date"
+    }
+  },
+  "checkin": {
+    "title": "Morning check-in",
+    "intro": "Four quick taps help {{therapist}} plan {{name}}'s session today.",
+    "sleep": "Sleep last night",
+    "sleepOpt": {
+      "good": "Good",
+      "ok": "OK",
+      "poor": "Poor"
+    },
+    "breakfast": "Ate breakfast",
+    "mood": "Mood this morning",
+    "moodOpt": {
+      "happy": "Happy",
+      "okay": "Okay",
+      "upset": "Upset"
+    },
+    "change": "Any change in routine or health?",
+    "changeNote": "What changed?",
+    "changePlaceholder": "e.g. Had a cold, slept late, started new medicine",
+    "progress": "{{count}} of 4 answered",
+    "needAll": "Please answer all four questions.",
+    "submit": "Send check-in",
+    "thanksTitle": "Thank you",
+    "thanks": "Thanks — {{therapist}} will see this before the session.",
+    "already": "Already checked in",
+    "backHome": "Back to home",
+    "greeting": {
+      "morning": "Good morning! How is {{name}} today?",
+      "afternoon": "Good afternoon! How is {{name}} today?",
+      "evening": "Hello! How is {{name}} today?"
+    },
+    "promptSession": "{{therapy}} at {{time}} with {{therapist}}",
+    "promptStart": "Start check-in (15 sec)",
+    "promptHint": "Four quick questions before today's session"
+  },
+  "home": {
+    "cardTitle": "This week's practice",
+    "noTasks": "No practice activities right now.",
+    "log": "Log"
+  }
+}
