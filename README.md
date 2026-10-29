@@ -69,7 +69,7 @@ Never put the Supabase **service_role** key in the app or in `.env`.
    ```bash
    supabase db push
    ```
-4. Optional demo data: run `npm run seed:sql`, then run `supabase/seed.sql` in the SQL editor (regenerate it first so "today" has sessions). Upload `assets/demo/practice-*.mp4` to the `media` bucket under `demo/`.
+4. Optional demo data: run `npm run seed:sql` (regenerates `supabase/seed.sql` so "today" has sessions), then run it in the SQL editor or with `psql`. Upload `assets/demo/practice-1..3.mp4` to the `media` bucket at the paths listed in the file's header. Demo logins then work on the real backend (staff password `Demo@1234`). `npm run test:db:seed` checks the seed loads cleanly against the migrations.
 5. Deploy the Edge Functions and their schedules (see `supabase/functions/README.md`):
    - `send-push`
    - `reminders`

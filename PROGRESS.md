@@ -6,7 +6,7 @@ Build order: Phase 1 (pitch APK first), then Phase 2. Everything below is on bra
 |---|---|---|
 | M0 Scaffold | Done | — |
 | M1 Auth, tenancy, roles, RLS | Done | Phone OTP needs MSG91/Twilio + DLT approval before real use; Expo push token needs an EAS projectId + FCM `google-services.json`. |
-| M2 Seed data | Done (Demo adapter) | `supabase/seed.sql` generator in progress (see below). |
+| M2 Seed data | Done | Demo adapter + `supabase/seed.sql` (same dataset, about 13.9k rows; `npm run test:db:seed` verifies it loads and scopes correctly). Regenerate before seeding. |
 | M3 Child profile, goals, goal bank | Done | — |
 | M4 Calendar & appointments | Done | Series are summarised from occurrences (no `getSeries` API yet); calendar month/day names are English in Hindi mode. |
 | M5 Session Logger, metrics, Handover Brief | Done | — |
