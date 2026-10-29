@@ -1,6 +1,9 @@
-// Owner: W6. Placeholder until the feature lands.
-import { Placeholder } from '@/components/Placeholder';
+// Owner: W6 (platform admin).
+import { useLocalSearchParams } from 'expo-router';
+
+import { SchoolDetailScreen } from '@/features/platform/SchoolDetailScreen';
 
 export default function Screen() {
-  return <Placeholder title="School" back={true} />;
+  const { id } = useLocalSearchParams<{ id: string }>();
+  return <SchoolDetailScreen id={String(id)} />;
 }
