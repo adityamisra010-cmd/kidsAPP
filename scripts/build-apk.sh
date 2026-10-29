@@ -9,6 +9,12 @@ cd "$(dirname "$0")/.."
 
 export ANDROID_HOME="${ANDROID_HOME:-/opt/android-sdk}"
 export ANDROID_SDK_ROOT="$ANDROID_HOME"
+# React Native's Gradle plugin compiles with a Java 17 toolchain; prefer a local JDK 17 when present.
+if [ -z "${JAVA_HOME:-}" ]; then
+  for j in /usr/lib/jvm/java-17-openjdk-amd64 /usr/lib/jvm/java-17-openjdk /Library/Java/JavaVirtualMachines/*17*/Contents/Home; do
+    if [ -x "$j/bin/java" ]; then export JAVA_HOME="$j"; break; fi
+  done
+fi
 VERSION=$(node -p "require('./package.json').version")
 OUT="dist/mykids-tracker-v${VERSION}.apk"
 
