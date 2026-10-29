@@ -1,6 +1,6 @@
-// Owner: W6. Placeholder until the feature lands.
-import { Placeholder } from '@/components/Placeholder';
+// Owner: W6 (home & dashboards).
+import { ParentHomeScreen } from '@/features/home/ParentHomeScreen';
 
 export default function Screen() {
-  return <Placeholder title="Home" back={false} />;
+  return <ParentHomeScreen />;
 }

@@ -1,1 +1,17 @@
-{}
+{
+  "bell": "Updates",
+  "title": "Updates",
+  "markAll": "Mark all read",
+  "markedAll": "All updates marked as read",
+  "unread": "Unread",
+  "unreadCount": "{{count}} unread",
+  "unreadCount_other": "{{count}} unread",
+  "groups": {
+    "today": "Today",
+    "earlier": "Earlier"
+  },
+  "empty": {
+    "title": "You're all caught up",
+    "body": "Session reminders, schedule changes and messages from the school will appear here."
+  }
+}

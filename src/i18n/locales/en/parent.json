@@ -1,1 +1,42 @@
-{}
+{
+  "home": {
+    "greeting": {
+      "morning": "Good morning, {{name}}",
+      "afternoon": "Good afternoon, {{name}}",
+      "evening": "Good evening, {{name}}"
+    },
+    "noChild": {
+      "title": "No child linked yet",
+      "body": "Ask your school to link your child to this phone number. Their sessions will then show up here."
+    },
+    "next": {
+      "title": "Next session",
+      "titleFor": "{{name}}'s next session",
+      "seeCalendar": "See calendar",
+      "emptyTitle": "No sessions booked yet",
+      "emptyBody": "When the school books the next session, you'll see the day and time here."
+    },
+    "latest": {
+      "title": "Latest session",
+      "all": "All sessions",
+      "emptyTitle": "No session notes yet",
+      "emptyBody": "After each session, the therapist's short note for you appears here."
+    },
+    "practice": {
+      "title": "This week's practice",
+      "open": "Open",
+      "emptyTitle": "No practice set this week",
+      "emptyBody": "When the therapist adds a home activity, it shows up here with simple steps."
+    },
+    "announcements": {
+      "title": "From the school",
+      "all": "See all"
+    },
+    "links": {
+      "title": "Quick links",
+      "messages": "Messages",
+      "resources": "Resources",
+      "contact": "Contact school"
+    }
+  }
+}

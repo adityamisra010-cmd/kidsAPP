@@ -1,1 +1,109 @@
-{ "_review": "TODO: machine-drafted Hindi, needs human review" }
+{
+  "_review": "TODO: machine-drafted Hindi, needs human review",
+  "header": {
+    "greeting": {
+      "morning": "सुप्रभात, {{name}}",
+      "afternoon": "नमस्ते, {{name}}",
+      "evening": "शुभ संध्या, {{name}}"
+    },
+    "alerts": "अलर्ट",
+    "toDo_one": "आज 1 काम आपका इंतज़ार कर रहा है",
+    "toDo_other": "आज {{count}} काम आपका इंतज़ार कर रहे हैं",
+    "allClear": "आज आपके लिए कुछ भी बाकी नहीं है",
+    "fallbackTitle": "डैशबोर्ड"
+  },
+  "showMore_one": "1 और देखें",
+  "showMore_other": "{{count}} और देखें",
+  "today": {
+    "title": "आज",
+    "scheduled": "तय सेशन",
+    "completed": "पूरे हुए",
+    "logged": "लॉग हुए",
+    "unlogged": "लॉग नहीं हुए",
+    "cancelled": "रद्द"
+  },
+  "attention": {
+    "title": "जिन बच्चों पर ध्यान चाहिए",
+    "allAlerts": "सभी अलर्ट देखें",
+    "emptyTitle": "किसी बच्चे पर अभी विशेष ध्यान की ज़रूरत नहीं",
+    "emptyBody": "जब स्कोर गिरे, घटनाएँ बढ़ें या प्रगति धीमी हो, तब बच्चे यहाँ दिखेंगे।"
+  },
+  "unlogged": {
+    "title": "अभी लॉग नहीं हुए",
+    "subtitle": "सेशन हुए पर उनका लॉग नहीं है",
+    "remind": "याद दिलाएँ",
+    "reminded": "याद दिलाया",
+    "sent": "{{name}} को याद दिला दिया",
+    "emptyTitle": "हर हुए सेशन का लॉग है"
+  },
+  "cover": {
+    "title": "सब्स्टीट्यूट चाहिए",
+    "manage": "प्रबंधित करें",
+    "away": "{{name}} छुट्टी पर · {{therapy}}",
+    "needsCover": "सब्स्टीट्यूट चाहिए",
+    "covering": "{{original}} की जगह {{sub}}",
+    "set": "सब्स्टीट्यूट तय",
+    "emptyTitle": "किसी सब्स्टीट्यूट की ज़रूरत नहीं"
+  },
+  "reschedule": {
+    "title": "समय बदलने के अनुरोध",
+    "review": "देखें",
+    "by": "{{name}} का अनुरोध",
+    "now": "अभी तय: {{when}}",
+    "options_one": "1 विकल्प",
+    "options_other": "{{count}} विकल्प",
+    "emptyTitle": "कोई अनुरोध बाकी नहीं"
+  },
+  "week": {
+    "title": "इस हफ़्ते",
+    "subtitle": "सोमवार से आज तक",
+    "attendance": "उपस्थिति",
+    "attendanceHint": "तय सेशन में से जितने सेशन हुए",
+    "practice": "घर पर अभ्यास पूरा",
+    "practiceHint": "घर की गतिविधियाँ जिन्हें परिवारों ने पूरा बताया",
+    "compliance": "समय पर लॉग, थेरेपिस्ट के अनुसार",
+    "loggedOf": "{{due}} में से {{logged}} लॉग हुए",
+    "noneDue": "कोई सेशन बाकी नहीं",
+    "noTherapists": "अभी कोई थेरेपिस्ट नहीं"
+  },
+  "workload": {
+    "title": "थेरेपिस्ट का काम",
+    "subtitle": "इस हफ़्ते के सेशन",
+    "sessions_one": "1 सेशन",
+    "sessions_other": "{{count}} सेशन"
+  },
+  "alerts": {
+    "title": "अलर्ट",
+    "segments": {
+      "open": "खुले",
+      "acknowledged": "देखे गए",
+      "resolved": "सुलझे"
+    },
+    "kinds": {
+      "score_drop": "स्कोर में गिरावट",
+      "incident_spike": "घटनाएँ बढ़ीं",
+      "unlogged_session": "सेशन लॉग नहीं हुआ",
+      "declining_trend": "गिरता रुझान"
+    },
+    "acknowledge": "देख लिया",
+    "resolve": "सुलझ गया",
+    "openChild": "बच्चे को खोलें",
+    "acknowledgedToast": "अलर्ट देखा गया",
+    "resolvedToast": "अलर्ट सुलझ गया",
+    "resolvedOn": "{{date}} को सुलझा",
+    "empty": {
+      "open": {
+        "title": "कोई खुला अलर्ट नहीं",
+        "body": "जब किसी बच्चे का स्कोर गिरे, घटनाएँ बढ़ें या सेशन लॉग न हो, तब अलर्ट दिखते हैं।"
+      },
+      "acknowledged": {
+        "title": "कोई देखा गया अलर्ट नहीं",
+        "body": "जिन अलर्ट को आप देख लेते हैं, वे सुलझने तक यहाँ रहते हैं।"
+      },
+      "resolved": {
+        "title": "अभी कोई सुलझा अलर्ट नहीं",
+        "body": "सुलझे अलर्ट संदर्भ के लिए यहाँ रखे जाते हैं।"
+      }
+    }
+  }
+}

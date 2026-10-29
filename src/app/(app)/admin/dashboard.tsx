@@ -1,6 +1,6 @@
-// Owner: W6. Placeholder until the feature lands.
-import { Placeholder } from '@/components/Placeholder';
+// Owner: W6 (home & dashboards).
+import { AdminDashboardScreen } from '@/features/dashboard/AdminDashboardScreen';
 
 export default function Screen() {
-  return <Placeholder title="Dashboard" back={false} />;
+  return <AdminDashboardScreen />;
 }

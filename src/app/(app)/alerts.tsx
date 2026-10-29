@@ -1,6 +1,6 @@
-// Owner: W6. Placeholder until the feature lands.
-import { Placeholder } from '@/components/Placeholder';
+// Owner: W6 (alerts).
+import { AlertsScreen } from '@/features/alerts/AlertsScreen';
 
 export default function Screen() {
-  return <Placeholder title="Alerts" back={true} />;
+  return <AlertsScreen />;
 }

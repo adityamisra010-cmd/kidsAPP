@@ -1,6 +1,6 @@
-// Owner: W6. Placeholder until the feature lands.
-import { Placeholder } from '@/components/Placeholder';
+// Owner: W6 (notifications inbox).
+import { NotificationsScreen } from '@/features/notifications/NotificationsScreen';
 
 export default function Screen() {
-  return <Placeholder title="Notifications" back={true} />;
+  return <NotificationsScreen />;
 }
