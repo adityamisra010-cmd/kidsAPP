@@ -1,6 +1,9 @@
-// Owner: W5. Placeholder until the feature lands.
-import { Placeholder } from '@/components/Placeholder';
+// Owner: W5 (practice). Morning check-in before a session.
+import { useLocalSearchParams } from 'expo-router';
+
+import { CheckinScreen } from '@/features/checkins/CheckinScreen';
 
 export default function Screen() {
-  return <Placeholder title="Morning check-in" back={true} />;
+  const { appointmentId } = useLocalSearchParams<{ appointmentId: string }>();
+  return <CheckinScreen appointmentId={appointmentId} />;
 }
