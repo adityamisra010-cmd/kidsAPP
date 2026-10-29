@@ -1,1 +1,73 @@
-{ "_review": "TODO: machine-drafted Hindi, needs human review" }
+{
+  "_review": "TODO: machine-drafted Hindi, needs human review",
+  "title": "हैंडओवर ब्रीफ़",
+  "subtitle": "{{therapy}} · {{time}}",
+  "substitute": "आप बदले में ले रहे हैं",
+  "newToChild": "आपके लिए नया",
+  "years": "{{age}}",
+  "communication": "बातचीत का तरीका",
+  "tools": "इस्तेमाल करता/करती है",
+  "alerts": "ध्यान देने वाली बात",
+  "plan": {
+    "title": "इस सत्र की योजना",
+    "by": "{{name}} की ओर से · {{date}}",
+    "goals": "आज के लक्ष्य",
+    "empty": "पिछले सत्र के बाद कोई योजना नहीं लिखी गई। नीचे दिए सक्रिय लक्ष्यों से शुरू करें।"
+  },
+  "dos": "करें",
+  "donts": "न करें",
+  "doA11y": "करें: {{rule}}",
+  "dontA11y": "न करें: {{rule}}",
+  "noRules": "अभी कोई 'करें / न करें' नियम नहीं लिखा गया।",
+  "reinforcers": "किससे प्रेरित होता/होती है",
+  "triggers": "इनसे बचें",
+  "calming": "क्या शांत करता है",
+  "none": "अभी कुछ नहीं लिखा",
+  "allergies": "एलर्जी",
+  "goals": {
+    "title": "सक्रिय लक्ष्य",
+    "empty": "इस थेरेपी के लिए अभी कोई सक्रिय लक्ष्य नहीं है।",
+    "last": "पिछली बार {{value}}%",
+    "noData": "अभी दर्ज नहीं",
+    "masterySuggested": "महारत हासिल",
+    "planned": "आज के लिए तय"
+  },
+  "goalStatus": {
+    "not_started": "शुरू नहीं हुआ",
+    "emerging": "शुरुआत",
+    "progressing": "प्रगति पर",
+    "mastered": "हासिल",
+    "maintenance": "बनाए रखना",
+    "paused": "रुका हुआ"
+  },
+  "recent": {
+    "title": "पिछले 3 सत्र",
+    "empty": "इस थेरेपी का अभी कोई सत्र दर्ज नहीं है।",
+    "scoreA11y": "सत्र स्कोर {{score}}",
+    "rowA11y": "{{date}}, {{therapist}}, स्कोर {{score}}। {{dims}}",
+    "sub": "बदले में"
+  },
+  "worked": "क्या काम आया",
+  "didnt": "क्या काम नहीं आया",
+  "nothingYet": "अभी कुछ दर्ज नहीं",
+  "checkin": {
+    "none": "आज माता-पिता की ओर से कोई जानकारी नहीं आई।"
+  },
+  "home": {
+    "title": "घर का अभ्यास",
+    "empty": "अभी घर के लिए कोई काम नहीं।",
+    "perWeek": "हफ़्ते में {{count}} बार",
+    "latestFeedback": "घर से ताज़ा जानकारी",
+    "outcome": { "done": "किया", "partly": "थोड़ा किया", "could_not": "नहीं कर पाए" },
+    "difficulty": { "easy": "आसान", "ok": "ठीक", "hard": "मुश्किल" },
+    "useInSession": "इस सत्र में इस्तेमाल के लिए चुना गया"
+  },
+  "footer": {
+    "acknowledge": "मैंने पढ़ लिया",
+    "acknowledged": "धन्यवाद। अब आप सत्र दर्ज कर सकते हैं।",
+    "mustRead": "सत्र से पहले यह ब्रीफ़ पढ़ें। पुष्टि करने के बाद लॉग खुलेगा।",
+    "log": "सत्र दर्ज करें",
+    "viewLog": "सत्र लॉग देखें"
+  },
+  "fullProfile": "पूरी प्रोफ़ाइल खोलें"
+}
