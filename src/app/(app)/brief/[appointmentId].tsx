@@ -1,6 +1,9 @@
-// Owner: W2. Placeholder until the feature lands.
-import { Placeholder } from '@/components/Placeholder';
+// Owner: W2 (session). Handover Brief for a therapist before a session.
+import { useLocalSearchParams } from 'expo-router';
+
+import { HandoverBriefScreen } from '@/features/session/screens/HandoverBriefScreen';
 
 export default function Screen() {
-  return <Placeholder title="Handover brief" back={true} />;
+  const { appointmentId } = useLocalSearchParams<{ appointmentId: string }>();
+  return <HandoverBriefScreen appointmentId={appointmentId} />;
 }
