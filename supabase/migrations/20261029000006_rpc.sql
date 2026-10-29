@@ -1249,5 +1249,7 @@ $$;
 -- ---------------------------------------------------------------------------
 revoke execute on all functions in schema public from public, anon;
 grant execute on all functions in schema public to authenticated, service_role;
+-- Service-role-only routines (cron / Edge Functions).
 revoke execute on function public.enqueue_reminders(timestamptz) from authenticated;
+revoke execute on function public.orphaned_media_objects(int) from authenticated;
 grant execute on all functions in schema app to authenticated, service_role;

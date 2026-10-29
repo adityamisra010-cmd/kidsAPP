@@ -1654,6 +1654,29 @@ async function testStorage(): Promise<void> {
     media[0].owner_id === pa.p1 && media[0].expires === true,
     JSON.stringify(media),
   );
+
+  // Orphan sweep used by media-retention (e.g. after a child is deleted on request).
+  const orphan = `${A.org}/${A.child2}/orphan.mp4`;
+  await su(
+    `insert into storage.objects (bucket_id, name, owner_id, created_at) values ('media', $1, $2, now() - interval '2 days')`,
+    [orphan, pa.p2],
+  );
+  const orphans = await as(
+    null,
+    async (q) => (await q<{ name: string }>(`select name from public.orphaned_media_objects(100)`)).map((r) => r.name),
+    { role: 'service_role' },
+  );
+  check(
+    'orphaned_media_objects lists files without a media row, not live ones',
+    orphans.includes(orphan) && !orphans.some((n) => n.includes(things('a').media)),
+    JSON.stringify(orphans),
+  );
+  await expectError(
+    'only the service role can list orphaned media',
+    () => as(pa.admin, (q) => q(`select * from public.orphaned_media_objects(10)`)),
+    /permission denied/,
+  );
+  await su(`delete from storage.objects where name = $1`, [orphan]);
 }
 
 async function testRemindersAndGuards(): Promise<void> {

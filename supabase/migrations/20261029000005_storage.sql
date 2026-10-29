@@ -186,4 +186,23 @@ create policy mkt_org_assets_write on storage.objects for all to authenticated
   using (bucket_id = 'org-assets' and (app.has_role(app.path_org(name), '{school_admin}') or app.is_platform_admin()))
   with check (bucket_id = 'org-assets' and (app.has_role(app.path_org(name), '{school_admin}') or app.is_platform_admin()));
 
+-- ---------------------------------------------------------------------------
+-- Orphan sweep (service role only, used by the media-retention Edge Function)
+-- Files in `media` that no public.media row points to: rows deleted with a child (deletion
+-- requests cascade), rows already expired, or uploads whose row was never written. The 1-day
+-- grace period avoids racing an upload that is about to write its row.
+-- ---------------------------------------------------------------------------
+create or replace function public.orphaned_media_objects(p_limit int default 500) returns table (name text)
+language sql stable security definer set search_path = '' as $$
+  select o.name
+  from storage.objects o
+  where o.bucket_id = 'media'
+    and o.created_at < now() - interval '1 day'
+    and not exists (select 1 from public.media m where m.bucket_path = o.name)
+  order by o.created_at
+  limit greatest(1, least(coalesce(p_limit, 500), 1000))
+$$;
+revoke execute on function public.orphaned_media_objects(int) from public, anon, authenticated;
+grant execute on function public.orphaned_media_objects(int) to service_role;
+
 grant execute on all functions in schema app to authenticated, service_role;
