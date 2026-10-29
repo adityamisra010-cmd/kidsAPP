@@ -20,7 +20,11 @@ const mockRepo = {
   sessions: {
     listForChild: jest.fn(async () => [summary('s0', '2026-10-27', 50, 3)]),
     previous: jest.fn(async () => summary('s0', '2026-10-27', 50, 3)),
-    get: jest.fn(async () => ({ id: 's0', therapistName: 'Ms. Priya Nair', notes: { planNext: 'Continue g1', planGoalIds: ['g1'] } })),
+    get: jest.fn(async () => ({
+      id: 's0',
+      therapistName: 'Ms. Priya Nair',
+      notes: { planNext: 'Continue g1', planGoalIds: ['g1'] },
+    })),
     save: jest.fn(),
   },
   checkins: { forAppointment: jest.fn(async () => null) },
@@ -28,7 +32,13 @@ const mockRepo = {
 
 jest.mock('@/data', () => ({ useRepo: () => mockRepo, getRepo: () => mockRepo }));
 jest.mock('expo-router', () => ({
-  router: { push: jest.fn(), back: jest.fn(), replace: jest.fn(), dismissTo: jest.fn(), canGoBack: jest.fn(() => true) },
+  router: {
+    push: jest.fn(),
+    back: jest.fn(),
+    replace: jest.fn(),
+    dismissTo: jest.fn(),
+    canGoBack: jest.fn(() => true),
+  },
   useLocalSearchParams: jest.fn(() => ({})),
 }));
 
@@ -92,7 +102,9 @@ describe('SessionLoggerScreen', () => {
   });
 
   it('asks for the handover brief first when it must be acknowledged', async () => {
-    mockRepo.appointments.get.mockResolvedValueOnce(appointment({ briefRequired: true, briefAcknowledged: false, isSubstitute: true }));
+    mockRepo.appointments.get.mockResolvedValueOnce(
+      appointment({ briefRequired: true, briefAcknowledged: false, isSubstitute: true }),
+    );
     await renderScreen(<SessionLoggerScreen appointmentId="appt-1" />);
     expect(await screen.findByTestId('brief-gate')).toBeTruthy();
     await waitFor(() => expect(screen.queryByTestId('session-logger')).toBeNull());

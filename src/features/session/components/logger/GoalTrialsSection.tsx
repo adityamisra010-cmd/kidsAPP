@@ -39,7 +39,10 @@ export function GoalTrialsSection({
 
   return (
     <Stack gap={2}>
-      <SectionHeader title={t('logger.sections.goals')} subtitle={rows.length ? t('logger.goals.zeroNotSaved') : undefined} />
+      <SectionHeader
+        title={t('logger.sections.goals')}
+        subtitle={rows.length ? t('logger.goals.zeroNotSaved') : undefined}
+      />
       {goals.length === 0 ? (
         <Card tone="sunken">
           <Text color="textMuted">{t('logger.goals.noActiveGoals')}</Text>
@@ -63,10 +66,21 @@ export function GoalTrialsSection({
         />
       ))}
       {available.length > 0 ? (
-        <Button label={t('logger.goals.add')} icon={Plus} variant="outline" onPress={() => setAdding(true)} testID="add-goal" />
+        <Button
+          label={t('logger.goals.add')}
+          icon={Plus}
+          variant="outline"
+          onPress={() => setAdding(true)}
+          testID="add-goal"
+        />
       ) : null}
 
-      <Sheet visible={adding} onClose={() => setAdding(false)} title={t('logger.goals.addSheetTitle')} subtitle={t('logger.goals.addSheetSubtitle')}>
+      <Sheet
+        visible={adding}
+        onClose={() => setAdding(false)}
+        title={t('logger.goals.addSheetTitle')}
+        subtitle={t('logger.goals.addSheetSubtitle')}
+      >
         {available.length === 0 ? (
           <EmptyState compact title={t('logger.goals.allAdded')} />
         ) : (

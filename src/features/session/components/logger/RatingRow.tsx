@@ -126,7 +126,11 @@ function RatingRowBase({
 
   const showPeek = peek != null && peek !== value;
   return (
-    <View ref={targetRef} style={{ gap: t.space[2], paddingVertical: t.space[3] }} testID={`rating-row-${dimension.key}`}>
+    <View
+      ref={targetRef}
+      style={{ gap: t.space[2], paddingVertical: t.space[3] }}
+      testID={`rating-row-${dimension.key}`}
+    >
       <View style={{ flexDirection: 'row', alignItems: 'center', gap: t.space[2] }}>
         <View style={{ flex: 1 }}>
           <Text variant="subheading">{text.label}</Text>
@@ -145,7 +149,11 @@ function RatingRowBase({
         </Pressable>
       </View>
       {children}
-      <View accessibilityRole="radiogroup" accessibilityLabel={text.label} style={{ flexDirection: 'row', gap: t.space[2] }}>
+      <View
+        accessibilityRole="radiogroup"
+        accessibilityLabel={text.label}
+        style={{ flexDirection: 'row', gap: t.space[2] }}
+      >
         {RATING_VALUES.map((v) => (
           <RatingPill
             key={v}
@@ -181,7 +189,12 @@ function RatingRowBase({
         )}
       </View>
 
-      <Sheet visible={sheetOpen} onClose={() => setSheetOpen(false)} title={text.label} subtitle={tr('logger.rating.anchorsSubtitle')}>
+      <Sheet
+        visible={sheetOpen}
+        onClose={() => setSheetOpen(false)}
+        title={text.label}
+        subtitle={tr('logger.rating.anchorsSubtitle')}
+      >
         {text.description ? <Text color="textMuted">{text.description}</Text> : null}
         {RATING_VALUES.map((v) => {
           const selected = value === v;
@@ -234,7 +247,20 @@ function RatingRowBase({
           );
         })}
       </Sheet>
-      {invalid && !value ? <View pointerEvents="none" style={{ position: 'absolute', left: -12, top: 12, bottom: 12, width: 3, borderRadius: 2, backgroundColor: t.colors.danger }} /> : null}
+      {invalid && !value ? (
+        <View
+          pointerEvents="none"
+          style={{
+            position: 'absolute',
+            left: -12,
+            top: 12,
+            bottom: 12,
+            width: 3,
+            borderRadius: 2,
+            backgroundColor: t.colors.danger,
+          }}
+        />
+      ) : null}
     </View>
   );
 }

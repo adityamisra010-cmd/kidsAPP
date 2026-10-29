@@ -3,7 +3,16 @@ import { Award, ClipboardList, House, ThumbsDown, ThumbsUp, TriangleAlert, Video
 import { useTranslation } from 'react-i18next';
 import { View } from 'react-native';
 
-import type { Alert, GoalStatus, GoalWithStats, HandoverBrief, HomeLog, HomeTask, RatingDimension, SessionSummary } from '@/domain/types';
+import type {
+  Alert,
+  GoalStatus,
+  GoalWithStats,
+  HandoverBrief,
+  HomeLog,
+  HomeTask,
+  RatingDimension,
+  SessionSummary,
+} from '@/domain/types';
 import { chipLabel, dimensionText } from '@/i18n/labels';
 import { formatDay, timeAgo } from '@/lib/dates';
 import { useTheme } from '@/theme/ThemeProvider';
@@ -121,12 +130,19 @@ export function GoalsCard({ goals, plannedIds }: { goals: GoalWithStats[]; plann
 function SessionRow({ s, dims }: { s: SessionSummary; dims: RatingDimension[] }) {
   const t = useTheme();
   const { t: tr } = useTranslation('brief');
-  const key = KEY_DIMENSIONS.map((k) => dims.find((d) => d.key === k)).filter((d): d is RatingDimension => !!d && s.ratings[d.key] != null);
+  const key = KEY_DIMENSIONS.map((k) => dims.find((d) => d.key === k)).filter(
+    (d): d is RatingDimension => !!d && s.ratings[d.key] != null,
+  );
   const dimText = key.map((d) => `${dimensionText(tr, d).parentLabel} ${s.ratings[d.key]}`);
   return (
     <View
       accessible
-      accessibilityLabel={tr('recent.rowA11y', { date: formatDay(s.date), therapist: s.therapistName, score: Math.round(s.sessionScore), dims: dimText.join(', ') })}
+      accessibilityLabel={tr('recent.rowA11y', {
+        date: formatDay(s.date),
+        therapist: s.therapistName,
+        score: Math.round(s.sessionScore),
+        dims: dimText.join(', '),
+      })}
       style={{ flexDirection: 'row', alignItems: 'center', gap: t.space[3] }}
     >
       <Stack gap={1} flex={1}>
@@ -142,8 +158,13 @@ function SessionRow({ s, dims }: { s: SessionSummary; dims: RatingDimension[] })
         <Row gap={2} wrap>
           {key.map((d) => (
             <Row key={d.key} gap={1}>
-              <View style={{ width: 8, height: 8, borderRadius: 4, backgroundColor: t.colors.scale[s.ratings[d.key] - 1] }} />
-              <Text variant="caption" color="textMuted">{`${dimensionText(tr, d).parentLabel} ${s.ratings[d.key]}`}</Text>
+              <View
+                style={{ width: 8, height: 8, borderRadius: 4, backgroundColor: t.colors.scale[s.ratings[d.key] - 1] }}
+              />
+              <Text
+                variant="caption"
+                color="textMuted"
+              >{`${dimensionText(tr, d).parentLabel} ${s.ratings[d.key]}`}</Text>
             </Row>
           ))}
         </Row>
@@ -187,7 +208,13 @@ export function RecentSessionsCard({ sessions, dims }: { sessions: SessionSummar
 export function WorkedCard({ worked, didnt }: { worked: string[]; didnt: string[] }) {
   const t = useTheme();
   const { t: tr } = useTranslation('brief');
-  const block = (title: string, Icon: typeof ThumbsUp, items: string[], group: 'worked' | 'notWorked', color: string) => (
+  const block = (
+    title: string,
+    Icon: typeof ThumbsUp,
+    items: string[],
+    group: 'worked' | 'notWorked',
+    color: string,
+  ) => (
     <Stack gap={2}>
       <Row gap={2}>
         <Icon size={18} color={color} />
@@ -248,12 +275,18 @@ export function HomePracticeCard({ tasks, feedback }: { tasks: HomeTask[]; feedb
             </Text>
             <Text variant="bodyStrong">{feedback.taskTitle}</Text>
             <Row gap={2} wrap>
-              <Badge label={tr(`home.outcome.${feedback.outcome}`)} tone={feedback.outcome === 'done' ? 'success' : feedback.outcome === 'partly' ? 'info' : 'warning'} />
+              <Badge
+                label={tr(`home.outcome.${feedback.outcome}`)}
+                tone={feedback.outcome === 'done' ? 'success' : feedback.outcome === 'partly' ? 'info' : 'warning'}
+              />
               <Badge label={tr(`home.difficulty.${feedback.difficulty}`)} />
               {feedback.useInNextSession ? <Badge label={tr('home.useInSession')} tone="primary" icon={Video} /> : null}
             </Row>
             {feedback.note ? <Text>{`“${feedback.note}”`}</Text> : null}
-            <Text variant="caption" color="textSubtle">{`${feedback.loggedByName} · ${timeAgo(feedback.createdAt)}`}</Text>
+            <Text
+              variant="caption"
+              color="textSubtle"
+            >{`${feedback.loggedByName} · ${timeAgo(feedback.createdAt)}`}</Text>
           </>
         ) : null}
       </Stack>

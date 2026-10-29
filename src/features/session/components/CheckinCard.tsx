@@ -1,6 +1,14 @@
 // Read-only parent pre-session check-in (logger context + handover brief).
 import type { LucideIcon } from 'lucide-react-native';
-import { ClipboardCheck, FaceNeutral, FaceSlightlyFrowning, FaceSlightlySmiling, Moon, TriangleAlert, Utensils } from 'lucide-react-native';
+import {
+  ClipboardCheck,
+  FaceNeutral,
+  FaceSlightlyFrowning,
+  FaceSlightlySmiling,
+  Moon,
+  TriangleAlert,
+  Utensils,
+} from 'lucide-react-native';
 import { useTranslation } from 'react-i18next';
 import { View } from 'react-native';
 
@@ -27,7 +35,8 @@ export function CheckinCard({ checkin }: { checkin: ParentCheckin }) {
   const sleep = tr(`checkin.sleepValue.${checkin.sleep}`);
   const ate = tr(`checkin.ateValue.${checkin.ateBreakfast ? 'yes' : 'no'}`);
   const mood = tr(`checkin.moodValue.${checkin.mood}`);
-  const MoodIcon = checkin.mood === 'happy' ? FaceSlightlySmiling : checkin.mood === 'okay' ? FaceNeutral : FaceSlightlyFrowning;
+  const MoodIcon =
+    checkin.mood === 'happy' ? FaceSlightlySmiling : checkin.mood === 'okay' ? FaceNeutral : FaceSlightlyFrowning;
   const change = checkin.changeFlag ? checkin.changeNote || tr('checkin.change') : tr('checkin.noChange');
   const summary = [sleep, ate, `${tr('checkin.mood')}: ${mood}`, change].join(', ');
   return (

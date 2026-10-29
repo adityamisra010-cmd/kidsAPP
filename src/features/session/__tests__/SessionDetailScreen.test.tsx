@@ -51,7 +51,10 @@ describe('SessionDetailScreen', () => {
 
   it('shows parents words and arrows, never internal notes or the score by default', async () => {
     useSession.setState({
-      user: { ...therapistUser, memberships: [{ id: 'm-p', userId: 'parent-1', organizationId: 'org-1', role: 'parent', status: 'active' }] },
+      user: {
+        ...therapistUser,
+        memberships: [{ id: 'm-p', userId: 'parent-1', organizationId: 'org-1', role: 'parent', status: 'active' }],
+      },
       activeMembershipId: 'm-p',
     });
     await renderScreen(<SessionDetailScreen id="session-1" />);

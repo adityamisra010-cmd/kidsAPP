@@ -18,7 +18,12 @@
  */
 import type { TFunction } from 'i18next';
 
-import { draftObjective, draftParentSummary, type ObjectiveInput, type ParentSummaryInput } from '@/features/session/summaries';
+import {
+  draftObjective,
+  draftParentSummary,
+  type ObjectiveInput,
+  type ParentSummaryInput,
+} from '@/features/session/summaries';
 import i18n from '@/i18n';
 
 export type { ObjectiveInput, ParentSummaryInput } from '@/features/session/summaries';

@@ -16,9 +16,14 @@ export const THERAPIST_ID = 'user-therapist';
 export const CHILD_ID = 'child-1';
 export const SPEECH_ID = 'tt-speech';
 
-export const dims: RatingDimension[] = DEFAULT_DIMENSIONS.map((d, i) => ({ ...d, id: `dim-${i}`, organizationId: ORG_ID }));
+export const dims: RatingDimension[] = DEFAULT_DIMENSIONS.map((d, i) => ({
+  ...d,
+  id: `dim-${i}`,
+  organizationId: ORG_ID,
+}));
 
-export const allRated = (v: RatingValue): Record<string, RatingValue> => Object.fromEntries(dims.map((d) => [d.key, v]));
+export const allRated = (v: RatingValue): Record<string, RatingValue> =>
+  Object.fromEntries(dims.map((d) => [d.key, v]));
 
 export function goal(id: string, overrides: Partial<GoalWithStats> = {}): GoalWithStats {
   return {
@@ -68,7 +73,13 @@ export function appointment(overrides: Partial<AppointmentView> = {}): Appointme
   };
 }
 
-export function summary(id: string, date: string, score: number, rating: RatingValue, overrides: Partial<SessionSummary> = {}): SessionSummary {
+export function summary(
+  id: string,
+  date: string,
+  score: number,
+  rating: RatingValue,
+  overrides: Partial<SessionSummary> = {},
+): SessionSummary {
   return {
     id,
     appointmentId: `appt-${id}`,
@@ -112,7 +123,14 @@ export function sessionLog(overrides: Partial<SessionLog> = {}): SessionLog {
     workedText: '',
     notWorkedTags: [],
     notWorkedText: '',
-    notes: { subjective: '', objective: 'Obs', assessment: 'Good', planNext: 'Continue g1', planGoalIds: ['g1'], parentSummary: 'A good day.' },
+    notes: {
+      subjective: '',
+      objective: 'Obs',
+      assessment: 'Good',
+      planNext: 'Continue g1',
+      planGoalIds: ['g1'],
+      parentSummary: 'A good day.',
+    },
     metrics: { sessionScore: 75, trend: 'flat', dimensions: {}, incidentCount: 0 },
     createdAt: '2026-10-29T11:20:00+05:30',
     updatedAt: '2026-10-29T11:20:00+05:30',
@@ -144,7 +162,15 @@ export const therapistUser: AuthUser = {
 export function brief(overrides: Partial<HandoverBrief> = {}): HandoverBrief {
   return {
     appointment: appointment({ isSubstitute: true, briefRequired: true }),
-    child: { id: CHILD_ID, organizationId: ORG_ID, fullName: 'Aarav Sharma', preferredName: 'Aarav', dob: '2019-03-02', status: 'active', createdAt: '2026-01-01' },
+    child: {
+      id: CHILD_ID,
+      organizationId: ORG_ID,
+      fullName: 'Aarav Sharma',
+      preferredName: 'Aarav',
+      dob: '2019-03-02',
+      status: 'active',
+      createdAt: '2026-01-01',
+    },
     ageLabel: '7 yrs 7 mo',
     profile: {
       childId: CHILD_ID,
@@ -162,7 +188,12 @@ export function brief(overrides: Partial<HandoverBrief> = {}): HandoverBrief {
       donts: ["Don't touch without telling him first"],
       updatedAt: '2026-10-01',
     },
-    planForToday: { text: 'Work on two-word requests with bubbles.', goalIds: ['g1'], byName: 'Ms. Priya Nair', date: '2026-10-27' },
+    planForToday: {
+      text: 'Work on two-word requests with bubbles.',
+      goalIds: ['g1'],
+      byName: 'Ms. Priya Nair',
+      date: '2026-10-27',
+    },
     goals: [goal('g1', { lastAccuracy: 70, lastPromptLevel: 4 })],
     recentSessions: [summary('s1', '2026-10-27', 62, 3), summary('s2', '2026-10-24', 55, 3)],
     whatWorked: ['visual_schedule', 'Bubbles break'],

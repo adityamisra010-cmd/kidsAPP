@@ -86,11 +86,17 @@ export function draftObjective(t: TFunction, input: ObjectiveInput): string {
 
   const rated = dims.filter((d) => input.ratings[d.key] != null);
   if (rated.length) {
-    const list = rated.map((d) => t('session:summary.objective.ratingItem', { label: dimensionText(t, d).label, value: input.ratings[d.key] }));
+    const list = rated.map((d) =>
+      t('session:summary.objective.ratingItem', { label: dimensionText(t, d).label, value: input.ratings[d.key] }),
+    );
     lines.push(t('session:summary.objective.ratings', { list: list.join(', ') }));
   }
   if (input.regulationState) {
-    lines.push(t('session:summary.objective.state', { state: lowerFirst(lang, vocabLabel(t, 'regulation', input.regulationState)) }));
+    lines.push(
+      t('session:summary.objective.state', {
+        state: lowerFirst(lang, vocabLabel(t, 'regulation', input.regulationState)),
+      }),
+    );
   }
 
   for (const tr of input.trials) {
@@ -103,7 +109,9 @@ export function draftObjective(t: TFunction, input: ObjectiveInput): string {
       attempted: tr.attempted,
       accuracy: Math.round((successful / tr.attempted) * 100),
     });
-    lines.push(level ? t('session:summary.objective.trialPrompt', { trial: base, prompt: promptPhrase(t, level) }) : `${base}.`);
+    lines.push(
+      level ? t('session:summary.objective.trialPrompt', { trial: base, prompt: promptPhrase(t, level) }) : `${base}.`,
+    );
   }
 
   if (input.incidents.length === 0) {
@@ -112,7 +120,8 @@ export function draftObjective(t: TFunction, input: ObjectiveInput): string {
     const items = input.incidents.map((inc) => {
       let s = lowerFirst(lang, vocabLabel(t, 'incidents', inc.type));
       const bucket = bucketForSeconds(inc.durationSeconds);
-      if (bucket) s = t('session:summary.objective.incidentDuration', { incident: s, duration: t(`session:duration.${bucket}`) });
+      if (bucket)
+        s = t('session:summary.objective.incidentDuration', { incident: s, duration: t(`session:duration.${bucket}`) });
       if (inc.antecedentTags.length) {
         const ants = inc.antecedentTags.map((a) => lowerFirst(lang, chipLabel(t, 'antecedents', a)));
         s = t('session:summary.objective.incidentAfter', { incident: s, antecedents: joinWords(t, ants) });
@@ -125,7 +134,9 @@ export function draftObjective(t: TFunction, input: ObjectiveInput): string {
 
   if (input.actualMinutes != null && input.actualMinutes > 0) {
     lines.push(
-      t(input.startedLate ? 'session:summary.objective.lengthLate' : 'session:summary.objective.length', { minutes: input.actualMinutes }),
+      t(input.startedLate ? 'session:summary.objective.lengthLate' : 'session:summary.objective.length', {
+        minutes: input.actualMinutes,
+      }),
     );
   }
   return lines.join('\n');
@@ -169,10 +180,18 @@ export function draftParentSummary(t: TFunction, input: ParentSummaryInput): str
     const deltas = input.deltaLast;
     const better = ordered.filter((d) => (deltas[d.key] ?? 0) >= 1).slice(0, 2);
     if (better.length) {
-      sentences.push(t('session:summary.parent.better', { count: better.length, list: sentenceList(t, lang, better.map(label)) }));
+      sentences.push(
+        t('session:summary.parent.better', { count: better.length, list: sentenceList(t, lang, better.map(label)) }),
+      );
     } else {
       const strengths = ordered.filter((d) => (input.ratings[d.key] ?? 0) >= 4).slice(0, 2);
-      if (strengths.length) sentences.push(t('session:summary.parent.strengths', { count: strengths.length, list: sentenceList(t, lang, strengths.map(label)) }));
+      if (strengths.length)
+        sentences.push(
+          t('session:summary.parent.strengths', {
+            count: strengths.length,
+            list: sentenceList(t, lang, strengths.map(label)),
+          }),
+        );
     }
     if (opening !== 'hard') {
       const harder = ordered
@@ -182,7 +201,13 @@ export function draftParentSummary(t: TFunction, input: ParentSummaryInput): str
     }
   } else {
     const strengths = ordered.filter((d) => (input.ratings[d.key] ?? 0) >= 4).slice(0, 2);
-    if (strengths.length) sentences.push(t('session:summary.parent.strengths', { count: strengths.length, list: sentenceList(t, lang, strengths.map(label)) }));
+    if (strengths.length)
+      sentences.push(
+        t('session:summary.parent.strengths', {
+          count: strengths.length,
+          list: sentenceList(t, lang, strengths.map(label)),
+        }),
+      );
   }
 
   if (input.regulationState === 'under') sentences.push(t('session:summary.parent.energyLow'));
@@ -190,7 +215,14 @@ export function draftParentSummary(t: TFunction, input: ParentSummaryInput): str
 
   const goals = input.goalTexts.filter(Boolean).slice(0, 2);
   if (goals.length) {
-    sentences.push(t('session:summary.parent.goals', { goals: joinWords(t, goals.map((g) => lowerFirst(lang, g.replace(/[.\s]+$/, '')))) }));
+    sentences.push(
+      t('session:summary.parent.goals', {
+        goals: joinWords(
+          t,
+          goals.map((g) => lowerFirst(lang, g.replace(/[.\s]+$/, ''))),
+        ),
+      }),
+    );
   }
   return sentences.join(' ');
 }

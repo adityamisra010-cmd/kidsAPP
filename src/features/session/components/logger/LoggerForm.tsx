@@ -2,18 +2,42 @@
 import { Info, Lock } from 'lucide-react-native';
 import { useCallback, useEffect, useMemo, useRef, useState, type RefObject } from 'react';
 import { useTranslation } from 'react-i18next';
-import { BackHandler, KeyboardAvoidingView, Platform, ScrollView, View, type ScrollViewInstance, type ViewInstance } from 'react-native';
+import {
+  BackHandler,
+  KeyboardAvoidingView,
+  Platform,
+  ScrollView,
+  View,
+  type ScrollViewInstance,
+  type ViewInstance,
+} from 'react-native';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 
 import type { PreviousSession } from '@/domain/metrics';
-import type { AppointmentView, GoalWithStats, OrgSettings, ParentCheckin, RatingDimension, SessionInput, SessionLog, UUID } from '@/domain/types';
+import type {
+  AppointmentView,
+  GoalWithStats,
+  OrgSettings,
+  ParentCheckin,
+  RatingDimension,
+  SessionInput,
+  SessionLog,
+  UUID,
+} from '@/domain/types';
 import { dimensionText } from '@/i18n/labels';
 import { formatDay, formatTime, toISODate } from '@/lib/dates';
 import { getSummaryService } from '@/services/summaries';
 import { useTheme } from '@/theme/ThemeProvider';
 import { confirm, OfflineBanner, Row, Text, toast } from '@/ui';
 
-import { buildSessionInput, diffForAmend, sessionPromptLevel, validateDraft, type LoggerDraft, type ValidationIssue } from '../../logic/draft';
+import {
+  buildSessionInput,
+  diffForAmend,
+  sessionPromptLevel,
+  validateDraft,
+  type LoggerDraft,
+  type ValidationIssue,
+} from '../../logic/draft';
 import { buildParentPreview } from '../../logic/result';
 import { AmendSheet } from './AmendSheet';
 import { BehaviourSection } from './BehaviourSection';
@@ -25,6 +49,7 @@ import { NotesSection } from './NotesSection';
 import { SaveBar } from './SaveBar';
 import { ScrollTargetsProvider, useScrollTargets } from './scrollTargets';
 import { SnapshotSection } from './SnapshotSection';
+import { useKeyboardOpen } from './useKeyboardOpen';
 import { useLoggerState } from './useLoggerState';
 
 export type LoggerMode = 'new' | 'edit' | 'amend';
@@ -85,25 +110,49 @@ function LoggerFormBody({
   const { scrollTo } = useScrollTargets();
   const [showIssues, setShowIssues] = useState(false);
   const [amendInput, setAmendInput] = useState<SessionInput | null>(null);
-  const s = useLoggerState({ initialDraft, allDimensions, goals, plannedGoalIds, mergePlanned: mode === 'new', previous, childName: a.childName });
+  const keyboardOpen = useKeyboardOpen();
+  const s = useLoggerState({
+    initialDraft,
+    allDimensions,
+    goals,
+    plannedGoalIds,
+    mergePlanned: mode === 'new',
+    previous,
+    childName: a.childName,
+  });
   const { draft, dims, actions } = s;
 
   const issues = useMemo(() => validateDraft(draft, allDimensions), [draft, allDimensions]);
-  const invalidGoalIds = useMemo(() => (showIssues ? issues.filter((i) => i.kind === 'trialPrompt').map((i) => i.goalId ?? '') : []), [issues, showIssues]);
+  const invalidGoalIds = useMemo(
+    () => (showIssues ? issues.filter((i) => i.kind === 'trialPrompt').map((i) => i.goalId ?? '') : []),
+    [issues, showIssues],
+  );
   const rated = dims.filter((d) => draft.ratings[d.key] != null).length;
 
   const issueText = useCallback(
     (i: ValidationIssue) => {
       const dim = dims.find((d) => d.key === i.dimensionKey);
       const goal = goals.find((g) => g.id === i.goalId);
-      return tr(`logger.save.issue.${i.kind}`, { label: dim ? dimensionText(tr, dim).label : '', goal: goal?.staffText ?? '' });
+      return tr(`logger.save.issue.${i.kind}`, {
+        label: dim ? dimensionText(tr, dim).label : '',
+        goal: goal?.staffText ?? '',
+      });
     },
     [dims, goals, tr],
   );
 
   const { isDirty } = s;
   const requestClose = useCallback(async () => {
-    if (!isDirty() || (await confirm({ title: tr('logger.discardTitle'), body: tr('logger.discardBody'), confirmLabel: tr('logger.discardConfirm'), cancelLabel: tr('logger.keepEditing'), destructive: true }))) {
+    if (
+      !isDirty() ||
+      (await confirm({
+        title: tr('logger.discardTitle'),
+        body: tr('logger.discardBody'),
+        confirmLabel: tr('logger.discardConfirm'),
+        cancelLabel: tr('logger.keepEditing'),
+        destructive: true,
+      }))
+    ) {
       onClose();
     }
   }, [onClose, isDirty, tr]);
@@ -117,7 +166,13 @@ function LoggerFormBody({
   }, [requestClose]);
 
   const build = useCallback(
-    (d: LoggerDraft) => buildSessionInput(d, { clientId, appointmentId: a.id, objectiveDraft: s.objectiveDraft, parentSummaryDraft: s.parentSummaryDraft }),
+    (d: LoggerDraft) =>
+      buildSessionInput(d, {
+        clientId,
+        appointmentId: a.id,
+        objectiveDraft: s.objectiveDraft,
+        parentSummaryDraft: s.parentSummaryDraft,
+      }),
     [clientId, a.id, s.objectiveDraft, s.parentSummaryDraft],
   );
 
@@ -146,7 +201,10 @@ function LoggerFormBody({
         actions.patch({ [which]: null });
         return;
       }
-      const text = which === 'objective' ? await service.draftObjective(s.objectiveInput) : await service.draftParentSummary(s.parentInput);
+      const text =
+        which === 'objective'
+          ? await service.draftObjective(s.objectiveInput)
+          : await service.draftParentSummary(s.parentInput);
       actions.patch({ [which]: text });
     },
     [actions, s.objectiveInput, s.parentInput],
@@ -172,7 +230,12 @@ function LoggerFormBody({
 
   const banner =
     mode === 'edit' && existing
-      ? { icon: Info, text: tr('logger.editingBanner', { time: `${formatDay(existing.lockedAt)}, ${formatTime(existing.lockedAt)}` }) }
+      ? {
+          icon: Info,
+          text: tr('logger.editingBanner', {
+            time: `${formatDay(existing.lockedAt)}, ${formatTime(existing.lockedAt)}`,
+          }),
+        }
       : mode === 'amend'
         ? { icon: Lock, text: tr('logger.lockedBanner') }
         : null;
@@ -183,14 +246,21 @@ function LoggerFormBody({
         <LoggerTopBar appointment={a} rated={rated} total={dims.length} onClose={() => void requestClose()} />
         <OfflineBanner />
         {banner ? (
-          <Row gap={2} style={{ paddingHorizontal: t.space[4], paddingVertical: t.space[2], backgroundColor: t.colors.infoSoft }}>
+          <Row
+            gap={2}
+            style={{ paddingHorizontal: t.space[4], paddingVertical: t.space[2], backgroundColor: t.colors.infoSoft }}
+          >
             <banner.icon size={16} color={t.colors.info} />
             <Text variant="caption" tint={t.colors.info} weight="medium" style={{ flex: 1 }}>
               {banner.text}
             </Text>
           </Row>
         ) : null}
-        <ScrollView ref={scrollRef} keyboardShouldPersistTaps="handled" contentContainerStyle={{ padding: t.space[4], paddingBottom: t.space[10] }}>
+        <ScrollView
+          ref={scrollRef}
+          keyboardShouldPersistTaps="handled"
+          contentContainerStyle={{ padding: t.space[4], paddingBottom: t.space[10] }}
+        >
           <View ref={contentRef} style={{ gap: t.space[6] }}>
             <ContextSection
               appointment={a}
@@ -253,14 +323,26 @@ function LoggerFormBody({
           </View>
         </ScrollView>
         <SaveBar
-          label={tr(mode === 'new' ? 'logger.save.save' : mode === 'edit' ? 'logger.save.saveEdit' : 'logger.save.saveAmend')}
-          missingMessage={showIssues && issues.length ? tr('logger.save.missing', { count: issues.length, first: issueText(issues[0]) }) : undefined}
+          label={tr(
+            mode === 'new' ? 'logger.save.save' : mode === 'edit' ? 'logger.save.saveEdit' : 'logger.save.saveAmend',
+          )}
+          missingMessage={
+            showIssues && issues.length
+              ? tr('logger.save.missing', { count: issues.length, first: issueText(issues[0]) })
+              : undefined
+          }
           onShowMissing={() => issues[0] && scrollTo(issues[0].id)}
           onSave={onSave}
           saving={saving}
+          compact={keyboardOpen}
         />
       </KeyboardAvoidingView>
-      <AmendSheet visible={!!amendInput} saving={saving} onClose={() => setAmendInput(null)} onSubmit={(reason) => amendInput && onSubmit(amendInput, reason)} />
+      <AmendSheet
+        visible={!!amendInput}
+        saving={saving}
+        onClose={() => setAmendInput(null)}
+        onSubmit={(reason) => amendInput && onSubmit(amendInput, reason)}
+      />
     </View>
   );
 }

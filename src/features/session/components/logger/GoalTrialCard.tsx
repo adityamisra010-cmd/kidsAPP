@@ -40,7 +40,8 @@ function GoalTrialCardBase({
   const ref = useTargetRef(issueId.trial(goal.id));
   const [noteOpen, setNoteOpen] = useState(trial.note.length > 0);
   const accuracy = trialAccuracyPercent(trial);
-  const setTries = (attempted: number) => onChange(goal.id, { attempted, successful: Math.min(trial.successful, attempted) });
+  const setTries = (attempted: number) =>
+    onChange(goal.id, { attempted, successful: Math.min(trial.successful, attempted) });
 
   return (
     <View ref={ref}>
@@ -76,7 +77,14 @@ function GoalTrialCardBase({
           </Row>
 
           <Row gap={6} wrap>
-            <Stepper testID={`tries-${goal.id}`} label={tr('logger.goals.tries')} value={trial.attempted} onChange={setTries} min={0} max={99} />
+            <Stepper
+              testID={`tries-${goal.id}`}
+              label={tr('logger.goals.tries')}
+              value={trial.attempted}
+              onChange={setTries}
+              min={0}
+              max={99}
+            />
             <Stepper
               testID={`correct-${goal.id}`}
               label={tr('logger.goals.correct')}
@@ -93,7 +101,13 @@ function GoalTrialCardBase({
             </Text>
             <Row gap={2} wrap>
               {QUICK_TRIES.map((n) => (
-                <Chip key={n} label={String(n)} selected={trial.attempted === n} onPress={() => setTries(n)} testID={`quick-tries-${goal.id}-${n}`} />
+                <Chip
+                  key={n}
+                  label={String(n)}
+                  selected={trial.attempted === n}
+                  onPress={() => setTries(n)}
+                  testID={`quick-tries-${goal.id}-${n}`}
+                />
               ))}
             </Row>
           </Stack>
@@ -105,7 +119,12 @@ function GoalTrialCardBase({
               </Text>
               <Row gap={2} wrap>
                 {Array.from({ length: trial.attempted + 1 }, (_, n) => (
-                  <Chip key={n} label={String(n)} selected={trial.successful === n} onPress={() => onChange(goal.id, { successful: n })} />
+                  <Chip
+                    key={n}
+                    label={String(n)}
+                    selected={trial.successful === n}
+                    onPress={() => onChange(goal.id, { successful: n })}
+                  />
                 ))}
               </Row>
             </Stack>

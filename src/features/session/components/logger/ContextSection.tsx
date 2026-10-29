@@ -43,7 +43,10 @@ function ContextSectionBase({
           <Row gap={2}>
             <Clock size={16} color={t.colors.textMuted} />
             <Text variant="label" color="textMuted">
-              {tr('logger.context.scheduled', { time: formatTime(appointment.startsAt), minutes: scheduledMinutes(appointment) })}
+              {tr('logger.context.scheduled', {
+                time: formatTime(appointment.startsAt),
+                minutes: scheduledMinutes(appointment),
+              })}
             </Text>
           </Row>
           <View ref={ref}>
@@ -59,7 +62,12 @@ function ContextSectionBase({
             />
           </View>
           <Divider />
-          <SwitchRow label={tr('logger.context.startedLate')} description={tr('logger.context.startedLateHint')} value={startedLate} onChange={onStartedLate} />
+          <SwitchRow
+            label={tr('logger.context.startedLate')}
+            description={tr('logger.context.startedLateHint')}
+            value={startedLate}
+            onChange={onStartedLate}
+          />
         </Stack>
       </Card>
       {checkin ? <CheckinCard checkin={checkin} /> : null}

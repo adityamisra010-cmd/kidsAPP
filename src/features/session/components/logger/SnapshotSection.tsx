@@ -27,7 +27,9 @@ export function SnapshotSection({
 }) {
   const { t } = useTranslation('session');
   const hasRegulation = dimensions.some((d) => d.key === REGULATION_KEY);
-  const stateSelector = <RegulationStateSelector value={regulationState} onChange={onRegulationState} invalid={showIssues} />;
+  const stateSelector = (
+    <RegulationStateSelector value={regulationState} onChange={onRegulationState} invalid={showIssues} />
+  );
   return (
     <Stack gap={2}>
       <SectionHeader title={t('logger.sections.snapshot')} subtitle={t('logger.sections.snapshotHint')} />
@@ -36,7 +38,12 @@ export function SnapshotSection({
         {dimensions.map((d, i) => (
           <Fragment key={d.id}>
             {i > 0 || !hasRegulation ? <Divider /> : null}
-            <RatingRow dimension={d} value={ratings[d.key]} invalid={showIssues && ratings[d.key] == null} onRate={onRate}>
+            <RatingRow
+              dimension={d}
+              value={ratings[d.key]}
+              invalid={showIssues && ratings[d.key] == null}
+              onRate={onRate}
+            >
               {d.key === REGULATION_KEY ? stateSelector : undefined}
             </RatingRow>
           </Fragment>

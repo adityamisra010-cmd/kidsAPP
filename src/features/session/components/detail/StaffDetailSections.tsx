@@ -37,7 +37,10 @@ export function StaffHeaderCard({ log, appointment: a }: { log: SessionLog; appo
           {locked ? (
             <Badge label={t('detail.lockedTag')} icon={Lock} />
           ) : (
-            <Badge label={t('detail.editableUntil', { time: `${formatDay(log.lockedAt)}, ${formatTime(log.lockedAt)}` })} icon={PencilLine} />
+            <Badge
+              label={t('detail.editableUntil', { time: `${formatDay(log.lockedAt)}, ${formatTime(log.lockedAt)}` })}
+              icon={PencilLine}
+            />
           )}
         </Row>
       </Stack>
@@ -75,7 +78,10 @@ export function ScoreCard({ log }: { log: SessionLog }) {
         </Row>
         <Divider />
         <Row gap={4} wrap>
-          {stat(t('detail.goalAccuracy'), <Text variant="subheading">{m.goalAccuracy != null ? `${Math.round(m.goalAccuracy)}%` : '—'}</Text>)}
+          {stat(
+            t('detail.goalAccuracy'),
+            <Text variant="subheading">{m.goalAccuracy != null ? `${Math.round(m.goalAccuracy)}%` : '—'}</Text>,
+          )}
           {stat(t('detail.incidents'), <Text variant="subheading">{String(m.incidentCount)}</Text>)}
           {stat(
             t('logger.context.duration'),
@@ -107,7 +113,14 @@ export function DimensionsCard({ log, dims }: { log: SessionLog; dims: RatingDim
               <Divider />
               <Row gap={3} align="flex-start">
                 <View
-                  style={{ width: 36, height: 36, borderRadius: 18, backgroundColor: t.colors.scale[v - 1], alignItems: 'center', justifyContent: 'center' }}
+                  style={{
+                    width: 36,
+                    height: 36,
+                    borderRadius: 18,
+                    backgroundColor: t.colors.scale[v - 1],
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                  }}
                 >
                   <Text variant="subheading" tint={t.scheme === 'dark' ? t.colors.bg : t.colors.text}>
                     {v}
@@ -286,7 +299,11 @@ export function AmendmentsCard({ amendments }: { amendments: Amendment[] }) {
           <Stack key={a.id} gap={1}>
             {i > 0 ? <Divider /> : null}
             <Text variant="label" weight="semibold">
-              {t('detail.amendmentLine', { field: t(`fields.${a.field}`, { defaultValue: a.field }), name: a.byName, when: timeAgo(a.at) })}
+              {t('detail.amendmentLine', {
+                field: t(`fields.${a.field}`, { defaultValue: a.field }),
+                name: a.byName,
+                when: timeAgo(a.at),
+              })}
             </Text>
             <Text variant="caption" color="textMuted" numberOfLines={2}>{`${a.oldValue} → ${a.newValue}`}</Text>
             <Text>{t('detail.amendmentReason', { reason: a.reason })}</Text>

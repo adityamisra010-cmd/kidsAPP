@@ -13,6 +13,7 @@ export function SaveBar({
   onShowMissing,
   onSave,
   saving,
+  compact = false,
 }: {
   label: string;
   /** Shown after a save attempt while something required is missing. */
@@ -20,6 +21,8 @@ export function SaveBar({
   onShowMissing: () => void;
   onSave: () => void;
   saving: boolean;
+  /** Keyboard open: keep Save reachable but small, so the field being typed stays visible. */
+  compact?: boolean;
 }) {
   const t = useTheme();
   const insets = useSafeAreaInsets();
@@ -28,15 +31,15 @@ export function SaveBar({
     <View
       style={{
         paddingHorizontal: t.space[4],
-        paddingTop: t.space[3],
-        paddingBottom: Math.max(insets.bottom, t.space[3]),
+        paddingTop: compact ? t.space[2] : t.space[3],
+        paddingBottom: compact ? t.space[2] : Math.max(insets.bottom, t.space[3]),
         borderTopWidth: 1,
         borderTopColor: t.colors.border,
         backgroundColor: t.colors.surface,
         gap: t.space[2],
       }}
     >
-      {missingMessage ? (
+      {missingMessage && !compact ? (
         <Pressable
           onPress={onShowMissing}
           accessibilityRole="button"
@@ -62,7 +65,15 @@ export function SaveBar({
           </Text>
         </Pressable>
       ) : null}
-      <Button label={label} icon={Check} size="lg" fullWidth onPress={onSave} loading={saving} testID="save-session" />
+      <Button
+        label={label}
+        icon={Check}
+        size={compact ? 'md' : 'lg'}
+        fullWidth
+        onPress={onSave}
+        loading={saving}
+        testID="save-session"
+      />
     </View>
   );
 }

@@ -23,7 +23,14 @@ import { SavedResult } from '../components/logger/SavedResult';
 import { activeGoals, canAmend, canEdit, diffForAmend, draftFromLog, emptyDraft, orderGoals } from '../logic/draft';
 import { computeSavedResult, toPreviousSessions } from '../logic/result';
 import { enqueueSessionSave, registerSessionOutbox } from '../outbox';
-import { useAmendSession, useCheckin, useGoalHistories, usePreviousPlan, useRecentSessions, useSessionLog } from '../queries';
+import {
+  useAmendSession,
+  useCheckin,
+  useGoalHistories,
+  usePreviousPlan,
+  useRecentSessions,
+  useSessionLog,
+} from '../queries';
 
 // Make sure queued logs can sync even before the integrator wires all handlers (idempotent).
 registerSessionOutbox();
@@ -52,13 +59,20 @@ export function SessionLoggerScreen({ appointmentId, sessionId }: { appointmentI
 
   const settings = orgQ.data?.settings ?? active.organization?.settings ?? DEFAULT_ORG_SETTINGS;
   const plannedGoalIds = planQ.data?.planGoalIds ?? EMPTY;
-  const goals = useMemo(() => orderGoals(activeGoals(goalsQ.data ?? EMPTY), plannedGoalIds), [goalsQ.data, plannedGoalIds]);
+  const goals = useMemo(
+    () => orderGoals(activeGoals(goalsQ.data ?? EMPTY), plannedGoalIds),
+    [goalsQ.data, plannedGoalIds],
+  );
   const goalIds = useMemo(() => goals.map((g) => g.id), [goals]);
   const histories = useGoalHistories(goalIds);
   const previous = useMemo(
     () =>
       appt && recentQ.data
-        ? toPreviousSessions(recentQ.data, { appointmentId: appt.id, onOrBefore: toISODate(new Date(appt.startsAt)), excludeSessionId: existingId })
+        ? toPreviousSessions(recentQ.data, {
+            appointmentId: appt.id,
+            onOrBefore: toISODate(new Date(appt.startsAt)),
+            excludeSessionId: existingId,
+          })
         : EMPTY,
     [appt, recentQ.data, existingId],
   );
@@ -165,7 +179,11 @@ export function SessionLoggerScreen({ appointmentId, sessionId }: { appointmentI
             <BookOpenCheck size={28} color={theme.colors.primaryText} />
             <Text variant="heading">{t('logger.briefFirstTitle')}</Text>
             <Text>{t('logger.briefFirstBody', { name: appt.childName })}</Text>
-            <Button label={t('logger.openBrief')} icon={ClipboardCheck} onPress={() => router.replace(`/brief/${appt.id}`)} />
+            <Button
+              label={t('logger.openBrief')}
+              icon={ClipboardCheck}
+              onPress={() => router.replace(`/brief/${appt.id}`)}
+            />
           </Stack>
         </Card>
       </Screen>

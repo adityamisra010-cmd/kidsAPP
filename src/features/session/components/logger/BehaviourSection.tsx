@@ -19,7 +19,9 @@ export function useIncidentText() {
     const bucket = bucketForSeconds(inc.durationSeconds);
     if (bucket) parts.push(t(`duration.${bucket}`));
     if (inc.antecedentTags.length) {
-      parts.push(t('logger.behaviour.after', { list: inc.antecedentTags.map((a) => chipLabel(t, 'antecedents', a)).join(', ') }));
+      parts.push(
+        t('logger.behaviour.after', { list: inc.antecedentTags.map((a) => chipLabel(t, 'antecedents', a)).join(', ') }),
+      );
     }
     return parts.join(' · ');
   };
@@ -48,7 +50,11 @@ function IncidentEditor({ onAdd, onCancel }: { onAdd: (i: BehaviourIncident) => 
           onChange={(v) => setBucket(v[0] as DurationBucket | undefined)}
         />
         <Text variant="label">{t('logger.behaviour.antecedent')}</Text>
-        <ChipGroup options={CHIPS.antecedents.map((v) => ({ value: v, label: chipLabel(t, 'antecedents', v) }))} value={antecedents} onChange={setAntecedents} />
+        <ChipGroup
+          options={CHIPS.antecedents.map((v) => ({ value: v, label: chipLabel(t, 'antecedents', v) }))}
+          value={antecedents}
+          onChange={setAntecedents}
+        />
         <Row gap={2} justify="end">
           <Button label={t('logger.behaviour.cancel')} variant="ghost" onPress={onCancel} />
           <Button
@@ -86,7 +92,9 @@ function BehaviourSectionBase({
   const [editing, setEditing] = useState(false);
   const describe = useIncidentText();
   const summary = tr('logger.behaviour.summary', {
-    incidents: incidents.length ? tr('logger.behaviour.incidents', { count: incidents.length }) : tr('logger.behaviour.noIncidents'),
+    incidents: incidents.length
+      ? tr('logger.behaviour.incidents', { count: incidents.length })
+      : tr('logger.behaviour.noIncidents'),
     breaks: tr('logger.behaviour.breaks', { count: breaksCount }),
   });
   return (
@@ -124,10 +132,22 @@ function BehaviourSectionBase({
               }}
             />
           ) : (
-            <Button label={tr('logger.behaviour.add')} icon={Plus} variant="outline" onPress={() => setEditing(true)} testID="add-incident" />
+            <Button
+              label={tr('logger.behaviour.add')}
+              icon={Plus}
+              variant="outline"
+              onPress={() => setEditing(true)}
+              testID="add-incident"
+            />
           )}
           <Divider />
-          <Stepper label={tr('logger.behaviour.breaksLabel')} value={breaksCount} onChange={onBreaks} min={0} max={20} />
+          <Stepper
+            label={tr('logger.behaviour.breaksLabel')}
+            value={breaksCount}
+            onChange={onBreaks}
+            min={0}
+            max={20}
+          />
         </Stack>
       </Card>
     </Stack>

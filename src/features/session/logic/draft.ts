@@ -193,7 +193,8 @@ export function validateDraft(draft: LoggerDraft, dims: RatingDimension[]): Vali
 
   const enabled = enabledDimensions(dims);
   const hasRegulationDim = enabled.some((d) => d.key === REGULATION_KEY);
-  if (!hasRegulationDim && !draft.regulationState) issues.push({ id: issueId.regulationState, kind: 'regulationState' });
+  if (!hasRegulationDim && !draft.regulationState)
+    issues.push({ id: issueId.regulationState, kind: 'regulationState' });
   for (const d of enabled) {
     if (d.key === REGULATION_KEY && !draft.regulationState) {
       issues.push({ id: issueId.regulationState, kind: 'regulationState' });
@@ -321,12 +322,21 @@ export function isLocked(log: Pick<SessionLog, 'lockedAt'>, now: Date = new Date
 }
 
 /** Own log, still inside the edit window. */
-export function canEdit(log: Pick<SessionLog, 'lockedAt' | 'therapistId'>, userId: UUID, now: Date = new Date()): boolean {
+export function canEdit(
+  log: Pick<SessionLog, 'lockedAt' | 'therapistId'>,
+  userId: UUID,
+  now: Date = new Date(),
+): boolean {
   return log.therapistId === userId && !isLocked(log, now);
 }
 
 /** After the lock: the author, or a coordinator / school admin reviewing logs. */
-export function canAmend(log: Pick<SessionLog, 'lockedAt' | 'therapistId'>, userId: UUID, role: Role, now: Date = new Date()): boolean {
+export function canAmend(
+  log: Pick<SessionLog, 'lockedAt' | 'therapistId'>,
+  userId: UUID,
+  role: Role,
+  now: Date = new Date(),
+): boolean {
   if (!isLocked(log, now)) return false;
   return log.therapistId === userId || role === 'coordinator' || role === 'school_admin';
 }

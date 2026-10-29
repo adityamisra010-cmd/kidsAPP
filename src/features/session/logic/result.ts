@@ -36,7 +36,9 @@ export function toPreviousSessions(
   opts: { appointmentId: UUID; onOrBefore: ISODate; excludeSessionId?: UUID },
 ): PreviousSession[] {
   return summaries
-    .filter((s) => s.appointmentId !== opts.appointmentId && s.id !== opts.excludeSessionId && s.date <= opts.onOrBefore)
+    .filter(
+      (s) => s.appointmentId !== opts.appointmentId && s.id !== opts.excludeSessionId && s.date <= opts.onOrBefore,
+    )
     .sort((a, b) => b.date.localeCompare(a.date))
     .map((s) => ({ sessionScore: s.sessionScore, ratings: s.ratings, deltaRolling: s.deltaRolling }));
 }
@@ -121,7 +123,9 @@ export function buildParentPreview(args: {
     previous: args.previous,
   });
   const enabled = enabledDimensions(args.dimensions);
-  const preferred = PARENT_HIGHLIGHT_KEYS.map((k) => enabled.find((d) => d.key === k)).filter((d): d is RatingDimension => !!d);
+  const preferred = PARENT_HIGHLIGHT_KEYS.map((k) => enabled.find((d) => d.key === k)).filter(
+    (d): d is RatingDimension => !!d,
+  );
   const pool = preferred.length >= 3 ? preferred : [...preferred, ...enabled.filter((d) => !preferred.includes(d))];
   const highlights = pool
     .filter((d) => args.input.ratings[d.key] != null)

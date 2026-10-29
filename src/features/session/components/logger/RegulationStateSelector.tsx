@@ -32,7 +32,11 @@ function RegulationStateSelectorBase({
       <Text variant="label" color="textMuted">
         {tr('logger.regulationState.label')}
       </Text>
-      <View accessibilityRole="radiogroup" accessibilityLabel={tr('logger.regulationState.label')} style={{ flexDirection: 'row', gap: t.space[2] }}>
+      <View
+        accessibilityRole="radiogroup"
+        accessibilityLabel={tr('logger.regulationState.label')}
+        style={{ flexDirection: 'row', gap: t.space[2] }}
+      >
         {REGULATION_STATES.map((s) => {
           const selected = value === s;
           const Icon = ICONS[s];
@@ -59,8 +63,18 @@ function RegulationStateSelectorBase({
                 paddingVertical: 6,
               })}
             >
-              {selected ? <Check size={18} color={t.colors.primaryText} strokeWidth={2.6} /> : <Icon size={18} color={t.colors.textMuted} />}
-              <Text variant="label" align="center" numberOfLines={2} tint={selected ? t.colors.primaryText : t.colors.text} weight={selected ? 'semibold' : 'medium'}>
+              {selected ? (
+                <Check size={18} color={t.colors.primaryText} strokeWidth={2.6} />
+              ) : (
+                <Icon size={18} color={t.colors.textMuted} />
+              )}
+              <Text
+                variant="label"
+                align="center"
+                numberOfLines={2}
+                tint={selected ? t.colors.primaryText : t.colors.text}
+                weight={selected ? 'semibold' : 'medium'}
+              >
                 {label}
               </Text>
             </Pressable>

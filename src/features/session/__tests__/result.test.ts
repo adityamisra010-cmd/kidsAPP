@@ -20,7 +20,14 @@ function input(overrides: Partial<SessionInput> = {}): SessionInput {
     workedText: '',
     notWorkedTags: [],
     notWorkedText: '',
-    notes: { subjective: '', objective: '', assessment: '', planNext: 'x', planGoalIds: [], parentSummary: 'Kind words' },
+    notes: {
+      subjective: '',
+      objective: '',
+      assessment: '',
+      planNext: 'x',
+      planGoalIds: [],
+      parentSummary: 'Kind words',
+    },
     ...overrides,
   };
 }
@@ -34,7 +41,11 @@ describe('toPreviousSessions', () => {
       summary('d', '2026-11-02', 90, 5),
       summary('e', '2026-10-24', 50, 3),
     ];
-    const prev = toPreviousSessions(list, { appointmentId: 'appt-now', onOrBefore: '2026-10-29', excludeSessionId: 'e' });
+    const prev = toPreviousSessions(list, {
+      appointmentId: 'appt-now',
+      onOrBefore: '2026-10-29',
+      excludeSessionId: 'e',
+    });
     expect(prev.map((p) => p.sessionScore)).toEqual([60, 40]);
   });
 });
@@ -45,7 +56,14 @@ describe('computeSavedResult', () => {
       appointmentId: 'x',
       onOrBefore: '2026-10-29',
     });
-    const r = computeSavedResult({ input: input(), dimensions: dims, previous, goals: [], history: {}, settings: DEFAULT_ORG_SETTINGS });
+    const r = computeSavedResult({
+      input: input(),
+      dimensions: dims,
+      previous,
+      goals: [],
+      history: {},
+      settings: DEFAULT_ORG_SETTINGS,
+    });
     expect(r.metrics.sessionScore).toBe(75);
     expect(r.metrics.deltaLast).toBe(25);
     expect(r.metrics.rollingAverage).toBe(45);
@@ -57,7 +75,14 @@ describe('computeSavedResult', () => {
 
   it('has no deltas for a first session and flags an incident spike', () => {
     const incidents = [1, 2, 3].map(() => ({ type: 'meltdown' as const, antecedentTags: [] }));
-    const r = computeSavedResult({ input: input({ incidents }), dimensions: dims, previous: [], goals: [], history: {}, settings: DEFAULT_ORG_SETTINGS });
+    const r = computeSavedResult({
+      input: input({ incidents }),
+      dimensions: dims,
+      previous: [],
+      goals: [],
+      history: {},
+      settings: DEFAULT_ORG_SETTINGS,
+    });
     expect(r.metrics.deltaLast).toBeUndefined();
     expect(r.metrics.deltaRolling).toBeUndefined();
     expect(r.hasPrevious).toBe(false);
@@ -84,7 +109,10 @@ describe('masterySuggestions', () => {
 
 describe('buildParentPreview', () => {
   it('shows highlights in words, hides the score unless enabled and lists goals worked on', () => {
-    const previous = toPreviousSessions([summary('a', '2026-10-27', 50, 3)], { appointmentId: 'x', onOrBefore: '2026-10-29' });
+    const previous = toPreviousSessions([summary('a', '2026-10-27', 50, 3)], {
+      appointmentId: 'x',
+      onOrBefore: '2026-10-29',
+    });
     const base = {
       sessionId: 'preview',
       date: '2026-10-29',

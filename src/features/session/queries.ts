@@ -2,15 +2,27 @@
  * TanStack Query hooks for the session feature (logger, handover brief, session detail).
  * All keys start with a KeyRoot so cross-feature invalidation works.
  */
-import { useMutation, useQueries, useQuery } from '@tanstack/react-query';
+import { useMutation, useQueries, useQuery, useQueryClient } from '@tanstack/react-query';
 
 import { useRepo } from '@/data';
 import { invalidate, key } from '@/data/queryClient';
-import type { GoalProgressPoint, ISODate, ISODateTime, SessionInput, UUID } from '@/domain/types';
+import type {
+  AppointmentView,
+  GoalProgressPoint,
+  HandoverBrief,
+  ISODate,
+  ISODateTime,
+  SessionInput,
+  UUID,
+} from '@/domain/types';
 
 export function useSessionLog(sessionId: UUID | null | undefined) {
   const repo = useRepo();
-  return useQuery({ queryKey: key('sessions', 'detail', sessionId), queryFn: () => repo.sessions.get(sessionId!), enabled: !!sessionId });
+  return useQuery({
+    queryKey: key('sessions', 'detail', sessionId),
+    queryFn: () => repo.sessions.get(sessionId!),
+    enabled: !!sessionId,
+  });
 }
 
 /** Recent sessions of one child + therapy type (newest first after sorting by the caller). */
@@ -32,7 +44,11 @@ export interface PreviousPlan {
 }
 
 /** The "P" of the previous session of this child + therapy type (drives "planned for today"). */
-export function usePreviousPlan(childId: UUID | undefined, therapyTypeId: UUID | undefined, before: ISODateTime | undefined) {
+export function usePreviousPlan(
+  childId: UUID | undefined,
+  therapyTypeId: UUID | undefined,
+  before: ISODateTime | undefined,
+) {
   const repo = useRepo();
   return useQuery({
     queryKey: key('sessions', 'previousPlan', childId, therapyTypeId, before),
@@ -63,7 +79,11 @@ export function useCheckin(appointmentId: UUID | undefined) {
 
 export function useBrief(appointmentId: UUID | undefined) {
   const repo = useRepo();
-  return useQuery({ queryKey: key('sessions', 'brief', appointmentId), queryFn: () => repo.sessions.brief(appointmentId!), enabled: !!appointmentId });
+  return useQuery({
+    queryKey: key('sessions', 'brief', appointmentId),
+    queryFn: () => repo.sessions.brief(appointmentId!),
+    enabled: !!appointmentId,
+  });
 }
 
 export function useParentSnapshot(sessionId: UUID | undefined, enabled = true) {
@@ -103,9 +123,19 @@ export function useGoalHistories(goalIds: UUID[]): Record<UUID, GoalProgressPoin
 
 export function useAcknowledgeBrief(appointmentId: UUID) {
   const repo = useRepo();
+  const client = useQueryClient();
   return useMutation({
     mutationFn: () => repo.appointments.acknowledgeBrief(appointmentId),
-    onSuccess: () => invalidate('appointments', 'sessions', 'dashboards'),
+    onSuccess: () => {
+      // Update caches first so the logger opens straight away (no flash of the "read the brief" gate).
+      client.setQueryData<AppointmentView>(key('appointments', 'detail', appointmentId), (a) =>
+        a ? { ...a, briefAcknowledged: true } : a,
+      );
+      client.setQueryData<HandoverBrief>(key('sessions', 'brief', appointmentId), (b) =>
+        b ? { ...b, acknowledged: true, appointment: { ...b.appointment, briefAcknowledged: true } } : b,
+      );
+      return invalidate('appointments', 'sessions', 'dashboards');
+    },
   });
 }
 

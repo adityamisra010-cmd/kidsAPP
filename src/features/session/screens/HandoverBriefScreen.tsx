@@ -15,7 +15,14 @@ import { useRequiredActive } from '@/state/session';
 import { Button, errorMessageKey, Screen, SectionHeader, SkeletonList, Stack, Text, toast, QueryView } from '@/ui';
 
 import { BriefHeader, DoDontCard, ProfileChipsCard } from '../components/brief/BriefProfile';
-import { AlertsCard, GoalsCard, HomePracticeCard, PlanCard, RecentSessionsCard, WorkedCard } from '../components/brief/BriefProgress';
+import {
+  AlertsCard,
+  GoalsCard,
+  HomePracticeCard,
+  PlanCard,
+  RecentSessionsCard,
+  WorkedCard,
+} from '../components/brief/BriefProgress';
 import { CheckinCard } from '../components/CheckinCard';
 import { activeGoals, orderGoals } from '../logic/draft';
 import { useAcknowledgeBrief, useBrief } from '../queries';
@@ -40,7 +47,13 @@ function BriefBody({ brief: b, fullAccess }: { brief: HandoverBrief; fullAccess:
       <WorkedCard worked={b.whatWorked} didnt={b.whatDidnt} />
       <HomePracticeCard tasks={b.openHomeTasks} feedback={b.latestParentFeedback} />
       {fullAccess ? (
-        <Button label={t('fullProfile')} icon={UserRound} variant="ghost" onPress={() => router.push(`/child/${b.child.id}`)} style={{ alignSelf: 'flex-start' }} />
+        <Button
+          label={t('fullProfile')}
+          icon={UserRound}
+          variant="ghost"
+          onPress={() => router.push(`/child/${b.child.id}`)}
+          style={{ alignSelf: 'flex-start' }}
+        />
       ) : null}
     </Stack>
   );
@@ -66,7 +79,15 @@ function BriefFooter({ brief: b }: { brief: HandoverBrief }) {
     });
 
   if (b.appointment.sessionId) {
-    return <Button label={t('footer.viewLog')} icon={Eye} variant="secondary" fullWidth onPress={() => router.push(`/session/${b.appointment.sessionId}`)} />;
+    return (
+      <Button
+        label={t('footer.viewLog')}
+        icon={Eye}
+        variant="secondary"
+        fullWidth
+        onPress={() => router.push(`/session/${b.appointment.sessionId}`)}
+      />
+    );
   }
   if (needsAck) {
     return (
@@ -74,13 +95,32 @@ function BriefFooter({ brief: b }: { brief: HandoverBrief }) {
         <Text variant="caption" color="textMuted" align="center">
           {t('footer.mustRead')}
         </Text>
-        <Button label={t('footer.acknowledge')} icon={Check} size="lg" fullWidth loading={ack.isPending} onPress={onAck} testID="brief-ack" />
-        {isOwnSession ? <Button label={t('footer.log')} icon={ClipboardPen} variant="outline" fullWidth disabled testID="brief-log" /> : null}
+        <Button
+          label={t('footer.acknowledge')}
+          icon={Check}
+          size="lg"
+          fullWidth
+          loading={ack.isPending}
+          onPress={onAck}
+          testID="brief-ack"
+        />
+        {isOwnSession ? (
+          <Button label={t('footer.log')} icon={ClipboardPen} variant="outline" fullWidth disabled testID="brief-log" />
+        ) : null}
       </>
     );
   }
   if (!isOwnSession) return null;
-  return <Button label={t('footer.log')} icon={ClipboardPen} size="lg" fullWidth onPress={() => router.push(logRoute)} testID="brief-log" />;
+  return (
+    <Button
+      label={t('footer.log')}
+      icon={ClipboardPen}
+      size="lg"
+      fullWidth
+      onPress={() => router.push(logRoute)}
+      testID="brief-log"
+    />
+  );
 }
 
 export function HandoverBriefScreen({ appointmentId }: { appointmentId: string }) {
@@ -93,7 +133,14 @@ export function HandoverBriefScreen({ appointmentId }: { appointmentId: string }
   return (
     <Screen
       title={t('title')}
-      subtitle={b ? t('subtitle', { therapy: b.appointment.therapyTypeName, time: formatTimeRange(b.appointment.startsAt, b.appointment.endsAt) }) : undefined}
+      subtitle={
+        b
+          ? t('subtitle', {
+              therapy: b.appointment.therapyTypeName,
+              time: formatTimeRange(b.appointment.startsAt, b.appointment.endsAt),
+            })
+          : undefined
+      }
       back
       refreshing={q.isRefetching}
       onRefresh={() => void q.refetch()}

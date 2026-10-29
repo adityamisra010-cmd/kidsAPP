@@ -56,7 +56,8 @@ export function SavedResult({
   const goalName = (id: string) => goals.find((g) => g.id === id)?.staffText ?? '';
   const practiceGoal = input.goalTrials[0]?.goalId ?? input.notes.planGoalIds[0];
   const SyncIcon = !queued || sync === 'synced' ? CloudCheck : sync === 'failed' ? TriangleAlert : CloudUpload;
-  const syncText = !queued || sync === 'synced' ? tr('result.synced') : sync === 'failed' ? tr('result.failed') : tr('result.syncing');
+  const syncText =
+    !queued || sync === 'synced' ? tr('result.synced') : sync === 'failed' ? tr('result.failed') : tr('result.syncing');
   const syncColor = sync === 'failed' && queued ? t.colors.warning : t.colors.textMuted;
 
   return (
@@ -69,7 +70,9 @@ export function SavedResult({
             icon={House}
             variant="secondary"
             fullWidth
-            onPress={() => router.push(`/practice/task/new?childId=${a.childId}${practiceGoal ? `&goalId=${practiceGoal}` : ''}`)}
+            onPress={() =>
+              router.push(`/practice/task/new?childId=${a.childId}${practiceGoal ? `&goalId=${practiceGoal}` : ''}`)
+            }
           />
           <Button label={primaryLabel} iconRight={ArrowRight} fullWidth onPress={onDone} testID="saved-done" />
         </Stack>
@@ -156,7 +159,13 @@ export function SavedResult({
               </Text>
             </Row>
             <Text>{tr('result.masteryBody', { goal: goalName(id) })}</Text>
-            <Button label={tr('result.openGoal')} variant="outline" size="sm" onPress={() => router.push(`/goal/${id}`)} style={{ alignSelf: 'flex-start' }} />
+            <Button
+              label={tr('result.openGoal')}
+              variant="outline"
+              size="sm"
+              onPress={() => router.push(`/goal/${id}`)}
+              style={{ alignSelf: 'flex-start' }}
+            />
           </Stack>
         </Card>
       ))}
@@ -171,7 +180,9 @@ export function SavedResult({
               </Text>
             </Row>
             {result.alerts.scoreDrop ? <Text>{tr('result.alertDrop')}</Text> : null}
-            {result.alerts.incidentSpike ? <Text>{tr('result.alertIncidents', { count: metrics.incidentCount })}</Text> : null}
+            {result.alerts.incidentSpike ? (
+              <Text>{tr('result.alertIncidents', { count: metrics.incidentCount })}</Text>
+            ) : null}
           </Stack>
         </Card>
       ) : null}

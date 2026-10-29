@@ -11,7 +11,9 @@ import { Badge, Button, Card, ChipGroup, Divider, Row, SectionHeader, Sheet, Sta
 import { issueId, type LoggerDraft } from '../../logic/draft';
 import { useTargetRef } from './scrollTargets';
 
-type NotesPatch = Partial<Pick<LoggerDraft, 'subjective' | 'objective' | 'assessment' | 'planNext' | 'planGoalIds' | 'parentSummary'>>;
+type NotesPatch = Partial<
+  Pick<LoggerDraft, 'subjective' | 'objective' | 'assessment' | 'planNext' | 'planGoalIds' | 'parentSummary'>
+>;
 
 function NotesSectionBase({
   subjective,
@@ -57,7 +59,14 @@ function NotesSectionBase({
           <Row justify="end">
             <Badge label={t('logger.notes.staffOnly')} icon={Lock} />
           </Row>
-          <TextField label={t('logger.notes.s')} placeholder={t('logger.notes.optional')} value={subjective} onChangeText={(v) => onChange({ subjective: v })} multiline minLines={2} />
+          <TextField
+            label={t('logger.notes.s')}
+            placeholder={t('logger.notes.optional')}
+            value={subjective}
+            onChangeText={(v) => onChange({ subjective: v })}
+            multiline
+            minLines={2}
+          />
           <Stack gap={2}>
             <TextField
               testID="objective-field"
@@ -68,9 +77,23 @@ function NotesSectionBase({
               multiline
               minLines={4}
             />
-            <Button label={t('logger.notes.regenerate')} icon={RotateCcw} variant="ghost" size="sm" onPress={onRegenerateObjective} style={{ alignSelf: 'flex-start' }} />
+            <Button
+              label={t('logger.notes.regenerate')}
+              icon={RotateCcw}
+              variant="ghost"
+              size="sm"
+              onPress={onRegenerateObjective}
+              style={{ alignSelf: 'flex-start' }}
+            />
           </Stack>
-          <TextField label={t('logger.notes.a')} placeholder={t('logger.notes.aPlaceholder')} value={assessment} onChangeText={(v) => onChange({ assessment: v })} multiline minLines={2} />
+          <TextField
+            label={t('logger.notes.a')}
+            placeholder={t('logger.notes.aPlaceholder')}
+            value={assessment}
+            onChangeText={(v) => onChange({ assessment: v })}
+            multiline
+            minLines={2}
+          />
           <View ref={planRef} style={{ gap: 8 }}>
             <TextField
               testID="plan-field"
@@ -93,7 +116,14 @@ function NotesSectionBase({
                   onChange={(planGoalIds) => onChange({ planGoalIds })}
                 />
                 {canContinueGoals ? (
-                  <Button label={t('logger.notes.continueGoals')} icon={Repeat} variant="secondary" size="sm" onPress={onContinueGoals} style={{ alignSelf: 'flex-start' }} />
+                  <Button
+                    label={t('logger.notes.continueGoals')}
+                    icon={Repeat}
+                    variant="secondary"
+                    size="sm"
+                    onPress={onContinueGoals}
+                    style={{ alignSelf: 'flex-start' }}
+                  />
                 ) : null}
               </Stack>
             ) : null}
@@ -120,13 +150,31 @@ function NotesSectionBase({
           />
           <Divider />
           <Row gap={2} wrap>
-            <Button label={t('logger.notes.preview')} icon={Eye} variant="outline" size="sm" onPress={() => setPreview(buildPreview())} testID="parent-preview" />
-            <Button label={t('logger.notes.regenerate')} icon={RotateCcw} variant="ghost" size="sm" onPress={onRegenerateParent} />
+            <Button
+              label={t('logger.notes.preview')}
+              icon={Eye}
+              variant="outline"
+              size="sm"
+              onPress={() => setPreview(buildPreview())}
+              testID="parent-preview"
+            />
+            <Button
+              label={t('logger.notes.regenerate')}
+              icon={RotateCcw}
+              variant="ghost"
+              size="sm"
+              onPress={onRegenerateParent}
+            />
           </Row>
         </Stack>
       </Card>
 
-      <Sheet visible={!!preview} onClose={() => setPreview(null)} title={t('logger.notes.preview')} subtitle={t('logger.notes.previewSubtitle')}>
+      <Sheet
+        visible={!!preview}
+        onClose={() => setPreview(null)}
+        title={t('logger.notes.preview')}
+        subtitle={t('logger.notes.previewSubtitle')}
+      >
         {preview ? <SessionSnapshotCard snapshot={preview} preview /> : null}
       </Sheet>
     </Stack>

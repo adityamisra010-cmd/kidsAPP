@@ -6,10 +6,24 @@ import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 
 import type { PreviousSession } from '@/domain/metrics';
-import type { BehaviourIncident, GoalWithStats, Language, RatingDimension, RatingValue, RegulationState, UUID } from '@/domain/types';
+import type {
+  BehaviourIncident,
+  GoalWithStats,
+  Language,
+  RatingDimension,
+  RatingValue,
+  RegulationState,
+  UUID,
+} from '@/domain/types';
 
 import { joinWords } from '../../labels';
-import { emptyTrial, enabledDimensions, sessionPromptLevel, type LoggerDraft, type TrialDraft } from '../../logic/draft';
+import {
+  emptyTrial,
+  enabledDimensions,
+  sessionPromptLevel,
+  type LoggerDraft,
+  type TrialDraft,
+} from '../../logic/draft';
 import { draftObjective, draftParentSummary, type ObjectiveInput, type ParentSummaryInput } from '../../summaries';
 
 type Patch = Partial<LoggerDraft> | ((d: LoggerDraft) => Partial<LoggerDraft>);
@@ -58,7 +72,9 @@ export function useLoggerState(args: {
       },
       addGoal: (goalId: UUID) => {
         trialsTouched.current = true;
-        update((d) => (d.trials.some((tr) => tr.goalId === goalId) ? {} : { trials: [...d.trials, emptyTrial(goalId)] }));
+        update((d) =>
+          d.trials.some((tr) => tr.goalId === goalId) ? {} : { trials: [...d.trials, emptyTrial(goalId)] },
+        );
       },
       removeGoal: (goalId: UUID) => {
         trialsTouched.current = true;
@@ -120,7 +136,9 @@ export function useLoggerState(args: {
   /** Goals worked on today → next session's plan (fills P only when it's still empty). */
   const continueGoals = useCallback(() => {
     update((d) => {
-      const ids = (d.trials.some((tr) => tr.attempted > 0) ? d.trials.filter((tr) => tr.attempted > 0) : d.trials).map((tr) => tr.goalId);
+      const ids = (d.trials.some((tr) => tr.attempted > 0) ? d.trials.filter((tr) => tr.attempted > 0) : d.trials).map(
+        (tr) => tr.goalId,
+      );
       const texts = ids.map((id) => goalText(id)?.staffText).filter((x): x is string => !!x);
       return {
         planGoalIds: ids,
@@ -129,5 +147,16 @@ export function useLoggerState(args: {
     });
   }, [update, goalText, t]);
 
-  return { draft, dims, isDirty, actions, objectiveInput, parentInput, objectiveDraft, parentSummaryDraft, continueGoals, language };
+  return {
+    draft,
+    dims,
+    isDirty,
+    actions,
+    objectiveInput,
+    parentInput,
+    objectiveDraft,
+    parentSummaryDraft,
+    continueGoals,
+    language,
+  };
 }

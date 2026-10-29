@@ -13,14 +13,26 @@ import { Card, ChipGroup, Divider, SectionHeader, Stack, Text, TextField } from 
 import { comparedLabel } from '../../labels';
 import type { LoggerDraft } from '../../logic/draft';
 
-type JudgementPatch = Partial<Pick<LoggerDraft, 'comparedToLast' | 'workedTags' | 'workedText' | 'notWorkedTags' | 'notWorkedText'>>;
+type JudgementPatch = Partial<
+  Pick<LoggerDraft, 'comparedToLast' | 'workedTags' | 'workedText' | 'notWorkedTags' | 'notWorkedText'>
+>;
 
 function DetailsField({ value, onChange, label }: { value: string; onChange: (v: string) => void; label: string }) {
   const t = useTheme();
   const { t: tr } = useTranslation('session');
   const [open, setOpen] = useState(value.length > 0);
   if (open) {
-    return <TextField label={tr('logger.judgement.details')} accessibilityLabel={label} placeholder={tr('logger.judgement.detailsPlaceholder')} value={value} onChangeText={onChange} multiline minLines={2} />;
+    return (
+      <TextField
+        label={tr('logger.judgement.details')}
+        accessibilityLabel={label}
+        placeholder={tr('logger.judgement.detailsPlaceholder')}
+        value={value}
+        onChangeText={onChange}
+        multiline
+        minLines={2}
+      />
+    );
   }
   return (
     <Pressable
@@ -85,7 +97,11 @@ function JudgementSectionBase({
             value={workedTags}
             onChange={(workedTags) => onChange({ workedTags })}
           />
-          <DetailsField label={t('logger.judgement.worked')} value={workedText} onChange={(workedText) => onChange({ workedText })} />
+          <DetailsField
+            label={t('logger.judgement.worked')}
+            value={workedText}
+            onChange={(workedText) => onChange({ workedText })}
+          />
           <Divider />
           <Text variant="subheading">{t('logger.judgement.notWorked')}</Text>
           <ChipGroup
@@ -94,7 +110,11 @@ function JudgementSectionBase({
             value={notWorkedTags}
             onChange={(notWorkedTags) => onChange({ notWorkedTags })}
           />
-          <DetailsField label={t('logger.judgement.notWorked')} value={notWorkedText} onChange={(notWorkedText) => onChange({ notWorkedText })} />
+          <DetailsField
+            label={t('logger.judgement.notWorked')}
+            value={notWorkedText}
+            onChange={(notWorkedText) => onChange({ notWorkedText })}
+          />
         </Stack>
       </Card>
     </Stack>

@@ -19,7 +19,13 @@ import {
 const ctx = { clientId: 'c-1', appointmentId: 'appt-1', objectiveDraft: 'Auto O', parentSummaryDraft: 'Auto parent' };
 
 function complete(overrides: Partial<LoggerDraft> = {}): LoggerDraft {
-  return { ...emptyDraft({ scheduledMinutes: 45 }), ratings: allRated(4), regulationState: 'regulated', planNext: 'Continue', ...overrides };
+  return {
+    ...emptyDraft({ scheduledMinutes: 45 }),
+    ratings: allRated(4),
+    regulationState: 'regulated',
+    planNext: 'Continue',
+    ...overrides,
+  };
 }
 
 describe('emptyDraft', () => {
@@ -65,7 +71,13 @@ describe('validateDraft', () => {
     const ratings = { ...allRated(4) };
     delete ratings.independence;
     const custom = dims.map((d) => (d.key === 'independence' ? { ...d, enabled: false } : d));
-    const draft = complete({ ratings, trials: [{ goalId: 'g1', attempted: 5, successful: 3, note: '' }, { goalId: 'g2', attempted: 0, successful: 0, note: '' }] });
+    const draft = complete({
+      ratings,
+      trials: [
+        { goalId: 'g1', attempted: 5, successful: 3, note: '' },
+        { goalId: 'g2', attempted: 0, successful: 0, note: '' },
+      ],
+    });
     expect(validateDraft(draft, custom).map((i) => i.id)).toEqual(['trial:g1']);
     // With an Independence rating the session level is used instead.
     expect(validateDraft(complete({ trials: draft.trials }), dims)).toEqual([]);
@@ -116,7 +128,10 @@ describe('diffForAmend', () => {
     const log = sessionLog();
     const same = buildSessionInput(draftFromLog(log), ctx);
     expect(diffForAmend(log, same)).toEqual({});
-    const changed = buildSessionInput({ ...draftFromLog(log), breaksCount: 3, ratings: { ...log.ratings, mood: 2 } }, ctx);
+    const changed = buildSessionInput(
+      { ...draftFromLog(log), breaksCount: 3, ratings: { ...log.ratings, mood: 2 } },
+      ctx,
+    );
     const diff = diffForAmend(log, changed);
     expect(Object.keys(diff).sort()).toEqual(['breaksCount', 'ratings']);
     expect(diff.breaksCount).toBe(3);

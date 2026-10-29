@@ -34,14 +34,23 @@ describe('draftObjective', () => {
   });
 
   it('notes when there were no incidents and skips goals with no tries', () => {
-    const text = draftObjective(en, { ...base, incidents: [], breaksCount: 0, trials: [{ goalText: 'X', attempted: 0, successful: 0 }] });
+    const text = draftObjective(en, {
+      ...base,
+      incidents: [],
+      breaksCount: 0,
+      trials: [{ goalText: 'X', attempted: 0, successful: 0 }],
+    });
     expect(text).toContain('No behaviour incidents.');
     expect(text).not.toContain('X:');
     expect(text).not.toContain('break');
   });
 
   it('uses the session prompt level when a trial has none', () => {
-    const text = draftObjective(en, { ...base, trials: [{ goalText: 'G', attempted: 4, successful: 2 }], fallbackPromptLevel: 5 });
+    const text = draftObjective(en, {
+      ...base,
+      trials: [{ goalText: 'G', attempted: 4, successful: 2 }],
+      fallbackPromptLevel: 5,
+    });
     expect(text).toContain('G: 2/4 correct (50%), independent.');
   });
 
@@ -68,11 +77,17 @@ describe('draftParentSummary', () => {
 
   it('opens warmly, names improvements in words and the goals worked on', () => {
     const text = draftParentSummary(en, { ...input, deltaLast: { attention: 1, mood: 2, engagement: 0 } });
-    expect(text).toBe('Aarav had a calm, settled session today. Focus and mood were better than last time. We worked on: asks for help with two words.');
+    expect(text).toBe(
+      'Aarav had a calm, settled session today. Focus and mood were better than last time. We worked on: asks for help with two words.',
+    );
   });
 
   it('mentions one harder area kindly and energy state', () => {
-    const text = draftParentSummary(en, { ...input, regulationState: 'under', deltaLast: { attention: 1, transitions: -2 } });
+    const text = draftParentSummary(en, {
+      ...input,
+      regulationState: 'under',
+      deltaLast: { attention: 1, transitions: -2 },
+    });
     expect(text).toContain('Focus was better than last time.');
     expect(text).toContain('Moving between activities was a little harder today.');
     expect(text).toContain('Energy was a little low today.');
@@ -109,7 +124,11 @@ describe('parentOpening', () => {
 
 describe('dedupeChips', () => {
   it('merges lists case-insensitively keeping first-seen order', () => {
-    expect(dedupeChips(['timer', 'Bubbles '], ['bubbles', 'timer', ''], ['song_cue'])).toEqual(['timer', 'Bubbles', 'song_cue']);
+    expect(dedupeChips(['timer', 'Bubbles '], ['bubbles', 'timer', ''], ['song_cue'])).toEqual([
+      'timer',
+      'Bubbles',
+      'song_cue',
+    ]);
   });
 });
 

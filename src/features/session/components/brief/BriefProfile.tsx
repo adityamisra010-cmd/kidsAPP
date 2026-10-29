@@ -23,7 +23,9 @@ export function BriefHeader({ brief: b, allergies }: { brief: HandoverBrief; all
           <Avatar name={b.child.fullName} uri={b.child.photoUrl} size={72} />
           <Stack gap={1} flex={1}>
             <Text variant="title">{name}</Text>
-            <Text color="textMuted">{name !== b.child.fullName ? `${b.child.fullName} · ${b.ageLabel}` : b.ageLabel}</Text>
+            <Text color="textMuted">
+              {name !== b.child.fullName ? `${b.child.fullName} · ${b.ageLabel}` : b.ageLabel}
+            </Text>
             <TypeTag name={a.therapyTypeName} color={a.therapyTypeColor} />
             <Text variant="label">{formatTimeRange(a.startsAt, a.endsAt)}</Text>
           </Stack>
@@ -102,7 +104,19 @@ export function DoDontCard({ dos, donts }: { dos: string[]; donts: string[] }) {
   );
 }
 
-function ChipBlock({ icon: Icon, title, items, group, notes }: { icon: LucideIcon; title: string; items: string[]; group: ChipVocab; notes: string }) {
+function ChipBlock({
+  icon: Icon,
+  title,
+  items,
+  group,
+  notes,
+}: {
+  icon: LucideIcon;
+  title: string;
+  items: string[];
+  group: ChipVocab;
+  notes: string;
+}) {
   const t = useTheme();
   const { t: tr } = useTranslation('brief');
   return (
@@ -137,8 +151,20 @@ export function ProfileChipsCard({ brief: b }: { brief: HandoverBrief }) {
   return (
     <Card padding={4}>
       <Stack gap={4}>
-        <ChipBlock icon={Heart} title={t('reinforcers')} items={p.reinforcers} group="reinforcers" notes={p.reinforcersNotes} />
-        <ChipBlock icon={TriangleAlert} title={t('triggers')} items={p.triggers} group="triggers" notes={p.triggersNotes} />
+        <ChipBlock
+          icon={Heart}
+          title={t('reinforcers')}
+          items={p.reinforcers}
+          group="reinforcers"
+          notes={p.reinforcersNotes}
+        />
+        <ChipBlock
+          icon={TriangleAlert}
+          title={t('triggers')}
+          items={p.triggers}
+          group="triggers"
+          notes={p.triggersNotes}
+        />
         <ChipBlock icon={Waves} title={t('calming')} items={p.calming} group="calming" notes={p.calmingNotes} />
       </Stack>
     </Card>

@@ -40,16 +40,31 @@ function StaffSessionDetail({ id }: { id: string }) {
 
   const footer = log ? (
     canEdit(log, userId) ? (
-      <Button label={t('detail.edit')} icon={PencilLine} fullWidth onPress={() => router.push(editRoute)} testID="session-edit" />
+      <Button
+        label={t('detail.edit')}
+        icon={PencilLine}
+        fullWidth
+        onPress={() => router.push(editRoute)}
+        testID="session-edit"
+      />
     ) : canAmend(log, userId, active.role) ? (
-      <Button label={t('detail.amend')} icon={FilePen} variant="secondary" fullWidth onPress={() => router.push(editRoute)} testID="session-amend" />
+      <Button
+        label={t('detail.amend')}
+        icon={FilePen}
+        variant="secondary"
+        fullWidth
+        onPress={() => router.push(editRoute)}
+        testID="session-amend"
+      />
     ) : undefined
   ) : undefined;
 
   return (
     <Screen
       title={t('detail.title')}
-      subtitle={log ? `${apptQ.data?.therapyTypeName ?? ''}${apptQ.data ? ' · ' : ''}${formatDay(log.date)}` : undefined}
+      subtitle={
+        log ? `${apptQ.data?.therapyTypeName ?? ''}${apptQ.data ? ' · ' : ''}${formatDay(log.date)}` : undefined
+      }
       back
       refreshing={logQ.isRefetching}
       onRefresh={() => void Promise.all([logQ.refetch(), amendQ.refetch()])}
@@ -78,7 +93,13 @@ function ParentSessionScreen({ id }: { id: string }) {
   const { t } = useTranslation('session');
   const q = useParentSnapshot(id);
   return (
-    <Screen title={t('parent.title')} back refreshing={q.isRefetching} onRefresh={() => void q.refetch()} testID="session-detail-parent">
+    <Screen
+      title={t('parent.title')}
+      back
+      refreshing={q.isRefetching}
+      onRefresh={() => void q.refetch()}
+      testID="session-detail-parent"
+    >
       <QueryView query={q} skeleton={<SkeletonList rows={3} height={140} />}>
         {(s) => <ParentSessionDetail snapshot={s} />}
       </QueryView>

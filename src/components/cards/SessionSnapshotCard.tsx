@@ -36,7 +36,9 @@ export function SessionSnapshotCard({
     date,
     with: withText,
     overall,
-    highlights: highlights.map((h) => tr('parent.highlightA11y', { label: h.text, change: tr(`common:changeShort.${h.change}`) })).join('. '),
+    highlights: highlights
+      .map((h) => tr('parent.highlightA11y', { label: h.text, change: tr(`common:changeShort.${h.change}`) }))
+      .join('. '),
   });
 
   return (

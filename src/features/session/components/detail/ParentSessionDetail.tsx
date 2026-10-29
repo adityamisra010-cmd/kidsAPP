@@ -26,7 +26,9 @@ export function ParentSessionDetail({ snapshot: s }: { snapshot: ParentSessionSn
               {formatDay(s.date)}
             </Text>
           </Row>
-          <Text color="textMuted">{tr(s.isSubstitute ? 'parent.covering' : 'parent.with', { name: s.therapistName })}</Text>
+          <Text color="textMuted">
+            {tr(s.isSubstitute ? 'parent.covering' : 'parent.with', { name: s.therapistName })}
+          </Text>
           <Row gap={2} accessibilityRole="header">
             <TrendIndicator change={s.overall} showLabel={false} />
             <Text variant="title" style={{ flex: 1 }}>
@@ -34,7 +36,10 @@ export function ParentSessionDetail({ snapshot: s }: { snapshot: ParentSessionSn
             </Text>
           </Row>
           {s.sessionScore != null ? (
-            <Text variant="bodyStrong" tint={t.colors.primaryText}>{`${tr('parent.score')}: ${tr('parent.scoreValue', { score: Math.round(s.sessionScore) })}`}</Text>
+            <Text
+              variant="bodyStrong"
+              tint={t.colors.primaryText}
+            >{`${tr('parent.score')}: ${tr('parent.scoreValue', { score: Math.round(s.sessionScore) })}`}</Text>
           ) : null}
         </Stack>
       </Card>
