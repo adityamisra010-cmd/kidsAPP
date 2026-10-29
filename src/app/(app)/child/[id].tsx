@@ -1,6 +1,9 @@
-// Owner: W4. Placeholder until the feature lands.
-import { Placeholder } from '@/components/Placeholder';
+// Owner: W4 (children/goals/progress/people). Optional `?tab=goals|sessions|progress|homeTasks|messages`.
+import { useLocalSearchParams } from 'expo-router';
+
+import { ChildWorkspaceScreen, isWorkspaceTab } from '@/features/children/screens/ChildWorkspaceScreen';
 
 export default function Screen() {
-  return <Placeholder title="Child" back={true} />;
+  const { id, tab } = useLocalSearchParams<{ id: string; tab?: string }>();
+  return <ChildWorkspaceScreen key={id} childId={id} initialTab={isWorkspaceTab(tab) ? tab : undefined} />;
 }

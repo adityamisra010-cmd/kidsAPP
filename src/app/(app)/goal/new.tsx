@@ -1,6 +1,9 @@
-// Owner: W4. Placeholder until the feature lands.
-import { Placeholder } from '@/components/Placeholder';
+// Owner: W4 (children/goals/progress/people).
+import { useLocalSearchParams } from 'expo-router';
+
+import { NewGoalScreen } from '@/features/goals/screens/NewGoalScreen';
 
 export default function Screen() {
-  return <Placeholder title="New goal" back={true} />;
+  const { childId } = useLocalSearchParams<{ childId?: string }>();
+  return <NewGoalScreen key={childId} childId={childId || undefined} />;
 }

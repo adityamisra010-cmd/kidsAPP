@@ -1,6 +1,6 @@
-// Owner: W4. Placeholder until the feature lands.
-import { Placeholder } from '@/components/Placeholder';
+// Owner: W4 (children/goals/progress/people).
+import { NewChildScreen } from '@/features/people/screens/NewChildScreen';
 
 export default function Screen() {
-  return <Placeholder title="Add child" back={true} />;
+  return <NewChildScreen />;
 }

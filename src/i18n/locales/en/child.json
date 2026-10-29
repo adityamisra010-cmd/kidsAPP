@@ -1,1 +1,172 @@
-{}
+{
+  "parent": {
+    "title": "My Child",
+    "noChildTitle": "No child linked yet",
+    "noChildBody": "Your school links your child to your account. If this looks wrong, please contact the school office.",
+    "tabs": { "sessions": "Sessions", "goals": "Goals", "wins": "Wins", "progress": "Progress", "about": "About" },
+    "sessionsEmptyTitle": "No sessions yet",
+    "sessionsEmptyBody": "After each session with {{name}}, a short note from the therapist will appear here.",
+    "showMore": "Show older sessions",
+    "aboutIntro": "This is what the therapists know about {{name}}. It helps every therapist, even a new one, start on the right foot.",
+    "howCommunicates": "How {{name}} communicates",
+    "motivates": "What motivates {{name}}",
+    "upsets": "What can upset {{name}}",
+    "calms": "What helps {{name}} calm down",
+    "notAddedYet": "Not added yet.",
+    "suggestTitle": "Something missing or changed?",
+    "suggestBody": "You know {{name}} best. Send the care team a message and they will update this page.",
+    "suggest": "Suggest a change"
+  },
+  "about": {
+    "communication": "Communication",
+    "dosDonts": "Do and don't",
+    "do": "Do",
+    "dont": "Don't",
+    "doPrefix": "Do",
+    "dontPrefix": "Don't",
+    "reinforcers": "What motivates them",
+    "triggers": "Known triggers",
+    "calming": "What calms them",
+    "sensory": "Sensory notes",
+    "clinical": "Clinical details",
+    "staffOnly": "Staff only",
+    "edit": "Edit About Me",
+    "history": "Edit history",
+    "noneYet": "Nothing added yet.",
+    "emptyStaff": "About Me for {{name}} is still empty. Adding communication, motivators and a few Do / Don't rules helps any therapist who covers a session."
+  },
+  "fields": {
+    "communicationMode": "Communication mode",
+    "commTools": "Ways of communicating",
+    "commNotes": "Communication notes",
+    "reinforcers": "What motivates them",
+    "reinforcersNotes": "Motivation notes",
+    "triggers": "Known triggers",
+    "triggersNotes": "Trigger notes",
+    "calming": "What calms them",
+    "calmingNotes": "Calming notes",
+    "sensoryNotes": "Sensory notes",
+    "dos": "Do rules",
+    "donts": "Don't rules",
+    "clinical": "Clinical details",
+    "diagnosis": "Diagnosis",
+    "allergies": "Allergies",
+    "medications": "Medicines",
+    "medicalNotes": "Medical notes"
+  },
+  "history": {
+    "title": "Edit history",
+    "subtitle": "Who changed what, and when",
+    "byLine": "{{name}} · {{date}}, {{time}}",
+    "empty": "(empty)",
+    "noneTitle": "No changes yet",
+    "noneBody": "Edits to About Me will be listed here."
+  },
+  "edit": {
+    "title": "Edit About Me",
+    "intro": "Keep it short and practical. A therapist meeting {{name}} for the first time should understand them in 30 seconds.",
+    "commTools": "Ways of communicating",
+    "notes": "Notes",
+    "commNotesPh": "e.g. Uses 2-word phrases; points to pictures for snacks",
+    "sensoryPh": "e.g. Seeks movement and deep pressure; covers ears in noisy rooms",
+    "rulesHelper": "Most important first. The top 3 appear on the Handover Brief.",
+    "doPh": "e.g. Give a 2-minute warning before transitions",
+    "dontPh": "e.g. Don't touch without telling him first",
+    "ruleN": "{{label}} rule {{n}}",
+    "addTo": "Add to {{label}}",
+    "moveUp": "Up",
+    "moveDown": "Down",
+    "listFull": "Up to {{max}} rules. Remove one to add another.",
+    "clinicalNote": "Visible only to school admins, coordinators and this child's therapists.",
+    "saveCount_one": "Save 1 change",
+    "saveCount_other": "Save {{count}} changes",
+    "noChanges": "No changes yet",
+    "saved": "About Me updated",
+    "noAccessBody": "Only this child's therapists, coordinators and school admins can edit About Me."
+  },
+  "diagnoses": {
+    "autism": "Autism spectrum disorder",
+    "adhd": "ADHD",
+    "gdd": "Global developmental delay",
+    "cp": "Cerebral palsy",
+    "down": "Down syndrome",
+    "ld": "Learning disability",
+    "id": "Intellectual disability",
+    "hearing": "Hearing impairment",
+    "speech": "Speech and language delay"
+  },
+  "unsaved": {
+    "title": "Leave without saving?",
+    "body": "Your changes on this screen will be lost.",
+    "discard": "Discard changes",
+    "keep": "Keep editing"
+  },
+  "header": {
+    "fullName": "Full name: {{name}}",
+    "careTeam": "Care team",
+    "family": "Family",
+    "lead": "Lead",
+    "primary": "Main contact",
+    "callHint": "Calls {{name}}"
+  },
+  "workspace": {
+    "title": "Child",
+    "loading": "Loading…",
+    "tabs": {
+      "about": "About Me",
+      "goals": "Goals",
+      "sessions": "Sessions",
+      "progress": "Progress",
+      "homeTasks": "Home tasks",
+      "messages": "Messages"
+    },
+    "briefOnlyTitle": "You're covering a session",
+    "briefOnlyBody": "You can see About Me and goals so the session goes smoothly. Session records and family contacts stay with the care team.",
+    "noAccessTitle": "This profile isn't available to you",
+    "noAccessBody": "Only the child's care team can open it. Ask a coordinator if you need access."
+  },
+  "sessions": {
+    "emptyTitle": "No sessions logged yet",
+    "emptyBody": "Logged sessions will appear here with their scores and changes.",
+    "substitute": "Substitute",
+    "incidents_one": "1 incident",
+    "incidents_other": "{{count}} incidents",
+    "vsLast": "vs last",
+    "goalAccuracy": "Goals {{value}}%",
+    "scoreA11y": "Session score {{score}} out of 100",
+    "a11y": "{{date}}, {{therapy}} with {{therapist}}, score {{score}}"
+  },
+  "homeTasks": {
+    "assign": "Assign task",
+    "emptyTitle": "No home tasks yet",
+    "emptyBody": "Tasks you assign appear in the family's Home Practice tab.",
+    "meta": "{{times}}× a week · {{minutes}} min · by {{by}}",
+    "window": "{{from}} – {{to}}",
+    "status": { "active": "Active", "completed": "Completed", "archived": "Archived" }
+  },
+  "messages": {
+    "emptyTitle": "No conversations yet",
+    "emptyBody": "Care-team chats about this child will show here.",
+    "noMessages": "No messages yet",
+    "unread_one": "1 new",
+    "unread_other": "{{count}} new",
+    "kind": { "care_team": "Care team", "staff_only": "Staff only", "direct": "Direct" }
+  },
+  "row": {
+    "next": "Next: {{day}}, {{time}}",
+    "noNext": "No upcoming session",
+    "needsAttention": "Needs attention"
+  },
+  "caseload": {
+    "title": "Caseload",
+    "count_one": "1 child",
+    "count_other": "{{count}} children",
+    "search": "Search by name or class",
+    "filterLabel": "Filter by therapy",
+    "all": "All",
+    "emptyTitle": "No children assigned yet",
+    "emptyBody": "When a coordinator assigns children to you, they will appear here.",
+    "noMatchTitle": "No matches",
+    "noMatchBody": "Try a different name or clear the filter."
+  }
+}

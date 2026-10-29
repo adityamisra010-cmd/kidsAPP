@@ -1,1 +1,139 @@
-{}
+{
+  "status": {
+    "not_started": "Not started",
+    "emerging": "Emerging",
+    "progressing": "Progressing",
+    "mastered": "Mastered",
+    "maintenance": "Maintenance",
+    "paused": "Paused"
+  },
+  "parentStatus": {
+    "working_on_it": "Working on it",
+    "getting_there": "Getting there",
+    "achieved": "Achieved",
+    "paused": "Paused for now"
+  },
+  "prompt": {
+    "full_physical": "Full physical prompt",
+    "partial_physical": "Partial physical prompt",
+    "model_gestural": "Model or gesture",
+    "verbal": "Verbal prompt",
+    "independent": "Independent"
+  },
+  "actions": { "add": "Add goal", "bank": "Goal Bank" },
+  "card": {
+    "parentSees": "Parents see: {{text}}",
+    "lastAccuracy": "Last: {{value}}%",
+    "noTrials": "No trials yet",
+    "rule": "Mastery: {{accuracy}}% × {{sessions}}"
+  },
+  "mastery": {
+    "banner": "Mastery reached — confirm?",
+    "bannerBody_one": "The last session was at {{accuracy}}% or higher.",
+    "bannerBody_other": "The last {{count}} sessions were at {{accuracy}}% or higher.",
+    "confirm": "Confirm mastered",
+    "confirmTitle": "Mark this goal as mastered?",
+    "confirmBody_one": "It met the rule ({{accuracy}}% in 1 session). The family will see it in Wins.",
+    "confirmBody_other": "It met the rule ({{accuracy}}% across {{count}} sessions in a row). The family will see it in Wins.",
+    "moment": "Goal mastered"
+  },
+  "workspace": {
+    "emptyTitle": "No goals yet",
+    "emptyBody": "Add goals from the Goal Bank or write your own. Each goal needs plain wording for parents.",
+    "otherType": "Other",
+    "count_one": "1 goal",
+    "count_other": "{{count}} goals"
+  },
+  "parent": {
+    "intro": "What the therapists are working on with {{name}}, in plain words.",
+    "emptyTitle": "No goals yet",
+    "emptyBody": "When the therapists set goals for {{name}}, you will see them here."
+  },
+  "wins": {
+    "intro_one": "1 goal achieved so far.",
+    "intro_other": "{{count}} goals achieved so far.",
+    "achievedOn": "Achieved on {{date}}",
+    "emptyTitle": "No wins yet",
+    "emptyBody": "Wins will appear here as goals are achieved."
+  },
+  "form": {
+    "title": "New goal",
+    "forChild": "For {{name}}",
+    "fromBank": "From Goal Bank",
+    "writeOwn": "Write my own",
+    "fromBankChosen": "Chosen from the Goal Bank. Check the wording below and adjust it for this child.",
+    "chooseAnother": "Choose a different goal",
+    "writeOwnInstead": "Write my own instead",
+    "therapyType": "Therapy",
+    "domain": "Area",
+    "staffText": "Goal (staff wording)",
+    "staffTextPh": "e.g. Requests preferred items using 2-word phrases in 4 of 5 trials",
+    "parentText": "Goal in parent-friendly words",
+    "parentTextPh": "e.g. Asks for things using two words",
+    "parentTextHelp": "Shown to the family. Use simple words, no jargon.",
+    "baseline": "Baseline",
+    "baselinePh": "e.g. Uses single words with a model, 1 in 5 trials",
+    "rule": "Mastery rule",
+    "accuracy": "Accuracy",
+    "sessions": "Sessions in a row",
+    "ruleSentence_one": "Mastered at {{accuracy}}% or more in 1 session",
+    "ruleSentence_other": "Mastered at {{accuracy}}% or more across {{count}} sessions in a row",
+    "startDate": "Start date",
+    "initialStatus": "Starting status",
+    "save": "Save goal",
+    "saved": "Goal added",
+    "fixErrors": "Please check the highlighted fields.",
+    "noAccessTitle": "Can't add a goal here",
+    "noAccessBody": "Only this child's therapists, coordinators and school admins can add goals.",
+    "errors": {
+      "therapyType": "Choose a therapy",
+      "domain": "Choose an area",
+      "staffText": "Write the goal for staff",
+      "parentText": "Write the goal in parent-friendly words",
+      "tooLong": "Please keep it under 240 characters",
+      "accuracy": "Accuracy must be between 50% and 100%",
+      "sessions": "Choose between 1 and 10 sessions",
+      "startDate": "Choose a start date"
+    }
+  },
+  "detail": {
+    "title": "Goal",
+    "parentWording": "What parents see",
+    "noBaseline": "Not recorded",
+    "masteredOn": "Mastered on",
+    "status": "Status",
+    "statusHelp": "Mastered goals move to the family's Wins. Paused goals stay on file.",
+    "statusChanged": "Status set to {{status}}",
+    "editTitle": "Edit goal",
+    "saved": "Goal updated",
+    "chartTitle": "Accuracy by session",
+    "chartSummary_one": "1 session recorded: {{latest}}%. Mastery needs {{accuracy}}%.",
+    "chartSummary_other": "{{count}} sessions recorded. Latest {{latest}}%. {{atOrAbove}} at or above {{accuracy}}%; current run {{streak}} in a row.",
+    "legendAccuracy": "Accuracy",
+    "legendMastery": "Mastery line ({{accuracy}}%)",
+    "noTrials": "No trials recorded yet. Accuracy appears after this goal is targeted in a session.",
+    "history": "Trial history",
+    "trials": "{{successful}} of {{attempted}} correct"
+  },
+  "bank": {
+    "title": "Goal Bank",
+    "subtitle": "Common goals by area",
+    "search": "Search goals",
+    "domain": "Area",
+    "therapy": "Therapy",
+    "all": "All",
+    "count_one": "1 goal",
+    "count_other": "{{count}} goals",
+    "refine": "{{count}} more. Search or filter to narrow down.",
+    "noMatchTitle": "No goals match",
+    "noMatchBody": "Try another word or area, or write your own.",
+    "ourSchool": "Our school",
+    "emptyTitle": "The Goal Bank is empty",
+    "emptyBody": "Goals added here can be reused for any child.",
+    "addShort": "Add goal",
+    "addTitle": "Add a school goal",
+    "addSubtitle": "Available to all therapists in your school",
+    "add": "Add to Goal Bank",
+    "added": "Added to the Goal Bank"
+  }
+}
