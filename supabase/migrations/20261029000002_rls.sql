@@ -587,15 +587,23 @@ begin
 end
 $$;
 
--- thread_members: member must belong to the school; staff-only threads accept staff only.
+-- thread_members: member must belong to the school; staff-only threads accept staff only;
+-- a child's care-team thread accepts staff and that child's guardians only.
 create or replace function app.thread_members_validate() returns trigger
 language plpgsql security definer set search_path = '' as $$
-declare v_kind public.thread_kind;
+declare
+  v_kind public.thread_kind;
+  v_child uuid;
 begin
-  select t.kind into v_kind from public.threads t where t.id = new.thread_id;
+  select t.kind, t.child_id into v_kind, v_child from public.threads t where t.id = new.thread_id;
   if not app.user_in_org(new.user_id, new.organization_id, v_kind = 'staff_only') then
     perform app.raise('validation', case when v_kind = 'staff_only'
       then 'only staff can join a staff-only thread' else 'user is not a member of this school' end);
+  end if;
+  if v_kind = 'care_team'
+     and not app.user_in_org(new.user_id, new.organization_id, true)
+     and not exists (select 1 from public.child_guardians g where g.child_id = v_child and g.user_id = new.user_id) then
+    perform app.raise('validation', 'only staff and this child''s guardians can join its care-team thread');
   end if;
   return new;
 end

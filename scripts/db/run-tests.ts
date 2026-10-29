@@ -772,6 +772,11 @@ async function testParents(): Promise<void> {
     () => su(`insert into public.thread_members (thread_id, user_id) values ($1, $2)`, [A.staffThread, pa.p1]),
     /validation/,
   );
+  await expectError(
+    "another child's parent cannot be added to a care-team thread",
+    () => su(`insert into public.thread_members (thread_id, user_id) values ($1, $2)`, [A.thread, pa.p2]),
+    /validation/,
+  );
 
   const snap = await rpc<Record<string, unknown>>(pa.p1, 'parent_session_snapshot', [A.session1]);
   const snapText = JSON.stringify(snap);
