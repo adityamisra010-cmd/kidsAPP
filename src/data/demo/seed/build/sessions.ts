@@ -2,6 +2,7 @@
  * Session logs for every attended past appointment, generated per child + therapy in chronological
  * order so metrics (deltas, rolling averages, trends) and alerts match what the app would compute.
  */
+import { formatDay } from '@/lib/dates';
 import { CHIPS } from '@/domain/constants';
 import { isAttended, toPreviousSession } from '@/domain/derive';
 import { checkAlerts, computeSessionMetrics } from '@/domain/metrics';
@@ -221,7 +222,7 @@ function raiseAlerts(b: Build, s: StoredSession, prev: StoredSession | undefined
     push('score_drop', `${c.preferredName}'s ${typeName} scores are well below the recent average for 2 sessions in a row.`, { drop: s.metrics.deltaRolling });
   }
   if (check.incidentSpike) {
-    push('incident_spike', `${s.metrics.incidentCount} behaviour incidents in ${c.preferredName}'s ${typeName} session on ${s.date}.`, { incidents: s.metrics.incidentCount });
+    push('incident_spike', `${s.metrics.incidentCount} behaviour incidents in ${c.preferredName}'s ${typeName} session on ${formatDay(s.date)}.`, { incidents: s.metrics.incidentCount });
   }
 }
 

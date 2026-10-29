@@ -4,7 +4,7 @@ import { RepoError } from '@/data/repository';
 import { briefChips, compareSessions, isMissed, isUnlogged, previousSessions, toPreviousSession } from '@/domain/derive';
 import { checkAlerts, computeSessionMetrics } from '@/domain/metrics';
 import type { Alert, Amendment, Appointment, SessionInput, SessionLog, UUID } from '@/domain/types';
-import { addDaysISO, ageLabel } from '@/lib/dates';
+import { addDaysISO, ageLabel, formatDay } from '@/lib/dates';
 import { uuid } from '@/lib/id';
 
 import type { StoredSession } from '../store';
@@ -57,7 +57,7 @@ export function createSessionsRepo(core: DemoCore): SessionsRepo {
     };
     const name = child.preferredName ?? child.fullName;
     if (check.scoreDrop) raise('score_drop', `${name}'s ${typeName} scores are well below the recent average for 2 sessions in a row.`, { drop: s.metrics.deltaRolling });
-    if (check.incidentSpike) raise('incident_spike', `${s.metrics.incidentCount} behaviour incidents in ${name}'s ${typeName} session on ${s.date}.`, { incidents: s.metrics.incidentCount });
+    if (check.incidentSpike) raise('incident_spike', `${s.metrics.incidentCount} behaviour incidents in ${name}'s ${typeName} session on ${formatDay(s.date)}.`, { incidents: s.metrics.incidentCount });
   };
 
   const apply = (s: StoredSession, input: Editable) => {

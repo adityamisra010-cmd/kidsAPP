@@ -1,7 +1,7 @@
 /** Weekly series expansion, RRULE helpers and conflict detection. */
 import { addDays, getDay } from 'date-fns';
 
-import { clockTime, combineDateTime, parse, toISODate } from '@/lib/dates';
+import { clockTime, combineDateTime, formatDay, parse, toISODate } from '@/lib/dates';
 
 import { isCancelled } from './appointments';
 import type {
@@ -84,7 +84,7 @@ export function detectConflicts(i: ConflictInput): Conflict[] {
     for (const e of live) {
       if (!overlaps(o, e)) continue;
       if (e.therapistId === i.therapistId) {
-        out.push({ kind: 'therapist_double_booked', date: o.date, appointmentId: e.id, message: `${therapist} is already booked at ${clockTime(e.startsAt)} on ${o.date}` });
+        out.push({ kind: 'therapist_double_booked', date: o.date, appointmentId: e.id, message: `${therapist} is already booked at ${clockTime(e.startsAt)} on ${formatDay(o.date)}` });
       }
       if (e.childId === i.childId) {
         out.push({ kind: 'child_double_booked', date: o.date, appointmentId: e.id, message: `${child} already has a session at ${clockTime(e.startsAt)} on ${o.date}` });

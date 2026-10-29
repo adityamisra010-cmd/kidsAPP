@@ -64,7 +64,8 @@ export default ({ config }: ConfigContext): ExpoConfig => ({
     [
       'expo-build-properties',
       {
-        android: { minSdkVersion: 26, enableProguardInReleaseBuilds: false },
+        // useLegacyPackaging compresses native libraries: a much smaller APK to share over WhatsApp/email.
+        android: { minSdkVersion: 26, enableProguardInReleaseBuilds: false, useLegacyPackaging: true },
       },
     ],
     'react-native-compressor',
