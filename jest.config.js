@@ -1,6 +1,6 @@
 module.exports = {
   preset: 'jest-expo',
-  testPathIgnorePatterns: ['/node_modules/', '<rootDir>/.claude/', '/android/', '/ios/', '/supabase/', '/dist/'],
+  testPathIgnorePatterns: ['/node_modules/', '<rootDir>/.claude/', '<rootDir>/android/', '<rootDir>/ios/', '<rootDir>/supabase/', '<rootDir>/dist/'],
   modulePathIgnorePatterns: ['<rootDir>/.claude/', '<rootDir>/dist/', '<rootDir>/android/'],
   moduleNameMapper: {
     '^@/(.*)$': '<rootDir>/src/$1',
