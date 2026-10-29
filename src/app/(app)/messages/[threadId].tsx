@@ -1,6 +1,9 @@
-// Owner: W6. Placeholder until the feature lands.
-import { Placeholder } from '@/components/Placeholder';
+// Owner: W6 (messaging).
+import { useLocalSearchParams } from 'expo-router';
+
+import { ThreadScreen } from '@/features/messages/ThreadScreen';
 
 export default function Screen() {
-  return <Placeholder title="Conversation" back={true} />;
+  const { threadId } = useLocalSearchParams<{ threadId: string }>();
+  return <ThreadScreen threadId={String(threadId)} />;
 }

@@ -1,1 +1,146 @@
-{}
+{
+  "status": {
+    "active": "Active",
+    "suspended": "Suspended"
+  },
+  "card": {
+    "children": "Active children",
+    "sessions": "Sessions this month",
+    "parents": "Parents using the app",
+    "lastActivity": "Last activity {{when}}",
+    "noActivity": "No activity yet"
+  },
+  "schools": {
+    "title": "Schools",
+    "subtitle": "{{active}} active of {{total}}",
+    "add": "Add school",
+    "totalSchools": "Active schools",
+    "totalChildren": "Active children",
+    "totalSessions": "Sessions this month",
+    "emptyTitle": "No schools yet",
+    "emptyBody": "Add your first partner school and invite its admin."
+  },
+  "detail": {
+    "title": "School",
+    "loading": "Loading…",
+    "notFound": "We couldn't find this school.",
+    "usage": "Usage",
+    "staff": "Staff",
+    "contact": "Contact",
+    "address": "Address",
+    "phone": "Phone",
+    "email": "Email",
+    "callHint": "Calls the school",
+    "since": "On the platform since {{date}}",
+    "activeNote": "Staff and families of this school can sign in and use the app.",
+    "suspendedNote": "Sign-in is paused for this school. Nothing has been deleted.",
+    "suspend": "Suspend school",
+    "reactivate": "Reactivate school",
+    "suspendTitle": "Suspend {{name}}?",
+    "suspendBody": "Staff and parents of this school won't be able to sign in until you reactivate it. No data is deleted.",
+    "reactivateTitle": "Reactivate {{name}}?",
+    "reactivateBody": "Staff and parents can sign in again straight away.",
+    "suspended": "{{name}} is suspended",
+    "reactivated": "{{name}} is active again"
+  },
+  "new": {
+    "title": "Add school",
+    "schoolSection": "School",
+    "name": "School name",
+    "namePlaceholder": "For example: Anvaya Child Development Centre",
+    "shortName": "Short name",
+    "shortNameHelp": "Shown in the app and in SMS. Up to 24 letters.",
+    "city": "City",
+    "cityPlaceholder": "For example: Pune",
+    "address": "Address",
+    "phone": "School phone",
+    "phoneHelp": "Mobile, or landline with STD code",
+    "adminSection": "First school admin",
+    "adminSectionHint": "They set up staff, children and the schedule.",
+    "adminName": "Full name",
+    "adminPhone": "Mobile number",
+    "adminPhoneHelp": "They sign in with this number using an SMS code.",
+    "create": "Create school",
+    "created": "School created",
+    "failed": "Couldn't create the school. Please try again.",
+    "createdTitle": "School added",
+    "createdHeading": "{{name}} is ready",
+    "createdBody": "The school starts with the default therapy types and rating scales.",
+    "inviteTitle": "Admin invite",
+    "inviteSubtitle": "Send these details to the school admin.",
+    "inviteRole": "School Admin",
+    "invitePhone": "Signs in with",
+    "inviteStatus": "Waiting to sign in",
+    "inviteStatusLabel": "Invite status",
+    "inviteHowTo": "Ask them to install the app and sign in with this mobile number. They'll get a one-time SMS code and their school opens straight away.",
+    "share": "Share invite",
+    "openSchool": "Open school",
+    "shareMessage": "Hello {{name}}, {{school}} is now set up on {{app}}. Install the app and sign in with {{phone}}. You'll get an SMS code.",
+    "errors": {
+      "name": "Enter the school's full name",
+      "shortName": "Add a short name (2 letters or more)",
+      "shortNameLong": "Keep the short name under 24 letters",
+      "city": "Enter the city",
+      "address": "Enter the address",
+      "phone": "Enter a 10-digit phone number",
+      "adminName": "Enter the admin's name",
+      "adminPhone": "Enter a 10-digit mobile number starting with 6, 7, 8 or 9"
+    }
+  },
+  "templates": {
+    "title": "Templates",
+    "subtitle": "What every new school starts with",
+    "tabs": {
+      "dimensions": "Rating scales",
+      "goals": "Goal bank",
+      "resources": "Resources"
+    },
+    "dimensionsNoteTitle": "Default rating scales",
+    "dimensionsNote": "Each school gets its own copy and can edit the wording and weights. Changes there don't affect other schools.",
+    "parentsSee": "Parents see: {{label}}",
+    "off": "Off by default",
+    "showAnchors": "Show what 1–5 mean",
+    "hideAnchors": "Hide anchors",
+    "emptyDimensions": "No rating scales yet",
+    "emptyResources": "No global resources yet",
+    "kinds": {
+      "pdf": "PDF",
+      "image": "Image",
+      "video": "Video",
+      "link": "Link"
+    },
+    "audience": {
+      "staff": "For staff",
+      "parents": "For parents",
+      "all": "For everyone"
+    }
+  },
+  "goalBank": {
+    "search": "Search goals",
+    "add": "Add goal",
+    "allAreas": "All areas",
+    "count_one": "1 goal",
+    "count_other": "{{count}} goals",
+    "empty": "The goal bank is empty",
+    "noMatch": "No goals match",
+    "parentsSee": "Parents see: {{text}}",
+    "editHint": "Opens the goal to edit",
+    "addTitle": "Add a goal",
+    "editTitle": "Edit goal",
+    "sheetHint": "Write it once for staff, and once in plain words for parents.",
+    "domain": "Area",
+    "therapy": "Therapy",
+    "staffText": "Wording for staff",
+    "staffTextHelp": "Specific and measurable, e.g. \"Requests 5 items using 2-word phrases\".",
+    "parentText": "Wording for parents",
+    "parentTextHelp": "Plain and warm, e.g. \"Asking for things with two words\".",
+    "save": "Save goal",
+    "saved": "Goal saved",
+    "errors": {
+      "domain": "Choose an area",
+      "therapy": "Choose a therapy",
+      "staffText": "Write the staff wording (8 letters or more)",
+      "parentText": "Write the parent wording (8 letters or more)"
+    }
+  }
+}

@@ -1,6 +1,6 @@
-// Owner: W6. Placeholder until the feature lands.
-import { Placeholder } from '@/components/Placeholder';
+// Owner: W6 (messaging).
+import { ThreadsScreen } from '@/features/messages/ThreadsScreen';
 
 export default function Screen() {
-  return <Placeholder title="Messages" back={true} />;
+  return <ThreadsScreen />;
 }

@@ -1,6 +1,6 @@
-// Owner: W6. Placeholder until the feature lands.
-import { Placeholder } from '@/components/Placeholder';
+// Owner: W6 (platform admin).
+import { SchoolsScreen } from '@/features/platform/SchoolsScreen';
 
 export default function Screen() {
-  return <Placeholder title="Schools" back={false} />;
+  return <SchoolsScreen />;
 }

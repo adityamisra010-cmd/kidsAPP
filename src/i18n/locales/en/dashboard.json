@@ -1,1 +1,108 @@
-{}
+{
+  "header": {
+    "greeting": {
+      "morning": "Good morning, {{name}}",
+      "afternoon": "Good afternoon, {{name}}",
+      "evening": "Good evening, {{name}}"
+    },
+    "alerts": "Alerts",
+    "toDo_one": "1 thing needs you today",
+    "toDo_other": "{{count}} things need you today",
+    "allClear": "Nothing is waiting on you today",
+    "fallbackTitle": "Dashboard"
+  },
+  "showMore_one": "Show 1 more",
+  "showMore_other": "Show {{count}} more",
+  "today": {
+    "title": "Today",
+    "scheduled": "Scheduled",
+    "completed": "Completed",
+    "logged": "Logged",
+    "unlogged": "Not logged",
+    "cancelled": "Cancelled"
+  },
+  "attention": {
+    "title": "Children needing attention",
+    "allAlerts": "See all alerts",
+    "emptyTitle": "No children need attention",
+    "emptyBody": "Children show up here when scores drop, incidents rise or progress slows."
+  },
+  "unlogged": {
+    "title": "Not logged yet",
+    "subtitle": "Sessions that happened but have no log",
+    "remind": "Remind",
+    "reminded": "Reminded",
+    "sent": "Reminder sent to {{name}}",
+    "emptyTitle": "Every attended session is logged"
+  },
+  "cover": {
+    "title": "Cover needed",
+    "manage": "Manage",
+    "away": "{{name}} is away · {{therapy}}",
+    "needsCover": "Needs cover",
+    "covering": "{{sub}} covering for {{original}}",
+    "set": "Cover set",
+    "emptyTitle": "No cover needed"
+  },
+  "reschedule": {
+    "title": "Reschedule requests",
+    "review": "Review",
+    "by": "Requested by {{name}}",
+    "now": "Booked: {{when}}",
+    "options_one": "1 option",
+    "options_other": "{{count}} options",
+    "emptyTitle": "No pending requests"
+  },
+  "week": {
+    "title": "This week",
+    "subtitle": "Monday to today",
+    "attendance": "Attendance",
+    "attendanceHint": "Sessions attended out of those scheduled",
+    "practice": "Home practice done",
+    "practiceHint": "Home activities families logged as done",
+    "compliance": "Logging on time, by therapist",
+    "loggedOf": "{{logged}} of {{due}} logged",
+    "noneDue": "No sessions due",
+    "noTherapists": "No therapists yet"
+  },
+  "workload": {
+    "title": "Therapist workload",
+    "subtitle": "Sessions this week",
+    "sessions_one": "1 session",
+    "sessions_other": "{{count}} sessions"
+  },
+  "alerts": {
+    "title": "Alerts",
+    "segments": {
+      "open": "Open",
+      "acknowledged": "Acknowledged",
+      "resolved": "Resolved"
+    },
+    "kinds": {
+      "score_drop": "Score drop",
+      "incident_spike": "More incidents",
+      "unlogged_session": "Session not logged",
+      "declining_trend": "Declining trend"
+    },
+    "acknowledge": "Acknowledge",
+    "resolve": "Resolve",
+    "openChild": "Open child",
+    "acknowledgedToast": "Alert acknowledged",
+    "resolvedToast": "Alert resolved",
+    "resolvedOn": "Resolved on {{date}}",
+    "empty": {
+      "open": {
+        "title": "No open alerts",
+        "body": "Alerts appear when a child's scores drop, incidents rise or a session isn't logged."
+      },
+      "acknowledged": {
+        "title": "Nothing acknowledged",
+        "body": "Alerts you acknowledge stay here until they're resolved."
+      },
+      "resolved": {
+        "title": "No resolved alerts yet",
+        "body": "Resolved alerts are kept here for reference."
+      }
+    }
+  }
+}
