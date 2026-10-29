@@ -87,7 +87,11 @@ export function createOrgRepo(core: DemoCore): OrgRepo {
         core.audit('org.update_settings', 'organization', orgId, { keys: Object.keys(patch) });
         return org;
       }),
-    listTherapyTypes: (orgId) => core.run(() => (orgFor(orgId), st.therapyTypes.filter((t) => t.organizationId === orgId))),
+    listTherapyTypes: (orgId) =>
+      core.run(() => {
+        orgFor(orgId);
+        return st.therapyTypes.filter((t) => t.organizationId === orgId);
+      }),
     upsertTherapyType: (input) =>
       core.run(() => {
         orgFor(input.organizationId, ['school_admin']);
@@ -98,7 +102,11 @@ export function createOrgRepo(core: DemoCore): OrgRepo {
         st.therapyTypes.push(created);
         return created;
       }),
-    listRatingDimensions: (orgId) => core.run(() => (orgFor(orgId), core.dims(orgId))),
+    listRatingDimensions: (orgId) =>
+      core.run(() => {
+        orgFor(orgId);
+        return core.dims(orgId);
+      }),
     upsertRatingDimension: (input) =>
       core.run(() => {
         if (!input.organizationId) throw new RepoError('forbidden', 'Global templates are managed by the platform admin.');
@@ -142,7 +150,11 @@ export function createOrgRepo(core: DemoCore): OrgRepo {
         orgFor(m.organizationId, ['school_admin']);
         m.status = status;
       }),
-    listInvites: (orgId) => core.run(() => (orgFor(orgId, ['school_admin', 'coordinator']), st.invites.filter((i) => i.organizationId === orgId).sort((a, b) => b.createdAt.localeCompare(a.createdAt)))),
+    listInvites: (orgId) =>
+      core.run(() => {
+        orgFor(orgId, ['school_admin', 'coordinator']);
+        return st.invites.filter((i) => i.organizationId === orgId).sort((a, b) => b.createdAt.localeCompare(a.createdAt));
+      }),
     createInvite: (input) =>
       core.run(() => {
         const ctx = core.requireCtx();
@@ -160,7 +172,11 @@ export function createOrgRepo(core: DemoCore): OrgRepo {
         orgFor(invite.organizationId, ['school_admin', 'coordinator']);
         invite.status = 'revoked';
       }),
-    listDataRequests: (orgId) => core.run(() => (orgFor(orgId, ['school_admin', 'coordinator']), st.dataRequests.filter((d) => d.organizationId === orgId))),
+    listDataRequests: (orgId) =>
+      core.run(() => {
+        orgFor(orgId, ['school_admin', 'coordinator']);
+        return st.dataRequests.filter((d) => d.organizationId === orgId);
+      }),
     setDataRequestStatus: (id, status) =>
       core.run(() => {
         const req = core.sameOrg(st.dataRequests.find((d) => d.id === id), 'Request');
