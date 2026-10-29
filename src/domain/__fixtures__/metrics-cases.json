@@ -1,0 +1,2267 @@
+[
+  {
+    "name": "first_session",
+    "description": "No previous sessions: no deltas, no rolling average, flat trend.",
+    "input": {
+      "ratings": {
+        "engagement": 4,
+        "attention": 3,
+        "regulation": 5,
+        "mood": 4,
+        "cooperation": 3,
+        "independence": 2,
+        "communication": 4,
+        "transitions": 5
+      },
+      "goalTrials": [
+        {
+          "attempted": 10,
+          "successful": 7
+        }
+      ],
+      "incidents": [],
+      "dimensions": [
+        {
+          "key": "engagement",
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "key": "attention",
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "key": "regulation",
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "key": "mood",
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "key": "cooperation",
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "key": "independence",
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "key": "communication",
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "key": "transitions",
+          "weight": 1,
+          "enabled": true
+        }
+      ],
+      "previous": []
+    },
+    "expected": {
+      "sessionScore": 68.8,
+      "goalAccuracy": 70,
+      "trend": "flat",
+      "dimensions": {
+        "engagement": {
+          "value": 4,
+          "trend": "flat"
+        },
+        "attention": {
+          "value": 3,
+          "trend": "flat"
+        },
+        "regulation": {
+          "value": 5,
+          "trend": "flat"
+        },
+        "mood": {
+          "value": 4,
+          "trend": "flat"
+        },
+        "cooperation": {
+          "value": 3,
+          "trend": "flat"
+        },
+        "independence": {
+          "value": 2,
+          "trend": "flat"
+        },
+        "communication": {
+          "value": 4,
+          "trend": "flat"
+        },
+        "transitions": {
+          "value": 5,
+          "trend": "flat"
+        }
+      },
+      "incidentCount": 0
+    }
+  },
+  {
+    "name": "one_previous",
+    "description": "One previous session: deltaLast only (rolling needs 2).",
+    "input": {
+      "ratings": {
+        "engagement": 4,
+        "attention": 4,
+        "regulation": 4,
+        "mood": 4,
+        "cooperation": 4,
+        "independence": 4,
+        "communication": 4,
+        "transitions": 4
+      },
+      "goalTrials": [],
+      "incidents": [],
+      "dimensions": [
+        {
+          "key": "engagement",
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "key": "attention",
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "key": "regulation",
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "key": "mood",
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "key": "cooperation",
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "key": "independence",
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "key": "communication",
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "key": "transitions",
+          "weight": 1,
+          "enabled": true
+        }
+      ],
+      "previous": [
+        {
+          "sessionScore": 50,
+          "ratings": {
+            "engagement": 3,
+            "attention": 3,
+            "regulation": 3,
+            "mood": 3,
+            "cooperation": 3,
+            "independence": 3,
+            "communication": 3,
+            "transitions": 3
+          }
+        }
+      ]
+    },
+    "expected": {
+      "sessionScore": 75,
+      "deltaLast": 25,
+      "trend": "flat",
+      "dimensions": {
+        "engagement": {
+          "value": 4,
+          "deltaLast": 1,
+          "trend": "flat"
+        },
+        "attention": {
+          "value": 4,
+          "deltaLast": 1,
+          "trend": "flat"
+        },
+        "regulation": {
+          "value": 4,
+          "deltaLast": 1,
+          "trend": "flat"
+        },
+        "mood": {
+          "value": 4,
+          "deltaLast": 1,
+          "trend": "flat"
+        },
+        "cooperation": {
+          "value": 4,
+          "deltaLast": 1,
+          "trend": "flat"
+        },
+        "independence": {
+          "value": 4,
+          "deltaLast": 1,
+          "trend": "flat"
+        },
+        "communication": {
+          "value": 4,
+          "deltaLast": 1,
+          "trend": "flat"
+        },
+        "transitions": {
+          "value": 4,
+          "deltaLast": 1,
+          "trend": "flat"
+        }
+      },
+      "incidentCount": 0
+    }
+  },
+  {
+    "name": "two_previous",
+    "description": "Two previous: rolling average defined; 3-point trend.",
+    "input": {
+      "ratings": {
+        "engagement": 4,
+        "attention": 4,
+        "regulation": 3,
+        "mood": 5,
+        "cooperation": 4,
+        "independence": 3,
+        "communication": 4,
+        "transitions": 4
+      },
+      "goalTrials": [
+        {
+          "attempted": 6,
+          "successful": 4
+        }
+      ],
+      "incidents": [],
+      "dimensions": [
+        {
+          "key": "engagement",
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "key": "attention",
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "key": "regulation",
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "key": "mood",
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "key": "cooperation",
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "key": "independence",
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "key": "communication",
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "key": "transitions",
+          "weight": 1,
+          "enabled": true
+        }
+      ],
+      "previous": [
+        {
+          "sessionScore": 59.4,
+          "ratings": {
+            "engagement": 3,
+            "attention": 4,
+            "regulation": 3,
+            "mood": 4,
+            "cooperation": 4,
+            "independence": 3,
+            "communication": 3,
+            "transitions": 4
+          }
+        },
+        {
+          "sessionScore": 46.9,
+          "ratings": {
+            "engagement": 3,
+            "attention": 3,
+            "regulation": 3,
+            "mood": 3,
+            "cooperation": 3,
+            "independence": 3,
+            "communication": 3,
+            "transitions": 4
+          }
+        }
+      ]
+    },
+    "expected": {
+      "sessionScore": 71.9,
+      "goalAccuracy": 66.7,
+      "deltaLast": 12.5,
+      "deltaRolling": 18.7,
+      "rollingAverage": 53.2,
+      "trend": "up",
+      "dimensions": {
+        "engagement": {
+          "value": 4,
+          "deltaLast": 1,
+          "deltaRolling": 1,
+          "trend": "up"
+        },
+        "attention": {
+          "value": 4,
+          "deltaLast": 0,
+          "deltaRolling": 0.5,
+          "trend": "up"
+        },
+        "regulation": {
+          "value": 3,
+          "deltaLast": 0,
+          "deltaRolling": 0,
+          "trend": "flat"
+        },
+        "mood": {
+          "value": 5,
+          "deltaLast": 1,
+          "deltaRolling": 1.5,
+          "trend": "up"
+        },
+        "cooperation": {
+          "value": 4,
+          "deltaLast": 0,
+          "deltaRolling": 0.5,
+          "trend": "up"
+        },
+        "independence": {
+          "value": 3,
+          "deltaLast": 0,
+          "deltaRolling": 0,
+          "trend": "flat"
+        },
+        "communication": {
+          "value": 4,
+          "deltaLast": 1,
+          "deltaRolling": 1,
+          "trend": "up"
+        },
+        "transitions": {
+          "value": 4,
+          "deltaLast": 0,
+          "deltaRolling": 0,
+          "trend": "flat"
+        }
+      },
+      "incidentCount": 0
+    }
+  },
+  {
+    "name": "four_previous",
+    "description": "Exactly the 4-session rolling window.",
+    "input": {
+      "ratings": {
+        "engagement": 5,
+        "attention": 4,
+        "regulation": 4,
+        "mood": 5,
+        "cooperation": 4,
+        "independence": 4,
+        "communication": 5,
+        "transitions": 4
+      },
+      "goalTrials": [
+        {
+          "attempted": 10,
+          "successful": 9
+        },
+        {
+          "attempted": 5,
+          "successful": 3
+        }
+      ],
+      "incidents": [],
+      "dimensions": [
+        {
+          "key": "engagement",
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "key": "attention",
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "key": "regulation",
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "key": "mood",
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "key": "cooperation",
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "key": "independence",
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "key": "communication",
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "key": "transitions",
+          "weight": 1,
+          "enabled": true
+        }
+      ],
+      "previous": [
+        {
+          "sessionScore": 71.9,
+          "ratings": {
+            "engagement": 4,
+            "attention": 4,
+            "regulation": 4,
+            "mood": 4,
+            "cooperation": 4,
+            "independence": 3,
+            "communication": 4,
+            "transitions": 4
+          }
+        },
+        {
+          "sessionScore": 65.6,
+          "ratings": {
+            "engagement": 4,
+            "attention": 3,
+            "regulation": 4,
+            "mood": 4,
+            "cooperation": 3,
+            "independence": 3,
+            "communication": 4,
+            "transitions": 4
+          }
+        },
+        {
+          "sessionScore": 62.5,
+          "ratings": {
+            "engagement": 3,
+            "attention": 4,
+            "regulation": 3,
+            "mood": 4,
+            "cooperation": 4,
+            "independence": 3,
+            "communication": 4,
+            "transitions": 3
+          }
+        },
+        {
+          "sessionScore": 56.3,
+          "ratings": {
+            "engagement": 3,
+            "attention": 3,
+            "regulation": 4,
+            "mood": 3,
+            "cooperation": 3,
+            "independence": 3,
+            "communication": 4,
+            "transitions": 3
+          }
+        }
+      ]
+    },
+    "expected": {
+      "sessionScore": 84.4,
+      "goalAccuracy": 75,
+      "deltaLast": 12.5,
+      "deltaRolling": 20.3,
+      "rollingAverage": 64.1,
+      "trend": "up",
+      "dimensions": {
+        "engagement": {
+          "value": 5,
+          "deltaLast": 1,
+          "deltaRolling": 1.5,
+          "trend": "up"
+        },
+        "attention": {
+          "value": 4,
+          "deltaLast": 0,
+          "deltaRolling": 0.5,
+          "trend": "up"
+        },
+        "regulation": {
+          "value": 4,
+          "deltaLast": 0,
+          "deltaRolling": 0.3,
+          "trend": "up"
+        },
+        "mood": {
+          "value": 5,
+          "deltaLast": 1,
+          "deltaRolling": 1.3,
+          "trend": "up"
+        },
+        "cooperation": {
+          "value": 4,
+          "deltaLast": 0,
+          "deltaRolling": 0.5,
+          "trend": "up"
+        },
+        "independence": {
+          "value": 4,
+          "deltaLast": 1,
+          "deltaRolling": 1,
+          "trend": "up"
+        },
+        "communication": {
+          "value": 5,
+          "deltaLast": 1,
+          "deltaRolling": 1,
+          "trend": "up"
+        },
+        "transitions": {
+          "value": 4,
+          "deltaLast": 0,
+          "deltaRolling": 0.5,
+          "trend": "up"
+        }
+      },
+      "incidentCount": 0
+    }
+  },
+  {
+    "name": "five_previous_window_cap",
+    "description": "5 previous: rolling uses 4, trend uses 5 + current; the oldest only feeds the trend.",
+    "input": {
+      "ratings": {
+        "engagement": 4,
+        "attention": 4,
+        "regulation": 4,
+        "mood": 4,
+        "cooperation": 4,
+        "independence": 4,
+        "communication": 4,
+        "transitions": 4
+      },
+      "goalTrials": [],
+      "incidents": [],
+      "dimensions": [
+        {
+          "key": "engagement",
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "key": "attention",
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "key": "regulation",
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "key": "mood",
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "key": "cooperation",
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "key": "independence",
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "key": "communication",
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "key": "transitions",
+          "weight": 1,
+          "enabled": true
+        }
+      ],
+      "previous": [
+        {
+          "sessionScore": 50,
+          "ratings": {
+            "engagement": 3,
+            "attention": 3,
+            "regulation": 3,
+            "mood": 3,
+            "cooperation": 3,
+            "independence": 3,
+            "communication": 3,
+            "transitions": 3
+          }
+        },
+        {
+          "sessionScore": 50,
+          "ratings": {
+            "engagement": 3,
+            "attention": 3,
+            "regulation": 3,
+            "mood": 3,
+            "cooperation": 3,
+            "independence": 3,
+            "communication": 3,
+            "transitions": 3
+          }
+        },
+        {
+          "sessionScore": 25,
+          "ratings": {
+            "engagement": 2,
+            "attention": 2,
+            "regulation": 2,
+            "mood": 2,
+            "cooperation": 2,
+            "independence": 2,
+            "communication": 2,
+            "transitions": 2
+          }
+        },
+        {
+          "sessionScore": 25,
+          "ratings": {
+            "engagement": 2,
+            "attention": 2,
+            "regulation": 2,
+            "mood": 2,
+            "cooperation": 2,
+            "independence": 2,
+            "communication": 2,
+            "transitions": 2
+          }
+        },
+        {
+          "sessionScore": 0,
+          "ratings": {
+            "engagement": 1,
+            "attention": 1,
+            "regulation": 1,
+            "mood": 1,
+            "cooperation": 1,
+            "independence": 1,
+            "communication": 1,
+            "transitions": 1
+          }
+        }
+      ]
+    },
+    "expected": {
+      "sessionScore": 75,
+      "deltaLast": 25,
+      "deltaRolling": 37.5,
+      "rollingAverage": 37.5,
+      "trend": "up",
+      "dimensions": {
+        "engagement": {
+          "value": 4,
+          "deltaLast": 1,
+          "deltaRolling": 1.5,
+          "trend": "up"
+        },
+        "attention": {
+          "value": 4,
+          "deltaLast": 1,
+          "deltaRolling": 1.5,
+          "trend": "up"
+        },
+        "regulation": {
+          "value": 4,
+          "deltaLast": 1,
+          "deltaRolling": 1.5,
+          "trend": "up"
+        },
+        "mood": {
+          "value": 4,
+          "deltaLast": 1,
+          "deltaRolling": 1.5,
+          "trend": "up"
+        },
+        "cooperation": {
+          "value": 4,
+          "deltaLast": 1,
+          "deltaRolling": 1.5,
+          "trend": "up"
+        },
+        "independence": {
+          "value": 4,
+          "deltaLast": 1,
+          "deltaRolling": 1.5,
+          "trend": "up"
+        },
+        "communication": {
+          "value": 4,
+          "deltaLast": 1,
+          "deltaRolling": 1.5,
+          "trend": "up"
+        },
+        "transitions": {
+          "value": 4,
+          "deltaLast": 1,
+          "deltaRolling": 1.5,
+          "trend": "up"
+        }
+      },
+      "incidentCount": 0
+    }
+  },
+  {
+    "name": "seven_previous_trend_window",
+    "description": "7 previous: trend only sees the newest 5 previous + current.",
+    "input": {
+      "ratings": {
+        "engagement": 3,
+        "attention": 3,
+        "regulation": 3,
+        "mood": 3,
+        "cooperation": 3,
+        "independence": 3,
+        "communication": 3,
+        "transitions": 3
+      },
+      "goalTrials": [],
+      "incidents": [],
+      "dimensions": [
+        {
+          "key": "engagement",
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "key": "attention",
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "key": "regulation",
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "key": "mood",
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "key": "cooperation",
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "key": "independence",
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "key": "communication",
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "key": "transitions",
+          "weight": 1,
+          "enabled": true
+        }
+      ],
+      "previous": [
+        {
+          "sessionScore": 50,
+          "ratings": {
+            "engagement": 3,
+            "attention": 3,
+            "regulation": 3,
+            "mood": 3,
+            "cooperation": 3,
+            "independence": 3,
+            "communication": 3,
+            "transitions": 3
+          }
+        },
+        {
+          "sessionScore": 50,
+          "ratings": {
+            "engagement": 3,
+            "attention": 3,
+            "regulation": 3,
+            "mood": 3,
+            "cooperation": 3,
+            "independence": 3,
+            "communication": 3,
+            "transitions": 3
+          }
+        },
+        {
+          "sessionScore": 50,
+          "ratings": {
+            "engagement": 3,
+            "attention": 3,
+            "regulation": 3,
+            "mood": 3,
+            "cooperation": 3,
+            "independence": 3,
+            "communication": 3,
+            "transitions": 3
+          }
+        },
+        {
+          "sessionScore": 50,
+          "ratings": {
+            "engagement": 3,
+            "attention": 3,
+            "regulation": 3,
+            "mood": 3,
+            "cooperation": 3,
+            "independence": 3,
+            "communication": 3,
+            "transitions": 3
+          }
+        },
+        {
+          "sessionScore": 50,
+          "ratings": {
+            "engagement": 3,
+            "attention": 3,
+            "regulation": 3,
+            "mood": 3,
+            "cooperation": 3,
+            "independence": 3,
+            "communication": 3,
+            "transitions": 3
+          }
+        },
+        {
+          "sessionScore": 100,
+          "ratings": {
+            "engagement": 5,
+            "attention": 5,
+            "regulation": 5,
+            "mood": 5,
+            "cooperation": 5,
+            "independence": 5,
+            "communication": 5,
+            "transitions": 5
+          }
+        },
+        {
+          "sessionScore": 0,
+          "ratings": {
+            "engagement": 1,
+            "attention": 1,
+            "regulation": 1,
+            "mood": 1,
+            "cooperation": 1,
+            "independence": 1,
+            "communication": 1,
+            "transitions": 1
+          }
+        }
+      ]
+    },
+    "expected": {
+      "sessionScore": 50,
+      "deltaLast": 0,
+      "deltaRolling": 0,
+      "rollingAverage": 50,
+      "trend": "flat",
+      "dimensions": {
+        "engagement": {
+          "value": 3,
+          "deltaLast": 0,
+          "deltaRolling": 0,
+          "trend": "flat"
+        },
+        "attention": {
+          "value": 3,
+          "deltaLast": 0,
+          "deltaRolling": 0,
+          "trend": "flat"
+        },
+        "regulation": {
+          "value": 3,
+          "deltaLast": 0,
+          "deltaRolling": 0,
+          "trend": "flat"
+        },
+        "mood": {
+          "value": 3,
+          "deltaLast": 0,
+          "deltaRolling": 0,
+          "trend": "flat"
+        },
+        "cooperation": {
+          "value": 3,
+          "deltaLast": 0,
+          "deltaRolling": 0,
+          "trend": "flat"
+        },
+        "independence": {
+          "value": 3,
+          "deltaLast": 0,
+          "deltaRolling": 0,
+          "trend": "flat"
+        },
+        "communication": {
+          "value": 3,
+          "deltaLast": 0,
+          "deltaRolling": 0,
+          "trend": "flat"
+        },
+        "transitions": {
+          "value": 3,
+          "deltaLast": 0,
+          "deltaRolling": 0,
+          "trend": "flat"
+        }
+      },
+      "incidentCount": 0
+    }
+  },
+  {
+    "name": "weighted_dimensions",
+    "description": "Per-school weights (3, 1, 2, 0.5) change the score.",
+    "input": {
+      "ratings": {
+        "engagement": 5,
+        "attention": 2,
+        "regulation": 4,
+        "mood": 1
+      },
+      "goalTrials": [],
+      "incidents": [],
+      "dimensions": [
+        {
+          "key": "engagement",
+          "weight": 3,
+          "enabled": true
+        },
+        {
+          "key": "attention",
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "key": "regulation",
+          "weight": 2,
+          "enabled": true
+        },
+        {
+          "key": "mood",
+          "weight": 0.5,
+          "enabled": true
+        }
+      ],
+      "previous": [
+        {
+          "sessionScore": 60.2,
+          "ratings": {
+            "engagement": 4,
+            "attention": 3,
+            "regulation": 3,
+            "mood": 2
+          }
+        },
+        {
+          "sessionScore": 55.1,
+          "ratings": {
+            "engagement": 3,
+            "attention": 3,
+            "regulation": 3,
+            "mood": 3
+          }
+        }
+      ]
+    },
+    "expected": {
+      "sessionScore": 73.1,
+      "deltaLast": 12.9,
+      "deltaRolling": 15.4,
+      "rollingAverage": 57.7,
+      "trend": "up",
+      "dimensions": {
+        "engagement": {
+          "value": 5,
+          "deltaLast": 1,
+          "deltaRolling": 1.5,
+          "trend": "up"
+        },
+        "attention": {
+          "value": 2,
+          "deltaLast": -1,
+          "deltaRolling": -1,
+          "trend": "down"
+        },
+        "regulation": {
+          "value": 4,
+          "deltaLast": 1,
+          "deltaRolling": 1,
+          "trend": "up"
+        },
+        "mood": {
+          "value": 1,
+          "deltaLast": -1,
+          "deltaRolling": -1.5,
+          "trend": "down"
+        }
+      },
+      "incidentCount": 0
+    }
+  },
+  {
+    "name": "disabled_and_zero_weight_dimensions",
+    "description": "Disabled dims are ignored everywhere; an enabled weight-0 dim is excluded from the score but still gets deltas.",
+    "input": {
+      "ratings": {
+        "engagement": 4,
+        "attention": 1,
+        "mood": 2,
+        "transitions": 5
+      },
+      "goalTrials": [],
+      "incidents": [],
+      "dimensions": [
+        {
+          "key": "engagement",
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "key": "attention",
+          "weight": 1,
+          "enabled": false
+        },
+        {
+          "key": "mood",
+          "weight": 0,
+          "enabled": true
+        },
+        {
+          "key": "transitions",
+          "weight": 2,
+          "enabled": true
+        }
+      ],
+      "previous": [
+        {
+          "sessionScore": 80,
+          "ratings": {
+            "engagement": 3,
+            "attention": 5,
+            "mood": 4,
+            "transitions": 4
+          }
+        },
+        {
+          "sessionScore": 70,
+          "ratings": {
+            "engagement": 3,
+            "attention": 5,
+            "mood": 3,
+            "transitions": 4
+          }
+        }
+      ]
+    },
+    "expected": {
+      "sessionScore": 91.7,
+      "deltaLast": 11.7,
+      "deltaRolling": 16.7,
+      "rollingAverage": 75,
+      "trend": "up",
+      "dimensions": {
+        "engagement": {
+          "value": 4,
+          "deltaLast": 1,
+          "deltaRolling": 1,
+          "trend": "up"
+        },
+        "mood": {
+          "value": 2,
+          "deltaLast": -2,
+          "deltaRolling": -1.5,
+          "trend": "down"
+        },
+        "transitions": {
+          "value": 5,
+          "deltaLast": 1,
+          "deltaRolling": 1,
+          "trend": "up"
+        }
+      },
+      "incidentCount": 0
+    }
+  },
+  {
+    "name": "negative_deltas_half_rounding",
+    "description": "Negative .x5 values round away from zero (-1.25 -> -1.3); rolling 62.55 -> 62.6; goal accuracy 6.25 -> 6.3.",
+    "input": {
+      "ratings": {
+        "engagement": 2,
+        "attention": 2,
+        "regulation": 2,
+        "mood": 2,
+        "cooperation": 2,
+        "independence": 2,
+        "communication": 2,
+        "transitions": 2
+      },
+      "goalTrials": [
+        {
+          "attempted": 16,
+          "successful": 1
+        },
+        {
+          "attempted": 2,
+          "successful": 1
+        }
+      ],
+      "incidents": [],
+      "dimensions": [
+        {
+          "key": "engagement",
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "key": "attention",
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "key": "regulation",
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "key": "mood",
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "key": "cooperation",
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "key": "independence",
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "key": "communication",
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "key": "transitions",
+          "weight": 1,
+          "enabled": true
+        }
+      ],
+      "previous": [
+        {
+          "sessionScore": 62.6,
+          "ratings": {
+            "engagement": 3,
+            "attention": 3,
+            "regulation": 3,
+            "mood": 3,
+            "cooperation": 3,
+            "independence": 3,
+            "communication": 3,
+            "transitions": 3
+          }
+        },
+        {
+          "sessionScore": 62.5,
+          "ratings": {
+            "engagement": 3,
+            "attention": 3,
+            "regulation": 3,
+            "mood": 3,
+            "cooperation": 3,
+            "independence": 3,
+            "communication": 3,
+            "transitions": 3
+          }
+        },
+        {
+          "sessionScore": 62.5,
+          "ratings": {
+            "engagement": 4,
+            "attention": 4,
+            "regulation": 4,
+            "mood": 4,
+            "cooperation": 4,
+            "independence": 4,
+            "communication": 4,
+            "transitions": 4
+          }
+        },
+        {
+          "sessionScore": 62.5,
+          "ratings": {
+            "engagement": 3,
+            "attention": 3,
+            "regulation": 3,
+            "mood": 3,
+            "cooperation": 3,
+            "independence": 3,
+            "communication": 3,
+            "transitions": 3
+          }
+        }
+      ]
+    },
+    "expected": {
+      "sessionScore": 25,
+      "goalAccuracy": 28.2,
+      "deltaLast": -37.6,
+      "deltaRolling": -37.5,
+      "rollingAverage": 62.5,
+      "trend": "down",
+      "dimensions": {
+        "engagement": {
+          "value": 2,
+          "deltaLast": -1,
+          "deltaRolling": -1.3,
+          "trend": "down"
+        },
+        "attention": {
+          "value": 2,
+          "deltaLast": -1,
+          "deltaRolling": -1.3,
+          "trend": "down"
+        },
+        "regulation": {
+          "value": 2,
+          "deltaLast": -1,
+          "deltaRolling": -1.3,
+          "trend": "down"
+        },
+        "mood": {
+          "value": 2,
+          "deltaLast": -1,
+          "deltaRolling": -1.3,
+          "trend": "down"
+        },
+        "cooperation": {
+          "value": 2,
+          "deltaLast": -1,
+          "deltaRolling": -1.3,
+          "trend": "down"
+        },
+        "independence": {
+          "value": 2,
+          "deltaLast": -1,
+          "deltaRolling": -1.3,
+          "trend": "down"
+        },
+        "communication": {
+          "value": 2,
+          "deltaLast": -1,
+          "deltaRolling": -1.3,
+          "trend": "down"
+        },
+        "transitions": {
+          "value": 2,
+          "deltaLast": -1,
+          "deltaRolling": -1.3,
+          "trend": "down"
+        }
+      },
+      "incidentCount": 0
+    }
+  },
+  {
+    "name": "trend_up",
+    "description": "Steadily rising scores: up.",
+    "input": {
+      "ratings": {
+        "engagement": 5,
+        "attention": 5,
+        "regulation": 5,
+        "mood": 5,
+        "cooperation": 5,
+        "independence": 5,
+        "communication": 5,
+        "transitions": 5
+      },
+      "goalTrials": [],
+      "incidents": [],
+      "dimensions": [
+        {
+          "key": "engagement",
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "key": "attention",
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "key": "regulation",
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "key": "mood",
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "key": "cooperation",
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "key": "independence",
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "key": "communication",
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "key": "transitions",
+          "weight": 1,
+          "enabled": true
+        }
+      ],
+      "previous": [
+        {
+          "sessionScore": 87.5,
+          "ratings": {
+            "engagement": 4,
+            "attention": 4,
+            "regulation": 4,
+            "mood": 4,
+            "cooperation": 4,
+            "independence": 4,
+            "communication": 4,
+            "transitions": 4
+          }
+        },
+        {
+          "sessionScore": 75,
+          "ratings": {
+            "engagement": 4,
+            "attention": 4,
+            "regulation": 4,
+            "mood": 4,
+            "cooperation": 4,
+            "independence": 4,
+            "communication": 4,
+            "transitions": 4
+          }
+        },
+        {
+          "sessionScore": 62.5,
+          "ratings": {
+            "engagement": 3,
+            "attention": 3,
+            "regulation": 3,
+            "mood": 3,
+            "cooperation": 3,
+            "independence": 3,
+            "communication": 3,
+            "transitions": 3
+          }
+        },
+        {
+          "sessionScore": 50,
+          "ratings": {
+            "engagement": 3,
+            "attention": 3,
+            "regulation": 3,
+            "mood": 3,
+            "cooperation": 3,
+            "independence": 3,
+            "communication": 3,
+            "transitions": 3
+          }
+        }
+      ]
+    },
+    "expected": {
+      "sessionScore": 100,
+      "deltaLast": 12.5,
+      "deltaRolling": 31.2,
+      "rollingAverage": 68.8,
+      "trend": "up",
+      "dimensions": {
+        "engagement": {
+          "value": 5,
+          "deltaLast": 1,
+          "deltaRolling": 1.5,
+          "trend": "up"
+        },
+        "attention": {
+          "value": 5,
+          "deltaLast": 1,
+          "deltaRolling": 1.5,
+          "trend": "up"
+        },
+        "regulation": {
+          "value": 5,
+          "deltaLast": 1,
+          "deltaRolling": 1.5,
+          "trend": "up"
+        },
+        "mood": {
+          "value": 5,
+          "deltaLast": 1,
+          "deltaRolling": 1.5,
+          "trend": "up"
+        },
+        "cooperation": {
+          "value": 5,
+          "deltaLast": 1,
+          "deltaRolling": 1.5,
+          "trend": "up"
+        },
+        "independence": {
+          "value": 5,
+          "deltaLast": 1,
+          "deltaRolling": 1.5,
+          "trend": "up"
+        },
+        "communication": {
+          "value": 5,
+          "deltaLast": 1,
+          "deltaRolling": 1.5,
+          "trend": "up"
+        },
+        "transitions": {
+          "value": 5,
+          "deltaLast": 1,
+          "deltaRolling": 1.5,
+          "trend": "up"
+        }
+      },
+      "incidentCount": 0
+    }
+  },
+  {
+    "name": "trend_down",
+    "description": "Steadily falling scores: down, with negative deltas.",
+    "input": {
+      "ratings": {
+        "engagement": 1,
+        "attention": 1,
+        "regulation": 1,
+        "mood": 1,
+        "cooperation": 1,
+        "independence": 1,
+        "communication": 1,
+        "transitions": 1
+      },
+      "goalTrials": [],
+      "incidents": [],
+      "dimensions": [
+        {
+          "key": "engagement",
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "key": "attention",
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "key": "regulation",
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "key": "mood",
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "key": "cooperation",
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "key": "independence",
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "key": "communication",
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "key": "transitions",
+          "weight": 1,
+          "enabled": true
+        }
+      ],
+      "previous": [
+        {
+          "sessionScore": 25,
+          "ratings": {
+            "engagement": 2,
+            "attention": 2,
+            "regulation": 2,
+            "mood": 2,
+            "cooperation": 2,
+            "independence": 2,
+            "communication": 2,
+            "transitions": 2
+          }
+        },
+        {
+          "sessionScore": 43.8,
+          "ratings": {
+            "engagement": 3,
+            "attention": 3,
+            "regulation": 3,
+            "mood": 3,
+            "cooperation": 3,
+            "independence": 3,
+            "communication": 3,
+            "transitions": 3
+          }
+        },
+        {
+          "sessionScore": 56.3,
+          "ratings": {
+            "engagement": 3,
+            "attention": 3,
+            "regulation": 3,
+            "mood": 3,
+            "cooperation": 3,
+            "independence": 3,
+            "communication": 3,
+            "transitions": 3
+          }
+        },
+        {
+          "sessionScore": 68.8,
+          "ratings": {
+            "engagement": 4,
+            "attention": 4,
+            "regulation": 4,
+            "mood": 4,
+            "cooperation": 4,
+            "independence": 4,
+            "communication": 4,
+            "transitions": 4
+          }
+        },
+        {
+          "sessionScore": 81.3,
+          "ratings": {
+            "engagement": 4,
+            "attention": 4,
+            "regulation": 4,
+            "mood": 4,
+            "cooperation": 4,
+            "independence": 4,
+            "communication": 4,
+            "transitions": 4
+          }
+        }
+      ]
+    },
+    "expected": {
+      "sessionScore": 0,
+      "deltaLast": -25,
+      "deltaRolling": -48.5,
+      "rollingAverage": 48.5,
+      "trend": "down",
+      "dimensions": {
+        "engagement": {
+          "value": 1,
+          "deltaLast": -1,
+          "deltaRolling": -2,
+          "trend": "down"
+        },
+        "attention": {
+          "value": 1,
+          "deltaLast": -1,
+          "deltaRolling": -2,
+          "trend": "down"
+        },
+        "regulation": {
+          "value": 1,
+          "deltaLast": -1,
+          "deltaRolling": -2,
+          "trend": "down"
+        },
+        "mood": {
+          "value": 1,
+          "deltaLast": -1,
+          "deltaRolling": -2,
+          "trend": "down"
+        },
+        "cooperation": {
+          "value": 1,
+          "deltaLast": -1,
+          "deltaRolling": -2,
+          "trend": "down"
+        },
+        "independence": {
+          "value": 1,
+          "deltaLast": -1,
+          "deltaRolling": -2,
+          "trend": "down"
+        },
+        "communication": {
+          "value": 1,
+          "deltaLast": -1,
+          "deltaRolling": -2,
+          "trend": "down"
+        },
+        "transitions": {
+          "value": 1,
+          "deltaLast": -1,
+          "deltaRolling": -2,
+          "trend": "down"
+        }
+      },
+      "incidentCount": 0
+    }
+  },
+  {
+    "name": "trend_flat_noisy",
+    "description": "Noisy but level series: flat.",
+    "input": {
+      "ratings": {
+        "engagement": 3,
+        "attention": 4,
+        "regulation": 3,
+        "mood": 3,
+        "cooperation": 4,
+        "independence": 3,
+        "communication": 3,
+        "transitions": 3
+      },
+      "goalTrials": [],
+      "incidents": [],
+      "dimensions": [
+        {
+          "key": "engagement",
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "key": "attention",
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "key": "regulation",
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "key": "mood",
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "key": "cooperation",
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "key": "independence",
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "key": "communication",
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "key": "transitions",
+          "weight": 1,
+          "enabled": true
+        }
+      ],
+      "previous": [
+        {
+          "sessionScore": 56.3,
+          "ratings": {
+            "engagement": 4,
+            "attention": 3,
+            "regulation": 3,
+            "mood": 4,
+            "cooperation": 3,
+            "independence": 3,
+            "communication": 3,
+            "transitions": 3
+          }
+        },
+        {
+          "sessionScore": 53.1,
+          "ratings": {
+            "engagement": 3,
+            "attention": 3,
+            "regulation": 4,
+            "mood": 3,
+            "cooperation": 3,
+            "independence": 3,
+            "communication": 4,
+            "transitions": 3
+          }
+        },
+        {
+          "sessionScore": 59.4,
+          "ratings": {
+            "engagement": 4,
+            "attention": 4,
+            "regulation": 3,
+            "mood": 3,
+            "cooperation": 4,
+            "independence": 3,
+            "communication": 3,
+            "transitions": 3
+          }
+        }
+      ]
+    },
+    "expected": {
+      "sessionScore": 56.3,
+      "deltaLast": 0,
+      "deltaRolling": 0,
+      "rollingAverage": 56.3,
+      "trend": "flat",
+      "dimensions": {
+        "engagement": {
+          "value": 3,
+          "deltaLast": -1,
+          "deltaRolling": -0.7,
+          "trend": "down"
+        },
+        "attention": {
+          "value": 4,
+          "deltaLast": 1,
+          "deltaRolling": 0.7,
+          "trend": "flat"
+        },
+        "regulation": {
+          "value": 3,
+          "deltaLast": 0,
+          "deltaRolling": -0.3,
+          "trend": "down"
+        },
+        "mood": {
+          "value": 3,
+          "deltaLast": -1,
+          "deltaRolling": -0.3,
+          "trend": "up"
+        },
+        "cooperation": {
+          "value": 4,
+          "deltaLast": 1,
+          "deltaRolling": 0.7,
+          "trend": "flat"
+        },
+        "independence": {
+          "value": 3,
+          "deltaLast": 0,
+          "deltaRolling": 0,
+          "trend": "flat"
+        },
+        "communication": {
+          "value": 3,
+          "deltaLast": 0,
+          "deltaRolling": -0.3,
+          "trend": "down"
+        },
+        "transitions": {
+          "value": 3,
+          "deltaLast": 0,
+          "deltaRolling": 0,
+          "trend": "flat"
+        }
+      },
+      "incidentCount": 0
+    }
+  },
+  {
+    "name": "trend_threshold_float_edge",
+    "description": "Series 38.8, 36.3, 33.8, 31.3 has an exact slope of -2.5 but JS doubles give -2.499999999999999 (flat). SQL uses float8 in the same order, so both say flat.",
+    "input": {
+      "ratings": {
+        "engagement": 3,
+        "mood": 2
+      },
+      "goalTrials": [],
+      "incidents": [],
+      "dimensions": [
+        {
+          "key": "engagement",
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "key": "mood",
+          "weight": 3,
+          "enabled": true
+        }
+      ],
+      "previous": [
+        {
+          "sessionScore": 33.8,
+          "ratings": {
+            "engagement": 3,
+            "mood": 2
+          }
+        },
+        {
+          "sessionScore": 36.3,
+          "ratings": {
+            "engagement": 3,
+            "mood": 3
+          }
+        },
+        {
+          "sessionScore": 38.8,
+          "ratings": {
+            "engagement": 3,
+            "mood": 3
+          }
+        }
+      ]
+    },
+    "expected": {
+      "sessionScore": 31.3,
+      "deltaLast": -2.5,
+      "deltaRolling": -5,
+      "rollingAverage": 36.3,
+      "trend": "flat",
+      "dimensions": {
+        "engagement": {
+          "value": 3,
+          "deltaLast": 0,
+          "deltaRolling": 0,
+          "trend": "flat"
+        },
+        "mood": {
+          "value": 2,
+          "deltaLast": 0,
+          "deltaRolling": -0.7,
+          "trend": "down"
+        }
+      },
+      "incidentCount": 0
+    }
+  },
+  {
+    "name": "incidents_and_trial_edges",
+    "description": "3 incidents; trials with 0 attempts are skipped; successful > attempted is capped.",
+    "input": {
+      "ratings": {
+        "engagement": 2,
+        "attention": 2,
+        "regulation": 2,
+        "mood": 2,
+        "cooperation": 2,
+        "independence": 2,
+        "communication": 2,
+        "transitions": 2
+      },
+      "goalTrials": [
+        {
+          "attempted": 0,
+          "successful": 0
+        },
+        {
+          "attempted": 3,
+          "successful": 5
+        },
+        {
+          "attempted": 3,
+          "successful": 1
+        }
+      ],
+      "incidents": [
+        {
+          "type": "meltdown",
+          "durationSeconds": 120,
+          "antecedentTags": [
+            "transition"
+          ]
+        },
+        {
+          "type": "aggression",
+          "antecedentTags": [
+            "demand"
+          ]
+        },
+        {
+          "type": "refusal",
+          "antecedentTags": []
+        }
+      ],
+      "dimensions": [
+        {
+          "key": "engagement",
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "key": "attention",
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "key": "regulation",
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "key": "mood",
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "key": "cooperation",
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "key": "independence",
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "key": "communication",
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "key": "transitions",
+          "weight": 1,
+          "enabled": true
+        }
+      ],
+      "previous": [
+        {
+          "sessionScore": 50,
+          "ratings": {
+            "engagement": 3,
+            "attention": 3,
+            "regulation": 3,
+            "mood": 3,
+            "cooperation": 3,
+            "independence": 3,
+            "communication": 3,
+            "transitions": 3
+          },
+          "deltaRolling": -2
+        },
+        {
+          "sessionScore": 50,
+          "ratings": {
+            "engagement": 3,
+            "attention": 3,
+            "regulation": 3,
+            "mood": 3,
+            "cooperation": 3,
+            "independence": 3,
+            "communication": 3,
+            "transitions": 3
+          }
+        }
+      ]
+    },
+    "expected": {
+      "sessionScore": 25,
+      "goalAccuracy": 66.7,
+      "deltaLast": -25,
+      "deltaRolling": -25,
+      "rollingAverage": 50,
+      "trend": "down",
+      "dimensions": {
+        "engagement": {
+          "value": 2,
+          "deltaLast": -1,
+          "deltaRolling": -1,
+          "trend": "down"
+        },
+        "attention": {
+          "value": 2,
+          "deltaLast": -1,
+          "deltaRolling": -1,
+          "trend": "down"
+        },
+        "regulation": {
+          "value": 2,
+          "deltaLast": -1,
+          "deltaRolling": -1,
+          "trend": "down"
+        },
+        "mood": {
+          "value": 2,
+          "deltaLast": -1,
+          "deltaRolling": -1,
+          "trend": "down"
+        },
+        "cooperation": {
+          "value": 2,
+          "deltaLast": -1,
+          "deltaRolling": -1,
+          "trend": "down"
+        },
+        "independence": {
+          "value": 2,
+          "deltaLast": -1,
+          "deltaRolling": -1,
+          "trend": "down"
+        },
+        "communication": {
+          "value": 2,
+          "deltaLast": -1,
+          "deltaRolling": -1,
+          "trend": "down"
+        },
+        "transitions": {
+          "value": 2,
+          "deltaLast": -1,
+          "deltaRolling": -1,
+          "trend": "down"
+        }
+      },
+      "incidentCount": 3
+    }
+  },
+  {
+    "name": "sparse_previous_dimensions",
+    "description": "A dimension missing from older sessions: deltaLast from the last session only, rolling from the values that exist.",
+    "input": {
+      "ratings": {
+        "engagement": 4,
+        "attention": 4,
+        "communication": 3
+      },
+      "goalTrials": [],
+      "incidents": [],
+      "dimensions": [
+        {
+          "key": "engagement",
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "key": "attention",
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "key": "communication",
+          "weight": 1,
+          "enabled": true
+        }
+      ],
+      "previous": [
+        {
+          "sessionScore": 66.7,
+          "ratings": {
+            "engagement": 4,
+            "attention": 3
+          }
+        },
+        {
+          "sessionScore": 58.3,
+          "ratings": {
+            "engagement": 3,
+            "attention": 3,
+            "communication": 2
+          }
+        },
+        {
+          "sessionScore": 50,
+          "ratings": {
+            "engagement": 3,
+            "attention": 3,
+            "communication": 3
+          }
+        },
+        {
+          "sessionScore": 41.7,
+          "ratings": {
+            "engagement": 2,
+            "attention": 3,
+            "communication": 3
+          }
+        },
+        {
+          "sessionScore": 41.7,
+          "ratings": {
+            "engagement": 2,
+            "attention": 3,
+            "communication": 2
+          }
+        }
+      ]
+    },
+    "expected": {
+      "sessionScore": 66.7,
+      "deltaLast": 0,
+      "deltaRolling": 12.5,
+      "rollingAverage": 54.2,
+      "trend": "up",
+      "dimensions": {
+        "engagement": {
+          "value": 4,
+          "deltaLast": 0,
+          "deltaRolling": 1,
+          "trend": "up"
+        },
+        "attention": {
+          "value": 4,
+          "deltaLast": 1,
+          "deltaRolling": 1,
+          "trend": "up"
+        },
+        "communication": {
+          "value": 3,
+          "deltaRolling": 0.5,
+          "trend": "up"
+        }
+      },
+      "incidentCount": 0
+    }
+  },
+  {
+    "name": "nothing_rated",
+    "description": "No ratings at all: score 0 and no dimension entries.",
+    "input": {
+      "ratings": {},
+      "goalTrials": [],
+      "incidents": [],
+      "dimensions": [
+        {
+          "key": "engagement",
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "key": "attention",
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "key": "regulation",
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "key": "mood",
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "key": "cooperation",
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "key": "independence",
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "key": "communication",
+          "weight": 1,
+          "enabled": true
+        },
+        {
+          "key": "transitions",
+          "weight": 1,
+          "enabled": true
+        }
+      ],
+      "previous": [
+        {
+          "sessionScore": 50,
+          "ratings": {
+            "engagement": 3,
+            "attention": 3,
+            "regulation": 3,
+            "mood": 3,
+            "cooperation": 3,
+            "independence": 3,
+            "communication": 3,
+            "transitions": 3
+          }
+        },
+        {
+          "sessionScore": 40,
+          "ratings": {
+            "engagement": 3,
+            "attention": 3,
+            "regulation": 3,
+            "mood": 3,
+            "cooperation": 3,
+            "independence": 3,
+            "communication": 3,
+            "transitions": 3
+          }
+        }
+      ]
+    },
+    "expected": {
+      "sessionScore": 0,
+      "deltaLast": -50,
+      "deltaRolling": -45,
+      "rollingAverage": 45,
+      "trend": "down",
+      "dimensions": {},
+      "incidentCount": 0
+    }
+  }
+]
