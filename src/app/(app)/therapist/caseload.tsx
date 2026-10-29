@@ -1,6 +1,6 @@
-// Owner: W4. Placeholder until the feature lands.
-import { Placeholder } from '@/components/Placeholder';
+// Owner: W4 (children/goals/progress/people).
+import { CaseloadScreen } from '@/features/children/screens/CaseloadScreen';
 
 export default function Screen() {
-  return <Placeholder title="Caseload" back={false} />;
+  return <CaseloadScreen />;
 }

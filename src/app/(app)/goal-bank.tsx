@@ -1,6 +1,6 @@
-// Owner: W4. Placeholder until the feature lands.
-import { Placeholder } from '@/components/Placeholder';
+// Owner: W4 (children/goals/progress/people).
+import { GoalBankScreen } from '@/features/goals/screens/GoalBankScreen';
 
 export default function Screen() {
-  return <Placeholder title="Goal bank" back={true} />;
+  return <GoalBankScreen />;
 }
