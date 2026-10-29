@@ -23,7 +23,7 @@ import {
   splitList,
   toMinutes,
 } from './normalize';
-import { normalizedPhone, type RefKind, type Resolver } from './resolve';
+import type { RefKind, Resolver } from './resolve';
 import type { RowIssue, UnresolvedRef } from './validate';
 
 export const issue = (code: string, column?: string, params?: RowIssue['params']): RowIssue => (params ? { code, column, params } : { code, column });
@@ -143,7 +143,7 @@ function validateChild(get: (k: string) => string, env: Env): RowDraft {
   if (d.values.fullName && d.values.dob) {
     const n = normalizeName(d.values.fullName);
     d.key = `${n}|${d.values.dob}`;
-    const same = env.ctx.children.filter((c) => normalizeName(c.fullName) === n);
+    const same = env.resolver.index.childrenByName.get(n) ?? [];
     const existing = same.find((c) => c.dob === d.values.dob);
     if (existing) d.existingId = existing.id;
     else if (same.length) d.warnings.push(issue('child_same_name_exists', 'dob', { name: same[0].fullName, date: same[0].dob }));
@@ -203,7 +203,7 @@ function validateStaff(get: (k: string) => string, env: Env): RowDraft {
 
   if (d.values.phone) {
     d.key = d.values.phone;
-    const existing = env.ctx.therapists.find((t) => normalizedPhone(t.phone) === d.values.phone);
+    const existing = env.resolver.index.therapistByPhone.get(d.values.phone);
     if (existing) {
       d.existingId = existing.id;
       if (d.values.fullName && normalizeName(existing.name) !== normalizeName(d.values.fullName)) {
@@ -230,7 +230,7 @@ function validateParent(get: (k: string) => string, env: Env): RowDraft {
   }
 
   if (d.values.phone) {
-    const existing = env.ctx.parents.find((p) => normalizedPhone(p.phone) === d.values.phone);
+    const existing = env.resolver.index.parentByPhone.get(d.values.phone);
     if (existing) d.existingId = existing.id;
     if (d.values.childId) d.key = `${d.values.phone}|${d.values.childId}`;
   }

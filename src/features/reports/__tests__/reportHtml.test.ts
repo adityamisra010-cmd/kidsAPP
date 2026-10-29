@@ -105,8 +105,9 @@ describe('buildReportHtml (staff)', () => {
     expect(text).toContain('Attendance 91%');
   });
 
-  it('draws one chart per therapy with scores and trend words', () => {
-    expect(html.match(/<svg /g)).toHaveLength(2);
+  it('draws a chart for each therapy with 2+ sessions, with scores and trend words', () => {
+    // Occupational Therapy has a single session: no chart, just the numbers.
+    expect(html.match(/<svg /g)).toHaveLength(1);
     expect(html).toContain('<polyline');
     expect(text).toContain('Average Session Score 65/100');
     expect(text).toContain('↑ Improving');

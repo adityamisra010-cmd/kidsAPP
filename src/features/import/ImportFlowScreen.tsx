@@ -1,6 +1,6 @@
 import { router } from 'expo-router';
 import { ArrowRight, Upload } from 'lucide-react-native';
-import { useMemo, useState, type ReactNode } from 'react';
+import { useEffect, useState, type ReactNode } from 'react';
 import { useTranslation } from 'react-i18next';
 
 import type { ImportKind, ImportSummary } from '@/domain/types';
@@ -18,7 +18,7 @@ import { pickSpreadsheet, readSpreadsheet, type PickedFile } from './file';
 import { autoMap, missingRequired, type ColumnMapping } from './mapping';
 import { ImportFileError, type ImportFileErrorCode, type ParsedSheet } from './parse';
 import { useCommitImport, useImportContext } from './queries';
-import { toImportRows, validateRows, type RefKind, type Resolutions } from './validate';
+import { toImportRows, validateRows, type RefKind, type Resolutions, type ValidationResult } from './validate';
 
 export function ImportFlowScreen({ kind }: { kind?: string }) {
   const { t } = useTranslation('import');
@@ -53,10 +53,15 @@ function ImportFlow({ kind }: { kind: ImportKind }) {
   const ctx = useImportContext();
   const commit = useCommitImport();
 
-  const result = useMemo(
-    () => (step === 'check' && sheet && ctx.data ? validateRows(kind, sheet.rows, mapping, ctx.data, { resolutions }) : null),
-    [step, sheet, ctx.data, kind, mapping, resolutions],
-  );
+  // Validation of a big file takes a moment: run it after the Check step has painted its skeleton,
+  // and keep showing the previous result while a "Did you mean" choice is re-checked.
+  const [result, setResult] = useState<ValidationResult | null>(null);
+  useEffect(() => {
+    if (step !== 'check' || !sheet || !ctx.data) return;
+    const data = ctx.data;
+    const timer = setTimeout(() => setResult(validateRows(kind, sheet.rows, mapping, data, { resolutions })), 0);
+    return () => clearTimeout(timer);
+  }, [step, sheet, ctx.data, kind, mapping, resolutions]);
 
   const reset = () => {
     setStep('file');
@@ -66,6 +71,7 @@ function ImportFlow({ kind }: { kind: ImportKind }) {
     setMapping({});
     setResolutions({});
     setSummary(null);
+    setResult(null);
   };
 
   const pick = async () => {
@@ -113,7 +119,10 @@ function ImportFlow({ kind }: { kind: ImportKind }) {
 
   const onBack = () => {
     if (step === 'match') setStep('file');
-    else if (step === 'check') setStep('match');
+    else if (step === 'check') {
+      setResult(null);
+      setStep('match');
+    }
     else if (router.canGoBack()) router.back();
     else router.replace('/import');
   };
@@ -159,10 +168,10 @@ function ImportFlow({ kind }: { kind: ImportKind }) {
       {step === 'file' ? <ChooseFileStep picked={picked} sheet={sheet} reading={reading} error={fileError} onPick={() => void pick()} /> : null}
       {step === 'match' && sheet ? <MatchColumnsStep kind={kind} sheet={sheet} mapping={mapping} onChange={setMapping} /> : null}
       {step === 'check' ? (
-        ctx.isPending ? (
-          <SkeletonList rows={4} />
-        ) : ctx.error || !result ? (
+        ctx.error ? (
           <ErrorState error={ctx.error} onRetry={() => void ctx.refetch()} />
+        ) : !result ? (
+          <SkeletonList rows={4} />
         ) : (
           <CheckStep kind={kind} result={result} onResolve={resolve} />
         )

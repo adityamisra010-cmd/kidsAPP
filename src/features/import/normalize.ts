@@ -129,7 +129,7 @@ export function normalizeRelation(raw: string): string {
   const t = normalizeHeader(raw);
   if (!t) return 'Parent';
   if (RELATIONS[t]) return RELATIONS[t];
-  return cleanText(raw).replace(/\b\p{L}/gu, (c) => c.toUpperCase());
+  return cleanText(raw).replace(/\b[a-z]/g, (c) => c.toUpperCase());
 }
 // ---------------------------------------------------------------------------
 // Fuzzy matching ("Did you mean …?")

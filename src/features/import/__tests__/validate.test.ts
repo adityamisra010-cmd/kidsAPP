@@ -281,6 +281,28 @@ describe('schedule', () => {
   });
 });
 
+describe('large files', () => {
+  it('validates 3,000 rows against a big school quickly', () => {
+    const big: ImportContext = {
+      therapists: ctx.therapists,
+      therapyTypes: ctx.therapyTypes,
+      children: Array.from({ length: 600 }, (_, i) => ({ id: `c${i}`, fullName: `Child Number${i} Kumar`, dob: '2018-01-01' })),
+      parents: Array.from({ length: 1200 }, (_, i) => ({ id: `p${i}`, name: `Parent ${i}`, phone: `+9190000${String(i).padStart(5, '0')}` })),
+    };
+    const lines = Array.from(
+      { length: 3000 },
+      (_, i) => `Parent ${i},90000${String(i).padStart(5, '0')},${i % 3 === 0 ? `Unknown Kid${i}` : `Child Number${i % 600} Kumar`}`,
+    );
+    const started = Date.now();
+    const r = run('parents', `Parent Name,Mobile,Child Name\n${lines.join('\n')}\n`, {}, big);
+    expect(Date.now() - started).toBeLessThan(4000);
+    expect(r.counts.total).toBe(3000);
+    expect(r.counts.error).toBe(1000);
+    // Known mobiles (first 1,200) whose child was found are updates.
+    expect(r.counts.update).toBe(800);
+  });
+});
+
 describe('toImportRows', () => {
   it('sends only new and updated rows, with existing ids', () => {
     const r = run('children', 'Name,DOB\nAarav Sharma,14/03/2019\nNew Kid,05/06/2019\nNew Kid,05/06/2019\n,\nBad,99/99/2019\n');

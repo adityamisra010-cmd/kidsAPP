@@ -102,7 +102,7 @@ function therapySection(m: ReportModel, o: ReportHtmlOptions): string {
           const meta = [t('reports:pdf.sessions', { count: th.sessionsCount })];
           if (th.averageScore != null) meta.push(t('reports:pdf.averageScore', { score: th.averageScore }));
           const chart =
-            m.audience === 'staff' && th.points.length
+            m.audience === 'staff' && th.points.length > 1
               ? lineChartSvg(th.points, {
                   color,
                   gridColor: c.border,

@@ -21,13 +21,19 @@ export function cleanText(raw: unknown): string {
     .trim();
 }
 
+/**
+ * Punctuation, symbols and spaces (ASCII, Latin-1, general/CJK/full-width punctuation, Devanagari
+ * danda). Spelled out instead of \p{L} classes, which Babel expands into huge, slow regexes.
+ */
+const SEPARATORS = /[\s!-/:-@[-`{-~\u00A0-\u00BF\u2000-\u206F\u3000-\u303F\uFF01-\uFF0F\u0964\u0965]+/g;
+
 /** Header comparison form: lower-case, no bracketed hints, punctuation → space. */
 export function normalizeHeader(raw: string): string {
   return cleanText(raw)
     .toLowerCase()
     .replace(/\([^)]*\)|\[[^\]]*\]/g, ' ')
     .replace(/['’`]/g, '')
-    .replace(/[^\p{L}\p{N}\p{M}]+/gu, ' ')
+    .replace(SEPARATORS, ' ')
     .trim();
 }
 
@@ -38,7 +44,7 @@ export function normalizeName(raw: string): string {
   const words = cleanText(raw)
     .toLowerCase()
     .replace(/['’`]/g, '')
-    .replace(/[^\p{L}\p{N}\p{M}]+/gu, ' ')
+    .replace(SEPARATORS, ' ')
     .trim()
     .split(' ')
     .filter(Boolean);
@@ -47,7 +53,8 @@ export function normalizeName(raw: string): string {
 }
 
 export function hasLetter(raw: string): boolean {
-  return /\p{L}/u.test(raw);
+  // Latin (with accents), Arabic/Urdu and the Indic scripts.
+  return /[A-Za-z\u00C0-\u024F\u0600-\u06FF\u0900-\u0DFF]/.test(raw);
 }
 
 /** Splits "Speech; OT / Physio" style lists (not on "&"/"and": "Speech & Language Therapy" is one name). */
