@@ -1,6 +1,6 @@
-// Owner: W7. Placeholder until the feature lands.
-import { Placeholder } from '@/components/Placeholder';
+// Owner: W7 (reports, import, school settings).
+import { TherapyTypesScreen } from '@/features/school/TherapyTypesScreen';
 
 export default function Screen() {
-  return <Placeholder title="Therapy types" back={true} />;
+  return <TherapyTypesScreen />;
 }

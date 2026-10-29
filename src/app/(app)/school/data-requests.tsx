@@ -1,6 +1,6 @@
-// Owner: W7. Placeholder until the feature lands.
-import { Placeholder } from '@/components/Placeholder';
+// Owner: W7 (reports, import, school settings).
+import { DataRequestsScreen } from '@/features/school/DataRequestsScreen';
 
 export default function Screen() {
-  return <Placeholder title="Data requests" back={true} />;
+  return <DataRequestsScreen />;
 }

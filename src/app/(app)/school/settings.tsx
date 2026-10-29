@@ -1,6 +1,6 @@
-// Owner: W7. Placeholder until the feature lands.
-import { Placeholder } from '@/components/Placeholder';
+// Owner: W7 (reports, import, school settings).
+import { SchoolSettingsScreen } from '@/features/school/SchoolSettingsScreen';
 
 export default function Screen() {
-  return <Placeholder title="School settings" back={true} />;
+  return <SchoolSettingsScreen />;
 }
