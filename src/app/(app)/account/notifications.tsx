@@ -1,6 +1,5 @@
-// Owner: W1. Placeholder until the feature lands.
-import { Placeholder } from '@/components/Placeholder';
+import { NotificationSettingsScreen } from '@/features/account/NotificationSettingsScreen';
 
 export default function Screen() {
-  return <Placeholder title="Notification settings" back={true} />;
+  return <NotificationSettingsScreen />;
 }

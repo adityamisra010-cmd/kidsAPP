@@ -1,6 +1,5 @@
-// Owner: W1. Placeholder until the feature lands.
-import { Placeholder } from '@/components/Placeholder';
+import { ContactScreen } from '@/features/account/ContactScreen';
 
 export default function Screen() {
-  return <Placeholder title="Contact school" back={true} />;
+  return <ContactScreen />;
 }

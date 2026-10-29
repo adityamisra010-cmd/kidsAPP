@@ -1,6 +1,5 @@
-// Owner: W1. Placeholder until the feature lands.
-import { Placeholder } from '@/components/Placeholder';
+import { ProfileScreen } from '@/features/account/ProfileScreen';
 
 export default function Screen() {
-  return <Placeholder title="My profile" back={true} />;
+  return <ProfileScreen />;
 }
