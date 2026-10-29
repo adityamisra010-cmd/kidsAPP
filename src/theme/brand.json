@@ -1,0 +1,11 @@
+{
+  "appName": "My Kid's Tracker",
+  "shortName": "MyKids",
+  "tagline": "Every session, clearly recorded. Every family, in the loop.",
+  "androidPackage": "com.mykidstracker.app",
+  "scheme": "mykidstracker",
+  "primary": "#B85418",
+  "background": "#F7F1E8",
+  "supportEmail": "support@mykidstracker.app",
+  "privacyPolicyUrl": "https://mykidstracker.app/privacy"
+}

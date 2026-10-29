@@ -1,0 +1,15 @@
+{
+  "_review": "TODO: machine-drafted Hindi, needs human review",
+  "commTools": { "speech": "बोलकर", "sign": "सांकेतिक भाषा", "pecs": "PECS (चित्र कार्ड)", "aac_device": "AAC डिवाइस", "gestures": "इशारे", "pointing": "उँगली से दिखाना", "visual_schedule": "चित्रों वाला टाइमटेबल" },
+  "commModes": { "verbal": "बोलकर बात करता/करती है", "limited_verbal": "थोड़ा बोलता/बोलती है", "non_verbal": "बोलकर बात नहीं करता/करती" },
+  "reinforcers": { "bubbles": "बुलबुले", "music": "संगीत", "songs": "गाने", "favourite_toy": "पसंदीदा खिलौना", "tablet_time": "टैबलेट का समय", "praise": "तारीफ़", "high_five": "हाई फ़ाइव", "stickers": "स्टिकर", "swing": "झूला", "snack": "थोड़ा नाश्ता", "cars": "खिलौना गाड़ियाँ", "blocks": "ब्लॉक", "tickles": "गुदगुदी", "books": "चित्रों वाली किताबें" },
+  "triggers": { "loud_sounds": "तेज़ आवाज़ें", "transitions": "एक काम से दूसरे पर जाना", "waiting": "इंतज़ार करना", "textures": "कुछ खास बनावट", "crowds": "भीड़", "bright_lights": "तेज़ रोशनी", "being_touched": "बिना बताए छूना", "change_in_routine": "दिनचर्या में बदलाव", "hunger": "भूख", "tiredness": "थकान", "no_answer": "मना किया जाना" },
+  "calming": { "deep_pressure": "गहरा दबाव", "quiet_corner": "शांत कोना", "counting": "साथ में गिनती", "favourite_song": "पसंदीदा गाना", "weighted_blanket": "भारी कंबल", "swinging": "झूलना", "breathing": "धीरे साँस लेना", "visual_timer": "विज़ुअल टाइमर", "fidget": "फ़िजेट खिलौना", "water_break": "पानी का ब्रेक" },
+  "antecedents": { "transition": "काम बदलना", "demand": "काम की माँग", "sensory": "संवेदी कारण", "waiting": "इंतज़ार", "denied_item": "चीज़ नहीं मिली", "peer": "दूसरा बच्चा", "unknown": "साफ़ नहीं" },
+  "worked": { "visual_schedule": "चित्रों वाला टाइमटेबल", "first_then": "पहले–फिर बोर्ड", "timer": "टाइमर", "movement_break": "चलने-फिरने का ब्रेक", "reinforcer_choice": "इनाम चुनने देना", "modelling": "करके दिखाना", "short_tasks": "छोटे काम", "quiet_room": "शांत कमरा", "parent_present": "अभिभावक साथ", "song_cue": "गाने से संकेत", "hand_over_hand": "हाथ पकड़कर करवाना", "choice_of_two": "दो में से चुनना" },
+  "notWorked": { "long_tasks": "लंबे काम", "noisy_room": "शोर वाला कमरा", "verbal_only_instructions": "सिर्फ़ बोलकर निर्देश", "waiting_turns": "बारी का इंतज़ार", "new_material": "नई सामग्री", "tablet_reinforcer": "टैबलेट इनाम के रूप में", "group_activity": "समूह गतिविधि", "touch_prompts": "छूकर संकेत" },
+  "incidents": { "meltdown": "बहुत ज़्यादा परेशान होना", "aggression": "आक्रामकता", "self_injury": "खुद को चोट", "elopement": "भाग जाना", "refusal": "मना करना", "other": "अन्य" },
+  "domains": { "communication": "बातचीत", "fine_motor": "हाथों के बारीक काम", "gross_motor": "शरीर की बड़ी हरकतें", "self_care": "अपना काम खुद", "social": "दूसरों से मेलजोल", "behaviour": "व्यवहार", "cognition": "सीखना और सोचना", "sensory": "संवेदी संतुलन" },
+  "therapyTypes": { "speech": "स्पीच थेरेपी", "occupational": "ऑक्यूपेशनल थेरेपी", "behaviour": "बिहेवियर थेरेपी (ABA)", "special_ed": "स्पेशल एजुकेशन", "physio": "फ़िज़ियोथेरेपी", "audiology": "ऑडियोलॉजी सहायता" },
+  "regulation": { "under": "कम ऊर्जा", "regulated": "संतुलित", "over": "बहुत उत्तेजित" }
+}

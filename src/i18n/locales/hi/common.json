@@ -1,0 +1,126 @@
+{
+  "_review": "TODO: machine-drafted Hindi, needs human review",
+  "appName": "My Kid's Tracker",
+  "actions": {
+    "save": "सेव करें",
+    "cancel": "रद्द करें",
+    "done": "हो गया",
+    "next": "आगे",
+    "back": "पीछे",
+    "close": "बंद करें",
+    "edit": "बदलें",
+    "delete": "हटाएँ",
+    "retry": "फिर से कोशिश करें",
+    "confirm": "पक्का करें",
+    "continue": "जारी रखें",
+    "seeAll": "सभी देखें",
+    "add": "जोड़ें",
+    "remove": "हटाएँ",
+    "send": "भेजें",
+    "share": "शेयर करें",
+    "search": "खोजें",
+    "filter": "फ़िल्टर",
+    "apply": "लागू करें",
+    "clear": "साफ़ करें",
+    "yes": "हाँ",
+    "no": "नहीं",
+    "ok": "ठीक है",
+    "view": "देखें",
+    "open": "खोलें",
+    "call": "कॉल करें",
+    "download": "डाउनलोड",
+    "upload": "अपलोड",
+    "select": "चुनें",
+    "change": "बदलें",
+    "addCustom": "अपना जोड़ें",
+    "skip": "छोड़ें"
+  },
+  "time": {
+    "today": "आज",
+    "tomorrow": "कल",
+    "yesterday": "बीता कल",
+    "thisWeek": "इस हफ़्ते",
+    "minutes": "{{count}} मिनट",
+    "minutes_other": "{{count}} मिनट"
+  },
+  "roles": {
+    "platform_admin": "प्लेटफ़ॉर्म एडमिन",
+    "school_admin": "स्कूल एडमिन",
+    "coordinator": "कोऑर्डिनेटर",
+    "therapist": "थेरेपिस्ट",
+    "parent": "अभिभावक"
+  },
+  "trend": {
+    "up": "सुधार हो रहा है",
+    "flat": "स्थिर",
+    "down": "कमी आ रही है"
+  },
+  "change": {
+    "better": "पिछली बार से बेहतर",
+    "same": "लगभग पहले जैसा",
+    "harder": "इस बार थोड़ा मुश्किल"
+  },
+  "changeShort": {
+    "better": "बेहतर",
+    "same": "स्थिर",
+    "harder": "मुश्किल"
+  },
+  "status": {
+    "confirmed": "पक्का",
+    "rescheduled": "समय बदला",
+    "substitute": "दूसरे थेरेपिस्ट",
+    "cancelled": "रद्द",
+    "completed": "पूरा हुआ",
+    "absent": "अनुपस्थित",
+    "makeup": "मेक-अप सत्र"
+  },
+  "logState": {
+    "upcoming": "आने वाला",
+    "in_progress": "चल रहा है",
+    "logged": "दर्ज",
+    "not_logged": "दर्ज नहीं",
+    "not_applicable": ""
+  },
+  "sync": {
+    "synced": "सभी बदलाव सेव हैं",
+    "pending": "{{count}} सिंक होना बाकी",
+    "pending_other": "{{count}} सिंक होना बाकी",
+    "syncing": "सिंक हो रहा है…",
+    "offline": "आप ऑफ़लाइन हैं। बदलाव फ़ोन में सेव हैं और बाद में सिंक होंगे।",
+    "failed": "कुछ बदलाव सिंक नहीं हुए",
+    "savedOffline": "फ़ोन में सेव हो गया। ऑनलाइन होने पर सिंक होगा।"
+  },
+  "states": {
+    "loading": "लोड हो रहा है…",
+    "errorTitle": "कुछ गड़बड़ हो गई",
+    "errorBody": "यह लोड नहीं हो सका। कनेक्शन जाँचें और फिर कोशिश करें।",
+    "emptyTitle": "अभी यहाँ कुछ नहीं है",
+    "offlineBanner": "आप ऑफ़लाइन हैं। सेव की हुई जानकारी दिख रही है।"
+  },
+  "a11y": {
+    "back": "पीछे जाएँ",
+    "close": "बंद करें",
+    "selected": "चुना गया",
+    "notSelected": "नहीं चुना गया",
+    "opensDetails": "विवरण खोलता है"
+  },
+  "demoBadge": "डेमो",
+  "required": "ज़रूरी",
+  "optional": "वैकल्पिक",
+  "tabs": {
+    "home": "होम",
+    "calendar": "कैलेंडर",
+    "myChild": "मेरा बच्चा",
+    "practice": "अभ्यास",
+    "more": "और",
+    "today": "आज",
+    "caseload": "बच्चे",
+    "reviews": "समीक्षा",
+    "dashboard": "डैशबोर्ड",
+    "schedule": "शेड्यूल",
+    "people": "लोग",
+    "reports": "रिपोर्ट",
+    "schools": "स्कूल",
+    "templates": "टेम्पलेट"
+  }
+}

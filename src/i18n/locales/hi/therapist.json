@@ -1,0 +1,49 @@
+{
+  "_review": "TODO: machine-drafted Hindi, needs human review",
+  "today": {
+    "greeting": {
+      "morning": "सुप्रभात, {{name}}",
+      "afternoon": "नमस्ते, {{name}}",
+      "evening": "शुभ संध्या, {{name}}"
+    },
+    "title": "आज · {{date}}",
+    "tiles": {
+      "reviews": "समीक्षा बाकी",
+      "reviewsHint": "माता-पिता के लॉग और वीडियो की समीक्षा खोलता है",
+      "messages": "अनपढ़े संदेश",
+      "messagesHint": "संदेश खोलता है",
+      "unlogged": "लॉग नहीं हुए",
+      "unloggedHint": "सिर्फ़ वे सेशन दिखाता है जिन्हें लॉग करना बाकी है। सभी देखने के लिए फिर से दबाएँ।"
+    },
+    "progress": "आज {{total}} में से {{logged}} सेशन लॉग हुए",
+    "filterActive": "लॉग करने के लिए बाकी सेशन दिख रहे हैं",
+    "showAll": "सभी दिखाएँ",
+    "agenda": "आपके सेशन",
+    "agendaHint": "ब्रीफ़ पढ़ें, सेशन लें, फिर लॉग करें।",
+    "now": "अभी",
+    "upNext": "इसके बाद",
+    "room": "{{room}}",
+    "substitute": "सब्स्टीट्यूट",
+    "briefRequired": "ब्रीफ़ पढ़ना ज़रूरी",
+    "briefRead": "ब्रीफ़ पढ़ लिया",
+    "checkinReceived": "चेक-इन मिला",
+    "coveringFor": "{{name}} की जगह",
+    "brief": "ब्रीफ़",
+    "log": "लॉग करें",
+    "viewLog": "लॉग देखें",
+    "readBriefFirst": "पहले ब्रीफ़ पढ़ें",
+    "empty": {
+      "title": "आज कोई सेशन नहीं",
+      "body": "आगे क्या है, यह आपके कैलेंडर में दिखेगा।",
+      "action": "कैलेंडर खोलें"
+    },
+    "allLogged": {
+      "title": "सब कुछ लॉग हो गया",
+      "body": "कोई सेशन लॉग होने के लिए बाकी नहीं है।"
+    },
+    "earlier": {
+      "title": "पिछले दिन",
+      "subtitle": "सेशन हुआ पर अभी लॉग नहीं हुआ। सेशन के {{hours}} घंटे बाद लॉग लॉक हो जाता है।"
+    }
+  }
+}

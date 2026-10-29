@@ -1,0 +1,18 @@
+{
+  "_review": "TODO: machine-drafted Hindi, needs human review",
+  "bell": "अपडेट",
+  "title": "अपडेट",
+  "markAll": "सब पढ़ा हुआ करें",
+  "markedAll": "सभी अपडेट पढ़े हुए मार्क हो गए",
+  "unread": "नहीं पढ़ा",
+  "unreadCount": "{{count}} नहीं पढ़े",
+  "unreadCount_other": "{{count}} नहीं पढ़े",
+  "groups": {
+    "today": "आज",
+    "earlier": "पहले"
+  },
+  "empty": {
+    "title": "सब कुछ देख लिया",
+    "body": "सेशन की याद, समय में बदलाव और स्कूल के संदेश यहाँ दिखेंगे।"
+  }
+}

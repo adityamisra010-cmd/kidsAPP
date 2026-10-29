@@ -1,0 +1,98 @@
+{
+  "threadTitle": "{{child}} · {{kind}}",
+  "kinds": {
+    "care_team": "Care team",
+    "staff_only": "Staff only",
+    "direct": "Direct"
+  },
+  "members": {
+    "list": "With {{names}}",
+    "more": "With {{names}} +{{count}}"
+  },
+  "threads": {
+    "title": "Messages",
+    "segments": {
+      "all": "All",
+      "care_team": "Care team",
+      "staff_only": "Staff only"
+    },
+    "unread_one": "1 unread",
+    "unread_other": "{{count}} unread",
+    "photo": "Photo",
+    "noMessages": "No messages yet",
+    "emptyTitle": "No conversations yet",
+    "emptyBody": "Your child's care-team conversation appears here once the school sets it up.",
+    "emptyBodyStaff": "Care-team conversations for the children you work with appear here.",
+    "segmentEmpty": "Nothing in this list yet"
+  },
+  "thread": {
+    "careTeamBanner": "This conversation stays with {{name}}'s care team, even when staff change.",
+    "careTeamBannerNoName": "This conversation stays with the care team, even when staff change.",
+    "staffOnlyBanner": "Staff only — parents can't see this",
+    "you": "You",
+    "sending": "Sending…",
+    "sent": "Sent",
+    "seenOne": "Seen by {{a}}",
+    "seenTwo": "Seen by {{a}} and {{b}}",
+    "seenMany": "Seen by {{a}}, {{b}} and {{count}} more",
+    "photo": "Photo: {{name}}",
+    "openFile": "Open {{name}}",
+    "emptyTitle": "Start the conversation",
+    "emptyBody": "Messages here stay with the child's record, so new staff can read the history."
+  },
+  "composer": {
+    "placeholder": "Write a message",
+    "label": "Message",
+    "photo": "Photo",
+    "send": "Send",
+    "removePhoto": "Remove photo",
+    "failed": "Couldn't send. Your message is back in the box.",
+    "pickFailed": "Couldn't open your photos. Please try again."
+  },
+  "audience": {
+    "everyone": "Everyone",
+    "all_parents": "All parents",
+    "all_staff": "All staff",
+    "therapy_type": "A therapy group",
+    "group": "{{name}} group"
+  },
+  "announcements": {
+    "title": "Announcements",
+    "new": "New",
+    "urgent": "Urgent",
+    "from": "From {{name}}",
+    "emptyTitle": "No announcements yet",
+    "emptyBody": "Holiday notices and school news will appear here.",
+    "emptyBodyAdmin": "Send holiday notices, events and schedule news to families and staff."
+  },
+  "new": {
+    "title": "New announcement",
+    "titleLabel": "Title",
+    "titlePlaceholder": "For example: Centre closed on Friday",
+    "bodyLabel": "Message",
+    "bodyPlaceholder": "Keep it short and clear. Include dates and times.",
+    "audienceLabel": "Who should get this?",
+    "groupLabel": "Which therapy group?",
+    "urgentLabel": "Urgent",
+    "urgentHint": "Urgent notices go out right away, even during quiet hours ({{start}} – {{end}}). Use only for schedule changes and safety.",
+    "preview": "Preview",
+    "previewHint": "This is how families and staff will see it.",
+    "previewTitle": "Your title",
+    "previewBody": "Your message will appear here.",
+    "send": "Send announcement",
+    "confirmTitle": "Send to {{audience}}?",
+    "confirmBody": "Everyone in this group gets a notification.",
+    "confirmUrgent": "Marked urgent: people are notified now, even during quiet hours.",
+    "sent": "Announcement sent",
+    "failed": "Couldn't send the announcement. Please try again.",
+    "notAllowedTitle": "Only coordinators and school admins can send announcements",
+    "notAllowedBody": "Ask your coordinator if something needs to go out to families.",
+    "errors": {
+      "title": "Add a short title (at least 3 letters)",
+      "titleLong": "Keep the title under 80 characters",
+      "body": "Add the message",
+      "bodyLong": "Keep the message under 1000 characters",
+      "group": "Choose a therapy group"
+    }
+  }
+}

@@ -1,0 +1,125 @@
+{
+  "appName": "My Kid's Tracker",
+  "actions": {
+    "save": "Save",
+    "cancel": "Cancel",
+    "done": "Done",
+    "next": "Next",
+    "back": "Back",
+    "close": "Close",
+    "edit": "Edit",
+    "delete": "Delete",
+    "retry": "Try again",
+    "confirm": "Confirm",
+    "continue": "Continue",
+    "seeAll": "See all",
+    "add": "Add",
+    "remove": "Remove",
+    "send": "Send",
+    "share": "Share",
+    "search": "Search",
+    "filter": "Filter",
+    "apply": "Apply",
+    "clear": "Clear",
+    "yes": "Yes",
+    "no": "No",
+    "ok": "OK",
+    "view": "View",
+    "open": "Open",
+    "call": "Call",
+    "download": "Download",
+    "upload": "Upload",
+    "select": "Select",
+    "change": "Change",
+    "addCustom": "Add your own",
+    "skip": "Skip"
+  },
+  "time": {
+    "today": "Today",
+    "tomorrow": "Tomorrow",
+    "yesterday": "Yesterday",
+    "thisWeek": "This week",
+    "minutes": "{{count}} min",
+    "minutes_other": "{{count}} min"
+  },
+  "roles": {
+    "platform_admin": "Platform Admin",
+    "school_admin": "School Admin",
+    "coordinator": "Coordinator",
+    "therapist": "Therapist",
+    "parent": "Parent"
+  },
+  "trend": {
+    "up": "Improving",
+    "flat": "Steady",
+    "down": "Declining"
+  },
+  "change": {
+    "better": "Better than last time",
+    "same": "About the same",
+    "harder": "Harder this time"
+  },
+  "changeShort": {
+    "better": "Better",
+    "same": "Steady",
+    "harder": "Harder"
+  },
+  "status": {
+    "confirmed": "Confirmed",
+    "rescheduled": "Rescheduled",
+    "substitute": "Substitute",
+    "cancelled": "Cancelled",
+    "completed": "Completed",
+    "absent": "Absent",
+    "makeup": "Make-up"
+  },
+  "logState": {
+    "upcoming": "Upcoming",
+    "in_progress": "In progress",
+    "logged": "Logged",
+    "not_logged": "Not logged",
+    "not_applicable": ""
+  },
+  "sync": {
+    "synced": "All changes saved",
+    "pending": "{{count}} waiting to sync",
+    "pending_other": "{{count}} waiting to sync",
+    "syncing": "Syncing…",
+    "offline": "Offline. Changes are saved on this phone and will sync later.",
+    "failed": "Some changes didn't sync",
+    "savedOffline": "Saved on this phone. Will sync when you're online."
+  },
+  "states": {
+    "loading": "Loading…",
+    "errorTitle": "Something went wrong",
+    "errorBody": "We couldn't load this. Check your connection and try again.",
+    "emptyTitle": "Nothing here yet",
+    "offlineBanner": "You're offline. Showing saved information."
+  },
+  "a11y": {
+    "back": "Go back",
+    "close": "Close",
+    "selected": "selected",
+    "notSelected": "not selected",
+    "opensDetails": "Opens details"
+  },
+  "demoBadge": "Demo",
+  "required": "Required",
+  "optional": "Optional",
+  "tabs": {
+    "home": "Home",
+    "calendar": "Calendar",
+    "myChild": "My Child",
+    "practice": "Practice",
+    "more": "More",
+    "today": "Today",
+    "caseload": "Caseload",
+    "reviews": "Reviews",
+    "dashboard": "Dashboard",
+    "schedule": "Schedule",
+    "people": "People",
+    "reports": "Reports",
+    "schools": "Schools",
+    "templates": "Templates"
+  }
+}

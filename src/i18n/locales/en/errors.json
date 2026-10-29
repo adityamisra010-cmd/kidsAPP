@@ -1,0 +1,14 @@
+{
+  "not_authenticated": "Please sign in again.",
+  "forbidden": "You don't have access to this.",
+  "not_found": "We couldn't find that. It may have been removed.",
+  "validation": "Please check the highlighted fields.",
+  "conflict": "This clashes with another booking.",
+  "locked": "This log is locked after 24 hours. Use 'Amend' and add a reason.",
+  "offline": "You're offline. We'll try again when you're connected.",
+  "otp_invalid": "That code didn't match. Please check and try again.",
+  "otp_expired": "That code has expired. Request a new one.",
+  "no_membership": "This number isn't linked to a school yet. Ask your school to send an invite.",
+  "consent_required": "Video sharing is turned off. You can turn it on in Consent & Privacy.",
+  "unknown": "Something went wrong. Please try again."
+}
