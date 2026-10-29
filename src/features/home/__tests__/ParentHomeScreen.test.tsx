@@ -26,6 +26,7 @@ const snapshot: ParentSessionSnapshot = {
   date: '2026-10-28',
   therapyTypeName: 'Speech Therapy',
   therapyTypeColor: '#C66B4E',
+  therapyTypeKey: 'speech',
   therapistName: 'Ms. Riya Menon',
   isSubstitute: false,
   highlights: [{ key: 'attention', label: 'Focus', icon: 'target', value: 4, change: 'better' }],
@@ -80,7 +81,7 @@ describe('ParentHomeScreen', () => {
     expect(await screen.findByText("Aarav's next session")).toBeTruthy();
     expect(await screen.findByText('Aarav named five animals with picture cards today.')).toBeTruthy();
     expect(await screen.findByText('Diwali break: 1–5 Nov')).toBeTruthy();
-    expect(await screen.findByTestId('checkin-prompt')).toBeTruthy();
+    expect(await screen.findByTestId('home-checkin-section')).toBeTruthy();
     expect(await screen.findByRole('button', { name: 'Updates, 3' })).toBeTruthy();
     expect(await screen.findByRole('button', { name: 'Messages, 2' })).toBeTruthy();
     // No raw score anywhere for parents.

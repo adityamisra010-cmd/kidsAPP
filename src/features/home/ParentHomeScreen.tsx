@@ -74,7 +74,7 @@ export function ParentHomeScreen() {
       <ChildSwitcher />
 
       {prompts.map((a) => (
-        <Section key={a.id} index={0} testID="checkin-prompt">
+        <Section key={a.id} index={0} testID="home-checkin-section">
           <CheckinPromptCard appointment={a} />
         </Section>
       ))}
