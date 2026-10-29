@@ -82,6 +82,7 @@
     "lint": "eslint .",
     "test": "jest",
     "test:db": "bash scripts/test-db.sh",
+    "test:db:seed": "bash scripts/test-db.sh --seed",
     "seed:sql": "tsx scripts/generate-seed-sql.ts",
     "check": "npm run typecheck && npm run lint && npm test",
     "build:apk": "bash scripts/build-apk.sh"

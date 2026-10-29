@@ -1,10 +1,10 @@
 -- =============================================================================
 -- Minimal Supabase shim for running the migrations on a plain Postgres (>= 15).
 --
--- Used only by scripts/test-db.sh. It recreates the small part of the Supabase platform the
+-- Used only by scripts/test-db.sh (and its --seed mode). It recreates the small part of the Supabase platform the
 -- migrations depend on, so RLS can be tested locally without Docker:
 --   * roles anon / authenticated / service_role (service_role bypasses RLS, like Supabase)
---   * auth.users, auth.uid(), auth.jwt(), auth.role()
+--   * auth.users, auth.identities, auth.uid(), auth.jwt(), auth.role()
 --   * storage.buckets, storage.objects, storage.foldername() / filename() / extension()
 --   * the `extensions` schema and default privileges on `public` that Supabase grants
 --
@@ -41,6 +41,8 @@ alter default privileges in schema public grant all on sequences to anon, authen
 -- ---------------------------------------------------------------------------
 -- auth
 -- ---------------------------------------------------------------------------
+-- The columns after updated_at mirror the real GoTrue table closely enough for supabase/seed.sql
+-- (the common Supabase seed pattern) to load unchanged; the tests only use the first block.
 create table if not exists auth.users (
   id uuid primary key default gen_random_uuid(),
   phone text unique,
@@ -50,7 +52,34 @@ create table if not exists auth.users (
   raw_user_meta_data jsonb not null default '{}'::jsonb,
   last_sign_in_at timestamptz,
   created_at timestamptz not null default now(),
-  updated_at timestamptz not null default now()
+  updated_at timestamptz not null default now(),
+  instance_id uuid,
+  aud varchar(255),
+  role varchar(255),
+  encrypted_password varchar(255),
+  raw_app_meta_data jsonb,
+  confirmation_token varchar(255),
+  recovery_token varchar(255),
+  email_change_token_new varchar(255),
+  email_change varchar(255),
+  is_super_admin boolean,
+  is_sso_user boolean not null default false,
+  is_anonymous boolean not null default false,
+  banned_until timestamptz,
+  deleted_at timestamptz
+);
+
+create table if not exists auth.identities (
+  id uuid primary key default gen_random_uuid(),
+  provider_id text not null,
+  user_id uuid not null references auth.users (id) on delete cascade,
+  identity_data jsonb not null,
+  provider text not null,
+  last_sign_in_at timestamptz,
+  created_at timestamptz,
+  updated_at timestamptz,
+  email text generated always as (lower(identity_data ->> 'email')) stored,
+  unique (provider_id, provider)
 );
 
 create or replace function auth.uid() returns uuid

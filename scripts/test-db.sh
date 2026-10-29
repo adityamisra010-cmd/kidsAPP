@@ -12,6 +12,11 @@
 #
 # Pass --write-fixtures to regenerate src/domain/__fixtures__/metrics-cases.json from
 # src/domain/metrics.ts.
+#
+# Pass --seed (npm run test:db:seed) to check the demo seed instead of running the tests:
+# shim + migrations, then scripts/generate-seed-sql.ts writes a fresh seed.sql to a temp file
+# (supabase/seed.sql is left untouched) and scripts/db/seed-check.ts loads it twice and runs the
+# sanity checks (row counts, logins, persona RLS, metrics). No test fixtures are loaded.
 # =============================================================================
 set -euo pipefail
 
@@ -19,8 +24,18 @@ ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
 cd "$ROOT"
 
 TMP=""
+SEED_TMP=""
 PG_BIN=""
 RUN_AS=()
+
+SEED=0
+ARGS=()
+for arg in "$@"; do
+  case "$arg" in
+    --seed) SEED=1 ;;
+    *) ARGS+=("$arg") ;;
+  esac
+done
 
 cleanup() {
   local code=$?
@@ -29,6 +44,9 @@ cleanup() {
       "${RUN_AS[@]}" "$PG_BIN/pg_ctl" -D "$TMP/data" -m immediate stop >/dev/null 2>&1 || true
     fi
     rm -rf "$TMP"
+  fi
+  if [ -n "$SEED_TMP" ] && [ -d "$SEED_TMP" ]; then
+    rm -rf "$SEED_TMP"
   fi
   exit "$code"
 }
@@ -96,8 +114,17 @@ for f in supabase/migrations/*.sql; do
   echo "› $(basename "$f")"
   run_sql "$f"
 done
+if [ "$SEED" = "1" ]; then
+  SEED_TMP="$(mktemp -d "${TMPDIR:-/tmp}/mkt-seed.XXXXXX")"
+  echo "› generate seed.sql"
+  npx tsx scripts/generate-seed-sql.ts --out "$SEED_TMP/seed.sql"
+  echo "› seed checks"
+  npx tsx scripts/db/seed-check.ts "$SEED_TMP/seed.sql"
+  exit 0
+fi
+
 echo "› fixtures"
 run_sql scripts/db/fixtures.sql
 
 echo "› tests"
-npx tsx scripts/db/run-tests.ts "$@"
+npx tsx scripts/db/run-tests.ts ${ARGS[@]+"${ARGS[@]}"}
