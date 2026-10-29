@@ -202,6 +202,7 @@ export function brief(overrides: Partial<HandoverBrief> = {}): HandoverBrief {
     activeAlerts: [],
     mustAcknowledge: true,
     acknowledged: false,
+    access: 'brief_only',
     ...overrides,
   };
 }

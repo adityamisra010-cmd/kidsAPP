@@ -12,6 +12,7 @@ const snapshot: ParentSessionSnapshot = {
   date: '2026-10-29',
   therapyTypeName: 'Speech Therapy',
   therapyTypeColor: '#C66B4E',
+  therapyTypeKey: 'speech',
   therapistName: 'Ms. Priya Nair',
   isSubstitute: true,
   highlights: [{ key: 'attention', label: 'Focus', icon: 'target', value: 4, change: 'better' }],

@@ -67,6 +67,7 @@ export const SNAPSHOT: ParentSessionSnapshot = {
   date: '2026-10-27',
   therapyTypeName: 'Speech Therapy',
   therapyTypeColor: '#C66B4E',
+  therapyTypeKey: 'speech',
   therapistName: 'Ms. Kavya Rao',
   isSubstitute: false,
   highlights: [{ key: 'attention', label: 'Focus', icon: 'target', value: 4, change: 'better' }],

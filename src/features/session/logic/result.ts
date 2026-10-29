@@ -107,6 +107,7 @@ export function buildParentPreview(args: {
   date: ISODate;
   therapyTypeName: string;
   therapyTypeColor: string;
+  therapyTypeKey?: string;
   therapistName: string;
   isSubstitute: boolean;
   input: Pick<SessionInput, 'ratings' | 'goalTrials' | 'incidents' | 'notes'>;
@@ -142,6 +143,7 @@ export function buildParentPreview(args: {
     date: args.date,
     therapyTypeName: args.therapyTypeName,
     therapyTypeColor: args.therapyTypeColor,
+    therapyTypeKey: args.therapyTypeKey ?? '',
     therapistName: args.therapistName,
     isSubstitute: args.isSubstitute,
     highlights,
