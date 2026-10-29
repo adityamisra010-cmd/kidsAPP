@@ -134,7 +134,8 @@ function generateLogs(b: Build, task: HomeTask, diligence: number, gender: 'male
       useInNextSession: false,
     };
     const ageDays = -o;
-    if (r.chance(ageDays > 2 ? 0.96 : 0.3)) review(b, log, task.assignedBy, r, vars);
+    // Therapists keep up with reviews: older logs are all reviewed; some of yesterday's and today's wait.
+    if (r.chance(ageDays > 1 ? 1 : 0.6)) review(b, log, task.assignedBy, r, vars);
     b.store.homeLogs.push(log);
   }
 }

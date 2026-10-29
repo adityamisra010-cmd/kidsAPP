@@ -93,7 +93,8 @@ export function createSessionsRepo(core: DemoCore): SessionsRepo {
         const a = core.appointment(input.appointmentId);
         if (!core.isAdmin(ctx) && a.therapistId !== ctx.userId) throw new RepoError('forbidden', 'Only the session therapist can log this session.');
         if (isMissed(a)) throw new RepoError('validation', 'This session was cancelled or the child was absent.');
-        if (new Date(a.startsAt).getTime() - core.now().getTime() > HOUR) throw new RepoError('validation', 'This session has not started yet.');
+        // Same rule as the server's save_session: a log can be written up to 12 hours before the start.
+        if (new Date(a.startsAt).getTime() - core.now().getTime() > 12 * HOUR) throw new RepoError('validation', 'This session has not started yet.');
         const { clientId, appointmentId: _appointmentId, ...fields } = input;
         validate(fields, a);
         const existing = core.sessionFor(a.id);

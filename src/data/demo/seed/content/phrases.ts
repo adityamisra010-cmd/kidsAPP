@@ -84,11 +84,16 @@ export const PARENT_SUMMARY = {
     '{name} had a lovely session today! {He} worked on {goalParent} and did really well. {StrategyParent} helped {him} a lot. Keep going with "{task}" at home.',
     'What a great day for {name}! {He} stayed focused and joined in happily. We practised {goalParent} — {he} needed less help than last time.',
     '{name} was cheerful and busy today. {He} worked on {goalParent} and we could see real progress. Thank you for practising at home — it shows!',
+    'A really good session. {name} tried {goalParent} with very little help, and {he} looked really pleased. Please praise {him} for it tonight.',
+    '{name} came in smiling and stayed with every activity. {StrategyParent} worked well again. Keep "{task}" short and fun at home.',
+    'Lovely work from {name} today on {goalParent}. {He} asked for help in {his} own way when stuck — a big step.',
   ],
   steady: [
     '{name} worked steadily today on {goalParent}. {He} needed some help but kept trying. Please keep going with "{task}" this week.',
     'A good, steady session. {name} practised {goalParent} and enjoyed the breaks in between. Little and often at home is perfect.',
     '{name} settled in well and worked on {goalParent}. Some parts were easy, some still need help — that is normal at this stage.',
+    '{name} had an ordinary, useful session. We repeated {goalParent} a few times; {he} is getting more familiar with it.',
+    'Steady progress today. {name} needed a few reminders but finished the activities. Try "{task}" at a calm time of day.',
   ],
   hard: [
     'Today was a harder day for {name} — {he} seemed {stateParent}. That is okay; every child has days like this. We used {strategyParent} to help {him} settle. If anything has changed at home, please let us know.',

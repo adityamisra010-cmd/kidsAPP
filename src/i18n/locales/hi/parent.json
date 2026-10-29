@@ -38,6 +38,10 @@
       "messages": "संदेश",
       "resources": "सामग्री",
       "contact": "स्कूल से संपर्क"
+    },
+    "checkinMore": {
+      "title": "{{name}} के लिए भी चेक-इन करें",
+      "subtitle": "{{time}} पर {{therapy}}"
     }
   }
 }

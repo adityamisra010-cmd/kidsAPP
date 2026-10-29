@@ -21,7 +21,7 @@
     "agendaHint": "Read the brief, run the session, then log it.",
     "now": "Now",
     "upNext": "Up next",
-    "room": "Room {{room}}",
+    "room": "{{room}}",
     "substitute": "Substitute",
     "briefRequired": "Brief required",
     "briefRead": "Brief read",

@@ -58,6 +58,20 @@ export function scoreTrend(oldestFirst: Pick<SessionLog, 'metrics'>[]): ReturnTy
   return trend(oldestFirst.map((s) => s.metrics.sessionScore));
 }
 
+/**
+ * A child's overall trend across therapies. Scores from different therapy types are not
+ * comparable, so each therapy is trended on its own: any declining therapy wins (it needs
+ * attention), otherwise any improving one, otherwise steady.
+ */
+export function childTrend(oldestFirst: Pick<SessionLog, 'metrics' | 'therapyTypeId'>[]): ReturnType<typeof trend> | undefined {
+  const byType = new Map<string, Pick<SessionLog, 'metrics'>[]>();
+  for (const s of oldestFirst) byType.set(s.therapyTypeId, [...(byType.get(s.therapyTypeId) ?? []), s]);
+  const trends = [...byType.values()].filter((l) => l.length >= 3).map((l) => scoreTrend(l.slice(-6)));
+  if (trends.length === 0) return undefined;
+  if (trends.includes('down')) return 'down';
+  return trends.includes('up') ? 'up' : 'flat';
+}
+
 export function goalsByDomain(goals: Pick<Goal, 'domain' | 'status'>[]): ParentProgress['goalsSummary'] {
   const map = new Map<GoalDomain, { achieved: number; inProgress: number }>();
   for (const g of goals) {

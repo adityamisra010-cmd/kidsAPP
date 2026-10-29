@@ -14,7 +14,8 @@ import { useAnnouncements } from '@/features/messages/queries';
 import { sortAnnouncements } from '@/features/messages/threads';
 import { BellButton } from '@/features/notifications/BellButton';
 import { useRequiredActive } from '@/state/session';
-import { EmptyState, Screen, SectionHeader } from '@/ui';
+import { formatTime } from '@/lib/dates';
+import { Avatar, Card, EmptyState, ListItem, Screen, SectionHeader } from '@/ui';
 
 import { InlineEmpty, Section, SectionQuery } from './components/Blocks';
 import { HomeHeader, SchoolLine } from './components/HomeHeader';
@@ -73,11 +74,21 @@ export function ParentHomeScreen() {
       {header}
       <ChildSwitcher />
 
-      {prompts.map((a) => (
-        <Section key={a.id} index={0} testID="home-checkin-section">
-          <CheckinPromptCard appointment={a} />
+      {prompts.length ? (
+        <Section index={0} testID="home-checkin-section">
+          <CheckinPromptCard appointment={prompts[0]} />
+          {/* Other children's check-ins stay compact so the page isn't a wall of orange. */}
+          {prompts.slice(1).map((a) => (
+            <Card key={a.id} padding={3} onPress={() => router.push(`/checkin/${a.id}`)} testID="home-checkin-more">
+              <ListItem
+                left={<Avatar name={a.childName} uri={a.childPhotoUrl} size={36} />}
+                title={t('home.checkinMore.title', { name: a.childName.split(' ')[0] })}
+                subtitle={t('home.checkinMore.subtitle', { therapy: a.therapyTypeName, time: formatTime(a.startsAt) })}
+              />
+            </Card>
+          ))}
         </Section>
-      ))}
+      ) : null}
 
       <Section index={1} testID="section-next">
         <SectionHeader
@@ -108,7 +119,7 @@ export function ParentHomeScreen() {
       </Section>
 
       <Section index={3} testID="section-practice">
-        <SectionHeader title={t('home.practice.title')} actionLabel={t('home.practice.open')} onAction={() => router.push('/parent/practice')} />
+        {/* HomeTasksCard carries its own "This week's practice" header and See all link. */}
         <SectionQuery
           query={practice}
           skeletonHeight={96}

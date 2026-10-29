@@ -51,7 +51,8 @@ function queuedSessions(): SessionInput[] {
 
 beforeEach(() => {
   signInTherapist();
-  useOutboxStore.setState({ items: [] });
+  useOutboxStore.setState({ items: [], online: true });
+  mockRepo.sessions.save.mockClear();
 });
 
 describe('SessionLoggerScreen', () => {
@@ -64,7 +65,8 @@ describe('SessionLoggerScreen', () => {
     expect(queuedSessions()).toHaveLength(0);
   });
 
-  it('rates every dimension, saves through the outbox and shows the result', async () => {
+  it('rates every dimension and, while offline, keeps the log on the phone and shows the result', async () => {
+    useOutboxStore.setState({ online: false });
     await renderScreen(<SessionLoggerScreen appointmentId="appt-1" />);
     await screen.findByTestId('session-logger');
     expect(screen.getByTestId('progress-pill')).toHaveTextContent('0 of 8 rated');
@@ -99,6 +101,18 @@ describe('SessionLoggerScreen', () => {
     expect(screen.getByTestId('saved-score')).toHaveTextContent('75');
     expect(screen.getByText('+25')).toBeTruthy();
     expect(screen.getByText('Saved on this phone, syncing')).toBeTruthy();
+  });
+
+  it('saves straight away when online', async () => {
+    await renderScreen(<SessionLoggerScreen appointmentId="appt-1" />);
+    await screen.findByTestId('session-logger');
+    for (const d of dims) await fireEvent.press(screen.getByTestId(`rate-${d.key}-4`));
+    await fireEvent.press(screen.getByTestId('regulation-state-regulated'));
+    await fireEvent.changeText(screen.getByTestId('plan-field'), 'Repeat today.');
+    await fireEvent.press(screen.getByTestId('save-session'));
+    await screen.findByTestId('session-saved');
+    expect(mockRepo.sessions.save).toHaveBeenCalledTimes(1);
+    expect(queuedSessions()).toHaveLength(0);
   });
 
   it('asks for the handover brief first when it must be acknowledged', async () => {

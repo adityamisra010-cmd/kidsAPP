@@ -1,7 +1,7 @@
 /** Children: scoped lists, About Me (clinical only for full access), edit history, assignments. */
 import type { ChildrenRepo } from '@/data/repository';
 import { RepoError } from '@/data/repository';
-import { compareSessions, isCancelled, scoreTrend } from '@/domain/derive';
+import { childTrend, compareSessions, isCancelled } from '@/domain/derive';
 import type { Child, ChildDetail, ChildProfile, ChildSummary, ProfileEdit, UUID } from '@/domain/types';
 import { addDaysISO } from '@/lib/dates';
 import { uuid } from '@/lib/id';
@@ -40,16 +40,18 @@ export function createChildrenRepo(core: DemoCore): ChildrenRepo {
     const next = st.appointments
       .filter((a) => a.childId === child.id && !isCancelled(a) && new Date(a.endsAt).getTime() > now)
       .sort((a, b) => a.startsAt.localeCompare(b.startsAt))[0];
-    const recent = st.sessions.filter((s) => s.childId === child.id).sort(compareSessions).slice(-6);
+    const recent = st.sessions.filter((s) => s.childId === child.id).sort(compareSessions);
+    const openAlerts = staffView ? st.alerts.filter((a) => a.childId === child.id && a.status === 'open') : [];
     return {
       child,
       therapists: st.childTherapists
         .filter((t) => t.childId === child.id && (!t.activeTo || t.activeTo >= core.today()))
         .map((t) => ({ userId: t.userId, name: core.name(t.userId), therapyTypeId: t.therapyTypeId, isLead: t.isLead })),
       guardians: st.guardians.filter((g) => g.childId === child.id).map((g) => ({ userId: g.userId, name: core.name(g.userId), relation: g.relation, phone: st.profiles.find((p) => p.id === g.userId)?.phone })),
-      openAlerts: staffView ? st.alerts.filter((a) => a.childId === child.id && a.status === 'open').length : 0,
+      openAlerts: openAlerts.length,
       nextAppointment: next ? core.appointmentView(next) : undefined,
-      trend: staffView && recent.length >= 3 ? scoreTrend(recent) : undefined,
+      // An open score-drop alert always reads as declining, whatever the other therapies do.
+      trend: !staffView ? undefined : openAlerts.some((a) => a.kind === 'score_drop') ? 'down' : childTrend(recent),
     };
   };
 

@@ -8,7 +8,11 @@ import { BookOpenCheck, ClipboardCheck } from 'lucide-react-native';
 import { useMemo, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 
+import { useRepo } from '@/data';
 import { useAppointment, useGoals, useOrg, useRatingDimensions } from '@/data/hooks';
+import { useOutboxStore } from '@/data/outbox';
+import { invalidate } from '@/data/queryClient';
+import { RepoError } from '@/data/repository';
 import { DEFAULT_ORG_SETTINGS } from '@/domain/constants';
 import type { SessionInput } from '@/domain/types';
 import { uuid } from '@/lib/id';
@@ -41,6 +45,7 @@ export function SessionLoggerScreen({ appointmentId, sessionId }: { appointmentI
   const { t } = useTranslation('session');
   const theme = useTheme();
   const active = useRequiredActive();
+  const repo = useRepo();
   const apptQ = useAppointment(appointmentId);
   const appt = apptQ.data;
   const existingId = sessionId || appt?.sessionId;
@@ -106,6 +111,18 @@ export function SessionLoggerScreen({ appointmentId, sessionId }: { appointmentI
         toast.success(t('logger.amend.saved'));
         router.replace(`/session/${existing.id}`);
         return;
+      }
+      // Online: save directly so problems (e.g. a locked log) show on the form right away.
+      // Offline or a network failure: keep the log on the phone and sync it later.
+      if (useOutboxStore.getState().online) {
+        try {
+          await repo.sessions.save(input);
+          void invalidate('sessions', 'dashboards', 'appointments', 'progress', 'alerts', 'goals', 'notifications');
+          setSaved({ input, queued: false });
+          return;
+        } catch (e) {
+          if (e instanceof RepoError && e.code !== 'offline' && e.code !== 'unknown') throw e;
+        }
       }
       await enqueueSessionSave(input, t('logger.outboxLabel', { name: appt.childName }));
       setSaved({ input, queued: true });

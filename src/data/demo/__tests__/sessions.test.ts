@@ -52,6 +52,8 @@ describe('sessions.save', () => {
   it('computes metrics, locks after 24 h, raises alerts and notifies, idempotently', async () => {
     const repo = await signedIn('therapist');
     const sub = substituteAppointment(repo);
+    // More than 12 hours before the start, a log is refused (same rule as the server).
+    repo.demo.setNow(new Date(new Date(sub.startsAt).getTime() - 13 * 3_600_000));
     await expect(repo.sessions.save(input(repo, sub.id))).rejects.toEqual(code('validation'));
     repo.demo.setNow(new Date(new Date(sub.endsAt).getTime() + 10 * 60_000));
 
