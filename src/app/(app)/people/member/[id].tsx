@@ -1,6 +1,9 @@
-// Owner: W4. Placeholder until the feature lands.
-import { Placeholder } from '@/components/Placeholder';
+// Owner: W4 (children/goals/progress/people). `id` is the member's user id.
+import { useLocalSearchParams } from 'expo-router';
+
+import { MemberScreen } from '@/features/people/screens/MemberScreen';
 
 export default function Screen() {
-  return <Placeholder title="Staff member" back={true} />;
+  const { id } = useLocalSearchParams<{ id: string }>();
+  return <MemberScreen key={id} userId={id} />;
 }
