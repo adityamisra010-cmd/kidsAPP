@@ -1,6 +1,6 @@
-// Owner: W7. Placeholder until the feature lands.
-import { Placeholder } from '@/components/Placeholder';
+// Owner: W7 (reports, import, school settings).
+import { ImportHomeScreen } from '@/features/import/ImportHomeScreen';
 
 export default function Screen() {
-  return <Placeholder title="Import from Excel" back={true} />;
+  return <ImportHomeScreen />;
 }
