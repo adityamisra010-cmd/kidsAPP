@@ -86,6 +86,24 @@ live('Supabase adapter (live project)', () => {
     console.log(`saved session score=${log.metrics.sessionScore} deltaLast=${log.metrics.deltaLast} trend=${log.metrics.trend}`);
   });
 
+  it('signs in a parent by phone code and shows only her children, with parent-safe summaries', async () => {
+    const repo = createRepositoryFromClient(client(), { store: memory(), readFile: async () => new ArrayBuffer(0) });
+    await repo.auth.requestOtp('+919800000001');
+    const user = await repo.auth.verifyOtp('+919800000001', '123456');
+    const m = user.memberships[0];
+    repo.setContext({ userId: user.profile.id, role: m.role, organizationId: m.organizationId });
+    expect(m.role).toBe('parent');
+    const kids = await repo.children.list();
+    expect(kids.map((k) => k.child.fullName).sort()).toEqual(['Aarav Sharma', 'Anaya Sharma']);
+    const snaps = await repo.sessions.parentSnapshots(kids[0].child.id, { limit: 3 });
+    expect(snaps.length).toBeGreaterThan(0);
+    expect(snaps[0].sessionScore).toBeUndefined();
+    const upcoming = await repo.appointments.upcoming({ childId: kids[0].child.id, limit: 1 });
+    const tasks = await repo.homePractice.listTasks({ childId: kids[0].child.id, status: ['active'] });
+    await expect(repo.sessions.get(snaps[0].sessionId)).rejects.toBeTruthy();
+    console.log(`parent: children=${kids.length} snapshots=${snaps.length} next=${upcoming[0]?.therapyTypeName} tasks=${tasks.length} highlight="${snaps[0].highlights[0]?.label}: ${snaps[0].highlights[0]?.change}"`);
+  });
+
   it('signs in a school admin and loads the dashboard and people', async () => {
     const sb = client();
     const repo = createRepositoryFromClient(sb, { store: memory(), readFile: async () => new ArrayBuffer(0) });
