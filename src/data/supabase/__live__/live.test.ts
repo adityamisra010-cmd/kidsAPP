@@ -1,3 +1,4 @@
+/* eslint-disable no-console -- the live smoke test prints what it saw on the real project */
 /**
  * Live smoke test of the Supabase adapter against a real project. Skipped unless
  * SUPABASE_LIVE_URL + SUPABASE_LIVE_KEY are set (never runs in CI by default).
