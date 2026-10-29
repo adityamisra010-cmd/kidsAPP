@@ -1,3 +1,4 @@
+/* eslint-disable import/no-named-as-default-member -- i18next's default instance is the documented API */
 /**
  * i18next setup. Every user-facing string goes through a translation key.
  * One namespace per feature area (files in ./locales/<lang>/<ns>.json) so features can be

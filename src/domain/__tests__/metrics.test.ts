@@ -176,3 +176,10 @@ describe('parent wording', () => {
     expect(overallChange(-12)).toBe('harder');
   });
 });
+
+describe('trend boundary', () => {
+  it('treats a slope of exactly -2.5 as down despite float noise', () => {
+    expect(trend([38.8, 36.3, 33.8, 31.3])).toBe('down');
+    expect(trend([31.3, 33.8, 36.3, 38.8])).toBe('up');
+  });
+});

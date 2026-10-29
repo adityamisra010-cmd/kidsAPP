@@ -1881,7 +1881,7 @@
       "deltaLast": -2.5,
       "deltaRolling": -5,
       "rollingAverage": 36.3,
-      "trend": "flat",
+      "trend": "down",
       "dimensions": {
         "engagement": {
           "value": 3,

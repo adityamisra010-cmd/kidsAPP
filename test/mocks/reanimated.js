@@ -6,7 +6,11 @@ const anim = () => {
   const a = { duration: () => a, delay: () => a, springify: () => a, damping: () => a, easing: () => a };
   return a;
 };
-const createAnimatedComponent = (C) => React.forwardRef((props, ref) => React.createElement(C, { ...props, ref }));
+const createAnimatedComponent = (C) => {
+  const Animated = React.forwardRef((props, ref) => React.createElement(C, { ...props, ref }));
+  Animated.displayName = `Animated(${C.displayName || C.name || 'Component'})`;
+  return Animated;
+};
 
 const Animated = {
   View: createAnimatedComponent(RN.View),

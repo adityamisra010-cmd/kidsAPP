@@ -15,6 +15,8 @@ import { SafeAreaProvider } from 'react-native-safe-area-context';
 
 import { AppErrorBoundary } from '@/components/AppErrorBoundary';
 import { queryClient } from '@/data/queryClient';
+import { registerPracticeOutbox } from '@/features/practice/outbox';
+import { registerSessionOutbox } from '@/features/session/outbox';
 import { deviceLanguage, initI18n } from '@/i18n';
 import { initErrorReporting } from '@/lib/errorReporting';
 import { bootstrapSession } from '@/state/auth-actions';
@@ -25,6 +27,9 @@ import { ConfirmHost, ToastHost } from '@/ui';
 
 void SplashScreen.preventAutoHideAsync().catch(() => undefined);
 initErrorReporting();
+// Offline queue handlers must exist before the outbox starts flushing items saved in earlier runs.
+registerSessionOutbox();
+registerPracticeOutbox();
 
 function waitForHydration(): Promise<void> {
   const stores = [usePreferences.persist, useSession.persist];

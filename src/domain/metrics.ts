@@ -1,7 +1,7 @@
 /**
  * Session metrics engine. Single source of truth for the maths; mirrored line-for-line in
  * supabase/migrations/*_metrics.sql (`compute_session_metrics`). Parity is enforced by
- * scripts/test-db (fixtures in src/domain/__fixtures__/metrics.json).
+ * scripts/test-db.sh (fixtures in src/domain/__fixtures__/metrics-cases.json).
  *
  * Conventions (keep identical in SQL):
  * - Ratings are 1..5. Normalised to 0..100 as (v - 1) / 4 * 100.
@@ -9,7 +9,8 @@
  * - "Previous" sessions = same child + same therapy type, strictly earlier, newest first.
  * - Rolling average uses up to 4 previous sessions and needs at least 2 (with 1 it equals "last").
  * - Trend = least-squares slope over the last up-to-6 values (oldest → newest, including current),
- *   on the 0..100 scale; needs 3+ points. slope >= +2.5 → up, <= -2.5 → down, else flat.
+ *   on the 0..100 scale; needs 3+ points. The slope is rounded to 6 decimals (so float noise like
+ *   -2.4999999999999996 counts as -2.5); >= +2.5 → up, <= -2.5 → down, else flat.
  */
 import type {
   BehaviourIncident,
@@ -96,7 +97,7 @@ export function slope(values: number[]): number {
 export function trend(values: number[]): Trend {
   const window = values.slice(-TREND_WINDOW);
   if (window.length < TREND_MIN_POINTS) return 'flat';
-  const s = slope(window);
+  const s = round(slope(window), 6);
   if (s >= TREND_SLOPE_THRESHOLD) return 'up';
   if (s <= -TREND_SLOPE_THRESHOLD) return 'down';
   return 'flat';

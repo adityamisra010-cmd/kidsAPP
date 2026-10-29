@@ -10,8 +10,8 @@
 --     - rolling window 4 previous sessions, needs >= 2; per-dimension deltas on raw 1..5 values;
 --     - trend: least-squares slope over the last <= 6 values (oldest -> newest, incl. current),
 --       >= 3 points, threshold +/-2.5. The slope is computed in float8 with the same operation
---       order as the JS code, so values that sit exactly on the threshold classify identically
---       (JS doubles can yield 2.4999999999999996 where exact maths gives 2.5).
+--       order as the JS code and then rounded to 6 decimals in both, so float noise such as
+--       2.4999999999999996 classifies as exactly 2.5 on both sides.
 --     Parity is enforced by scripts/db/run-tests.ts against src/domain/__fixtures__/metrics-cases.json.
 --   * save_session(payload) — SECURITY INVOKER: the session upsert and child rows go through RLS.
 --     Derived work (metrics, alerts, notifications) is done by private SECURITY DEFINER helpers
@@ -65,12 +65,12 @@ language plpgsql immutable as $$
 declare
   n int := coalesce(cardinality(p_values), 0);
   w float8[] := case when n > 6 then p_values[n - 5 : n] else coalesce(p_values, '{}') end;
-  s float8;
+  s numeric;
 begin
   if cardinality(w) < 3 then
     return 'flat';
   end if;
-  s := app.slope(w);
+  s := round(app.slope(w)::numeric, 6);
   if s >= 2.5 then
     return 'up';
   end if;
