@@ -298,6 +298,8 @@ export interface HomePracticeRepo {
   /** Idempotent on clientId. Video, if any, is uploaded by the media queue first. */
   log(input: HomeLogInput & { mediaId?: UUID }): Promise<HomeLog>;
   listLogs(filter: { childId?: UUID; taskId?: UUID; limit?: number }): Promise<HomeLog[]>;
+  /** One log. Parent: own child's logs; staff: scoped like reviewQueue. */
+  getLog(logId: UUID): Promise<HomeLog>;
   /** Unreviewed logs for children assigned to the therapist (or all, for coordinators). */
   reviewQueue(): Promise<HomeLog[]>;
   review(logId: UUID, input: { reaction: ReviewReaction; comment?: string; useInNextSession?: boolean }): Promise<HomeLog>;
