@@ -35,7 +35,7 @@ export function StatTile({
   const body = (
     <>
       <View style={{ flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between', gap: t.space[2] }}>
-        <Text variant="display" style={{ fontVariant: ['tabular-nums'] }} numberOfLines={1} adjustsFontSizeToFit minimumFontScale={0.5}>
+        <Text variant="display" style={{ fontVariant: ['tabular-nums'], flexShrink: 1 }} numberOfLines={1} adjustsFontSizeToFit minimumFontScale={0.5}>
           {value}
         </Text>
         <View style={{ width: 32, height: 32, borderRadius: 16, backgroundColor: c.bg, alignItems: 'center', justifyContent: 'center' }}>
