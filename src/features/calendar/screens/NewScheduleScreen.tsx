@@ -38,7 +38,7 @@ import { ChildPickerField, StaffRadioList, useQualifiedStaff } from '../componen
 import { isAdminRole } from '../lib/actions';
 import { countOccurrences, sortWeekdays } from '../lib/recurrence';
 import { DURATIONS, emptySchedule, isCheckable, scheduleSchema, toSeriesInput, type ScheduleValues } from '../lib/schedule';
-import { latestStart, weekdayOf } from '../lib/slots';
+import { latestStart, toMinutes, weekdayOf } from '../lib/slots';
 import { useLiveConflicts, useOrgSettings, useScheduleMutation } from '../queries';
 
 /** About one school term. The summary line shows the exact count before saving. */
@@ -72,24 +72,26 @@ export function NewScheduleScreen({ childId, date }: { childId?: string; date?: 
   const staff = useQualifiedStaff(values.therapyTypeId || undefined);
   const child = children.data?.find((c) => c.child.id === values.childId);
   const usualIds = (child?.therapists ?? []).filter((x) => x.therapyTypeId === values.therapyTypeId).map((x) => x.userId);
+  const usualKey = usualIds.join(',');
 
   // Suggest the child's usual therapist for the chosen therapy (still changeable).
   useEffect(() => {
     const current = getValues('therapistId');
-    const qualified = staff.list.some((m) => m.profile.id === current);
-    if (!qualified) {
-      const usual = staff.list.find((m) => usualIds.includes(m.profile.id));
-      setValue('therapistId', usual?.profile.id ?? '', { shouldValidate: formState.isSubmitted });
-    }
-    // usualIds is derived from these two; listing it would re-run on every render.
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [staff.list, values.childId]);
+    if (staff.list.some((m) => m.profile.id === current)) return;
+    const usual = staff.list.find((m) => usualKey.split(',').includes(m.profile.id));
+    setValue('therapistId', usual?.profile.id ?? '', { shouldValidate: formState.isSubmitted });
+  }, [staff.list, usualKey, getValues, setValue, formState.isSubmitted]);
 
   // Any edit after a refused save drops the old clash list.
   const serial = JSON.stringify(values);
   const rejected = refused && refused.serial === serial ? refused.conflicts : null;
 
-  const checkable = isCheckable(values);
+  // A longer session can push a chosen start time past closing time.
+  const lastStart = latestStart(settings.workingHours, values.durationMinutes);
+  const timeOutside =
+    !!values.startTime && (toMinutes(values.startTime) < toMinutes(settings.workingHours.start) || toMinutes(values.startTime) > toMinutes(lastStart));
+
+  const checkable = isCheckable(values) && !timeOutside;
   const live = useLiveConflicts(checkable ? toSeriesInput(values) : null);
   const conflicts = rejected ?? live.conflicts;
   const hasConflicts = !!conflicts?.length;
@@ -107,6 +109,7 @@ export function NewScheduleScreen({ childId, date }: { childId?: string; date?: 
   });
 
   const onSubmit = handleSubmit(async (v) => {
+    if (timeOutside) return;
     if (hasConflicts) {
       if (!isAdminRole(active.role)) return;
       const ok = await confirm({ title: t('conflicts.confirmTitle'), body: t('conflicts.confirmBody'), confirmLabel: t('conflicts.saveAnyway') });
@@ -260,9 +263,9 @@ export function NewScheduleScreen({ childId, date }: { childId?: string; date?: 
               label={t('new.startTime')}
               value={field.value || undefined}
               start={settings.workingHours.start}
-              end={latestStart(settings.workingHours, values.durationMinutes)}
+              end={lastStart}
               onChange={field.onChange}
-              error={err('startTime')}
+              error={timeOutside ? t('slots.errors.outside_hours') : err('startTime')}
             />
           )}
         />

@@ -4,12 +4,12 @@ import { ChevronDown } from 'lucide-react-native';
 import { useTranslation } from 'react-i18next';
 
 import type { AppointmentView } from '@/domain/types';
-import { formatDay } from '@/lib/dates';
-import { Button, EmptyState, SegmentedControl, SkeletonList, Stack, Text } from '@/ui';
+import { Button, EmptyState, SegmentedControl, SkeletonList, Stack } from '@/ui';
 
-import { dayHeading, groupByDay, splitUpcomingPast } from '../lib/grouping';
+import { groupByDay, splitUpcomingPast } from '../lib/grouping';
 import type { ListTab } from '../lib/ranges';
 import { AgendaRow, type Perspective } from './AgendaRow';
+import { DayHeading } from './DayHeading';
 
 export function ListView({
   tab,
@@ -36,7 +36,6 @@ export function ListView({
   const { t } = useTranslation('calendar');
   const { upcoming, past } = splitUpcomingPast(items, now);
   const groups = tab === 'upcoming' ? groupByDay(upcoming, 'asc') : groupByDay(past, 'desc');
-  const words = { today: t('day.today'), tomorrow: t('day.tomorrow'), yesterday: t('day.yesterday') };
 
   const empty = () => {
     if (filtered) return <EmptyState compact title={t('empty.filteredTitle')} body={t('empty.filteredBody')} />;
@@ -65,20 +64,14 @@ export function ListView({
       ) : groups.length === 0 ? (
         empty()
       ) : (
-        groups.map((g) => {
-          const heading = dayHeading(g.date, now, words);
-          const full = formatDay(g.date);
-          return (
-            <Stack gap={2} key={g.date}>
-              <Text variant="overline" color="textMuted" accessibilityRole="header">
-                {heading === full ? heading : `${heading} · ${full}`}
-              </Text>
-              {g.items.map((a) => (
-                <AgendaRow key={a.id} appointment={a} perspective={perspective} showChildName={showChildName} />
-              ))}
-            </Stack>
-          );
-        })
+        groups.map((g) => (
+          <Stack gap={2} key={g.date}>
+            <DayHeading day={g.date} now={now} />
+            {g.items.map((a) => (
+              <AgendaRow key={a.id} appointment={a} perspective={perspective} showChildName={showChildName} />
+            ))}
+          </Stack>
+        ))
       )}
       {!loading ? (
         <Button

@@ -29,6 +29,7 @@
     "emptyParent": "Your child has no sessions on this day.",
     "emptyStaff": "Pick another day, or switch to List to see what's coming up.",
     "addSession": "Add a session",
+    "backToToday": "Back to today",
     "a11y_one": "{{day}}, {{count}} session",
     "a11y_other": "{{day}}, {{count}} sessions"
   },

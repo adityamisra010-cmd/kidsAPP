@@ -11,8 +11,9 @@ import { useTheme } from '@/theme/ThemeProvider';
 import { Avatar, Button, Card, EmptyState, ErrorState, Row, Screen, SectionHeader, SkeletonList, Stack, Text, TypeTag } from '@/ui';
 
 import { AgendaRow } from '../components/AgendaRow';
+import { DayHeading } from '../components/DayHeading';
 import { SubstituteSheet } from '../components/SubstituteSheet';
-import { dayHeading, groupByDay, localDate } from '../lib/grouping';
+import { groupByDay, localDate } from '../lib/grouping';
 import { useAppointmentList, useNeedingSubstitute, useUnavailability } from '../queries';
 
 const UPCOMING_DAYS = 14;
@@ -63,7 +64,6 @@ export function SubstitutionsScreen() {
   const [choosing, setChoosing] = useState<AppointmentView | null>(null);
   const [refreshing, setRefreshing] = useState(false);
 
-  const words = { today: t('day.today'), tomorrow: t('day.tomorrow'), yesterday: t('day.yesterday') };
   const covered = (upcoming.data ?? []).filter((a) => a.isSubstitute && a.status === 'scheduled');
   const onRefresh = async () => {
     setRefreshing(true);
@@ -96,9 +96,7 @@ export function SubstitutionsScreen() {
         ) : (
           groupByDay(needs.data).map((g) => (
             <Stack key={g.date} gap={2}>
-              <Text variant="overline" color="textMuted" accessibilityRole="header">
-                {dayHeading(g.date, now, words)}
-              </Text>
+              <DayHeading day={g.date} now={now} />
               {g.items.map((a) => (
                 <NeedsCoverCard key={a.id} appointment={a} leave={leaveFor(a, leave.data ?? [])} onChoose={() => setChoosing(a)} />
               ))}

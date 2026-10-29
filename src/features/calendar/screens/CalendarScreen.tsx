@@ -3,7 +3,7 @@
  * coordinator / school admin Schedule. Month · Week · List views over one fetched range.
  */
 import { router } from 'expo-router';
-import { Plus } from 'lucide-react-native';
+import { CalendarCheck, Plus } from 'lucide-react-native';
 import { useMemo, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 
@@ -121,6 +121,9 @@ export function CalendarScreen() {
           />
         ) : (
           <>
+            {selectedDay !== today ? (
+              <Button size="sm" variant="ghost" icon={CalendarCheck} label={t('day.backToToday')} onPress={() => selectDay(today)} style={{ alignSelf: 'flex-end', marginBottom: -8 }} testID="back-to-today" />
+            ) : null}
             {view === 'month' ? (
               <MonthView month={month} selectedDay={selectedDay} appointments={items} settings={settings} onSelectDay={selectDay} onMonthChange={changeMonth} />
             ) : (
