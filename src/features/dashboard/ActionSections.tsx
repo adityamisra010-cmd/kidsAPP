@@ -69,8 +69,8 @@ export function AttentionSection({ items, index }: { items: AdminDashboard['chil
 }
 
 /**
- * Sessions attended but not logged. "Remind" confirms with a toast; there is no reminder API in the
- * repository contract yet, so nothing is sent (see report).
+ * Sessions attended but not logged. "Remind" confirms with a toast only: the repository contract has
+ * no reminder call yet. Wire it to a `notifications.remindUnlogged(appointmentId)` once it exists.
  */
 export function UnloggedSection({ items, index }: { items: AppointmentView[]; index: number }) {
   const { t } = useTranslation('dashboard');
