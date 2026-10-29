@@ -1,6 +1,6 @@
 import type { ConfigContext, ExpoConfig } from 'expo/config';
 
-import { BRAND } from './src/theme/brand';
+import BRAND from './src/theme/brand.json';
 
 export default ({ config }: ConfigContext): ExpoConfig => ({
   ...config,
@@ -68,6 +68,7 @@ export default ({ config }: ConfigContext): ExpoConfig => ({
       },
     ],
     'react-native-compressor',
+    './plugins/withReleaseSigning',
   ],
   experiments: { typedRoutes: false, reactCompiler: false },
   extra: {
