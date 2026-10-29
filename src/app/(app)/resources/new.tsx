@@ -1,6 +1,6 @@
-// Owner: W5. Placeholder until the feature lands.
-import { Placeholder } from '@/components/Placeholder';
+// Owner: W5 (resources). Add a resource to the school library.
+import { NewResourceScreen } from '@/features/resources/screens/NewResourceScreen';
 
 export default function Screen() {
-  return <Placeholder title="Add resource" back={true} />;
+  return <NewResourceScreen />;
 }

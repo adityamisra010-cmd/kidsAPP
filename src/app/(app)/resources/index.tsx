@@ -1,6 +1,6 @@
-// Owner: W5. Placeholder until the feature lands.
-import { Placeholder } from '@/components/Placeholder';
+// Owner: W5 (resources). Resource library (staff) / shared resources (parent).
+import { ResourceLibraryScreen } from '@/features/resources/screens/ResourceLibraryScreen';
 
 export default function Screen() {
-  return <Placeholder title="Resources" back={true} />;
+  return <ResourceLibraryScreen />;
 }
