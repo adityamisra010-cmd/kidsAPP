@@ -27,6 +27,6 @@ Build order: Phase 1 (pitch APK first), then Phase 2. Everything below is on bra
 
 ## Honest gaps
 - **Not run on a physical phone or emulator** in the build environment (no hardware virtualisation). Run TEST_PLAN.md on a real device.
-- **Supabase adapter** is complete and unit-tested against mocked clients but has **not run against a live Supabase project** yet.
+- **Supabase (test project)**: migrations applied, demo data loaded and the adapter verified live (staff sign-in, Today, brief, caseload, progress, reviews, admin dashboard, saving a session with server-side metrics; RLS checks for parents/anonymous). Not yet verified live: parent phone sign-in (phone provider disabled on the project), Edge Functions (not deployed), real SMS/push. The test project is in Tokyo (ap-northeast-1); production should be a new project in Mumbai (ap-south-1).
 - Real SMS OTP, FCM push and Sentry are configured by env vars but untested without accounts.
 - Hindi strings need human review.
