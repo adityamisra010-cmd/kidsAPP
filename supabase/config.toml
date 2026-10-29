@@ -1,0 +1,153 @@
+# =============================================================================
+# Supabase CLI configuration for My Kid's Tracker (local development: `supabase start`).
+#
+# HOSTED PROJECT: create it in the Mumbai region (AWS ap-south-1, "South Asia (Mumbai)").
+# Children's data must stay in India-hosted infrastructure (see PRIVACY_NOTES.md); the region
+# cannot be changed after the project is created.
+#
+# Secrets are never written here. Values like "env(NAME)" are read from the environment or
+# from supabase/.env (git-ignored) when the CLI starts.
+# =============================================================================
+
+project_id = "mykids-tracker"
+
+[api]
+enabled = true
+port = 54321
+# Only `public` is exposed over PostgREST. The private `app` schema (RLS helpers, internal
+# routines) must never be added here.
+schemas = ["public", "graphql_public"]
+extra_search_path = ["public", "extensions"]
+max_rows = 1000
+
+[db]
+port = 54322
+shadow_port = 54320
+major_version = 17
+
+[db.pooler]
+enabled = false
+
+[db.seed]
+enabled = true
+sql_paths = ["./seed.sql"]
+
+[realtime]
+enabled = true
+
+[studio]
+enabled = true
+port = 54323
+api_url = "http://127.0.0.1"
+
+# Local email testing (magic links / staff password resets land here).
+[inbucket]
+enabled = true
+port = 54324
+
+[storage]
+enabled = true
+# Per-bucket limits (media 25 MB, ...) are set in supabase/migrations/*_storage.sql.
+file_size_limit = "50MiB"
+
+[auth]
+enabled = true
+site_url = "mykidstracker://"
+additional_redirect_urls = ["mykidstracker://auth-callback", "exp://127.0.0.1:8081"]
+jwt_expiry = 3600
+enable_refresh_token_rotation = true
+refresh_token_reuse_interval = 10
+enable_signup = true
+enable_anonymous_sign_ins = false
+enable_manual_linking = false
+minimum_password_length = 10
+
+[auth.rate_limit]
+email_sent = 10
+sms_sent = 60
+token_verifications = 60
+
+# Staff fallback: email + password. Confirmations stay ON: accept_pending_invites() only trusts
+# confirmed emails/phones, and an unconfirmed address must never be able to claim an invite.
+[auth.email]
+enable_signup = true
+double_confirm_changes = true
+enable_confirmations = true
+secure_password_change = true
+max_frequency = "1m0s"
+otp_length = 6
+otp_expiry = 3600
+
+# Primary login: phone number + SMS OTP (Indian parents use phone numbers, not email).
+[auth.sms]
+enable_signup = true
+enable_confirmations = true
+template = "Your My Kid's Tracker code is {{ .Code }}. Do not share it with anyone."
+max_frequency = "30s"
+
+# Demo / QA numbers: no SMS is sent, the OTP is always 123456 (keys are E.164 without "+").
+# Remove or rotate these before giving the hosted project to real users.
+[auth.sms.test_otp]
+919800000001 = "123456"
+919800000002 = "123456"
+919800000003 = "123456"
+919800000004 = "123456"
+919800000005 = "123456"
+919800000006 = "123456"
+919800000007 = "123456"
+919800000008 = "123456"
+919800000009 = "123456"
+919800000010 = "123456"
+
+# -----------------------------------------------------------------------------
+# SMS provider for production (enable exactly one). If local phone sign-in with the test
+# numbers above fails with "Unable to get SMS provider", enable the Twilio block with dummy
+# values: test numbers never reach the provider.
+#
+# Option A — Twilio (native Supabase provider):
+# [auth.sms.twilio]
+# enabled = true
+# account_sid = "env(SUPABASE_AUTH_SMS_TWILIO_ACCOUNT_SID)"
+# message_service_sid = "env(SUPABASE_AUTH_SMS_TWILIO_MESSAGE_SERVICE_SID)"
+# auth_token = "env(SUPABASE_AUTH_SMS_TWILIO_AUTH_TOKEN)"
+#
+# Option B — MSG91 (common in India, DLT-registered templates). Supabase has no native MSG91
+# provider, so use the Send SMS auth hook pointing at an Edge Function that calls MSG91's
+# OTP API with MSG91_AUTH_KEY / MSG91_TEMPLATE_ID (set with `supabase secrets set`):
+# [auth.hook.send_sms]
+# enabled = true
+# uri = "env(SUPABASE_AUTH_HOOK_SEND_SMS_URI)"          # https://<ref>.supabase.co/functions/v1/send-sms-msg91
+# secrets = "env(SUPABASE_AUTH_HOOK_SEND_SMS_SECRETS)"  # v1,whsec_... (hook signing secret)
+#
+# Option C — Textlocal (native provider, India):
+# [auth.sms.textlocal]
+# enabled = true
+# sender = "env(SUPABASE_AUTH_SMS_TEXTLOCAL_SENDER)"
+# api_key = "env(SUPABASE_AUTH_SMS_TEXTLOCAL_API_KEY)"
+# -----------------------------------------------------------------------------
+
+[auth.external.apple]
+enabled = false
+
+[auth.external.google]
+enabled = false
+
+[edge_runtime]
+enabled = true
+policy = "oneshot"
+inspector_port = 8083
+
+# Cron-invoked functions authenticate with CRON_SECRET (x-cron-secret header) or the service-role
+# key inside the function, so the gateway JWT check is off for them. See supabase/functions/README.md.
+[functions.send-push]
+verify_jwt = false
+
+[functions.reminders]
+verify_jwt = false
+
+[functions.media-retention]
+verify_jwt = false
+
+# No third-party analytics: this block is Supabase's own local log collector only.
+[analytics]
+enabled = false
