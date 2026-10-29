@@ -679,6 +679,12 @@ async function testTenantIsolation(): Promise<void> {
   );
   check('A admin updates 0 School B children', updated === 0);
   await expectError(
+    'rows cannot be moved to another school',
+    () =>
+      as(pa.admin, (q) => q(`update public.therapy_types set organization_id = $1 where id = $2`, [B.org, A.speech])),
+    /organization_id cannot be changed/,
+  );
+  await expectError(
     'A therapist cannot add a goal to a School B child',
     () =>
       as(pa.t1, (q) =>

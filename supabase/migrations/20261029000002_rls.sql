@@ -926,6 +926,32 @@ $$;
 create trigger c_guard before insert or update on public.media
   for each row execute function app.media_owner_guard();
 
+-- Rows never move between schools through the API (records would end up split across tenants).
+create or replace function app.organization_immutable() returns trigger
+language plpgsql set search_path = '' as $$
+begin
+  if current_user in ('authenticated', 'anon') and new.organization_id is distinct from old.organization_id then
+    perform app.raise('forbidden', 'organization_id cannot be changed');
+  end if;
+  return new;
+end
+$$;
+
+do $$
+declare t record;
+begin
+  for t in
+    select c.table_name
+    from information_schema.columns c
+    join information_schema.tables tb on tb.table_schema = c.table_schema and tb.table_name = c.table_name
+    where c.table_schema = 'public' and c.column_name = 'organization_id' and tb.table_type = 'BASE TABLE'
+  loop
+    execute format('create trigger b_org_immutable before update of organization_id on public.%I
+                    for each row execute function app.organization_immutable()', t.table_name);
+  end loop;
+end
+$$;
+
 -- ---------------------------------------------------------------------------
 -- Enable RLS on EVERY table in public (asserted again at the end of this file)
 -- ---------------------------------------------------------------------------
