@@ -145,7 +145,7 @@ describe('sessions', () => {
     const ratings = { ...prev.ratings, attention: 4 as RatingValue, mood: 2 as RatingValue };
     const metrics = computeSessionMetrics({ ratings, goalTrials: [{ attempted: 10, successful: 7 }], incidents: [], dimensions: dims, previous: [{ sessionScore: prev.metrics.sessionScore, ratings: prev.ratings }] });
     const s = session('s', '2026-10-03', 3, { ratings, metrics, goalTrials: [{ goalId: 'g1', attempted: 10, successful: 7, promptLevel: 4 }] });
-    const snap = buildParentSnapshot({ session: s, dimensions: dims, settings: DEFAULT_ORG_SETTINGS, therapyType: { name: 'Speech Therapy', color: '#000' }, goals: [{ id: 'g1', parentText: 'Asks with two words' }] });
+    const snap = buildParentSnapshot({ session: s, dimensions: dims, settings: DEFAULT_ORG_SETTINGS, therapyType: { name: 'Speech Therapy', color: '#000', key: 'speech' }, goals: [{ id: 'g1', parentText: 'Asks with two words' }] });
     expect(snap.highlights.map((h) => [h.key, h.change])).toEqual([
       ['attention', 'better'],
       ['mood', 'harder'],
@@ -153,8 +153,9 @@ describe('sessions', () => {
       ['communication', 'same'],
     ]);
     expect(snap.sessionScore).toBeUndefined();
+    expect(snap.therapyTypeKey).toBe('speech');
     expect(snap.goalsWorkedOn).toEqual([{ goalId: 'g1', parentText: 'Asks with two words' }]);
-    expect(buildParentSnapshot({ session: s, dimensions: dims, settings: { parentsSeeNumericScore: true }, therapyType: { name: 'x', color: '#000' }, goals: [] }).sessionScore).toBe(s.metrics.sessionScore);
+    expect(buildParentSnapshot({ session: s, dimensions: dims, settings: { parentsSeeNumericScore: true }, therapyType: { name: 'x', color: '#000', key: 'speech' }, goals: [] }).sessionScore).toBe(s.metrics.sessionScore);
   });
 
   it('tops highlights up to 3 when preferred dimensions are disabled', () => {

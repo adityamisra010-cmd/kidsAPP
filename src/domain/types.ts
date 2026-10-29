@@ -575,6 +575,8 @@ export interface ParentSessionSnapshot {
   date: ISODate;
   therapyTypeName: string;
   therapyTypeColor: string;
+  /** Stable therapy type key (speech, occupational, …) for icons and i18n. */
+  therapyTypeKey: string;
   therapistName: string;
   isSubstitute: boolean;
   /** 3–4 highlighted dimensions in words. */
@@ -634,6 +636,8 @@ export interface HandoverBrief {
   openHomeTasks: HomeTask[];
   latestParentFeedback?: HomeLog;
   activeAlerts: Alert[];
+  /** Viewer's access to the child ('brief_only' for substitutes outside their caseload). */
+  access: ChildAccess;
   mustAcknowledge: boolean;
   acknowledged: boolean;
 }

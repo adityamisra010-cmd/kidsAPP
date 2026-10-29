@@ -61,7 +61,8 @@ export function isMissed(a: ApptState): boolean {
   return isCancelled(a) || a.attendance === 'absent';
 }
 
-const ms = (iso: ISODateTime) => parse(iso).getTime();
+/** Epoch ms of a full ISO timestamp (native parsing; these always carry an offset). */
+const ms = (iso: ISODateTime) => Date.parse(iso);
 
 export function appointmentDisplayStatus(a: Appointment, now: Date): AppointmentDisplayStatus {
   if (isCancelled(a)) return 'cancelled';
@@ -212,7 +213,7 @@ export function buildParentSnapshot(input: {
   session: SessionLog;
   dimensions: RatingDimension[];
   settings: Pick<OrgSettings, 'parentsSeeNumericScore'>;
-  therapyType: Pick<TherapyType, 'name' | 'color'>;
+  therapyType: Pick<TherapyType, 'name' | 'color' | 'key'>;
   goals: Pick<Goal, 'id' | 'parentText'>[];
 }): ParentSessionSnapshot {
   const { session: s } = input;
@@ -235,6 +236,7 @@ export function buildParentSnapshot(input: {
     date: s.date,
     therapyTypeName: input.therapyType.name,
     therapyTypeColor: input.therapyType.color,
+    therapyTypeKey: input.therapyType.key,
     therapistName: s.therapistName,
     isSubstitute: s.isSubstitute,
     highlights,
