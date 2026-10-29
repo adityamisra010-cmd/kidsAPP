@@ -1,6 +1,5 @@
-// Owner: W1. Placeholder until the feature lands.
-import { Placeholder } from '@/components/Placeholder';
+import { ConsentScreen } from '@/features/onboarding/ConsentScreen';
 
 export default function Screen() {
-  return <Placeholder title="Consent" back={true} />;
+  return <ConsentScreen />;
 }

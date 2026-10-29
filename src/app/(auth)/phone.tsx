@@ -1,6 +1,5 @@
-// Owner: W1. Placeholder until the feature lands.
-import { Placeholder } from '@/components/Placeholder';
+import { PhoneScreen } from '@/features/onboarding/PhoneScreen';
 
 export default function Screen() {
-  return <Placeholder title="Sign in" back={true} />;
+  return <PhoneScreen />;
 }
