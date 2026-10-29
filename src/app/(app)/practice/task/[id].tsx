@@ -1,6 +1,9 @@
-// Owner: W5. Placeholder until the feature lands.
-import { Placeholder } from '@/components/Placeholder';
+// Owner: W5 (practice). Home task detail.
+import { useLocalSearchParams } from 'expo-router';
+
+import { TaskDetailScreen } from '@/features/practice/screens/TaskDetailScreen';
 
 export default function Screen() {
-  return <Placeholder title="Home task" back={true} />;
+  const { id } = useLocalSearchParams<{ id: string }>();
+  return <TaskDetailScreen taskId={id} />;
 }
