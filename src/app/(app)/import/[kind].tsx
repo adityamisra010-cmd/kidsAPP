@@ -1,6 +1,9 @@
-// Owner: W7. Placeholder until the feature lands.
-import { Placeholder } from '@/components/Placeholder';
+// Owner: W7 (reports, import, school settings).
+import { useLocalSearchParams } from 'expo-router';
+
+import { ImportFlowScreen } from '@/features/import/ImportFlowScreen';
 
 export default function Screen() {
-  return <Placeholder title="Import" back={true} />;
+  const { kind } = useLocalSearchParams<{ kind: string }>();
+  return <ImportFlowScreen kind={kind} />;
 }

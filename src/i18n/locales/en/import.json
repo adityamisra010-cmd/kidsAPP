@@ -1,1 +1,231 @@
-{}
+{
+  "home": {
+    "title": "Import from Excel",
+    "subtitle": "Bring your existing sheets into the app",
+    "intro": "Move your school's Excel sheets into the app in one sitting. Use our templates or your own sheet: you'll match the columns and check every row before anything is saved.",
+    "safe": "Importing the same file again is safe. Matching records are updated, never added twice.",
+    "orderTitle": "Suggested order",
+    "step": "Step {{n}}",
+    "orderBody": "Parents and the schedule refer to people already in the app, so import in this order.",
+    "downloadTemplate": "Download template",
+    "importFile": "Import file",
+    "columns": "Columns: {{list}}",
+    "adminOnly": "Only the school admin can import this.",
+    "noAccess": "Imports are available to school admins and coordinators.",
+    "templateShareTitle": "Share template",
+    "templateError": "We couldn't share the template. Please try again."
+  },
+  "kinds": {
+    "staff": { "title": "Staff", "body": "Therapists, coordinators and admins, with mobile numbers and therapy types." },
+    "children": { "title": "Children", "body": "Names, dates of birth and class or group." },
+    "parents": { "title": "Parents", "body": "Parents and guardians, linked to their children." },
+    "schedule": { "title": "Recurring schedule", "body": "Weekly sessions: child, therapist, therapy type, days and time." }
+  },
+  "flow": {
+    "title": "Import {{kind}}",
+    "unknownKind": "This import type doesn't exist.",
+    "steps": {
+      "file": "Choose file",
+      "match": "Match columns",
+      "check": "Check",
+      "done": "Done"
+    },
+    "stepA11y": "Step {{n}} of 4: {{label}}",
+    "stepDone": "done",
+    "stepCurrent": "current"
+  },
+  "file": {
+    "title": "Choose your file",
+    "body": "Excel (.xlsx or .xls) or CSV. We use the first sheet that has data.",
+    "choose": "Choose file",
+    "chooseAnother": "Choose another file",
+    "reading": "Reading your file…",
+    "tip": "Your own column names are fine. You'll match them to ours in the next step.",
+    "sheet": "Sheet “{{name}}”",
+    "rows_one": "{{count}} row found",
+    "rows_other": "{{count}} rows found",
+    "headerRow": "Column names found in row {{row}}",
+    "next": "Next: match columns",
+    "errorTitle": "We couldn't use this file",
+    "errors": {
+      "empty": "This file looks empty.",
+      "unreadable": "We couldn't read this file. If it opens in Excel, save it again as .xlsx or “CSV UTF-8” and try once more.",
+      "no_header": "We couldn't find column names in the first rows. Put the column names in the first row and try again.",
+      "no_rows": "We found the column names but no rows under them.",
+      "too_many_rows": "This file is too big for one import (more than 3,000 rows). Split it into smaller files.",
+      "unsupported_type": "Please choose an Excel (.xlsx, .xls) or CSV file.",
+      "password": "This file is password-protected. Remove the password in Excel and try again."
+    }
+  },
+  "match": {
+    "title": "Match your columns",
+    "body": "We matched what we could. Check each one and change it if it's wrong.",
+    "notInFile": "Not in my file",
+    "required": "Required",
+    "missingRequired": "Choose the column that has {{name}}.",
+    "missingSummary": "Match the required columns to continue.",
+    "example": "e.g. {{value}}",
+    "pickTitle": "Which column has “{{name}}”?",
+    "fileColumn": "Your column",
+    "ignored": "Not used: {{list}}",
+    "next": "Next: check rows"
+  },
+  "check": {
+    "title": "Check before importing",
+    "new": "Ready to add",
+    "update": "Will update",
+    "duplicate": "Repeated in file",
+    "error": "Need fixing",
+    "updateHint": "Rows marked “Update” are already in the app. Their details will be updated, not duplicated.",
+    "showProblems": "Show only problems",
+    "showProblemsHint": "Rows that need fixing or have a note",
+    "unresolvedTitle": "Names we couldn't find",
+    "unresolvedBody": "Pick the right match and we'll use it for every row with that name. No need to edit your file.",
+    "useMatch": "Use {{name}}",
+    "noSuggestion": "No close match. Check the spelling in your file, or add them to the app first.",
+    "rowsAffected_one": "{{count}} row",
+    "rowsAffected_other": "{{count}} rows",
+    "refKind": {
+      "child": "Child",
+      "therapist": "Therapist",
+      "therapyType": "Therapy type"
+    },
+    "row": "Row {{n}}",
+    "status": {
+      "new": "New",
+      "update": "Update",
+      "duplicate": "Repeated",
+      "error": "Needs fixing"
+    },
+    "duplicateOf": "Same as row {{row}}, so it will be imported once.",
+    "noProblems": "No problems found. Everything is ready to import.",
+    "showMore": "Show more rows",
+    "showing": "Showing {{shown}} of {{total}}",
+    "import_one": "Import {{count}} row",
+    "import_other": "Import {{count}} rows",
+    "nothingToImport": "Nothing to import yet. Fix the rows above and try again.",
+    "skipNote": "Rows that need fixing will be skipped. Fix them in your file and import it again; nothing will be added twice.",
+    "emptyIgnored_one": "{{count}} row without any of these columns was ignored.",
+    "emptyIgnored_other": "{{count}} rows without any of these columns were ignored."
+  },
+  "done": {
+    "title": "Import finished",
+    "created": "Added",
+    "updated": "Updated",
+    "skipped": "Skipped",
+    "errors": "Couldn't import",
+    "safeAgain": "Importing this file again will update these records instead of adding them twice.",
+    "errorsTitle": "Rows we couldn't import",
+    "rowError": "Row {{n}}: {{message}}",
+    "another": "Import another file",
+    "backToImports": "Back to imports",
+    "goTo": {
+      "staff": "Go to People",
+      "children": "Go to People",
+      "parents": "Go to People",
+      "schedule": "Go to Schedule"
+    },
+    "failed": "The import didn't finish. Nothing was lost. Please try again."
+  },
+  "columns": {
+    "children": {
+      "fullName": { "label": "Full name", "help": "The child's name as on school records" },
+      "preferredName": { "label": "Preferred name", "help": "What the child likes to be called" },
+      "dob": { "label": "Date of birth", "help": "Used with the name to recognise the same child" },
+      "gender": { "label": "Gender", "help": "Male, Female or Other" },
+      "classGroup": { "label": "Class or group", "help": "Class, section or programme" }
+    },
+    "staff": {
+      "fullName": { "label": "Full name", "help": "As it should appear in the app" },
+      "phone": { "label": "Mobile number", "help": "Used to sign in, and to recognise the same person" },
+      "email": { "label": "Email", "help": "Optional" },
+      "role": { "label": "Role", "help": "Therapist, Coordinator or School Admin" },
+      "title": { "label": "Job title", "help": "e.g. Speech Therapist" },
+      "therapyTypes": { "label": "Therapy types", "help": "One or more, e.g. Speech; OT" }
+    },
+    "parents": {
+      "fullName": { "label": "Parent's full name", "help": "Parent or guardian" },
+      "phone": { "label": "Mobile number", "help": "The parent signs in with this number" },
+      "email": { "label": "Email", "help": "Optional" },
+      "relation": { "label": "Relation", "help": "Mother, Father, Guardian…" },
+      "childName": { "label": "Child's full name", "help": "Must match a child in the app" },
+      "childDob": { "label": "Child's date of birth", "help": "Only needed when two children share a name" },
+      "isPrimary": { "label": "Primary contact", "help": "Yes or No" }
+    },
+    "schedule": {
+      "childName": { "label": "Child's full name", "help": "Must match a child in the app" },
+      "childDob": { "label": "Child's date of birth", "help": "Only needed when two children share a name" },
+      "therapist": { "label": "Therapist", "help": "Name or mobile number" },
+      "therapyType": { "label": "Therapy type", "help": "e.g. Speech Therapy, OT" },
+      "weekdays": { "label": "Days", "help": "e.g. Mon/Wed/Fri" },
+      "startTime": { "label": "Start time", "help": "e.g. 10:30 AM" },
+      "durationMinutes": { "label": "Duration (minutes)", "help": "Default 45" },
+      "startDate": { "label": "Start date", "help": "Default today" },
+      "endDate": { "label": "End date", "help": "Default 31 March" },
+      "room": { "label": "Room", "help": "Optional" }
+    }
+  },
+  "line": {
+    "born": "Born {{date}}",
+    "relationOf": "{{relation}} of {{child}}",
+    "with": "{{therapy}} with {{therapist}}"
+  },
+  "issues": {
+    "required": "{{column}} is missing.",
+    "name_invalid": "“{{value}}” doesn't look like a name.",
+    "phone_invalid": "“{{value}}” isn't a 10-digit Indian mobile number.",
+    "phone_landline": "“{{value}}” looks like a landline. A mobile number is needed to sign in with an SMS code.",
+    "phone_foreign": "“{{value}}” isn't an Indian (+91) number. Only Indian mobiles work for now.",
+    "phone_shortened": "Excel shortened this number to “{{value}}”. Format the column as Text, type the number again and re-import.",
+    "phone_multiple": "Two numbers in one cell. We used the first one.",
+    "email_invalid": "“{{value}}” isn't a valid email, so it was left out.",
+    "date_invalid": "“{{value}}” isn't a date we can read. Use day/month/year, like 14/03/2019.",
+    "date_us_order": "Read “{{value}}” as {{date}} (month first).",
+    "dob_future": "Date of birth “{{value}}” is in the future.",
+    "dob_unusual": "This child would be {{age}} years old. Please check the date of birth.",
+    "gender_unknown": "“{{value}}” isn't a gender we recognise, so it was left out.",
+    "child_same_name_exists": "{{name}} (born {{date}}) is already in the app. This row has a different date of birth, so it will be added as a new child.",
+    "role_unknown": "“{{value}}” isn't a role. Use Therapist, Coordinator or School Admin.",
+    "role_from_title": "Role taken from the job title: {{role}}.",
+    "role_defaulted": "No role given, so they'll be added as {{role}}.",
+    "therapist_no_types": "No therapy types yet. You can add them later in People.",
+    "therapy_type_unknown": "We couldn't find the therapy type “{{value}}”.",
+    "phone_belongs_to": "This number belongs to {{name}} in the app. Their details will be updated.",
+    "child_unknown": "We couldn't find a child called “{{value}}”.",
+    "child_ambiguous": "More than one child is called “{{value}}”. Add the child's date of birth to tell them apart.",
+    "child_dob_mismatch": "A child called “{{value}}” is in the app, but with a different date of birth.",
+    "child_dob_ignored": "The child's date of birth “{{value}}” couldn't be read, so it was ignored.",
+    "yesno_unknown": "“{{value}}” isn't Yes or No, so it was ignored.",
+    "phone_different_name": "Row {{row}} uses this number for {{name}}.",
+    "therapist_unknown": "We couldn't find a therapist called “{{value}}”.",
+    "therapist_ambiguous": "More than one therapist is called “{{value}}”. Use their mobile number instead.",
+    "days_invalid": "“{{value}}” isn't a list of days we can read. Try Mon/Wed/Fri.",
+    "days_assumed_daily": "“{{value}}” read as Monday to Saturday.",
+    "time_invalid": "“{{value}}” isn't a time we can read. Try 10:30 AM.",
+    "time_assumed_pm": "“{{value}}” read as {{time}}.",
+    "duration_invalid": "“{{value}}” isn't a session length between 10 and 240 minutes.",
+    "duration_hours_assumed": "“{{value}}” read as {{minutes}} minutes.",
+    "duration_defaulted": "No duration given, so sessions will be {{minutes}} minutes.",
+    "start_date_moved": "The start date is in the past, so sessions will start from {{date}}.",
+    "end_date_defaulted": "No end date, so sessions run until {{date}} (end of the academic year).",
+    "end_before_start": "The end date {{date}} is before the start date.",
+    "child_double_booked": "This child already has a session at this time in row {{row}}.",
+    "therapist_double_booked": "This therapist already has a session at this time in row {{row}}.",
+    "suggestion": "Did you mean {{names}}?",
+    "unknown": "Please check this row."
+  },
+  "roles": {
+    "therapist": "Therapist",
+    "coordinator": "Coordinator",
+    "school_admin": "School Admin"
+  },
+  "days": {
+    "0": "Sun",
+    "1": "Mon",
+    "2": "Tue",
+    "3": "Wed",
+    "4": "Thu",
+    "5": "Fri",
+    "6": "Sat"
+  }
+}
