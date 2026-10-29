@@ -1,6 +1,9 @@
-// Owner: W2. Placeholder until the feature lands.
-import { Placeholder } from '@/components/Placeholder';
+// Owner: W2 (session). Session detail: full log for staff, parent snapshot for parents.
+import { useLocalSearchParams } from 'expo-router';
+
+import { SessionDetailScreen } from '@/features/session/screens/SessionDetailScreen';
 
 export default function Screen() {
-  return <Placeholder title="Session" back={true} />;
+  const { id } = useLocalSearchParams<{ id: string }>();
+  return <SessionDetailScreen id={id} />;
 }
