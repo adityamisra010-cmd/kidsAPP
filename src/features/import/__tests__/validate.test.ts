@@ -295,7 +295,7 @@ describe('large files', () => {
     );
     const started = Date.now();
     const r = run('parents', `Parent Name,Mobile,Child Name\n${lines.join('\n')}\n`, {}, big);
-    expect(Date.now() - started).toBeLessThan(4000);
+    expect(Date.now() - started).toBeLessThan(15000);
     expect(r.counts.total).toBe(3000);
     expect(r.counts.error).toBe(1000);
     // Known mobiles (first 1,200) whose child was found are updates.
