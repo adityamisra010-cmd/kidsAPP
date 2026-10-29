@@ -1,6 +1,9 @@
-// Owner: W3. Placeholder until the feature lands.
-import { Placeholder } from '@/components/Placeholder';
+// Owner: W3 (calendar). Parent: request a change to a session.
+import { useLocalSearchParams } from 'expo-router';
+
+import { RescheduleRequestScreen } from '@/features/calendar';
 
 export default function Screen() {
-  return <Placeholder title="Request a change" back={true} />;
+  const { appointmentId } = useLocalSearchParams<{ appointmentId: string }>();
+  return <RescheduleRequestScreen appointmentId={appointmentId} />;
 }

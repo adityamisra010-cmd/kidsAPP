@@ -1,6 +1,6 @@
-// Owner: W3. Placeholder until the feature lands.
-import { Placeholder } from '@/components/Placeholder';
+// Owner: W3 (calendar). Coordinator / school admin Schedule tab.
+import { CalendarScreen } from '@/features/calendar';
 
 export default function Screen() {
-  return <Placeholder title="Schedule" back={false} />;
+  return <CalendarScreen />;
 }

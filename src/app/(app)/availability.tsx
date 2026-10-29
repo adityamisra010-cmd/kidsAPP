@@ -1,6 +1,6 @@
-// Owner: W3. Placeholder until the feature lands.
-import { Placeholder } from '@/components/Placeholder';
+// Owner: W3 (calendar). Therapist leave; coordinators manage anyone's.
+import { AvailabilityScreen } from '@/features/calendar';
 
 export default function Screen() {
-  return <Placeholder title="Availability & leave" back={true} />;
+  return <AvailabilityScreen />;
 }
