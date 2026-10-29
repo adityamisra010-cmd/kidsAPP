@@ -1,5 +1,6 @@
 import { Redirect, Stack } from 'expo-router';
 
+import { useNotificationsSetup } from '@/features/push';
 import { useActive } from '@/state/session';
 import { useTheme } from '@/theme/ThemeProvider';
 
@@ -7,10 +8,15 @@ import { useTheme } from '@/theme/ThemeProvider';
 export default function AppLayout() {
   const t = useTheme();
   const active = useActive();
+  // Channels, notification taps, the one-time permission explanation and local reminders.
+  const notificationsPrompt = useNotificationsSetup();
   if (!active) return <Redirect href="/welcome" />;
   return (
-    <Stack screenOptions={{ headerShown: false, contentStyle: { backgroundColor: t.colors.bg }, animation: t.reduceMotion ? 'none' : 'default' }}>
-      <Stack.Screen name="session/log/[appointmentId]" options={{ presentation: 'fullScreenModal', gestureEnabled: false }} />
-    </Stack>
+    <>
+      <Stack screenOptions={{ headerShown: false, contentStyle: { backgroundColor: t.colors.bg }, animation: t.reduceMotion ? 'none' : 'default' }}>
+        <Stack.Screen name="session/log/[appointmentId]" options={{ presentation: 'fullScreenModal', gestureEnabled: false }} />
+      </Stack>
+      {notificationsPrompt}
+    </>
   );
 }

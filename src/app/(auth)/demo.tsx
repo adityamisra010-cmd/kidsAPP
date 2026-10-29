@@ -1,6 +1,5 @@
-// Owner: W1. Placeholder until the feature lands.
-import { Placeholder } from '@/components/Placeholder';
+import { DemoScreen } from '@/features/onboarding/DemoScreen';
 
 export default function Screen() {
-  return <Placeholder title="Try demo" back={true} />;
+  return <DemoScreen />;
 }

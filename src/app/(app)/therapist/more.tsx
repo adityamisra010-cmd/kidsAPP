@@ -1,6 +1,5 @@
-// Owner: W1. Placeholder until the feature lands.
-import { Placeholder } from '@/components/Placeholder';
+import { MoreScreen } from '@/features/account/MoreScreen';
 
 export default function Screen() {
-  return <Placeholder title="More" back={false} />;
+  return <MoreScreen />;
 }
