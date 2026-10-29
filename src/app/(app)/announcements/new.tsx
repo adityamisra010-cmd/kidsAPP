@@ -1,6 +1,6 @@
-// Owner: W6. Placeholder until the feature lands.
-import { Placeholder } from '@/components/Placeholder';
+// Owner: W6 (announcements).
+import { NewAnnouncementScreen } from '@/features/messages/NewAnnouncementScreen';
 
 export default function Screen() {
-  return <Placeholder title="New announcement" back={true} />;
+  return <NewAnnouncementScreen />;
 }
