@@ -31,7 +31,7 @@ describe('parseCsvText', () => {
   });
 
   it('strips a UTF-8 BOM and handles semicolon and tab separated files', () => {
-    expect(parseCsvText('﻿Name;DOB\nAarav;12/03/2019').rows[0].cells).toEqual(['Aarav', '12/03/2019']);
+    expect(parseCsvText('\uFEFFName;DOB\nAarav;12/03/2019').rows[0].cells).toEqual(['Aarav', '12/03/2019']);
     expect(parseCsvText('Name\tDOB\nAarav\t12/03/2019').rows[0].cells).toEqual(['Aarav', '12/03/2019']);
   });
 
@@ -142,7 +142,7 @@ describe('helpers', () => {
 
   it('spots badly decoded text', () => {
     expect(looksGarbled('Name,DOB\nAarav,14/03/2019')).toBe(false);
-    expect(looksGarbled('�����abc')).toBe(true);
+    expect(looksGarbled('\uFFFD\uFFFD\uFFFD\uFFFD\uFFFDabc')).toBe(true);
   });
 
   it('finds a sample value for a column', () => {

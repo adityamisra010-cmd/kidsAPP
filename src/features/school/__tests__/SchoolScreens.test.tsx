@@ -129,8 +129,8 @@ describe('Rating scales', () => {
   it('keeps at least three scales on', async () => {
     signIn('school_admin');
     await render(wrap(<DimensionsScreen />));
-    expect(await screen.findByText('Clear anchors keep scoring consistent when therapists change.')).toBeTruthy();
-    await fireEvent.press(screen.getByTestId('dimension-engagement-enabled'));
+    expect(screen.getByText('Clear anchors keep scoring consistent when therapists change.')).toBeTruthy();
+    await fireEvent.press(await screen.findByTestId('dimension-engagement-enabled'));
     expect(mockOrgRepo.upsertRatingDimension).not.toHaveBeenCalled();
     await fireEvent.press(screen.getByTestId('dimension-mood-enabled'));
     await waitFor(() => expect(mockOrgRepo.upsertRatingDimension).toHaveBeenCalledWith(expect.objectContaining({ key: 'mood', enabled: true })));

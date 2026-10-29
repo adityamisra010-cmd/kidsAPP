@@ -191,12 +191,12 @@ export function workbookToSheet(wb: XLSX.WorkBook, kind?: ImportKind): ParsedShe
 export function looksGarbled(text: string): boolean {
   if (!text) return false;
   const sample = text.slice(0, 4000);
-  const bad = (sample.match(/[\u0000-\u0008\u000E-\u001F�]/g) ?? []).length;
+  const bad = (sample.match(/[\u0000-\u0008\u000E-\u001F\uFFFD]/g) ?? []).length;
   return bad > Math.max(3, sample.length * 0.02);
 }
 
 export function parseCsvText(text: string, kind?: ImportKind): ParsedSheet {
-  const clean = text.replace(/^﻿/, '');
+  const clean = text.replace(/^\uFEFF/, '');
   if (!clean.trim()) throw new ImportFileError('empty');
   if (looksGarbled(clean)) throw new ImportFileError('unreadable');
   let wb: XLSX.WorkBook;

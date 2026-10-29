@@ -24,7 +24,7 @@ const TODAY = new Date(2026, 9, 29); // 29 Oct 2026
 
 describe('cleanText / normalizeHeader / normalizeName', () => {
   it('cleans invisible characters and spacing', () => {
-    expect(cleanText('  Aarav  Sharma​ ')).toBe('Aarav Sharma');
+    expect(cleanText('  Aarav\u00A0 Sharma\u200B ')).toBe('Aarav Sharma');
     expect(cleanText(null)).toBe('');
     expect(cleanText(42)).toBe('42');
   });

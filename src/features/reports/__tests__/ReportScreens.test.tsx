@@ -136,7 +136,7 @@ describe('Export screen', () => {
     await fireEvent.press(screen.getByTestId('export-share'));
     await waitFor(() => expect(Sharing.shareAsync).toHaveBeenCalled());
     expect(mockWritten).toHaveLength(1);
-    expect(mockWritten[0].content.startsWith('﻿Date,Child,Therapy,Session Score,Substitute\r\n')).toBe(true);
+    expect(mockWritten[0].content.startsWith('\uFEFFDate,Child,Therapy,Session Score,Substitute\r\n')).toBe(true);
     expect(mockWritten[0].content).toContain('2026-10-14,दिया अय्यर,Speech Therapy,66,Yes');
     expect(Sharing.shareAsync).toHaveBeenCalledWith(expect.stringMatching(/sessions_\d{4}-\d{2}-01_to_/), expect.objectContaining({ mimeType: 'text/csv' }));
   });

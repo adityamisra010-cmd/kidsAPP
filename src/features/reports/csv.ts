@@ -4,7 +4,7 @@
  */
 import type { ExportRow } from '@/domain/types';
 
-export const UTF8_BOM = '﻿';
+export const UTF8_BOM = '\uFEFF';
 
 export interface CsvOptions {
   /** Column order. Default: keys in order of first appearance across rows. */
