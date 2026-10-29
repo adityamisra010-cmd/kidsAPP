@@ -1,6 +1,9 @@
-// Owner: W3. Placeholder until the feature lands.
-import { Placeholder } from '@/components/Placeholder';
+// Owner: W3 (calendar). Coordinator / school admin: new schedule (optional ?childId=&date=).
+import { useLocalSearchParams } from 'expo-router';
+
+import { NewScheduleScreen } from '@/features/calendar';
 
 export default function Screen() {
-  return <Placeholder title="New schedule" back={true} />;
+  const { childId, date } = useLocalSearchParams<{ childId?: string; date?: string }>();
+  return <NewScheduleScreen childId={childId} date={date} />;
 }

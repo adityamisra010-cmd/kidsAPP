@@ -1,6 +1,6 @@
-// Owner: W3. Placeholder until the feature lands.
-import { Placeholder } from '@/components/Placeholder';
+// Owner: W3 (calendar). Coordinator: sessions needing cover.
+import { SubstitutionsScreen } from '@/features/calendar';
 
 export default function Screen() {
-  return <Placeholder title="Substitutions" back={true} />;
+  return <SubstitutionsScreen />;
 }

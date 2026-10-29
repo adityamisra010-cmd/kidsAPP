@@ -1,6 +1,6 @@
-// Owner: W3. Placeholder until the feature lands.
-import { Placeholder } from '@/components/Placeholder';
+// Owner: W3 (calendar). Coordinator: parents' change requests.
+import { RescheduleRequestsScreen } from '@/features/calendar';
 
 export default function Screen() {
-  return <Placeholder title="Reschedule requests" back={true} />;
+  return <RescheduleRequestsScreen />;
 }
