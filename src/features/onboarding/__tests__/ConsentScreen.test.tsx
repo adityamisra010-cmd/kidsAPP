@@ -36,7 +36,7 @@ describe('ConsentScreen', () => {
     const me = fakeRepo([]);
     await renderScreen(<ConsentScreen />);
     expect(await screen.findByText('Before you start')).toBeTruthy();
-    expect(screen.getByText(/Sunrise Learning Centre keeps about your child/)).toBeTruthy();
+    expect(await screen.findByText(/Sunrise Learning Centre keeps about your child/)).toBeTruthy();
     expect(screen.getByText('Stored on servers in India.')).toBeTruthy();
 
     await fireEvent.press(screen.getByTestId('consent-continue'));
