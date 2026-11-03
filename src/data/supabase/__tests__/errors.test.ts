@@ -48,6 +48,11 @@ describe('toRepoError', () => {
     expect(code(authErr('otp_expired', 'Token has expired or is invalid', 403))).toBe('otp_invalid');
     expect(code(authErr('otp_expired', 'Token has expired', 403))).toBe('otp_expired');
     expect(code(authErr('invalid_credentials', 'Invalid login credentials'))).toBe('not_authenticated');
+    // A failed SMS send mentions "OTP ... invalid username": it must not read as a wrong code.
+    const sendFail = 'Error sending confirmation OTP to provider: Authentication Error - invalid username';
+    expect(code(authErr('sms_send_failed', sendFail, 422))).toBe('sms_failed');
+    expect(code(authErr('', sendFail, 422))).toBe('sms_failed');
+    expect(code(authErr('over_sms_send_rate_limit', 'Too many SMS sent', 429))).toBe('sms_failed');
     expect(code(authErr('validation_failed', 'Invalid phone number format'))).toBe('validation');
     expect(code({ __isAuthError: true, name: 'AuthSessionMissingError', message: 'Auth session missing!' })).toBe('not_authenticated');
   });

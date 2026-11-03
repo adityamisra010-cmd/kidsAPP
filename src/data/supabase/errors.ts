@@ -17,6 +17,7 @@ const REPO_CODES: ReadonlySet<string> = new Set<RepoErrorCode>([
   'offline',
   'otp_invalid',
   'otp_expired',
+  'sms_failed',
   'no_membership',
   'consent_required',
   'unknown',
@@ -112,6 +113,9 @@ function authCode(code: string, message: string, status: number | undefined): Re
       // GoTrue uses otp_expired for both a wrong and an expired code ("Token has expired or is
       // invalid"). A mistyped code is far more common, so only a pure "expired" maps to expired.
       return /invalid/i.test(message) ? 'otp_invalid' : 'otp_expired';
+    case 'sms_send_failed':
+    case 'over_sms_send_rate_limit':
+      return 'sms_failed';
     case 'invalid_credentials':
     case 'session_not_found':
     case 'session_expired':
@@ -143,6 +147,7 @@ function authCode(code: string, message: string, status: number | undefined): Re
     default:
       break;
   }
+  if (/error sending .*(otp|sms|code)|sms provider|sending .*to provider/i.test(message)) return 'sms_failed';
   if (/token has expired or is invalid|invalid otp|otp.*invalid/i.test(message)) return 'otp_invalid';
   if (/expired/i.test(message) && /otp|token|code/i.test(message)) return 'otp_expired';
   if (/invalid login credentials/i.test(message)) return 'not_authenticated';

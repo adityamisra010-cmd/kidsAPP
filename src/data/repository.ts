@@ -97,6 +97,8 @@ export type RepoErrorCode =
   | 'offline'
   | 'otp_invalid'
   | 'otp_expired'
+  /** The code could not be sent (SMS provider failure, number not reachable, send limit). */
+  | 'sms_failed'
   | 'no_membership'
   | 'consent_required'
   | 'unknown';
