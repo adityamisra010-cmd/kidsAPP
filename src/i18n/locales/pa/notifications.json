@@ -1,0 +1,18 @@
+{
+  "_review": "TODO: machine-drafted, needs review by a native speaker",
+  "bell": "ਅੱਪਡੇਟ",
+  "title": "ਅੱਪਡੇਟ",
+  "markAll": "ਸਭ ਪੜ੍ਹ ਲਿਆ",
+  "markedAll": "ਸਾਰੇ ਅੱਪਡੇਟ ਪੜ੍ਹੇ ਹੋਏ ਮਾਰਕ ਕੀਤੇ",
+  "unread": "ਨਾ-ਪੜ੍ਹੇ",
+  "unreadCount": "{{count}} ਨਾ-ਪੜ੍ਹਿਆ",
+  "unreadCount_other": "{{count}} ਨਾ-ਪੜ੍ਹੇ",
+  "groups": {
+    "today": "ਅੱਜ",
+    "earlier": "ਪਹਿਲਾਂ"
+  },
+  "empty": {
+    "title": "ਸਭ ਵੇਖ ਲਿਆ",
+    "body": "ਸੈਸ਼ਨ ਯਾਦ-ਦਹਾਨੀਆਂ, ਸਮਾਂ-ਸਾਰਣੀ ਤਬਦੀਲੀਆਂ ਅਤੇ ਸਕੂਲ ਦੇ ਸੁਨੇਹੇ ਇੱਥੇ ਦਿਸਣਗੇ।"
+  }
+}
