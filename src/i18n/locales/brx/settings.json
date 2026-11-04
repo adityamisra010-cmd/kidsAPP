@@ -1,0 +1,28 @@
+{
+  "_review": "TODO: machine-drafted, needs review by a native speaker",
+  "more": {
+    "sections": {
+      "school": "फरायसालि"
+    },
+    "items": {
+      "language": "राव"
+    }
+  },
+  "language": {
+    "title": "राव"
+  },
+  "profile": {
+    "language": "राव"
+  },
+  "switch": {
+    "children": "गथ'फोर"
+  },
+  "push": {
+    "today": "दिनै",
+    "tomorrow": "गाबोन"
+  },
+  "app": {
+    "language": "राव",
+    "school": "फरायसालि"
+  }
+}
