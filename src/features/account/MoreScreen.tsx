@@ -11,6 +11,7 @@ import {
   FileSpreadsheet,
   Info,
   Languages,
+  Settings,
   Layers,
   LibraryBig,
   LogOut,
@@ -31,10 +32,9 @@ import { useTranslation } from 'react-i18next';
 import { Pressable, View } from 'react-native';
 
 import { useUnreadCounts } from '@/data/hooks';
-import { LanguageToggle } from '@/features/onboarding/LanguageToggle';
 import { useRequiredActive, useSession } from '@/state/session';
 import { useTheme } from '@/theme/ThemeProvider';
-import { Badge, Card, Divider, ListItem, Row, Screen, SectionHeader, Text } from '@/ui';
+import { Badge, Card, Divider, ListItem, Screen, SectionHeader, Text } from '@/ui';
 
 import { buildMoreMenu, type MenuItem, type MenuItemKey } from './menu';
 import { ProfileCard } from './ProfileCard';
@@ -47,6 +47,7 @@ const ICONS: Record<MenuItemKey, LucideIcon> = {
   notifications: Bell,
   availability: CalendarOff,
   language: Languages,
+  settings: Settings,
   privacy: ShieldCheck,
   contact: Phone,
   notificationSettings: BellRing,
@@ -101,21 +102,6 @@ export function MoreScreen() {
 
   const renderItem = (item: MenuItem) => {
     const title = tr(`settings:more.items.${item.key}`);
-    if (item.key === 'language') {
-      return (
-        <View style={{ gap: t.space[2], paddingVertical: t.space[2] }}>
-          <Row gap={3}>
-            <MenuIcon icon={ICONS.language} />
-            <Text variant="bodyStrong" style={{ flex: 1 }}>
-              {title}
-            </Text>
-          </Row>
-          <View style={{ paddingLeft: 52 }}>
-            <LanguageToggle persist width={240} testID="more-language" />
-          </View>
-        </View>
-      );
-    }
     const count = item.badge ? unread[item.badge] : 0;
     return (
       <ListItem

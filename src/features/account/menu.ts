@@ -10,6 +10,7 @@ export type MenuItemKey =
   | 'notifications'
   | 'availability'
   | 'language'
+  | 'settings'
   | 'privacy'
   | 'contact'
   | 'notificationSettings'
@@ -59,6 +60,7 @@ const item = (key: MenuItemKey, route?: string, extra?: Omit<MenuItem, 'key' | '
 const messages = item('messages', '/messages', { badge: 'messages' });
 const notifications = item('notifications', '/notifications', { badge: 'notifications' });
 const notificationSettings = item('notificationSettings', '/account/notifications');
+const settings = item('settings', '/account/settings');
 const profile = item('profile', '/account/profile');
 const about = item('about', '/account/about');
 const resources = item('resources', '/resources');
@@ -78,7 +80,7 @@ export function buildMoreMenu({ role, childCount, membershipCount }: MenuInput):
         {
           key: 'me',
           items: compact([
-            item('language'),
+            settings,
             notificationSettings,
             profile,
             childCount > 1 && item('switchChild', '/account/switch'),
@@ -91,7 +93,7 @@ export function buildMoreMenu({ role, childCount, membershipCount }: MenuInput):
     case 'therapist':
       return [
         { key: 'work', items: [messages, resources, item('availability', '/availability'), notifications] },
-        { key: 'me', items: compact([notificationSettings, profile, switchRole]) },
+        { key: 'me', items: compact([settings, notificationSettings, profile, switchRole]) },
         { key: 'help', items: [about] },
       ];
 
@@ -121,14 +123,14 @@ export function buildMoreMenu({ role, childCount, membershipCount }: MenuInput):
             item('dataRequests', '/school/data-requests', { readOnly }),
           ],
         },
-        { key: 'me', items: compact([messages, notifications, notificationSettings, profile, switchRole, about]) },
+        { key: 'me', items: compact([settings, messages, notifications, notificationSettings, profile, switchRole, about]) },
       ];
     }
 
     case 'platform_admin':
       return [
         { key: 'platform', items: [item('templates', '/platform/templates')] },
-        { key: 'me', items: compact([profile, switchRole, about]) },
+        { key: 'me', items: compact([settings, profile, switchRole, about]) },
       ];
   }
 }

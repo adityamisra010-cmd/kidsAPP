@@ -3,6 +3,7 @@
  * RPC payload mappers (camelCase jsonb) live in mappers-rpc.ts.
  */
 import { DEFAULT_MASTERY_RULE, DEFAULT_ORG_SETTINGS } from '@/domain/constants';
+import { isLanguage } from '@/domain/languages';
 import type {
   Alert,
   Amendment,
@@ -161,7 +162,7 @@ export function profileFromRow(r: ProfileRow): Profile {
     phone: opt(r.phone),
     email: opt(r.email),
     avatarUrl: opt(r.avatar_url),
-    preferredLanguage: r.preferred_language === 'hi' ? 'hi' : 'en',
+    preferredLanguage: isLanguage(r.preferred_language) ? r.preferred_language : 'en',
     title: opt(r.title),
   };
 }

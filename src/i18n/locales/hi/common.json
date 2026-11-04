@@ -122,5 +122,12 @@
     "reports": "रिपोर्ट",
     "schools": "स्कूल",
     "templates": "टेम्पलेट"
+  },
+  "age": {
+    "years": "{{count}} वर्ष",
+    "years_other": "{{count}} वर्ष",
+    "months": "{{count}} महीना",
+    "months_other": "{{count}} महीने",
+    "yearsMonths": "{{years}} वर्ष {{months}} महीने"
   }
 }

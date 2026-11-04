@@ -63,7 +63,7 @@ export function ChildReportScreen({ id, from, to, audience: requested }: ChildRe
           />
         )
       }
-      footer={query.data ? <CreatePdfButton data={query.data} audience={audience} summary={summary} lang={i18n.language === 'hi' ? 'hi' : 'en'} /> : undefined}
+      footer={query.data ? <CreatePdfButton data={query.data} audience={audience} summary={summary} lang={i18n.language || 'en'} /> : undefined}
     >
       <QueryView query={query} skeleton={<SkeletonList rows={5} height={120} />}>
         {(data) => (
@@ -142,7 +142,7 @@ function ReportBody({
   );
 }
 
-function CreatePdfButton({ data, audience, summary, lang }: { data: ChildReportData; audience: Audience; summary: string; lang: 'en' | 'hi' }) {
+function CreatePdfButton({ data, audience, summary, lang }: { data: ChildReportData; audience: Audience; summary: string; lang: string }) {
   const { t } = useTranslation('reports');
   const [busy, setBusy] = useState(false);
   const create = async () => {

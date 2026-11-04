@@ -1,36 +1,43 @@
+import { router } from 'expo-router';
+import { ChevronDown, Languages } from 'lucide-react-native';
 import { useTranslation } from 'react-i18next';
-import { View } from 'react-native';
+import { Pressable } from 'react-native';
 
-import type { Language } from '@/domain/types';
-import { applyLanguage, saveLanguage } from '@/features/account/language';
-import { SegmentedControl, toast } from '@/ui';
+import { isLanguage, languageInfo } from '@/domain/languages';
+import { useTheme } from '@/theme/ThemeProvider';
+import { Text } from '@/ui';
 
 /**
- * English / हिंदी switch. Language names are always shown in their own script so a parent can
- * find theirs whatever the current language is.
+ * Current language as a button ("हिन्दी ▾") that opens the full list of 23 languages. The name is
+ * shown in its own script so a parent can recognise theirs whatever the app is in.
  */
-export function LanguageToggle({ persist = false, width = 220, testID }: { persist?: boolean; width?: number; testID?: string }) {
-  const { t, i18n } = useTranslation();
-  const value: Language = i18n.language === 'hi' ? 'hi' : 'en';
-  const onChange = (lang: Language) => {
-    if (lang === value) return;
-    if (!persist) {
-      applyLanguage(lang);
-      return;
-    }
-    saveLanguage(lang).catch(() => toast.error(t('errors:unknown')));
-  };
+export function LanguageToggle({ testID }: { persist?: boolean; width?: number; testID?: string }) {
+  const t = useTheme();
+  const { t: tr, i18n } = useTranslation();
+  const lang = languageInfo(isLanguage(i18n.language) ? i18n.language : 'en');
   return (
-    <View style={{ width }} accessibilityLabel={t('settings:language.title')}>
-      <SegmentedControl<Language>
-        testID={testID}
-        value={value}
-        onChange={onChange}
-        options={[
-          { value: 'en', label: 'English' },
-          { value: 'hi', label: 'हिंदी' },
-        ]}
-      />
-    </View>
+    <Pressable
+      testID={testID}
+      onPress={() => router.push('/language')}
+      accessibilityRole="button"
+      accessibilityLabel={`${tr('settings:language.title')}: ${lang.native}, ${lang.english}`}
+      hitSlop={6}
+      style={({ pressed }) => ({
+        flexDirection: 'row',
+        alignItems: 'center',
+        gap: 8,
+        minHeight: 44,
+        paddingHorizontal: t.space[4],
+        borderRadius: t.radius.pill,
+        backgroundColor: pressed ? t.colors.primarySoft : t.colors.surfaceAlt,
+        alignSelf: 'flex-end',
+      })}
+    >
+      <Languages size={18} color={t.colors.primaryText} />
+      <Text variant="label" weight="semibold">
+        {lang.native}
+      </Text>
+      <ChevronDown size={16} color={t.colors.textMuted} />
+    </Pressable>
   );
 }

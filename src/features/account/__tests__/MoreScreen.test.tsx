@@ -45,7 +45,7 @@ describe('MoreScreen', () => {
     expect(screen.getByText('Priya Sharma')).toBeTruthy();
     expect(screen.getByText('Parent · Sunrise Learning Centre')).toBeTruthy();
     expect(screen.getByTestId('more-demo-badge')).toBeTruthy();
-    for (const label of ['Messages', 'Resources', 'Notifications', 'Language', 'Consent & privacy', 'Contact school', 'Notification settings', 'Profile & app settings', 'About']) {
+    for (const label of ['Messages', 'Resources', 'Notifications', 'Settings', 'Consent & privacy', 'Contact school', 'Notification settings', 'Profile', 'About']) {
       expect(screen.getByText(label)).toBeTruthy();
     }
     expect(await screen.findByText('Switch child')).toBeTruthy();

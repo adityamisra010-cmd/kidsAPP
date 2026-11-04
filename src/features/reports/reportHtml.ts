@@ -15,7 +15,8 @@ export type Translate = (key: string, vars?: Record<string, string | number>) =>
 export interface ReportHtmlOptions {
   t: Translate;
   appName: string;
-  lang: 'en' | 'hi';
+  /** html lang attribute (screen readers, hyphenation). */
+  lang: string;
   /** The (possibly edited) therapist summary paragraph. */
   therapistSummary: string;
   /** "24 May 2026" style formatter (follows the app language). */

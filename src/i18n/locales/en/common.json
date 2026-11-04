@@ -121,5 +121,12 @@
     "reports": "Reports",
     "schools": "Schools",
     "templates": "Templates"
+  },
+  "age": {
+    "years": "{{count}} yr",
+    "years_other": "{{count}} yrs",
+    "months": "{{count}} mo",
+    "months_other": "{{count}} mo",
+    "yearsMonths": "{{years}} yrs {{months}} mo"
   }
 }

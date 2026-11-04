@@ -14,7 +14,9 @@ export type ISODateTime = string;
 /** Wall-clock time, `HH:mm`. */
 export type ClockTime = string;
 
-export type Language = 'en' | 'hi';
+import type { Language } from './languages';
+
+export type { Language };
 
 // ---------------------------------------------------------------------------
 // Tenancy, people, roles

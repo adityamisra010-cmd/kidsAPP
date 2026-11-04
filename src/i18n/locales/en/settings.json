@@ -19,7 +19,7 @@
       "privacy": "Consent & privacy",
       "contact": "Contact school",
       "notificationSettings": "Notification settings",
-      "profile": "Profile & app settings",
+      "profile": "Profile",
       "switchChild": "Switch child",
       "switchRole": "Switch role or school",
       "about": "About",
@@ -33,7 +33,8 @@
       "dimensions": "Rating scales",
       "therapyTypes": "Therapy types",
       "dataRequests": "Data requests",
-      "templates": "Templates"
+      "templates": "Templates",
+      "settings": "Settings"
     },
     "hints": {
       "messages": "Talk with the care team",
@@ -42,7 +43,7 @@
       "availability": "Mark leave so cover can be arranged",
       "privacy": "What you agreed to, copy or deletion",
       "notificationSettings": "Choose what you hear about",
-      "profile": "Name, language, appearance",
+      "profile": "Name, email and phone",
       "switchChild": "Showing {{name}}",
       "switchRole": "Now: {{role}}",
       "announcements": "Notices for parents and staff",
@@ -53,7 +54,8 @@
       "import": "Children, staff, parents and schedules",
       "dimensions": "Session rating wording and weights",
       "dataRequests": "Copies and deletions parents asked for",
-      "templates": "Rating scales and goal bank for all schools"
+      "templates": "Rating scales and goal bank for all schools",
+      "settings": "Language, appearance, app version"
     },
     "viewOnly": "View only",
     "signOut": "Sign out",
@@ -71,7 +73,13 @@
     "confirm": "Sign out"
   },
   "language": {
-    "title": "Language"
+    "title": "Language",
+    "subtitle": "Choose the app's language. Each name is shown in its own script.",
+    "search": "Search languages",
+    "restartTitle": "Restart to switch direction",
+    "restartBody": "{{language}} reads right to left. The app will restart to switch.",
+    "restartConfirm": "Restart now",
+    "review": "Some screens are still being translated. Until then they show in {{fallback}}."
   },
   "profile": {
     "title": "Profile & app settings",
@@ -256,5 +264,27 @@
       "allow": "Turn on notifications",
       "notNow": "Not now"
     }
+  },
+  "app": {
+    "title": "Settings",
+    "sectionGeneral": "General",
+    "language": "Language",
+    "appearance": "Appearance",
+    "sectionAbout": "About this app",
+    "version": "Version",
+    "build": "Build",
+    "data": "Data",
+    "dataDemo": "Demo: sample data on this phone",
+    "dataLive": "Live: your school's server",
+    "school": "School",
+    "signedInAs": "Signed in as",
+    "device": "Device",
+    "appLanguage": "App language",
+    "sync": "Sync",
+    "synced": "All changes saved",
+    "pending": "{{count}} waiting to sync",
+    "pending_other": "{{count}} waiting to sync",
+    "privacy": "Privacy policy",
+    "support": "Contact support"
   }
 }

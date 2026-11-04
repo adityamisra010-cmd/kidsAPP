@@ -13,7 +13,7 @@ describe('More menus', () => {
       'messages',
       'resources',
       'notifications',
-      'language',
+      'settings',
       'notificationSettings',
       'profile',
       'privacy',
@@ -27,7 +27,7 @@ describe('More menus', () => {
 
   it('therapist: work items include availability; no school settings', () => {
     const k = keys(buildMoreMenu({ role: 'therapist', childCount: 0, membershipCount: 1 }));
-    expect(k).toEqual(['messages', 'resources', 'availability', 'notifications', 'notificationSettings', 'profile', 'about']);
+    expect(k).toEqual(['messages', 'resources', 'availability', 'notifications', 'settings', 'notificationSettings', 'profile', 'about']);
   });
 
   it('school admin can import and edit settings; coordinator sees settings read-only and no import', () => {
@@ -51,7 +51,7 @@ describe('More menus', () => {
   });
 
   it('platform admin: templates, profile, about', () => {
-    expect(keys(buildMoreMenu({ role: 'platform_admin', childCount: 0, membershipCount: 1 }))).toEqual(['templates', 'profile', 'about']);
+    expect(keys(buildMoreMenu({ role: 'platform_admin', childCount: 0, membershipCount: 1 }))).toEqual(['templates', 'settings', 'profile', 'about']);
   });
 
   it('offers "Switch role or school" only with several memberships', () => {
@@ -64,8 +64,7 @@ describe('More menus', () => {
   it('every item with a route uses an absolute path', () => {
     for (const role of ['parent', 'therapist', 'coordinator', 'school_admin', 'platform_admin'] as const) {
       for (const item of buildMoreMenu({ role, childCount: 3, membershipCount: 2 }).flatMap((s) => s.items)) {
-        if (item.key === 'language') expect(item.route).toBeUndefined();
-        else expect(item.route).toMatch(/^\//);
+        expect(item.route).toMatch(/^\//);
       }
     }
   });

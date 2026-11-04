@@ -9,8 +9,9 @@ import { getLocales } from 'expo-localization';
 import i18n from 'i18next';
 import { initReactI18next } from 'react-i18next';
 
+import { fallbackChain, isLanguage } from '@/domain/languages';
 import type { Language } from '@/domain/types';
-import { setDateLanguage } from '@/lib/dates';
+import { setAgeFormatter, setDateLanguage } from '@/lib/dates';
 
 import enAdmin from './locales/en/admin.json';
 import enAuth from './locales/en/auth.json';
@@ -60,6 +61,7 @@ import hiSchool from './locales/hi/school.json';
 import hiSession from './locales/hi/session.json';
 import hiSettings from './locales/hi/settings.json';
 import hiTherapist from './locales/hi/therapist.json';
+import { LOADERS } from './locales/loaders';
 
 export const NAMESPACES = [
   'common',
@@ -145,10 +147,29 @@ const resources = {
 
 export function deviceLanguage(): Language {
   try {
-    return getLocales()[0]?.languageCode === 'hi' ? 'hi' : 'en';
+    for (const l of getLocales()) {
+      if (isLanguage(l.languageCode)) return l.languageCode;
+    }
   } catch {
-    return 'en';
+    // fall through
   }
+  return 'en';
+}
+
+/** Adds a language's bundles (and those it falls back to) the first time it is used. */
+function ensureLoaded(lang: Language) {
+  for (const code of fallbackChain(lang)) {
+    if (code === 'en' || code === 'hi' || i18n.hasResourceBundle(code, 'common')) continue;
+    const bundle = LOADERS[code]?.();
+    if (!bundle) continue;
+    for (const [ns, data] of Object.entries(bundle)) i18n.addResourceBundle(code, ns, data, true, true);
+  }
+}
+
+function formatAge({ years, months }: { years: number; months: number }): string {
+  if (years === 0) return i18n.t('common:age.months', { count: months });
+  if (months === 0) return i18n.t('common:age.years', { count: years });
+  return i18n.t('common:age.yearsMonths', { years, months });
 }
 
 let initialised = false;
@@ -156,25 +177,28 @@ let initialised = false;
 export function initI18n(lang: Language) {
   setDateLanguage(lang);
   if (initialised) {
-    void i18n.changeLanguage(lang);
+    changeLanguage(lang);
     return i18n;
   }
   initialised = true;
   void i18n.use(initReactI18next).init({
     resources,
     lng: lang,
-    fallbackLng: 'en',
+    // Missing strings come from the closest language a reader is likely to know, then English.
+    fallbackLng: (code: string) => (isLanguage(code) ? fallbackChain(code).slice(1) : ['en']),
     ns: NAMESPACES as unknown as string[],
     defaultNS: 'common',
     interpolation: { escapeValue: false },
     returnNull: false,
-    // Missing Hindi keys fall back to English rather than showing raw keys.
     returnEmptyString: false,
   });
+  ensureLoaded(lang);
+  setAgeFormatter(formatAge);
   return i18n;
 }
 
 export function changeLanguage(lang: Language) {
+  ensureLoaded(lang);
   setDateLanguage(lang);
   void i18n.changeLanguage(lang);
 }

@@ -10,19 +10,26 @@ import {
   parseISO,
   startOfWeek,
 } from 'date-fns';
-import { hi as hiLocale } from 'date-fns/locale/hi';
+import type { Locale } from 'date-fns';
+import { bn } from 'date-fns/locale/bn';
 import { enIN } from 'date-fns/locale/en-IN';
+import { gu } from 'date-fns/locale/gu';
+import { hi as hiLocale } from 'date-fns/locale/hi';
+import { kn } from 'date-fns/locale/kn';
+import { ta } from 'date-fns/locale/ta';
+import { te } from 'date-fns/locale/te';
 
 import type { ISODate, ISODateTime, Language } from '@/domain/types';
 
-const locales = { en: enIN, hi: hiLocale };
+/** date-fns ships these Indian locales; other languages use English (India) month and day names. */
+const locales: Partial<Record<Language, Locale>> = { en: enIN, hi: hiLocale, bn, gu, kn, ta, te };
 
 let currentLanguage: Language = 'en';
 /** Called by i18n when the language changes, so date formatting follows. */
 export function setDateLanguage(lang: Language) {
   currentLanguage = lang;
 }
-const locale = () => locales[currentLanguage];
+const locale = () => locales[currentLanguage] ?? enIN;
 
 export function toISODate(d: Date): ISODate {
   return format(d, 'yyyy-MM-dd');
@@ -43,12 +50,17 @@ export function ageParts(dob: ISODate, at: Date = new Date()): { years: number; 
   return { years: Math.floor(total / 12), months: total % 12 };
 }
 
+type AgeFormatter = (parts: { years: number; months: number }) => string;
+let ageFormatter: AgeFormatter | null = null;
+/** i18n registers a translated formatter so ages read naturally in every language. */
+export function setAgeFormatter(f: AgeFormatter) {
+  ageFormatter = f;
+}
+
 export function ageLabel(dob: ISODate, at: Date = new Date()): string {
-  const { years, months } = ageParts(dob, at);
-  if (currentLanguage === 'hi') {
-    if (years === 0) return `${months} महीने`;
-    return months ? `${years} वर्ष ${months} महीने` : `${years} वर्ष`;
-  }
+  const parts = ageParts(dob, at);
+  if (ageFormatter) return ageFormatter(parts);
+  const { years, months } = parts;
   if (years === 0) return `${months} mo`;
   return months ? `${years} yrs ${months} mo` : `${years} yrs`;
 }

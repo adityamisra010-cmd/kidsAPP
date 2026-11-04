@@ -2,9 +2,7 @@ import { fireEvent, screen } from '@testing-library/react-native';
 import { router } from 'expo-router';
 import * as WebBrowser from 'expo-web-browser';
 
-import i18n from '@/i18n';
 import { isLiveBackendAvailable } from '@/state/auth-actions';
-import { usePreferences } from '@/state/preferences';
 import { BRAND } from '@/theme/brand';
 
 import { renderScreen } from '../test-utils';
@@ -49,11 +47,9 @@ describe('WelcomeScreen', () => {
     expect(WebBrowser.openBrowserAsync).toHaveBeenCalledWith(BRAND.privacyPolicyUrl);
   });
 
-  it('switches the language to Hindi', async () => {
+  it('opens the language list from the language button', async () => {
     await renderScreen(<WelcomeScreen />);
-    await fireEvent.press(screen.getByRole('tab', { name: 'हिंदी' }));
-    expect(usePreferences.getState().language).toBe('hi');
-    expect(i18n.language).toBe('hi');
-    expect(await screen.findByText('डेमो देखें')).toBeTruthy();
+    await fireEvent.press(screen.getByRole('button', { name: /Language: English/ }));
+    expect(router.push).toHaveBeenCalledWith('/language');
   });
 });
