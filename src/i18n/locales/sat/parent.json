@@ -1,0 +1,14 @@
+{
+  "_review": "TODO: machine-drafted, needs review by a native speaker",
+  "home": {
+    "greeting": {
+      "morning": "ᱡᱚᱦᱟᱨ, {{name}}",
+      "afternoon": "ᱡᱚᱦᱟᱨ, {{name}}",
+      "evening": "ᱡᱚᱦᱟᱨ, {{name}}"
+    },
+    "announcements": {
+      "title": "ᱤᱥᱠᱩᱞ ᱠᱷᱚᱱ",
+      "all": "ᱡᱚᱛᱚ ᱧᱮᱞ ᱢᱮ"
+    }
+  }
+}

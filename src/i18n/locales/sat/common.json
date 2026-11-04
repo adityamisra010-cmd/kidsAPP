@@ -1,0 +1,31 @@
+{
+  "_review": "TODO: machine-drafted, needs review by a native speaker",
+  "actions": {
+    "seeAll": "ᱡᱚᱛᱚ ᱧᱮᱞ ᱢᱮ",
+    "yes": "ᱦᱮᱸ",
+    "no": "ᱵᱟᱝ",
+    "view": "ᱧᱮᱞ ᱢᱮ"
+  },
+  "time": {
+    "today": "ᱛᱮᱦᱮᱧ",
+    "tomorrow": "ᱜᱟᱯᱟ",
+    "yesterday": "ᱦᱤᱞᱟᱹᱜ",
+    "thisWeek": "ᱱᱚᱶᱟ ᱦᱟᱯᱛᱟ",
+    "minutes": "{{count}} ᱢᱤᱱᱤᱴ",
+    "minutes_other": "{{count}} ᱢᱤᱱᱤᱴ"
+  },
+  "tabs": {
+    "myChild": "ᱤᱧᱟᱜ ᱜᱤᱫᱽᱨᱤ",
+    "today": "ᱛᱮᱦᱮᱧ",
+    "caseload": "ᱜᱤᱫᱽᱨᱤ ᱠᱚ",
+    "people": "ᱦᱚᱲ ᱠᱚ",
+    "schools": "ᱤᱥᱠᱩᱞ ᱠᱚ"
+  },
+  "age": {
+    "years": "{{count}} ᱥᱮᱨᱢᱟ",
+    "years_other": "{{count}} ᱥᱮᱨᱢᱟ",
+    "months": "{{count}} ᱪᱟᱸᱫᱚ",
+    "months_other": "{{count}} ᱪᱟᱸᱫᱚ",
+    "yearsMonths": "{{years}} ᱥᱮᱨᱢᱟ {{months}} ᱪᱟᱸᱫᱚ"
+  }
+}
