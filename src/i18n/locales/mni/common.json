@@ -1,0 +1,28 @@
+{
+  "_review": "TODO: machine-drafted, needs review by a native speaker",
+  "actions": {
+    "yes": "হোয়",
+    "no": "নত্তে"
+  },
+  "time": {
+    "today": "ঙসি",
+    "tomorrow": "হয়েং",
+    "yesterday": "ঙরাং",
+    "minutes": "{{count}} মিনিট",
+    "minutes_other": "{{count}} মিনিট"
+  },
+  "tabs": {
+    "myChild": "ঐগী অঙাং",
+    "today": "ঙসি",
+    "caseload": "অঙাংশিং",
+    "people": "মীওইশিং",
+    "schools": "স্কুলশিং"
+  },
+  "age": {
+    "years": "{{count}} চহী",
+    "years_other": "{{count}} চহী",
+    "months": "{{count}} থা",
+    "months_other": "{{count}} থা",
+    "yearsMonths": "{{years}} চহী {{months}} থা"
+  }
+}

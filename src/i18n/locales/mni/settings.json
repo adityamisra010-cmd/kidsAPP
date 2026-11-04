@@ -1,0 +1,28 @@
+{
+  "_review": "TODO: machine-drafted, needs review by a native speaker",
+  "more": {
+    "sections": {
+      "school": "স্কুল"
+    },
+    "items": {
+      "language": "লোল"
+    }
+  },
+  "language": {
+    "title": "লোল"
+  },
+  "profile": {
+    "language": "লোল"
+  },
+  "switch": {
+    "children": "অঙাংশিং"
+  },
+  "push": {
+    "today": "ঙসি",
+    "tomorrow": "হয়েং"
+  },
+  "app": {
+    "language": "লোল",
+    "school": "স্কুল"
+  }
+}

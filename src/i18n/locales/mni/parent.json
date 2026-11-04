@@ -1,0 +1,10 @@
+{
+  "_review": "TODO: machine-drafted, needs review by a native speaker",
+  "home": {
+    "greeting": {
+      "morning": "খুরুমজরি, {{name}}",
+      "afternoon": "খুরুমজরি, {{name}}",
+      "evening": "খুরুমজরি, {{name}}"
+    }
+  }
+}
