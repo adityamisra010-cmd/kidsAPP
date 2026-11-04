@@ -1,0 +1,18 @@
+{
+  "_review": "TODO: machine-drafted, needs review by a native speaker",
+  "bell": "আপডেট",
+  "title": "আপডেট",
+  "markAll": "সব পড়া হয়েছে",
+  "markedAll": "সব আপডেট পড়া হয়েছে",
+  "unread": "পড়া হয়নি",
+  "unreadCount": "{{count}}টি পড়া হয়নি",
+  "unreadCount_other": "{{count}}টি পড়া হয়নি",
+  "groups": {
+    "today": "আজ",
+    "earlier": "আগে"
+  },
+  "empty": {
+    "title": "সব দেখা হয়ে গেছে",
+    "body": "সেশনের রিমাইন্ডার, সময়সূচির পরিবর্তন ও স্কুলের মেসেজ এখানে দেখা যাবে।"
+  }
+}

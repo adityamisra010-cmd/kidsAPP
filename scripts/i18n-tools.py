@@ -119,6 +119,8 @@ def check():
             continue
         total = done = 0
         for ns, src in en.items():
+            if ns == 'dims':
+                continue  # English dimension wording lives in school data, not in this file
             tr = flat(load(lang, ns))
             total += len(src)
             for k, v in tr.items():
