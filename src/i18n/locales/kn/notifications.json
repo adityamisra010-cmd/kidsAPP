@@ -1,0 +1,18 @@
+{
+  "_review": "TODO: machine-drafted, needs review by a native speaker",
+  "bell": "ಅಪ್‌ಡೇಟ್‌ಗಳು",
+  "title": "ಅಪ್‌ಡೇಟ್‌ಗಳು",
+  "markAll": "ಎಲ್ಲವೂ ಓದಲಾಗಿದೆ",
+  "markedAll": "ಎಲ್ಲಾ ಅಪ್‌ಡೇಟ್‌ಗಳನ್ನು ಓದಿದಂತೆ ಗುರುತಿಸಲಾಗಿದೆ",
+  "unread": "ಓದದವು",
+  "unreadCount": "{{count}} ಓದದ್ದು",
+  "unreadCount_other": "{{count}} ಓದದವು",
+  "groups": {
+    "today": "ಇಂದು",
+    "earlier": "ಹಿಂದಿನವು"
+  },
+  "empty": {
+    "title": "ಎಲ್ಲವನ್ನೂ ನೋಡಿದ್ದೀರಿ",
+    "body": "ಅವಧಿಯ ಜ್ಞಾಪನೆಗಳು, ವೇಳಾಪಟ್ಟಿ ಬದಲಾವಣೆಗಳು ಮತ್ತು ಶಾಲೆಯ ಸಂದೇಶಗಳು ಇಲ್ಲಿ ಕಾಣುತ್ತವೆ."
+  }
+}
