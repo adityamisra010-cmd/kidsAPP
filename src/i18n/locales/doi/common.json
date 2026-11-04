@@ -1,0 +1,61 @@
+{
+  "_review": "TODO: machine-drafted, needs review by a native speaker",
+  "actions": {
+    "save": "सेव करो",
+    "cancel": "रद्द करो",
+    "done": "होई गेआ",
+    "next": "अगला",
+    "back": "पिच्छें",
+    "close": "बंद करो",
+    "delete": "मटाओ",
+    "retry": "फ्ही कोशश करो",
+    "confirm": "पक्का करो",
+    "seeAll": "सारे दिक्खो",
+    "add": "जोड़ो",
+    "remove": "हटाओ",
+    "send": "भेजो",
+    "share": "सांझा करो",
+    "search": "तुप्पो",
+    "yes": "हां",
+    "no": "नेईं",
+    "ok": "ठीक ऐ",
+    "view": "दिक्खो",
+    "open": "खोलो",
+    "call": "कॉल करो",
+    "select": "चुनो",
+    "change": "बदलो",
+    "skip": "छोड़ो"
+  },
+  "time": {
+    "today": "अज्ज",
+    "tomorrow": "कल",
+    "thisWeek": "इस हफ्ते",
+    "minutes": "{{count}} मिंट",
+    "minutes_other": "{{count}} मिंट"
+  },
+  "roles": {
+    "parent": "माता-पिता"
+  },
+  "changeShort": {
+    "better": "खरा",
+    "harder": "औखा"
+  },
+  "tabs": {
+    "home": "घर",
+    "calendar": "कैलेंडर",
+    "myChild": "मेरा बच्चा",
+    "practice": "अभ्यास",
+    "more": "होर",
+    "today": "अज्ज",
+    "caseload": "बच्चे",
+    "people": "लोक",
+    "schools": "स्कूल"
+  },
+  "age": {
+    "years": "{{count}} ब'रा",
+    "years_other": "{{count}} ब'रे",
+    "months": "{{count}} म्हीना",
+    "months_other": "{{count}} म्हीने",
+    "yearsMonths": "{{years}} ब'रे {{months}} म्हीने"
+  }
+}
