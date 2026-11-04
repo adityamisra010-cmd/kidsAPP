@@ -1,0 +1,122 @@
+{
+  "_review": "TODO: machine-drafted, needs review by a native speaker",
+  "commTools": {
+    "speech": "बोलून",
+    "sign": "सांकेतिक भाषा",
+    "pecs": "PECS (चित्र कार्ड)",
+    "aac_device": "AAC उपकरण",
+    "gestures": "हावभाव",
+    "pointing": "बोट दाखवणे",
+    "visual_schedule": "चित्र वेळापत्रक"
+  },
+  "commModes": {
+    "verbal": "बोलतो/बोलते",
+    "limited_verbal": "थोडे बोलतो/बोलते",
+    "non_verbal": "बोलत नाही"
+  },
+  "reinforcers": {
+    "bubbles": "फुगे",
+    "music": "संगीत",
+    "songs": "गाणी",
+    "favourite_toy": "आवडते खेळणे",
+    "tablet_time": "टॅबलेटचा वेळ",
+    "praise": "कौतुक",
+    "high_five": "हाय फाइव्ह",
+    "stickers": "स्टिकर",
+    "swing": "झोका",
+    "snack": "थोडा खाऊ",
+    "cars": "खेळण्यातील गाड्या",
+    "blocks": "ठोकळे",
+    "tickles": "गुदगुल्या",
+    "books": "चित्रांची पुस्तके"
+  },
+  "triggers": {
+    "loud_sounds": "मोठे आवाज",
+    "transitions": "एका कामातून दुसऱ्याकडे जाणे",
+    "waiting": "वाट पाहणे",
+    "textures": "काही विशिष्ट स्पर्श",
+    "crowds": "गर्दी",
+    "bright_lights": "प्रखर प्रकाश",
+    "being_touched": "न सांगता स्पर्श",
+    "change_in_routine": "दिनक्रमात बदल",
+    "hunger": "भूक",
+    "tiredness": "थकवा",
+    "no_answer": "‘नाही’ ऐकणे"
+  },
+  "calming": {
+    "deep_pressure": "खोल दाब",
+    "quiet_corner": "शांत कोपरा",
+    "counting": "एकत्र मोजणे",
+    "favourite_song": "आवडते गाणे",
+    "weighted_blanket": "जड पांघरूण",
+    "swinging": "झोके घेणे",
+    "breathing": "हळू श्वास घेणे",
+    "visual_timer": "चित्र टायमर",
+    "fidget": "फिजेट खेळणे",
+    "water_break": "पाणी पिण्याचा ब्रेक"
+  },
+  "antecedents": {
+    "transition": "काम बदलणे",
+    "demand": "कामाची मागणी",
+    "sensory": "संवेदनांशी संबंधित",
+    "waiting": "वाट पाहणे",
+    "denied_item": "हवी ती वस्तू न मिळणे",
+    "peer": "दुसरे मूल",
+    "unknown": "स्पष्ट नाही"
+  },
+  "worked": {
+    "visual_schedule": "चित्र वेळापत्रक",
+    "first_then": "आधी–मग बोर्ड",
+    "timer": "टायमर",
+    "movement_break": "हालचालीचा ब्रेक",
+    "reinforcer_choice": "बक्षीस निवडू देणे",
+    "modelling": "करून दाखवणे",
+    "short_tasks": "छोटी कामे",
+    "quiet_room": "शांत खोली",
+    "parent_present": "पालक सोबत",
+    "song_cue": "गाण्याचा संकेत",
+    "hand_over_hand": "हात धरून करवणे",
+    "choice_of_two": "दोनपैकी निवड"
+  },
+  "notWorked": {
+    "long_tasks": "लांब कामे",
+    "noisy_room": "गोंगाटाची खोली",
+    "verbal_only_instructions": "फक्त तोंडी सूचना",
+    "waiting_turns": "पाळीची वाट",
+    "new_material": "नवीन साहित्य",
+    "tablet_reinforcer": "बक्षीस म्हणून टॅबलेट",
+    "group_activity": "गट उपक्रम",
+    "touch_prompts": "स्पर्शाने संकेत"
+  },
+  "incidents": {
+    "meltdown": "खूप अस्वस्थ होणे",
+    "aggression": "आक्रमकता",
+    "self_injury": "स्वतःला इजा",
+    "elopement": "पळून जाणे",
+    "refusal": "नकार",
+    "other": "इतर"
+  },
+  "domains": {
+    "communication": "संवाद",
+    "fine_motor": "हाताची बारीक कामे",
+    "gross_motor": "शरीराच्या मोठ्या हालचाली",
+    "self_care": "स्वतःची काळजी",
+    "social": "इतरांशी मिसळणे",
+    "behaviour": "वर्तन",
+    "cognition": "शिकणे आणि विचार",
+    "sensory": "संवेदनांचा समतोल"
+  },
+  "therapyTypes": {
+    "speech": "स्पीच थेरपी",
+    "occupational": "ऑक्युपेशनल थेरपी",
+    "behaviour": "बिहेविअर थेरपी (ABA)",
+    "special_ed": "विशेष शिक्षण",
+    "physio": "फिजिओथेरपी",
+    "audiology": "ऑडिओलॉजी सहाय्य"
+  },
+  "regulation": {
+    "under": "कमी ऊर्जा",
+    "regulated": "संतुलित",
+    "over": "अति उत्साही"
+  }
+}

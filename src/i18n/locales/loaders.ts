@@ -7,4 +7,5 @@ type Bundle = Record<string, object>;
 /** Translation bundles for languages other than English and Hindi, loaded on first use. */
 export const LOADERS: Partial<Record<Language, () => Bundle>> = {
   bn: () => ({ auth: require('./bn/auth.json'), chips: require('./bn/chips.json'), common: require('./bn/common.json'), errors: require('./bn/errors.json'), notifications: require('./bn/notifications.json'), parent: require('./bn/parent.json'), settings: require('./bn/settings.json') }),
+  mr: () => ({ auth: require('./mr/auth.json'), chips: require('./mr/chips.json'), common: require('./mr/common.json'), errors: require('./mr/errors.json'), notifications: require('./mr/notifications.json'), parent: require('./mr/parent.json'), settings: require('./mr/settings.json') }),
 };

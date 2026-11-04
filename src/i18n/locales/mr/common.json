@@ -1,0 +1,131 @@
+{
+  "_review": "TODO: machine-drafted, needs review by a native speaker",
+  "actions": {
+    "save": "सेव्ह करा",
+    "cancel": "रद्द करा",
+    "done": "झाले",
+    "next": "पुढे",
+    "back": "मागे",
+    "close": "बंद करा",
+    "edit": "बदला",
+    "delete": "हटवा",
+    "retry": "पुन्हा प्रयत्न करा",
+    "confirm": "खात्री करा",
+    "continue": "पुढे चला",
+    "seeAll": "सर्व पहा",
+    "add": "जोडा",
+    "remove": "काढा",
+    "send": "पाठवा",
+    "share": "शेअर करा",
+    "search": "शोधा",
+    "filter": "फिल्टर",
+    "apply": "लागू करा",
+    "clear": "साफ करा",
+    "yes": "हो",
+    "no": "नाही",
+    "ok": "ठीक आहे",
+    "view": "पहा",
+    "open": "उघडा",
+    "call": "कॉल करा",
+    "download": "डाउनलोड",
+    "upload": "अपलोड",
+    "select": "निवडा",
+    "change": "बदला",
+    "addCustom": "स्वतःचे जोडा",
+    "skip": "वगळा"
+  },
+  "time": {
+    "today": "आज",
+    "tomorrow": "उद्या",
+    "yesterday": "काल",
+    "thisWeek": "या आठवड्यात",
+    "minutes": "{{count}} मिनिट",
+    "minutes_other": "{{count}} मिनिटे"
+  },
+  "roles": {
+    "platform_admin": "प्लॅटफॉर्म ॲडमिन",
+    "school_admin": "शाळा ॲडमिन",
+    "coordinator": "समन्वयक",
+    "therapist": "थेरपिस्ट",
+    "parent": "पालक"
+  },
+  "trend": {
+    "up": "सुधारणा होत आहे",
+    "flat": "स्थिर",
+    "down": "घसरत आहे"
+  },
+  "change": {
+    "better": "मागच्या वेळेपेक्षा चांगले",
+    "same": "साधारण तसेच",
+    "harder": "या वेळी थोडे कठीण"
+  },
+  "changeShort": {
+    "better": "चांगले",
+    "same": "स्थिर",
+    "harder": "कठीण"
+  },
+  "status": {
+    "confirmed": "निश्चित",
+    "rescheduled": "वेळ बदलली",
+    "substitute": "पर्यायी थेरपिस्ट",
+    "cancelled": "रद्द",
+    "completed": "पूर्ण",
+    "absent": "गैरहजर",
+    "makeup": "भरपाई सत्र"
+  },
+  "logState": {
+    "upcoming": "पुढील",
+    "in_progress": "सुरू आहे",
+    "logged": "नोंदवले",
+    "not_logged": "नोंदवले नाही"
+  },
+  "sync": {
+    "synced": "सर्व बदल सेव्ह झाले",
+    "pending": "{{count}} सिंक होणे बाकी",
+    "pending_other": "{{count}} सिंक होणे बाकी",
+    "syncing": "सिंक होत आहे…",
+    "offline": "तुम्ही ऑफलाइन आहात. बदल या फोनवर सेव्ह आहेत आणि नंतर सिंक होतील.",
+    "failed": "काही बदल सिंक झाले नाहीत",
+    "savedOffline": "या फोनवर सेव्ह झाले. ऑनलाइन आल्यावर सिंक होईल."
+  },
+  "states": {
+    "loading": "लोड होत आहे…",
+    "errorTitle": "काहीतरी चुकले",
+    "errorBody": "हे लोड होऊ शकले नाही. कनेक्शन तपासून पुन्हा प्रयत्न करा.",
+    "emptyTitle": "इथे अजून काही नाही",
+    "offlineBanner": "तुम्ही ऑफलाइन आहात. सेव्ह केलेली माहिती दाखवत आहोत."
+  },
+  "a11y": {
+    "back": "मागे जा",
+    "close": "बंद करा",
+    "selected": "निवडले",
+    "notSelected": "निवडले नाही",
+    "opensDetails": "तपशील उघडते"
+  },
+  "demoBadge": "डेमो",
+  "required": "आवश्यक",
+  "optional": "ऐच्छिक",
+  "tabs": {
+    "home": "होम",
+    "calendar": "कॅलेंडर",
+    "myChild": "माझे मूल",
+    "practice": "सराव",
+    "more": "अधिक",
+    "today": "आज",
+    "caseload": "मुले",
+    "reviews": "तपासणी",
+    "dashboard": "डॅशबोर्ड",
+    "schedule": "वेळापत्रक",
+    "people": "लोक",
+    "reports": "अहवाल",
+    "schools": "शाळा",
+    "templates": "साचे"
+  },
+  "age": {
+    "years": "{{count}} वर्ष",
+    "years_other": "{{count}} वर्षे",
+    "months": "{{count}} महिना",
+    "months_other": "{{count}} महिने",
+    "yearsMonths": "{{years}} वर्षे {{months}} महिने"
+  }
+}

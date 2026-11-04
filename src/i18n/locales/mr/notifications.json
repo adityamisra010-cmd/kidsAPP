@@ -1,0 +1,18 @@
+{
+  "_review": "TODO: machine-drafted, needs review by a native speaker",
+  "bell": "अपडेट",
+  "title": "अपडेट",
+  "markAll": "सर्व वाचले",
+  "markedAll": "सर्व अपडेट वाचले म्हणून नोंदवले",
+  "unread": "न वाचलेले",
+  "unreadCount": "{{count}} न वाचलेले",
+  "unreadCount_other": "{{count}} न वाचलेले",
+  "groups": {
+    "today": "आज",
+    "earlier": "आधीचे"
+  },
+  "empty": {
+    "title": "सगळे पाहून झाले",
+    "body": "सत्राच्या आठवणी, वेळापत्रकातील बदल आणि शाळेचे संदेश इथे दिसतील."
+  }
+}
