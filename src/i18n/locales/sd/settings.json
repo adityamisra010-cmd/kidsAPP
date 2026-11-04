@@ -1,0 +1,149 @@
+{
+  "_review": "TODO: machine-drafted, needs review by a native speaker",
+  "more": {
+    "title": "وڌيڪ",
+    "sections": {
+      "family": "توهان جي خاندان لاءِ",
+      "work": "ڪم",
+      "school": "اسڪول",
+      "schoolSettings": "اسڪول سيٽنگون",
+      "platform": "پليٽفارم",
+      "me": "توهان",
+      "help": "مدد ۽ رازداري"
+    },
+    "items": {
+      "messages": "پيغام",
+      "resources": "مواد",
+      "notifications": "اطلاعون",
+      "availability": "دستيابي ۽ موڪل",
+      "language": "ٻولي",
+      "privacy": "رضامندي ۽ رازداري",
+      "contact": "اسڪول سان رابطو",
+      "notificationSettings": "اطلاعن جون سيٽنگون",
+      "profile": "پروفائل",
+      "switchChild": "ٻار بدلايو",
+      "switchRole": "ڪردار يا اسڪول بدلايو",
+      "about": "تعارف",
+      "announcements": "اعلان",
+      "alerts": "خبرداريون",
+      "substitutions": "متبادل انتظام",
+      "reschedule": "وقت بدلائڻ جون درخواستون",
+      "import": "Excel مان امپورٽ",
+      "schoolSettings": "اسڪول سيٽنگون",
+      "therapyTypes": "ٿراپي جا قسم",
+      "dataRequests": "معلومات جون درخواستون",
+      "templates": "نمونا",
+      "settings": "سيٽنگون"
+    },
+    "hints": {
+      "profile": "نالو، اي ميل ۽ فون",
+      "switchRole": "هن وقت: {{role}}",
+      "settings": "ٻولي، ظاهري شڪل، ايپ ورزن"
+    },
+    "viewOnly": "صرف ڏسڻ لاءِ",
+    "signOut": "سائن آئوٽ",
+    "allSchools": "سڀ اسڪول"
+  },
+  "signOut": {
+    "title": "سائن آئوٽ ڪريو؟",
+    "confirm": "سائن آئوٽ"
+  },
+  "language": {
+    "title": "ٻولي",
+    "search": "ٻولي ڳوليو",
+    "restartConfirm": "هاڻي ٻيهر شروع ڪريو"
+  },
+  "profile": {
+    "sectionProfile": "توهان جا تفصيل",
+    "name": "پورو نالو",
+    "email": "اي ميل",
+    "phone": "موبائل نمبر",
+    "save": "تفصيل محفوظ ڪريو",
+    "saved": "توهان جا تفصيل محفوظ ٿي ويا.",
+    "sectionApp": "ايپ سيٽنگون",
+    "language": "ٻولي",
+    "theme": "ظاهري شڪل",
+    "themeSystem": "فون جي سيٽنگ",
+    "version": "ايپ ورزن",
+    "versionValue": "{{version}} (بلڊ {{build}})"
+  },
+  "notifications": {
+    "title": "اطلاعن جون سيٽنگون",
+    "groups": {
+      "schedule": "شيڊول",
+      "sessions": "سيشن",
+      "practice": "گهر جي مشق",
+      "messages": "پيغام",
+      "announcements": "اعلان"
+    },
+    "kinds": {
+      "new_message": "نوان پيغام",
+      "announcement": "اسڪول جا اعلان"
+    },
+    "turnOn": "اطلاعون چالو ڪريو",
+    "openSettings": "فون سيٽنگون کوليو"
+  },
+  "privacy": {
+    "title": "رضامندي ۽ رازداري",
+    "withdrawConfirm": "بند ڪريو",
+    "sendRequest": "درخواست موڪليو"
+  },
+  "contact": {
+    "title": "اسڪول سان رابطو",
+    "address": "پتو",
+    "phone": "فون",
+    "call": "ڪال ڪريو",
+    "email": "اي ميل",
+    "write": "لکو",
+    "hoursLabel": "ڪم جا ڪلاڪ",
+    "message": "پيغام کوليو",
+    "supportTitle": "مدد گهرجي؟"
+  },
+  "about": {
+    "title": "تعارف",
+    "version": "ورزن {{version}}",
+    "versionBuild": "ورزن {{version}} (بلڊ {{build}})",
+    "privacy": "رازداري پاليسي",
+    "support": "مدد لاءِ رابطو"
+  },
+  "switch": {
+    "title": "ڪردار يا اسڪول بدلايو",
+    "titleChild": "ٻار بدلايو",
+    "children": "ٻار",
+    "current": "موجوده"
+  },
+  "push": {
+    "today": "اڄ",
+    "tomorrow": "سڀاڻي",
+    "agenda": {
+      "title_one": "اڄ: {{count}} سيشن",
+      "title_other": "اڄ: {{count}} سيشن"
+    },
+    "channels": {
+      "messages": "پيغام"
+    },
+    "sheet": {
+      "allow": "اطلاعون چالو ڪريو",
+      "notNow": "هاڻي نه"
+    }
+  },
+  "app": {
+    "title": "سيٽنگون",
+    "sectionGeneral": "عام",
+    "language": "ٻولي",
+    "appearance": "ظاهري شڪل",
+    "sectionAbout": "هن ايپ بابت",
+    "version": "ورزن",
+    "build": "بلڊ",
+    "data": "معلومات",
+    "school": "اسڪول",
+    "device": "ڊوائيس",
+    "appLanguage": "ايپ جي ٻولي",
+    "sync": "سنڪ",
+    "synced": "سڀ تبديليون محفوظ ٿي ويون",
+    "pending": "{{count}} سنڪ ٿيڻ باقي",
+    "pending_other": "{{count}} سنڪ ٿيڻ باقي",
+    "privacy": "رازداري پاليسي",
+    "support": "مدد لاءِ رابطو"
+  }
+}

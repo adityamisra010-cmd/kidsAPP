@@ -1,0 +1,37 @@
+{
+  "_review": "TODO: machine-drafted, needs review by a native speaker",
+  "reinforcers": {
+    "music": "موسيقي",
+    "songs": "گيت",
+    "favourite_toy": "پسنديده رانديڪو",
+    "praise": "ساراهه",
+    "stickers": "اسٽيڪر",
+    "swing": "جهولو",
+    "blocks": "بلاڪ"
+  },
+  "triggers": {
+    "hunger": "بک",
+    "tiredness": "ٿڪ"
+  },
+  "calming": {
+    "quiet_corner": "خاموش ڪنڊ",
+    "favourite_song": "پسنديده گيت"
+  },
+  "worked": {
+    "timer": "ٽائمر"
+  },
+  "incidents": {
+    "other": "ٻيا"
+  },
+  "domains": {
+    "communication": "ڳالهه ٻولهه",
+    "behaviour": "رويو"
+  },
+  "therapyTypes": {
+    "speech": "اسپيچ ٿراپي",
+    "occupational": "آڪيوپيشنل ٿراپي",
+    "behaviour": "بيهيويئر ٿراپي (ABA)",
+    "special_ed": "خاص تعليم",
+    "physio": "فزيوٿراپي"
+  }
+}
