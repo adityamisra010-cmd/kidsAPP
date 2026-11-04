@@ -1,0 +1,131 @@
+{
+  "_review": "TODO: machine-drafted, needs review by a native speaker",
+  "actions": {
+    "save": "सेभ गर्नुहोस्",
+    "cancel": "रद्द गर्नुहोस्",
+    "done": "भयो",
+    "next": "अर्को",
+    "back": "पछाडि",
+    "close": "बन्द गर्नुहोस्",
+    "edit": "सम्पादन गर्नुहोस्",
+    "delete": "मेटाउनुहोस्",
+    "retry": "फेरि प्रयास गर्नुहोस्",
+    "confirm": "पुष्टि गर्नुहोस्",
+    "continue": "अगाडि बढ्नुहोस्",
+    "seeAll": "सबै हेर्नुहोस्",
+    "add": "थप्नुहोस्",
+    "remove": "हटाउनुहोस्",
+    "send": "पठाउनुहोस्",
+    "share": "सेयर गर्नुहोस्",
+    "search": "खोज्नुहोस्",
+    "filter": "फिल्टर",
+    "apply": "लागू गर्नुहोस्",
+    "clear": "खाली गर्नुहोस्",
+    "yes": "हो",
+    "no": "होइन",
+    "ok": "ठिक छ",
+    "view": "हेर्नुहोस्",
+    "open": "खोल्नुहोस्",
+    "call": "कल गर्नुहोस्",
+    "download": "डाउनलोड",
+    "upload": "अपलोड",
+    "select": "छान्नुहोस्",
+    "change": "बदल्नुहोस्",
+    "addCustom": "आफ्नै थप्नुहोस्",
+    "skip": "छोड्नुहोस्"
+  },
+  "time": {
+    "today": "आज",
+    "tomorrow": "भोलि",
+    "yesterday": "हिजो",
+    "thisWeek": "यो हप्ता",
+    "minutes": "{{count}} मिनेट",
+    "minutes_other": "{{count}} मिनेट"
+  },
+  "roles": {
+    "platform_admin": "प्लेटफर्म एडमिन",
+    "school_admin": "विद्यालय एडमिन",
+    "coordinator": "संयोजक",
+    "therapist": "थेरापिस्ट",
+    "parent": "अभिभावक"
+  },
+  "trend": {
+    "up": "सुधार हुँदैछ",
+    "flat": "स्थिर",
+    "down": "घट्दैछ"
+  },
+  "change": {
+    "better": "गत पटकभन्दा राम्रो",
+    "same": "लगभग उस्तै",
+    "harder": "यस पटक अलि गाह्रो"
+  },
+  "changeShort": {
+    "better": "राम्रो",
+    "same": "स्थिर",
+    "harder": "गाह्रो"
+  },
+  "status": {
+    "confirmed": "पक्का",
+    "rescheduled": "समय सारियो",
+    "substitute": "सट्टा थेरापिस्ट",
+    "cancelled": "रद्द",
+    "completed": "सम्पन्न",
+    "absent": "अनुपस्थित",
+    "makeup": "पूरक सत्र"
+  },
+  "logState": {
+    "upcoming": "आगामी",
+    "in_progress": "चलिरहेको",
+    "logged": "दर्ता भयो",
+    "not_logged": "दर्ता भएन"
+  },
+  "sync": {
+    "synced": "सबै परिवर्तन सेभ भए",
+    "pending": "{{count}} सिंक हुन बाँकी",
+    "pending_other": "{{count}} सिंक हुन बाँकी",
+    "syncing": "सिंक हुँदैछ…",
+    "offline": "तपाईं अफलाइन हुनुहुन्छ। परिवर्तनहरू यो फोनमा सेभ छन् र पछि सिंक हुनेछन्।",
+    "failed": "केही परिवर्तन सिंक भएनन्",
+    "savedOffline": "यो फोनमा सेभ भयो। अनलाइन भएपछि सिंक हुनेछ।"
+  },
+  "states": {
+    "loading": "लोड हुँदैछ…",
+    "errorTitle": "केही गडबड भयो",
+    "errorBody": "यो लोड हुन सकेन। जडान जाँचेर फेरि प्रयास गर्नुहोस्।",
+    "emptyTitle": "यहाँ अहिले केही छैन",
+    "offlineBanner": "तपाईं अफलाइन हुनुहुन्छ। सेभ गरिएको जानकारी देखाउँदैछौं।"
+  },
+  "a11y": {
+    "back": "पछाडि जानुहोस्",
+    "close": "बन्द गर्नुहोस्",
+    "selected": "छानिएको",
+    "notSelected": "छानिएको छैन",
+    "opensDetails": "विवरण खोल्छ"
+  },
+  "demoBadge": "डेमो",
+  "required": "आवश्यक",
+  "optional": "ऐच्छिक",
+  "tabs": {
+    "home": "गृहपृष्ठ",
+    "calendar": "पात्रो",
+    "myChild": "मेरो बच्चा",
+    "practice": "अभ्यास",
+    "more": "थप",
+    "today": "आज",
+    "caseload": "बच्चाहरू",
+    "reviews": "जाँच",
+    "dashboard": "ड्यासबोर्ड",
+    "schedule": "तालिका",
+    "people": "मानिसहरू",
+    "reports": "प्रतिवेदन",
+    "schools": "विद्यालयहरू",
+    "templates": "ढाँचाहरू"
+  },
+  "age": {
+    "years": "{{count}} वर्ष",
+    "years_other": "{{count}} वर्ष",
+    "months": "{{count}} महिना",
+    "months_other": "{{count}} महिना",
+    "yearsMonths": "{{years}} वर्ष {{months}} महिना"
+  }
+}

@@ -1,0 +1,122 @@
+{
+  "_review": "TODO: machine-drafted, needs review by a native speaker",
+  "commTools": {
+    "speech": "बोलेर",
+    "sign": "साङ्केतिक भाषा",
+    "pecs": "PECS (चित्र कार्ड)",
+    "aac_device": "AAC उपकरण",
+    "gestures": "इशारा",
+    "pointing": "औंलाले देखाउने",
+    "visual_schedule": "चित्र तालिका"
+  },
+  "commModes": {
+    "verbal": "बोल्छ",
+    "limited_verbal": "केही शब्द",
+    "non_verbal": "बोल्दैन"
+  },
+  "reinforcers": {
+    "bubbles": "फोकाहरू",
+    "music": "सङ्गीत",
+    "songs": "गीतहरू",
+    "favourite_toy": "मनपर्ने खेलौना",
+    "tablet_time": "ट्याब्लेटको समय",
+    "praise": "प्रशंसा",
+    "high_five": "हाई फाइभ",
+    "stickers": "स्टिकर",
+    "swing": "पिङ",
+    "snack": "अलिकति खाजा",
+    "cars": "खेलौना गाडी",
+    "blocks": "ब्लक",
+    "tickles": "काउकुती",
+    "books": "चित्र किताब"
+  },
+  "triggers": {
+    "loud_sounds": "ठूला आवाज",
+    "transitions": "एउटा कामबाट अर्कोमा जाने",
+    "waiting": "पर्खनु",
+    "textures": "केही प्रकारको स्पर्श",
+    "crowds": "भीड",
+    "bright_lights": "चर्को उज्यालो",
+    "being_touched": "नभनी छुनु",
+    "change_in_routine": "दिनचर्यामा परिवर्तन",
+    "hunger": "भोक",
+    "tiredness": "थकान",
+    "no_answer": "‘हुँदैन’ सुन्नु"
+  },
+  "calming": {
+    "deep_pressure": "गहिरो दबाब",
+    "quiet_corner": "शान्त कुना",
+    "counting": "सँगै गन्नु",
+    "favourite_song": "मनपर्ने गीत",
+    "weighted_blanket": "गह्रौं कम्बल",
+    "swinging": "हल्लिनु",
+    "breathing": "बिस्तारै सास",
+    "visual_timer": "चित्र टाइमर",
+    "fidget": "फिजेट खेलौना",
+    "water_break": "पानी पिउने विश्राम"
+  },
+  "antecedents": {
+    "transition": "काम परिवर्तन",
+    "demand": "कामको माग",
+    "sensory": "इन्द्रिय सम्बन्धी",
+    "waiting": "पर्खाइ",
+    "denied_item": "चाहेको कुरा नपाउनु",
+    "peer": "अर्को बच्चा",
+    "unknown": "स्पष्ट छैन"
+  },
+  "worked": {
+    "visual_schedule": "चित्र तालिका",
+    "first_then": "पहिले–त्यसपछि बोर्ड",
+    "timer": "टाइमर",
+    "movement_break": "चलफिरको विश्राम",
+    "reinforcer_choice": "पुरस्कार रोज्न दिने",
+    "modelling": "गरेर देखाउने",
+    "short_tasks": "साना काम",
+    "quiet_room": "शान्त कोठा",
+    "parent_present": "अभिभावक साथमा",
+    "song_cue": "गीतको सङ्केत",
+    "hand_over_hand": "हात समातेर गराउने",
+    "choice_of_two": "दुईमध्ये एक रोजाइ"
+  },
+  "notWorked": {
+    "long_tasks": "लामा काम",
+    "noisy_room": "हल्ला हुने कोठा",
+    "verbal_only_instructions": "मौखिक निर्देशन मात्र",
+    "waiting_turns": "पालो पर्खनु",
+    "new_material": "नयाँ सामग्री",
+    "tablet_reinforcer": "पुरस्कारको रूपमा ट्याब्लेट",
+    "group_activity": "समूह गतिविधि",
+    "touch_prompts": "स्पर्श सङ्केत"
+  },
+  "incidents": {
+    "meltdown": "अत्यधिक बेचैनी",
+    "aggression": "आक्रामकता",
+    "self_injury": "आफैंलाई चोट",
+    "elopement": "भाग्नु",
+    "refusal": "इन्कार",
+    "other": "अन्य"
+  },
+  "domains": {
+    "communication": "सञ्चार",
+    "fine_motor": "हातका सूक्ष्म काम",
+    "gross_motor": "शरीरका ठूला चाल",
+    "self_care": "आफ्नो हेरचाह",
+    "social": "अरूसँग घुलमिल",
+    "behaviour": "व्यवहार",
+    "cognition": "सिकाइ र सोचाइ",
+    "sensory": "इन्द्रिय सन्तुलन"
+  },
+  "therapyTypes": {
+    "speech": "स्पिच थेरापी",
+    "occupational": "अकुपेसनल थेरापी",
+    "behaviour": "बिहेभियर थेरापी (ABA)",
+    "special_ed": "विशेष शिक्षा",
+    "physio": "फिजियोथेरापी",
+    "audiology": "श्रवण सहायता"
+  },
+  "regulation": {
+    "under": "कम ऊर्जा",
+    "regulated": "सन्तुलित",
+    "over": "अति उत्साह"
+  }
+}
