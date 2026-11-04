@@ -1,0 +1,131 @@
+{
+  "_review": "TODO: machine-drafted, needs review by a native speaker",
+  "actions": {
+    "save": "ସେଭ୍ କରନ୍ତୁ",
+    "cancel": "ବାତିଲ୍ କରନ୍ତୁ",
+    "done": "ହୋଇଗଲା",
+    "next": "ପରବର୍ତ୍ତୀ",
+    "back": "ପଛକୁ",
+    "close": "ବନ୍ଦ କରନ୍ତୁ",
+    "edit": "ସମ୍ପାଦନା କରନ୍ତୁ",
+    "delete": "ହଟାନ୍ତୁ",
+    "retry": "ପୁଣି ଚେଷ୍ଟା କରନ୍ତୁ",
+    "confirm": "ନିଶ୍ଚିତ କରନ୍ତୁ",
+    "continue": "ଆଗକୁ ବଢ଼ନ୍ତୁ",
+    "seeAll": "ସବୁ ଦେଖନ୍ତୁ",
+    "add": "ଯୋଡ଼ନ୍ତୁ",
+    "remove": "କାଢ଼ନ୍ତୁ",
+    "send": "ପଠାନ୍ତୁ",
+    "share": "ସେୟାର୍ କରନ୍ତୁ",
+    "search": "ଖୋଜନ୍ତୁ",
+    "filter": "ଫିଲ୍ଟର୍",
+    "apply": "ଲାଗୁ କରନ୍ତୁ",
+    "clear": "ସଫା କରନ୍ତୁ",
+    "yes": "ହଁ",
+    "no": "ନା",
+    "ok": "ଠିକ୍ ଅଛି",
+    "view": "ଦେଖନ୍ତୁ",
+    "open": "ଖୋଲନ୍ତୁ",
+    "call": "କଲ୍ କରନ୍ତୁ",
+    "download": "ଡାଉନଲୋଡ୍",
+    "upload": "ଅପଲୋଡ୍",
+    "select": "ବାଛନ୍ତୁ",
+    "change": "ବଦଳାନ୍ତୁ",
+    "addCustom": "ନିଜର ଯୋଡ଼ନ୍ତୁ",
+    "skip": "ଛାଡ଼ନ୍ତୁ"
+  },
+  "time": {
+    "today": "ଆଜି",
+    "tomorrow": "କାଲି",
+    "yesterday": "ଗତକାଲି",
+    "thisWeek": "ଏହି ସପ୍ତାହ",
+    "minutes": "{{count}} ମିନିଟ୍",
+    "minutes_other": "{{count}} ମିନିଟ୍"
+  },
+  "roles": {
+    "platform_admin": "ପ୍ଲାଟଫର୍ମ ଆଡମିନ୍",
+    "school_admin": "ବିଦ୍ୟାଳୟ ଆଡମିନ୍",
+    "coordinator": "ସଂଯୋଜକ",
+    "therapist": "ଥେରାପିଷ୍ଟ",
+    "parent": "ଅଭିଭାବକ"
+  },
+  "trend": {
+    "up": "ଉନ୍ନତି ହେଉଛି",
+    "flat": "ସ୍ଥିର",
+    "down": "କମୁଛି"
+  },
+  "change": {
+    "better": "ଗତ ଥର ଠାରୁ ଭଲ",
+    "same": "ପ୍ରାୟ ସେହିପରି",
+    "harder": "ଏଥର ଟିକେ କଷ୍ଟ"
+  },
+  "changeShort": {
+    "better": "ଭଲ",
+    "same": "ସ୍ଥିର",
+    "harder": "କଷ୍ଟ"
+  },
+  "status": {
+    "confirmed": "ନିଶ୍ଚିତ",
+    "rescheduled": "ସମୟ ବଦଳିଛି",
+    "substitute": "ବିକଳ୍ପ ଥେରାପିଷ୍ଟ",
+    "cancelled": "ବାତିଲ୍",
+    "completed": "ସମାପ୍ତ",
+    "absent": "ଅନୁପସ୍ଥିତ",
+    "makeup": "ପୂରଣ ସେସନ୍"
+  },
+  "logState": {
+    "upcoming": "ଆଗାମୀ",
+    "in_progress": "ଚାଲିଛି",
+    "logged": "ଲେଖାଯାଇଛି",
+    "not_logged": "ଲେଖାଯାଇନାହିଁ"
+  },
+  "sync": {
+    "synced": "ସମସ୍ତ ପରିବର୍ତ୍ତନ ସେଭ୍ ହୋଇଛି",
+    "pending": "{{count}} ସିଙ୍କ୍ ବାକି",
+    "pending_other": "{{count}} ସିଙ୍କ୍ ବାକି",
+    "syncing": "ସିଙ୍କ୍ ହେଉଛି…",
+    "offline": "ଆପଣ ଅଫଲାଇନ୍ ଅଛନ୍ତି। ପରିବର୍ତ୍ତନ ଏହି ଫୋନରେ ସେଭ୍ ଅଛି ଏବଂ ପରେ ସିଙ୍କ୍ ହେବ।",
+    "failed": "କିଛି ପରିବର୍ତ୍ତନ ସିଙ୍କ୍ ହୋଇନାହିଁ",
+    "savedOffline": "ଏହି ଫୋନରେ ସେଭ୍ ହେଲା। ଅନଲାଇନ୍ ହେଲେ ସିଙ୍କ୍ ହେବ।"
+  },
+  "states": {
+    "loading": "ଲୋଡ୍ ହେଉଛି…",
+    "errorTitle": "କିଛି ଭୁଲ୍ ହୋଇଗଲା",
+    "errorBody": "ଏହା ଲୋଡ୍ ହୋଇପାରିଲା ନାହିଁ। ସଂଯୋଗ ଯାଞ୍ଚ କରି ପୁଣି ଚେଷ୍ଟା କରନ୍ତୁ।",
+    "emptyTitle": "ଏଠାରେ ଏପର୍ଯ୍ୟନ୍ତ କିଛି ନାହିଁ",
+    "offlineBanner": "ଆପଣ ଅଫଲାଇନ୍ ଅଛନ୍ତି। ସେଭ୍ ହୋଇଥିବା ସୂଚନା ଦେଖାଉଛୁ।"
+  },
+  "a11y": {
+    "back": "ପଛକୁ ଯାଆନ୍ତୁ",
+    "close": "ବନ୍ଦ କରନ୍ତୁ",
+    "selected": "ବଛାଯାଇଛି",
+    "notSelected": "ବଛାଯାଇନାହିଁ",
+    "opensDetails": "ବିବରଣୀ ଖୋଲେ"
+  },
+  "demoBadge": "ଡେମୋ",
+  "required": "ଆବଶ୍ୟକ",
+  "optional": "ଇଚ୍ଛାଧୀନ",
+  "tabs": {
+    "home": "ମୂଳପୃଷ୍ଠା",
+    "calendar": "କ୍ୟାଲେଣ୍ଡର",
+    "myChild": "ମୋ ପିଲା",
+    "practice": "ଅଭ୍ୟାସ",
+    "more": "ଅଧିକ",
+    "today": "ଆଜି",
+    "caseload": "ପିଲାମାନେ",
+    "reviews": "ଯାଞ୍ଚ",
+    "dashboard": "ଡ୍ୟାସବୋର୍ଡ",
+    "schedule": "ସମୟସୂଚୀ",
+    "people": "ଲୋକମାନେ",
+    "reports": "ରିପୋର୍ଟ",
+    "schools": "ବିଦ୍ୟାଳୟ",
+    "templates": "ଛାଞ୍ଚ"
+  },
+  "age": {
+    "years": "{{count}} ବର୍ଷ",
+    "years_other": "{{count}} ବର୍ଷ",
+    "months": "{{count}} ମାସ",
+    "months_other": "{{count}} ମାସ",
+    "yearsMonths": "{{years}} ବର୍ଷ {{months}} ମାସ"
+  }
+}
