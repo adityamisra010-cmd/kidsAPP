@@ -1,0 +1,87 @@
+{
+  "_review": "TODO: machine-drafted, needs review by a native speaker",
+  "more": {
+    "title": "अधिकम्",
+    "sections": {
+      "school": "विद्यालयः"
+    },
+    "items": {
+      "messages": "सन्देशाः",
+      "notifications": "सूचनाः",
+      "language": "भाषा",
+      "contact": "विद्यालयेन सम्पर्कः",
+      "profile": "स्वविवरणम्",
+      "about": "विषये",
+      "announcements": "घोषणाः",
+      "settings": "व्यवस्थाः"
+    },
+    "signOut": "निर्गम्यताम्",
+    "allSchools": "सर्वे विद्यालयाः"
+  },
+  "signOut": {
+    "confirm": "निर्गम्यताम्"
+  },
+  "language": {
+    "title": "भाषा",
+    "search": "भाषा अन्विष्यताम्"
+  },
+  "profile": {
+    "email": "ईपत्रम्",
+    "phone": "चलदूरवाणीसङ्ख्या",
+    "sectionApp": "व्यवस्थाः",
+    "language": "भाषा",
+    "theme": "रूपम्",
+    "themeLight": "प्रकाशमयम्",
+    "themeDark": "अन्धकारमयम्"
+  },
+  "notifications": {
+    "groups": {
+      "schedule": "समयसारिणी",
+      "sessions": "सत्राणि",
+      "practice": "गृहाभ्यासः",
+      "messages": "सन्देशाः",
+      "announcements": "घोषणाः"
+    }
+  },
+  "contact": {
+    "title": "विद्यालयेन सम्पर्कः",
+    "address": "सङ्केतः",
+    "phone": "दूरवाणी",
+    "email": "ईपत्रम्",
+    "write": "लिख्यताम्",
+    "supportTitle": "साहाय्यम् अपेक्षितम्?"
+  },
+  "about": {
+    "title": "विषये",
+    "version": "संस्करणम् {{version}}",
+    "privacy": "गोपनीयतानीतिः"
+  },
+  "switch": {
+    "children": "बालकाः"
+  },
+  "push": {
+    "today": "अद्य",
+    "tomorrow": "श्वः",
+    "agenda": {
+      "title_one": "अद्य: {{count}} सत्रम्",
+      "title_other": "अद्य: {{count}} सत्राणि"
+    },
+    "channels": {
+      "messages": "सन्देशाः"
+    },
+    "sheet": {
+      "notNow": "इदानीं न"
+    }
+  },
+  "app": {
+    "title": "व्यवस्थाः",
+    "sectionGeneral": "सामान्यम्",
+    "language": "भाषा",
+    "appearance": "रूपम्",
+    "version": "संस्करणम्",
+    "school": "विद्यालयः",
+    "device": "उपकरणम्",
+    "appLanguage": "अनुप्रयोगस्य भाषा",
+    "privacy": "गोपनीयतानीतिः"
+  }
+}

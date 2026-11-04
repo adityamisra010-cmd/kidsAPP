@@ -1,0 +1,26 @@
+{
+  "_review": "TODO: machine-drafted, needs review by a native speaker",
+  "home": {
+    "greeting": {
+      "morning": "सुप्रभातम्, {{name}}",
+      "afternoon": "नमस्ते, {{name}}",
+      "evening": "शुभसन्ध्या, {{name}}"
+    },
+    "next": {
+      "title": "अग्रिमं सत्रम्"
+    },
+    "latest": {
+      "all": "सर्वाणि सत्राणि"
+    },
+    "practice": {
+      "open": "उद्घाट्यताम्"
+    },
+    "announcements": {
+      "all": "सर्वं दृश्यताम्"
+    },
+    "links": {
+      "messages": "सन्देशाः",
+      "contact": "विद्यालयेन सम्पर्कः"
+    }
+  }
+}

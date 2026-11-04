@@ -1,0 +1,73 @@
+{
+  "_review": "TODO: machine-drafted, needs review by a native speaker",
+  "actions": {
+    "save": "रक्ष्यताम्",
+    "cancel": "निरस्यताम्",
+    "done": "सम्पन्नम्",
+    "next": "अग्रिमम्",
+    "back": "पृष्ठतः",
+    "close": "पिधीयताम्",
+    "edit": "सम्पाद्यताम्",
+    "delete": "अपाक्रियताम्",
+    "retry": "पुनः प्रयतताम्",
+    "confirm": "निश्चीयताम्",
+    "continue": "अग्रे गम्यताम्",
+    "seeAll": "सर्वं दृश्यताम्",
+    "add": "योज्यताम्",
+    "remove": "निष्कास्यताम्",
+    "send": "प्रेष्यताम्",
+    "search": "अन्विष्यताम्",
+    "yes": "आम्",
+    "no": "न",
+    "ok": "अस्तु",
+    "view": "दृश्यताम्",
+    "open": "उद्घाट्यताम्",
+    "select": "चीयताम्",
+    "change": "परिवर्त्यताम्",
+    "skip": "त्यज्यताम्"
+  },
+  "time": {
+    "today": "अद्य",
+    "tomorrow": "श्वः",
+    "yesterday": "ह्यः",
+    "thisWeek": "अस्मिन् सप्ताहे",
+    "minutes": "{{count}} निमेषः",
+    "minutes_other": "{{count}} निमेषाः"
+  },
+  "roles": {
+    "therapist": "चिकित्सकः",
+    "parent": "अभिभावकः"
+  },
+  "changeShort": {
+    "better": "उत्तमम्",
+    "same": "स्थिरम्",
+    "harder": "कठिनम्"
+  },
+  "states": {
+    "loading": "आरोप्यते…",
+    "errorTitle": "किमपि दोषः जातः"
+  },
+  "demoBadge": "प्रदर्शनम्",
+  "required": "आवश्यकम्",
+  "optional": "वैकल्पिकम्",
+  "tabs": {
+    "home": "गृहम्",
+    "calendar": "दिनदर्शिका",
+    "myChild": "मम बालकः",
+    "practice": "अभ्यासः",
+    "more": "अधिकम्",
+    "today": "अद्य",
+    "caseload": "बालकाः",
+    "schedule": "समयसारिणी",
+    "people": "जनाः",
+    "reports": "प्रतिवेदनानि",
+    "schools": "विद्यालयाः"
+  },
+  "age": {
+    "years": "{{count}} वर्षम्",
+    "years_other": "{{count}} वर्षाणि",
+    "months": "{{count}} मासः",
+    "months_other": "{{count}} मासाः",
+    "yearsMonths": "{{years}} वर्षाणि {{months}} मासाः"
+  }
+}
