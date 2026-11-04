@@ -1,0 +1,18 @@
+{
+  "_review": "TODO: machine-drafted, needs review by a native speaker",
+  "bell": "اپ ڈیٹس",
+  "title": "اپ ڈیٹس",
+  "markAll": "سب پڑھ لیا",
+  "markedAll": "تمام اپ ڈیٹس پڑھے ہوئے نشان زد",
+  "unread": "نہ پڑھے",
+  "unreadCount": "{{count}} نہ پڑھا",
+  "unreadCount_other": "{{count}} نہ پڑھے",
+  "groups": {
+    "today": "آج",
+    "earlier": "پہلے"
+  },
+  "empty": {
+    "title": "سب دیکھ لیا",
+    "body": "سیشن کی یاد دہانیاں، شیڈول کی تبدیلیاں اور اسکول کے پیغامات یہاں نظر آئیں گے۔"
+  }
+}

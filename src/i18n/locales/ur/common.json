@@ -1,0 +1,131 @@
+{
+  "_review": "TODO: machine-drafted, needs review by a native speaker",
+  "actions": {
+    "save": "محفوظ کریں",
+    "cancel": "منسوخ کریں",
+    "done": "ہو گیا",
+    "next": "آگے",
+    "back": "پیچھے",
+    "close": "بند کریں",
+    "edit": "ترمیم کریں",
+    "delete": "حذف کریں",
+    "retry": "دوبارہ کوشش کریں",
+    "confirm": "تصدیق کریں",
+    "continue": "جاری رکھیں",
+    "seeAll": "سب دیکھیں",
+    "add": "شامل کریں",
+    "remove": "ہٹائیں",
+    "send": "بھیجیں",
+    "share": "شیئر کریں",
+    "search": "تلاش کریں",
+    "filter": "فلٹر",
+    "apply": "لاگو کریں",
+    "clear": "صاف کریں",
+    "yes": "ہاں",
+    "no": "نہیں",
+    "ok": "ٹھیک ہے",
+    "view": "دیکھیں",
+    "open": "کھولیں",
+    "call": "کال کریں",
+    "download": "ڈاؤن لوڈ",
+    "upload": "اپ لوڈ",
+    "select": "منتخب کریں",
+    "change": "تبدیل کریں",
+    "addCustom": "اپنا شامل کریں",
+    "skip": "چھوڑیں"
+  },
+  "time": {
+    "today": "آج",
+    "tomorrow": "کل",
+    "yesterday": "گزشتہ کل",
+    "thisWeek": "اس ہفتے",
+    "minutes": "{{count}} منٹ",
+    "minutes_other": "{{count}} منٹ"
+  },
+  "roles": {
+    "platform_admin": "پلیٹ فارم ایڈمن",
+    "school_admin": "اسکول ایڈمن",
+    "coordinator": "کوآرڈینیٹر",
+    "therapist": "تھراپسٹ",
+    "parent": "والدین"
+  },
+  "trend": {
+    "up": "بہتری آ رہی ہے",
+    "flat": "مستحکم",
+    "down": "کمی آ رہی ہے"
+  },
+  "change": {
+    "better": "پچھلی بار سے بہتر",
+    "same": "تقریباً ویسا ہی",
+    "harder": "اس بار کچھ مشکل"
+  },
+  "changeShort": {
+    "better": "اچھا",
+    "same": "مستحکم",
+    "harder": "مشکل"
+  },
+  "status": {
+    "confirmed": "طے شدہ",
+    "rescheduled": "وقت بدل گیا",
+    "substitute": "متبادل تھراپسٹ",
+    "cancelled": "منسوخ",
+    "completed": "مکمل",
+    "absent": "غیر حاضر",
+    "makeup": "تلافی سیشن"
+  },
+  "logState": {
+    "upcoming": "آنے والا",
+    "in_progress": "جاری ہے",
+    "logged": "درج ہو گیا",
+    "not_logged": "درج نہیں ہوا"
+  },
+  "sync": {
+    "synced": "تمام تبدیلیاں محفوظ ہو گئیں",
+    "pending": "{{count}} سنک ہونا باقی",
+    "pending_other": "{{count}} سنک ہونا باقی",
+    "syncing": "سنک ہو رہا ہے…",
+    "offline": "آپ آف لائن ہیں۔ تبدیلیاں اس فون پر محفوظ ہیں اور بعد میں سنک ہو جائیں گی۔",
+    "failed": "کچھ تبدیلیاں سنک نہیں ہوئیں",
+    "savedOffline": "اس فون پر محفوظ ہو گیا۔ آن لائن ہونے پر سنک ہو جائے گا۔"
+  },
+  "states": {
+    "loading": "لوڈ ہو رہا ہے…",
+    "errorTitle": "کچھ غلط ہو گیا",
+    "errorBody": "یہ لوڈ نہیں ہو سکا۔ کنکشن چیک کر کے دوبارہ کوشش کریں۔",
+    "emptyTitle": "یہاں ابھی کچھ نہیں ہے",
+    "offlineBanner": "آپ آف لائن ہیں۔ محفوظ معلومات دکھائی جا رہی ہیں۔"
+  },
+  "a11y": {
+    "back": "واپس جائیں",
+    "close": "بند کریں",
+    "selected": "منتخب",
+    "notSelected": "منتخب نہیں",
+    "opensDetails": "تفصیلات کھولتا ہے"
+  },
+  "demoBadge": "ڈیمو",
+  "required": "ضروری",
+  "optional": "اختیاری",
+  "tabs": {
+    "home": "ہوم",
+    "calendar": "کیلنڈر",
+    "myChild": "میرا بچہ",
+    "practice": "مشق",
+    "more": "مزید",
+    "today": "آج",
+    "caseload": "بچے",
+    "reviews": "جانچ",
+    "dashboard": "ڈیش بورڈ",
+    "schedule": "شیڈول",
+    "people": "لوگ",
+    "reports": "رپورٹس",
+    "schools": "اسکول",
+    "templates": "سانچے"
+  },
+  "age": {
+    "years": "{{count}} سال",
+    "years_other": "{{count}} سال",
+    "months": "{{count}} مہینہ",
+    "months_other": "{{count}} مہینے",
+    "yearsMonths": "{{years}} سال {{months}} مہینے"
+  }
+}

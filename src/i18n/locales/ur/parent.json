@@ -1,0 +1,47 @@
+{
+  "_review": "TODO: machine-drafted, needs review by a native speaker",
+  "home": {
+    "greeting": {
+      "morning": "صبح بخیر، {{name}}",
+      "afternoon": "آداب، {{name}}",
+      "evening": "شام بخیر، {{name}}"
+    },
+    "noChild": {
+      "title": "ابھی کوئی بچہ منسلک نہیں",
+      "body": "اسکول سے کہیں کہ آپ کے بچے کو اس فون نمبر سے منسلک کرے۔ پھر اس کے سیشن یہاں نظر آئیں گے۔"
+    },
+    "next": {
+      "title": "اگلا سیشن",
+      "titleFor": "{{name}} کا اگلا سیشن",
+      "seeCalendar": "کیلنڈر دیکھیں",
+      "emptyTitle": "ابھی کوئی سیشن طے نہیں",
+      "emptyBody": "جب اسکول اگلا سیشن طے کرے گا تو دن اور وقت یہاں نظر آئے گا۔"
+    },
+    "latest": {
+      "title": "پچھلا سیشن",
+      "all": "تمام سیشن",
+      "emptyTitle": "ابھی سیشن کے نوٹس نہیں",
+      "emptyBody": "ہر سیشن کے بعد تھراپسٹ کا مختصر نوٹ یہاں نظر آئے گا۔"
+    },
+    "practice": {
+      "title": "اس ہفتے کی مشق",
+      "open": "کھولیں",
+      "emptyTitle": "اس ہفتے کوئی مشق نہیں",
+      "emptyBody": "جب تھراپسٹ گھر کی سرگرمی دے گا تو وہ آسان مراحل کے ساتھ یہاں نظر آئے گی۔"
+    },
+    "announcements": {
+      "title": "اسکول کی طرف سے",
+      "all": "سب دیکھیں"
+    },
+    "links": {
+      "title": "فوری لنکس",
+      "messages": "پیغامات",
+      "resources": "وسائل",
+      "contact": "اسکول سے رابطہ"
+    },
+    "checkinMore": {
+      "title": "{{name}} کے لیے بھی درج کریں",
+      "subtitle": "{{time}} بجے {{therapy}}"
+    }
+  }
+}
