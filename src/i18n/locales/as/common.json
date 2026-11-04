@@ -1,0 +1,131 @@
+{
+  "_review": "TODO: machine-drafted, needs review by a native speaker",
+  "actions": {
+    "save": "ছেভ কৰক",
+    "cancel": "বাতিল কৰক",
+    "done": "হ'ল",
+    "next": "পৰৱৰ্তী",
+    "back": "পিছলৈ",
+    "close": "বন্ধ কৰক",
+    "edit": "সম্পাদনা কৰক",
+    "delete": "মচক",
+    "retry": "পুনৰ চেষ্টা কৰক",
+    "confirm": "নিশ্চিত কৰক",
+    "continue": "আগবাঢ়ক",
+    "seeAll": "সকলো চাওক",
+    "add": "যোগ কৰক",
+    "remove": "আঁতৰাওক",
+    "send": "পঠিয়াওক",
+    "share": "শ্বেয়াৰ কৰক",
+    "search": "বিচাৰক",
+    "filter": "ফিল্টাৰ",
+    "apply": "প্ৰয়োগ কৰক",
+    "clear": "পৰিষ্কাৰ কৰক",
+    "yes": "হয়",
+    "no": "নহয়",
+    "ok": "ঠিক আছে",
+    "view": "চাওক",
+    "open": "খোলক",
+    "call": "কল কৰক",
+    "download": "ডাউনলোড",
+    "upload": "আপলোড",
+    "select": "বাছনি কৰক",
+    "change": "সলনি কৰক",
+    "addCustom": "নিজৰ যোগ কৰক",
+    "skip": "এৰি যাওক"
+  },
+  "time": {
+    "today": "আজি",
+    "tomorrow": "কাইলৈ",
+    "yesterday": "কালি",
+    "thisWeek": "এই সপ্তাহত",
+    "minutes": "{{count}} মিনিট",
+    "minutes_other": "{{count}} মিনিট"
+  },
+  "roles": {
+    "platform_admin": "প্লেটফৰ্ম এডমিন",
+    "school_admin": "বিদ্যালয় এডমিন",
+    "coordinator": "সমন্বয়ক",
+    "therapist": "থেৰাপিষ্ট",
+    "parent": "অভিভাৱক"
+  },
+  "trend": {
+    "up": "উন্নতি হৈছে",
+    "flat": "স্থিৰ",
+    "down": "কমি আহিছে"
+  },
+  "change": {
+    "better": "যোৱাবাৰতকৈ ভাল",
+    "same": "প্ৰায় একেই",
+    "harder": "এইবাৰ অলপ কঠিন"
+  },
+  "changeShort": {
+    "better": "ভাল",
+    "same": "স্থিৰ",
+    "harder": "কঠিন"
+  },
+  "status": {
+    "confirmed": "নিশ্চিত",
+    "rescheduled": "সময় সলনি হৈছে",
+    "substitute": "বিকল্প থেৰাপিষ্ট",
+    "cancelled": "বাতিল",
+    "completed": "সম্পূৰ্ণ",
+    "absent": "অনুপস্থিত",
+    "makeup": "পূৰণ ছেছন"
+  },
+  "logState": {
+    "upcoming": "আগন্তুক",
+    "in_progress": "চলি আছে",
+    "logged": "লিখা হৈছে",
+    "not_logged": "লিখা হোৱা নাই"
+  },
+  "sync": {
+    "synced": "সকলো সলনি ছেভ হৈছে",
+    "pending": "{{count}} টা ছিংক বাকী",
+    "pending_other": "{{count}} টা ছিংক বাকী",
+    "syncing": "ছিংক হৈ আছে…",
+    "offline": "আপুনি অফলাইন আছে। সলনিবোৰ এই ফোনত ছেভ আছে আৰু পিছত ছিংক হ'ব।",
+    "failed": "কিছুমান সলনি ছিংক হোৱা নাই",
+    "savedOffline": "এই ফোনত ছেভ হ'ল। অনলাইন হ'লে ছিংক হ'ব।"
+  },
+  "states": {
+    "loading": "লোড হৈ আছে…",
+    "errorTitle": "কিবা ভুল হ'ল",
+    "errorBody": "এইটো লোড কৰিব পৰা নগ'ল। সংযোগ পৰীক্ষা কৰি পুনৰ চেষ্টা কৰক।",
+    "emptyTitle": "ইয়াত এতিয়াও একো নাই",
+    "offlineBanner": "আপুনি অফলাইন আছে। ছেভ কৰা তথ্য দেখুওৱা হৈছে।"
+  },
+  "a11y": {
+    "back": "উভতি যাওক",
+    "close": "বন্ধ কৰক",
+    "selected": "বাছনি কৰা হৈছে",
+    "notSelected": "বাছনি কৰা হোৱা নাই",
+    "opensDetails": "বিৱৰণ খোলে"
+  },
+  "demoBadge": "ডেমো",
+  "required": "প্ৰয়োজনীয়",
+  "optional": "ঐচ্ছিক",
+  "tabs": {
+    "home": "হোম",
+    "calendar": "কেলেণ্ডাৰ",
+    "myChild": "মোৰ সন্তান",
+    "practice": "অনুশীলন",
+    "more": "অধিক",
+    "today": "আজি",
+    "caseload": "শিশুসকল",
+    "reviews": "পৰীক্ষা",
+    "dashboard": "ডেশ্বব'ৰ্ড",
+    "schedule": "সময়সূচী",
+    "people": "লোকসকল",
+    "reports": "প্ৰতিবেদন",
+    "schools": "বিদ্যালয়",
+    "templates": "নমুনা"
+  },
+  "age": {
+    "years": "{{count}} বছৰ",
+    "years_other": "{{count}} বছৰ",
+    "months": "{{count}} মাহ",
+    "months_other": "{{count}} মাহ",
+    "yearsMonths": "{{years}} বছৰ {{months}} মাহ"
+  }
+}

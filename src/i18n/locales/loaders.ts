@@ -6,6 +6,7 @@ type Bundle = Record<string, object>;
 
 /** Translation bundles for languages other than English and Hindi, loaded on first use. */
 export const LOADERS: Partial<Record<Language, () => Bundle>> = {
+  as: () => ({ auth: require('./as/auth.json'), chips: require('./as/chips.json'), common: require('./as/common.json'), errors: require('./as/errors.json'), notifications: require('./as/notifications.json'), parent: require('./as/parent.json'), settings: require('./as/settings.json') }),
   bn: () => ({ auth: require('./bn/auth.json'), chips: require('./bn/chips.json'), common: require('./bn/common.json'), errors: require('./bn/errors.json'), notifications: require('./bn/notifications.json'), parent: require('./bn/parent.json'), settings: require('./bn/settings.json') }),
   gu: () => ({ auth: require('./gu/auth.json'), chips: require('./gu/chips.json'), common: require('./gu/common.json'), errors: require('./gu/errors.json'), notifications: require('./gu/notifications.json'), parent: require('./gu/parent.json'), settings: require('./gu/settings.json') }),
   kn: () => ({ auth: require('./kn/auth.json'), chips: require('./kn/chips.json'), common: require('./kn/common.json'), errors: require('./kn/errors.json'), notifications: require('./kn/notifications.json'), parent: require('./kn/parent.json'), settings: require('./kn/settings.json') }),
