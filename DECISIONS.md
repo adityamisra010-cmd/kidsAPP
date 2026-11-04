@@ -37,3 +37,8 @@ One line per decision: what, and why. Newest at the bottom of each section.
 - Reports: "For parents" + "Last month" are the defaults (what gets handed out at meetings); parents always get the parent copy; at least 3 rating scales must stay enabled.
 - Coordinators see school settings read-only; only School Admins can invite another School Admin.
 - Dashboard "Remind" for unlogged sessions shows a confirmation; the server-side reminder job (`reminders` Edge Function) does the actual nudging.
+
+## Languages: all 22 offered, translated in tiers with fallbacks
+- **Decision:** Offer English and all 22 scheduled languages from day one. Each language gets a fallback chain to the nearest widely-read language, then English. Translation depth depends on how confidently the language could be drafted without a native reviewer.
+- **Why:** A parent who sees their own language listed, with key words in it, is more likely to keep using the app. A clear fallback in a language they read beats a wrong or garbled translation. Only five namespaces load per language, and they load lazily, so the app stays small.
+- **Follow-up:** Native review for every non-English language, starting with the starter-set ones.

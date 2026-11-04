@@ -122,7 +122,7 @@ src/ui/             Design system (Screen, Text, Card, Button, Chip, Sheet, pick
 src/theme/          Tokens (light/dark), brand.json, makeStyles
 src/domain/         Types, constants (rating scales, chips), metrics engine, pure derivations
 src/data/           Repository contract, Demo adapter, Supabase adapter, offline outbox, query client
-src/i18n/           English + Hindi (one namespace per feature; Hindi is machine-drafted, marked for review)
+src/i18n/           English + the 22 scheduled languages of India (one namespace per feature; see "Languages" below)
 supabase/           Migrations (schema, RLS, metrics, storage, RPCs), Edge Functions, config
 scripts/            build-apk.sh, test-db.sh, brand asset generator, seed generator
 CSV_TEMPLATES/      Excel/CSV import templates + column guide
@@ -143,3 +143,23 @@ Docs: [DECISIONS.md](DECISIONS.md), [PROGRESS.md](PROGRESS.md), [TEST_PLAN.md](T
 - Session logs, parent practice logs and check-ins are saved to an on-device SQLite queue when the phone is offline, then synced in order when it reconnects.
 - The sync badge shows what is waiting, and failed items can be retried.
 - Videos are compressed on the phone to 720p and at most 60 seconds, then uploaded in the background. There is an optional "Wi-Fi only" setting.
+
+## Languages
+
+The app offers English and all 22 scheduled languages of India. Change it under **More → Settings → Language**, or with the language button on the welcome screen. Every language name is shown in its own script, so people can find theirs.
+
+| Coverage | Languages | What it means |
+|---|---|---|
+| Full app | English, Hindi | Every screen |
+| Core screens | Bengali, Marathi, Telugu, Tamil, Gujarati, Urdu, Kannada, Odia, Malayalam, Punjabi, Assamese, Maithili, Nepali | Sign-in, consent, parent home, alerts, errors, settings and labels (580 strings). Other screens fall back. |
+| Labels and short text | Sindhi, Konkani, Sanskrit | Buttons, tabs and labels. Longer text falls back. |
+| Starter set | Santali (Ol Chiki), Kashmiri, Dogri, Manipuri (Meitei), Bodo | Common words only. The rest falls back. |
+
+**Fallbacks.** Any missing string shows in the nearest language a reader is likely to know, then English: Marathi, Gujarati, Odia, Punjabi, Maithili, Nepali, Dogri, Santali and Sanskrit go to Hindi. Konkani goes to Marathi, then Hindi. Assamese and Manipuri go to Bengali. Bodo goes to Assamese, then Hindi. Kashmiri and Sindhi go to Urdu.
+
+**Right-to-left.** Urdu, Kashmiri and Sindhi switch the layout to right-to-left. The app asks first, then restarts once.
+
+**Review.** All non-English text is machine-drafted. Each file carries a `_review` marker until a native speaker signs it off. Use `scripts/i18n-tools.py`:
+- `export <lang>` writes the English source for a translator.
+- `apply <lang> <file>` imports their work and checks placeholders.
+- `check` shows coverage.
