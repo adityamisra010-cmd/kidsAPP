@@ -1,0 +1,41 @@
+{
+  "_review": "TODO: machine-drafted, needs review by a native speaker",
+  "home": {
+    "greeting": {
+      "morning": "बरी सकाळ, {{name}}",
+      "afternoon": "नमस्कार, {{name}}",
+      "evening": "बरी सांज, {{name}}"
+    },
+    "noChild": {
+      "title": "अजून खंयचेंच भुरगें जोडूंक ना"
+    },
+    "next": {
+      "title": "फुडलें सत्र",
+      "titleFor": "{{name}} चें फुडलें सत्र",
+      "seeCalendar": "कॅलेंडर पळयात"
+    },
+    "latest": {
+      "title": "फाटलें सत्र",
+      "all": "सगळीं सत्रां",
+      "emptyTitle": "अजून सत्राची नोंद ना"
+    },
+    "practice": {
+      "title": "ह्या सप्तकाचो सराव",
+      "open": "उगडात",
+      "emptyTitle": "ह्या सप्तकांत सराव ना"
+    },
+    "announcements": {
+      "title": "शाळेकडल्यान",
+      "all": "सगळें पळयात"
+    },
+    "links": {
+      "title": "बेगीन लिंक",
+      "messages": "संदेश",
+      "resources": "साहित्य",
+      "contact": "शाळेकडेन संपर्क"
+    },
+    "checkinMore": {
+      "subtitle": "{{time}} वरां {{therapy}}"
+    }
+  }
+}

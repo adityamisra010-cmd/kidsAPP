@@ -1,0 +1,39 @@
+{
+  "_review": "TODO: machine-drafted, needs review by a native speaker",
+  "reinforcers": {
+    "bubbles": "बुडबुडे",
+    "music": "संगीत",
+    "songs": "गितां",
+    "favourite_toy": "आवडीचें खेळणें",
+    "praise": "तोखणाय",
+    "stickers": "स्टिकर",
+    "swing": "झोपाळो",
+    "blocks": "ब्लॉक"
+  },
+  "triggers": {
+    "hunger": "भूक",
+    "tiredness": "थकवो"
+  },
+  "calming": {
+    "quiet_corner": "शांत कोनो",
+    "favourite_song": "आवडीचें गीत"
+  },
+  "worked": {
+    "timer": "टायमर"
+  },
+  "incidents": {
+    "other": "हेर"
+  },
+  "domains": {
+    "communication": "संवाद",
+    "self_care": "स्वताची काळजी",
+    "behaviour": "वागणूक"
+  },
+  "therapyTypes": {
+    "speech": "स्पीच थेरपी",
+    "occupational": "ऑक्युपेशनल थेरपी",
+    "behaviour": "बिहेवियर थेरपी (ABA)",
+    "special_ed": "खाशेलें शिक्षण",
+    "physio": "फिजिओथेरपी"
+  }
+}
