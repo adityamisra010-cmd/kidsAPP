@@ -1,0 +1,131 @@
+{
+  "_review": "TODO: machine-drafted, needs review by a native speaker",
+  "actions": {
+    "save": "सेव करू",
+    "cancel": "रद्द करू",
+    "done": "भ' गेल",
+    "next": "आगाँ",
+    "back": "पाछाँ",
+    "close": "बन्न करू",
+    "edit": "सम्पादन करू",
+    "delete": "मेटाउ",
+    "retry": "फेर सँ प्रयास करू",
+    "confirm": "पुष्टि करू",
+    "continue": "आगाँ बढ़ू",
+    "seeAll": "सभ देखू",
+    "add": "जोड़ू",
+    "remove": "हटाउ",
+    "send": "पठाउ",
+    "share": "शेयर करू",
+    "search": "खोजू",
+    "filter": "फिल्टर",
+    "apply": "लागू करू",
+    "clear": "साफ करू",
+    "yes": "हँ",
+    "no": "नहि",
+    "ok": "ठीक अछि",
+    "view": "देखू",
+    "open": "खोलू",
+    "call": "कॉल करू",
+    "download": "डाउनलोड",
+    "upload": "अपलोड",
+    "select": "चुनू",
+    "change": "बदलू",
+    "addCustom": "अपन जोड़ू",
+    "skip": "छोड़ू"
+  },
+  "time": {
+    "today": "आइ",
+    "tomorrow": "काल्हि",
+    "yesterday": "बीतल काल्हि",
+    "thisWeek": "एहि सप्ताह",
+    "minutes": "{{count}} मिनट",
+    "minutes_other": "{{count}} मिनट"
+  },
+  "roles": {
+    "platform_admin": "प्लेटफॉर्म एडमिन",
+    "school_admin": "विद्यालय एडमिन",
+    "coordinator": "समन्वयक",
+    "therapist": "थेरेपिस्ट",
+    "parent": "अभिभावक"
+  },
+  "trend": {
+    "up": "सुधार भ' रहल अछि",
+    "flat": "स्थिर",
+    "down": "घटि रहल अछि"
+  },
+  "change": {
+    "better": "पछिला बेर सँ नीक",
+    "same": "लगभग ओहिना",
+    "harder": "एहि बेर किछु कठिन"
+  },
+  "changeShort": {
+    "better": "नीक",
+    "same": "स्थिर",
+    "harder": "कठिन"
+  },
+  "status": {
+    "confirmed": "पक्का",
+    "rescheduled": "समय बदलल",
+    "substitute": "बदली थेरेपिस्ट",
+    "cancelled": "रद्द",
+    "completed": "पूर्ण",
+    "absent": "अनुपस्थित",
+    "makeup": "भरपाई सत्र"
+  },
+  "logState": {
+    "upcoming": "आगामी",
+    "in_progress": "चलि रहल अछि",
+    "logged": "दर्ज भेल",
+    "not_logged": "दर्ज नहि भेल"
+  },
+  "sync": {
+    "synced": "सभ बदलाव सेव भ' गेल",
+    "pending": "{{count}} सिंक बाँकी",
+    "pending_other": "{{count}} सिंक बाँकी",
+    "syncing": "सिंक भ' रहल अछि…",
+    "offline": "अहाँ ऑफलाइन छी। बदलाव एहि फोन पर सेव अछि आ बाद मे सिंक भ' जाएत।",
+    "failed": "किछु बदलाव सिंक नहि भेल",
+    "savedOffline": "एहि फोन पर सेव भ' गेल। ऑनलाइन भेला पर सिंक होएत।"
+  },
+  "states": {
+    "loading": "लोड भ' रहल अछि…",
+    "errorTitle": "किछु गड़बड़ भ' गेल",
+    "errorBody": "ई लोड नहि भ' सकल। कनेक्शन जाँचि फेर सँ प्रयास करू।",
+    "emptyTitle": "एतय एखन किछु नहि अछि",
+    "offlineBanner": "अहाँ ऑफलाइन छी। सेव कएल जानकारी देखा रहल छी।"
+  },
+  "a11y": {
+    "back": "पाछाँ जाउ",
+    "close": "बन्न करू",
+    "selected": "चुनल गेल",
+    "notSelected": "नहि चुनल गेल",
+    "opensDetails": "विवरण खोलैत अछि"
+  },
+  "demoBadge": "डेमो",
+  "required": "आवश्यक",
+  "optional": "वैकल्पिक",
+  "tabs": {
+    "home": "होम",
+    "calendar": "कैलेंडर",
+    "myChild": "हमर बच्चा",
+    "practice": "अभ्यास",
+    "more": "आओर",
+    "today": "आइ",
+    "caseload": "बच्चा सभ",
+    "reviews": "जाँच",
+    "dashboard": "डैशबोर्ड",
+    "schedule": "समय-सारणी",
+    "people": "लोक",
+    "reports": "रिपोर्ट",
+    "schools": "विद्यालय",
+    "templates": "नमूना"
+  },
+  "age": {
+    "years": "{{count}} बरख",
+    "years_other": "{{count}} बरख",
+    "months": "{{count}} मास",
+    "months_other": "{{count}} मास",
+    "yearsMonths": "{{years}} बरख {{months}} मास"
+  }
+}
