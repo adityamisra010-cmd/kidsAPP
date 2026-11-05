@@ -1,0 +1,122 @@
+{
+  "_review": "TODO: machine-drafted, needs review by a native speaker",
+  "commTools": {
+    "speech": "بول کر",
+    "sign": "اشاروں کی زبان",
+    "pecs": "PECS (تصویری کارڈ)",
+    "aac_device": "AAC آلہ",
+    "gestures": "اشارے",
+    "pointing": "انگلی سے اشارہ",
+    "visual_schedule": "تصویری شیڈول"
+  },
+  "commModes": {
+    "verbal": "بولتا ہے",
+    "limited_verbal": "کچھ الفاظ",
+    "non_verbal": "نہیں بولتا"
+  },
+  "reinforcers": {
+    "bubbles": "بلبلے",
+    "music": "موسیقی",
+    "songs": "گانے",
+    "favourite_toy": "پسندیدہ کھلونا",
+    "tablet_time": "ٹیبلٹ کا وقت",
+    "praise": "تعریف",
+    "high_five": "ہائی فائیو",
+    "stickers": "اسٹیکرز",
+    "swing": "جھولا",
+    "snack": "تھوڑا سا ناشتہ",
+    "cars": "کھلونا گاڑیاں",
+    "blocks": "بلاکس",
+    "tickles": "گدگدی",
+    "books": "تصویری کتابیں"
+  },
+  "triggers": {
+    "loud_sounds": "تیز آوازیں",
+    "transitions": "ایک کام سے دوسرے کام پر جانا",
+    "waiting": "انتظار کرنا",
+    "textures": "کچھ طرح کا لمس",
+    "crowds": "بھیڑ",
+    "bright_lights": "تیز روشنی",
+    "being_touched": "بغیر بتائے چھونا",
+    "change_in_routine": "معمول میں تبدیلی",
+    "hunger": "بھوک",
+    "tiredness": "تھکن",
+    "no_answer": "’نہیں‘ سننا"
+  },
+  "calming": {
+    "deep_pressure": "گہرا دباؤ",
+    "quiet_corner": "پرسکون کونا",
+    "counting": "ساتھ مل کر گننا",
+    "favourite_song": "پسندیدہ گانا",
+    "weighted_blanket": "بھاری کمبل",
+    "swinging": "جھولنا",
+    "breathing": "آہستہ سانس",
+    "visual_timer": "تصویری ٹائمر",
+    "fidget": "فِجٹ کھلونا",
+    "water_break": "پانی کا وقفہ"
+  },
+  "antecedents": {
+    "transition": "کام کی تبدیلی",
+    "demand": "کام کا مطالبہ",
+    "sensory": "حسی",
+    "waiting": "انتظار",
+    "denied_item": "مطلوبہ چیز نہ ملنا",
+    "peer": "دوسرا بچہ",
+    "unknown": "واضح نہیں"
+  },
+  "worked": {
+    "visual_schedule": "تصویری شیڈول",
+    "first_then": "پہلے–پھر بورڈ",
+    "timer": "ٹائمر",
+    "movement_break": "حرکت کا وقفہ",
+    "reinforcer_choice": "انعام کا انتخاب",
+    "modelling": "کر کے دکھانا",
+    "short_tasks": "چھوٹے کام",
+    "quiet_room": "پرسکون کمرہ",
+    "parent_present": "والدین ساتھ",
+    "song_cue": "گانے کا اشارہ",
+    "hand_over_hand": "ہاتھ پکڑ کر کروانا",
+    "choice_of_two": "دو میں سے انتخاب"
+  },
+  "notWorked": {
+    "long_tasks": "لمبے کام",
+    "noisy_room": "شور والا کمرہ",
+    "verbal_only_instructions": "صرف زبانی ہدایات",
+    "waiting_turns": "باری کا انتظار",
+    "new_material": "نیا سامان",
+    "tablet_reinforcer": "انعام کے طور پر ٹیبلٹ",
+    "group_activity": "گروپ سرگرمی",
+    "touch_prompts": "لمس سے اشارے"
+  },
+  "incidents": {
+    "meltdown": "شدید بے چینی",
+    "aggression": "جارحیت",
+    "self_injury": "خود کو نقصان",
+    "elopement": "بھاگ جانا",
+    "refusal": "انکار",
+    "other": "دیگر"
+  },
+  "domains": {
+    "communication": "بات چیت",
+    "fine_motor": "ہاتھ کی باریک حرکات",
+    "gross_motor": "جسم کی بڑی حرکات",
+    "self_care": "اپنی دیکھ بھال",
+    "social": "دوسروں سے میل جول",
+    "behaviour": "رویہ",
+    "cognition": "سیکھنا اور سوچنا",
+    "sensory": "حسی توازن"
+  },
+  "therapyTypes": {
+    "speech": "اسپیچ تھراپی",
+    "occupational": "آکیوپیشنل تھراپی",
+    "behaviour": "بیہیویئر تھراپی (ABA)",
+    "special_ed": "خصوصی تعلیم",
+    "physio": "فزیوتھراپی",
+    "audiology": "سماعت کی مدد"
+  },
+  "regulation": {
+    "under": "کم توانائی",
+    "regulated": "متوازن",
+    "over": "زیادہ جوش"
+  }
+}

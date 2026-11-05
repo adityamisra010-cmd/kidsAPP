@@ -1,0 +1,131 @@
+{
+  "_review": "TODO: machine-drafted, needs review by a native speaker",
+  "actions": {
+    "save": "ਸੇਵ ਕਰੋ",
+    "cancel": "ਰੱਦ ਕਰੋ",
+    "done": "ਹੋ ਗਿਆ",
+    "next": "ਅੱਗੇ",
+    "back": "ਪਿੱਛੇ",
+    "close": "ਬੰਦ ਕਰੋ",
+    "edit": "ਸੋਧੋ",
+    "delete": "ਮਿਟਾਓ",
+    "retry": "ਦੁਬਾਰਾ ਕੋਸ਼ਿਸ਼ ਕਰੋ",
+    "confirm": "ਪੁਸ਼ਟੀ ਕਰੋ",
+    "continue": "ਜਾਰੀ ਰੱਖੋ",
+    "seeAll": "ਸਭ ਵੇਖੋ",
+    "add": "ਜੋੜੋ",
+    "remove": "ਹਟਾਓ",
+    "send": "ਭੇਜੋ",
+    "share": "ਸਾਂਝਾ ਕਰੋ",
+    "search": "ਖੋਜੋ",
+    "filter": "ਫਿਲਟਰ",
+    "apply": "ਲਾਗੂ ਕਰੋ",
+    "clear": "ਸਾਫ਼ ਕਰੋ",
+    "yes": "ਹਾਂ",
+    "no": "ਨਹੀਂ",
+    "ok": "ਠੀਕ ਹੈ",
+    "view": "ਵੇਖੋ",
+    "open": "ਖੋਲ੍ਹੋ",
+    "call": "ਕਾਲ ਕਰੋ",
+    "download": "ਡਾਊਨਲੋਡ",
+    "upload": "ਅਪਲੋਡ",
+    "select": "ਚੁਣੋ",
+    "change": "ਬਦਲੋ",
+    "addCustom": "ਆਪਣਾ ਜੋੜੋ",
+    "skip": "ਛੱਡੋ"
+  },
+  "time": {
+    "today": "ਅੱਜ",
+    "tomorrow": "ਕੱਲ੍ਹ",
+    "yesterday": "ਬੀਤਿਆ ਕੱਲ੍ਹ",
+    "thisWeek": "ਇਸ ਹਫ਼ਤੇ",
+    "minutes": "{{count}} ਮਿੰਟ",
+    "minutes_other": "{{count}} ਮਿੰਟ"
+  },
+  "roles": {
+    "platform_admin": "ਪਲੇਟਫਾਰਮ ਐਡਮਿਨ",
+    "school_admin": "ਸਕੂਲ ਐਡਮਿਨ",
+    "coordinator": "ਕੋਆਰਡੀਨੇਟਰ",
+    "therapist": "ਥੈਰੇਪਿਸਟ",
+    "parent": "ਮਾਪੇ"
+  },
+  "trend": {
+    "up": "ਸੁਧਾਰ ਹੋ ਰਿਹਾ ਹੈ",
+    "flat": "ਸਥਿਰ",
+    "down": "ਘੱਟ ਰਿਹਾ ਹੈ"
+  },
+  "change": {
+    "better": "ਪਿਛਲੀ ਵਾਰ ਨਾਲੋਂ ਵਧੀਆ",
+    "same": "ਲਗਭਗ ਉਸੇ ਤਰ੍ਹਾਂ",
+    "harder": "ਇਸ ਵਾਰ ਥੋੜ੍ਹਾ ਔਖਾ"
+  },
+  "changeShort": {
+    "better": "ਵਧੀਆ",
+    "same": "ਸਥਿਰ",
+    "harder": "ਔਖਾ"
+  },
+  "status": {
+    "confirmed": "ਪੱਕਾ",
+    "rescheduled": "ਸਮਾਂ ਬਦਲਿਆ",
+    "substitute": "ਬਦਲਵਾਂ ਥੈਰੇਪਿਸਟ",
+    "cancelled": "ਰੱਦ",
+    "completed": "ਪੂਰਾ",
+    "absent": "ਗੈਰਹਾਜ਼ਰ",
+    "makeup": "ਭਰਪਾਈ ਸੈਸ਼ਨ"
+  },
+  "logState": {
+    "upcoming": "ਆਉਣ ਵਾਲਾ",
+    "in_progress": "ਚੱਲ ਰਿਹਾ ਹੈ",
+    "logged": "ਦਰਜ ਹੋਇਆ",
+    "not_logged": "ਦਰਜ ਨਹੀਂ ਹੋਇਆ"
+  },
+  "sync": {
+    "synced": "ਸਾਰੀਆਂ ਤਬਦੀਲੀਆਂ ਸੇਵ ਹੋ ਗਈਆਂ",
+    "pending": "{{count}} ਸਿੰਕ ਹੋਣਾ ਬਾਕੀ",
+    "pending_other": "{{count}} ਸਿੰਕ ਹੋਣੇ ਬਾਕੀ",
+    "syncing": "ਸਿੰਕ ਹੋ ਰਿਹਾ ਹੈ…",
+    "offline": "ਤੁਸੀਂ ਔਫਲਾਈਨ ਹੋ। ਤਬਦੀਲੀਆਂ ਇਸ ਫ਼ੋਨ 'ਤੇ ਸੇਵ ਹਨ ਅਤੇ ਬਾਅਦ ਵਿੱਚ ਸਿੰਕ ਹੋ ਜਾਣਗੀਆਂ।",
+    "failed": "ਕੁਝ ਤਬਦੀਲੀਆਂ ਸਿੰਕ ਨਹੀਂ ਹੋਈਆਂ",
+    "savedOffline": "ਇਸ ਫ਼ੋਨ 'ਤੇ ਸੇਵ ਹੋ ਗਿਆ। ਔਨਲਾਈਨ ਹੋਣ 'ਤੇ ਸਿੰਕ ਹੋ ਜਾਵੇਗਾ।"
+  },
+  "states": {
+    "loading": "ਲੋਡ ਹੋ ਰਿਹਾ ਹੈ…",
+    "errorTitle": "ਕੁਝ ਗ਼ਲਤ ਹੋ ਗਿਆ",
+    "errorBody": "ਇਹ ਲੋਡ ਨਹੀਂ ਹੋ ਸਕਿਆ। ਕਨੈਕਸ਼ਨ ਜਾਂਚ ਕੇ ਦੁਬਾਰਾ ਕੋਸ਼ਿਸ਼ ਕਰੋ।",
+    "emptyTitle": "ਇੱਥੇ ਅਜੇ ਕੁਝ ਨਹੀਂ",
+    "offlineBanner": "ਤੁਸੀਂ ਔਫਲਾਈਨ ਹੋ। ਸੇਵ ਕੀਤੀ ਜਾਣਕਾਰੀ ਵਿਖਾ ਰਹੇ ਹਾਂ।"
+  },
+  "a11y": {
+    "back": "ਵਾਪਸ ਜਾਓ",
+    "close": "ਬੰਦ ਕਰੋ",
+    "selected": "ਚੁਣਿਆ",
+    "notSelected": "ਨਹੀਂ ਚੁਣਿਆ",
+    "opensDetails": "ਵੇਰਵੇ ਖੋਲ੍ਹਦਾ ਹੈ"
+  },
+  "demoBadge": "ਡੈਮੋ",
+  "required": "ਲੋੜੀਂਦਾ",
+  "optional": "ਵਿਕਲਪਿਕ",
+  "tabs": {
+    "home": "ਹੋਮ",
+    "calendar": "ਕੈਲੰਡਰ",
+    "myChild": "ਮੇਰਾ ਬੱਚਾ",
+    "practice": "ਅਭਿਆਸ",
+    "more": "ਹੋਰ",
+    "today": "ਅੱਜ",
+    "caseload": "ਬੱਚੇ",
+    "reviews": "ਜਾਂਚ",
+    "dashboard": "ਡੈਸ਼ਬੋਰਡ",
+    "schedule": "ਸਮਾਂ-ਸਾਰਣੀ",
+    "people": "ਲੋਕ",
+    "reports": "ਰਿਪੋਰਟਾਂ",
+    "schools": "ਸਕੂਲ",
+    "templates": "ਨਮੂਨੇ"
+  },
+  "age": {
+    "years": "{{count}} ਸਾਲ",
+    "years_other": "{{count}} ਸਾਲ",
+    "months": "{{count}} ਮਹੀਨਾ",
+    "months_other": "{{count}} ਮਹੀਨੇ",
+    "yearsMonths": "{{years}} ਸਾਲ {{months}} ਮਹੀਨੇ"
+  }
+}

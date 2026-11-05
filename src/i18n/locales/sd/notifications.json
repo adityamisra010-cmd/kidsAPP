@@ -1,0 +1,16 @@
+{
+  "_review": "TODO: machine-drafted, needs review by a native speaker",
+  "bell": "تازه ڪاريون",
+  "title": "تازه ڪاريون",
+  "markAll": "سڀ پڙهيا",
+  "unread": "اڻ پڙهيل",
+  "unreadCount": "{{count}} اڻ پڙهيل",
+  "unreadCount_other": "{{count}} اڻ پڙهيل",
+  "groups": {
+    "today": "اڄ",
+    "earlier": "اڳ وارا"
+  },
+  "empty": {
+    "title": "سڀ ڏسي ورتو"
+  }
+}

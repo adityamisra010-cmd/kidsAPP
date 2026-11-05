@@ -1,0 +1,18 @@
+{
+  "_review": "TODO: machine-drafted, needs review by a native speaker",
+  "bell": "ଅପଡେଟ୍",
+  "title": "ଅପଡେଟ୍",
+  "markAll": "ସବୁ ପଢ଼ାଗଲା",
+  "markedAll": "ସମସ୍ତ ଅପଡେଟ୍ ପଢ଼ାଯାଇଛି ବୋଲି ଚିହ୍ନିତ",
+  "unread": "ପଢ଼ାଯାଇନାହିଁ",
+  "unreadCount": "{{count}} ପଢ଼ାଯାଇନାହିଁ",
+  "unreadCount_other": "{{count}} ପଢ଼ାଯାଇନାହିଁ",
+  "groups": {
+    "today": "ଆଜି",
+    "earlier": "ପୂର୍ବରୁ"
+  },
+  "empty": {
+    "title": "ସବୁ ଦେଖିସାରିଲେ",
+    "body": "ସେସନ୍ ସ୍ମାରକ, ସମୟସୂଚୀ ପରିବର୍ତ୍ତନ ଏବଂ ବିଦ୍ୟାଳୟ ବାର୍ତ୍ତା ଏଠାରେ ଦେଖାଯିବ।"
+  }
+}

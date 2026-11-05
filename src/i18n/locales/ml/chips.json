@@ -1,0 +1,122 @@
+{
+  "_review": "TODO: machine-drafted, needs review by a native speaker",
+  "commTools": {
+    "speech": "സംസാരത്തിലൂടെ",
+    "sign": "ആംഗ്യഭാഷ",
+    "pecs": "PECS (ചിത്ര കാർഡുകൾ)",
+    "aac_device": "AAC ഉപകരണം",
+    "gestures": "ആംഗ്യങ്ങൾ",
+    "pointing": "ചൂണ്ടിക്കാണിക്കൽ",
+    "visual_schedule": "ചിത്ര ഷെഡ്യൂൾ"
+  },
+  "commModes": {
+    "verbal": "സംസാരിക്കും",
+    "limited_verbal": "കുറച്ച് വാക്കുകൾ",
+    "non_verbal": "സംസാരിക്കില്ല"
+  },
+  "reinforcers": {
+    "bubbles": "കുമിളകൾ",
+    "music": "സംഗീതം",
+    "songs": "പാട്ടുകൾ",
+    "favourite_toy": "ഇഷ്ടപ്പെട്ട കളിപ്പാട്ടം",
+    "tablet_time": "ടാബ്‌ലെറ്റ് സമയം",
+    "praise": "പ്രശംസ",
+    "high_five": "ഹൈ ഫൈവ്",
+    "stickers": "സ്റ്റിക്കറുകൾ",
+    "swing": "ഊഞ്ഞാൽ",
+    "snack": "ചെറിയ ലഘുഭക്ഷണം",
+    "cars": "കളിപ്പാട്ട കാറുകൾ",
+    "blocks": "ബ്ലോക്കുകൾ",
+    "tickles": "ഇക്കിളി",
+    "books": "ചിത്ര പുസ്തകങ്ങൾ"
+  },
+  "triggers": {
+    "loud_sounds": "ഉച്ചത്തിലുള്ള ശബ്ദങ്ങൾ",
+    "transitions": "ഒരു പ്രവൃത്തിയിൽ നിന്ന് മറ്റൊന്നിലേക്ക് മാറൽ",
+    "waiting": "കാത്തിരിക്കൽ",
+    "textures": "ചിലതരം സ്പർശം",
+    "crowds": "ആൾക്കൂട്ടം",
+    "bright_lights": "കണ്ണഞ്ചിക്കുന്ന വെളിച്ചം",
+    "being_touched": "പറയാതെ തൊടൽ",
+    "change_in_routine": "ദിനചര്യയിൽ മാറ്റം",
+    "hunger": "വിശപ്പ്",
+    "tiredness": "ക്ഷീണം",
+    "no_answer": "‘വേണ്ട’ എന്ന് കേൾക്കൽ"
+  },
+  "calming": {
+    "deep_pressure": "ആഴത്തിലുള്ള അമർത്തൽ",
+    "quiet_corner": "ശാന്തമായ മൂല",
+    "counting": "ഒരുമിച്ച് എണ്ണൽ",
+    "favourite_song": "ഇഷ്ടപ്പെട്ട പാട്ട്",
+    "weighted_blanket": "ഭാരമുള്ള പുതപ്പ്",
+    "swinging": "ആടൽ",
+    "breathing": "പതുക്കെയുള്ള ശ്വാസം",
+    "visual_timer": "ചിത്ര ടൈമർ",
+    "fidget": "ഫിജറ്റ് കളിപ്പാട്ടം",
+    "water_break": "വെള്ളം കുടിക്കാൻ ഇടവേള"
+  },
+  "antecedents": {
+    "transition": "പ്രവൃത്തി മാറ്റം",
+    "demand": "ജോലി ആവശ്യപ്പെടൽ",
+    "sensory": "ഇന്ദ്രിയ സംബന്ധം",
+    "waiting": "കാത്തിരിപ്പ്",
+    "denied_item": "ആഗ്രഹിച്ചത് കിട്ടാത്തത്",
+    "peer": "മറ്റൊരു കുട്ടി",
+    "unknown": "വ്യക്തമല്ല"
+  },
+  "worked": {
+    "visual_schedule": "ചിത്ര ഷെഡ്യൂൾ",
+    "first_then": "ആദ്യം–പിന്നെ ബോർഡ്",
+    "timer": "ടൈമർ",
+    "movement_break": "ചലന ഇടവേള",
+    "reinforcer_choice": "സമ്മാനം തിരഞ്ഞെടുക്കൽ",
+    "modelling": "ചെയ്തുകാണിക്കൽ",
+    "short_tasks": "ചെറിയ ജോലികൾ",
+    "quiet_room": "ശാന്തമായ മുറി",
+    "parent_present": "രക്ഷിതാവ് കൂടെ",
+    "song_cue": "പാട്ട് സൂചന",
+    "hand_over_hand": "കൈപിടിച്ച് ചെയ്യിക്കൽ",
+    "choice_of_two": "രണ്ടിൽ ഒന്ന് തിരഞ്ഞെടുക്കൽ"
+  },
+  "notWorked": {
+    "long_tasks": "നീണ്ട ജോലികൾ",
+    "noisy_room": "ശബ്ദമുള്ള മുറി",
+    "verbal_only_instructions": "വാക്കാലുള്ള നിർദ്ദേശം മാത്രം",
+    "waiting_turns": "ഊഴത്തിനായി കാത്തിരിക്കൽ",
+    "new_material": "പുതിയ സാമഗ്രികൾ",
+    "tablet_reinforcer": "സമ്മാനമായി ടാബ്‌ലെറ്റ്",
+    "group_activity": "ഗ്രൂപ്പ് പ്രവർത്തനം",
+    "touch_prompts": "സ്പർശ സൂചനകൾ"
+  },
+  "incidents": {
+    "meltdown": "കടുത്ത അസ്വസ്ഥത",
+    "aggression": "ആക്രമണ സ്വഭാവം",
+    "self_injury": "സ്വയം പരിക്കേൽപ്പിക്കൽ",
+    "elopement": "ഓടിപ്പോകൽ",
+    "refusal": "നിരസിക്കൽ",
+    "other": "മറ്റുള്ളവ"
+  },
+  "domains": {
+    "communication": "ആശയവിനിമയം",
+    "fine_motor": "കൈയുടെ സൂക്ഷ്മ ചലനം",
+    "gross_motor": "ശരീരത്തിന്റെ വലിയ ചലനം",
+    "self_care": "സ്വയം പരിചരണം",
+    "social": "മറ്റുള്ളവരുമായി ഇടപഴകൽ",
+    "behaviour": "പെരുമാറ്റം",
+    "cognition": "പഠനവും ചിന്തയും",
+    "sensory": "ഇന്ദ്രിയ സന്തുലനം"
+  },
+  "therapyTypes": {
+    "speech": "സ്പീച്ച് തെറാപ്പി",
+    "occupational": "ഒക്യുപേഷണൽ തെറാപ്പി",
+    "behaviour": "ബിഹേവിയർ തെറാപ്പി (ABA)",
+    "special_ed": "പ്രത്യേക വിദ്യാഭ്യാസം",
+    "physio": "ഫിസിയോതെറാപ്പി",
+    "audiology": "കേൾവി സഹായം"
+  },
+  "regulation": {
+    "under": "കുറഞ്ഞ ഊർജ്ജം",
+    "regulated": "സന്തുലിതം",
+    "over": "അമിത ഉത്സാഹം"
+  }
+}

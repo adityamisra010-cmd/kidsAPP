@@ -1,0 +1,122 @@
+{
+  "_review": "TODO: machine-drafted, needs review by a native speaker",
+  "commTools": {
+    "speech": "બોલીને",
+    "sign": "સાંકેતિક ભાષા",
+    "pecs": "PECS (ચિત્ર કાર્ડ)",
+    "aac_device": "AAC સાધન",
+    "gestures": "હાવભાવ",
+    "pointing": "આંગળી ચીંધવી",
+    "visual_schedule": "ચિત્ર સમયપત્રક"
+  },
+  "commModes": {
+    "verbal": "બોલે છે",
+    "limited_verbal": "થોડા શબ્દો",
+    "non_verbal": "બોલતું નથી"
+  },
+  "reinforcers": {
+    "bubbles": "પરપોટા",
+    "music": "સંગીત",
+    "songs": "ગીતો",
+    "favourite_toy": "મનપસંદ રમકડું",
+    "tablet_time": "ટેબ્લેટનો સમય",
+    "praise": "વખાણ",
+    "high_five": "હાઇ ફાઇવ",
+    "stickers": "સ્ટિકર",
+    "swing": "હીંચકો",
+    "snack": "થોડો નાસ્તો",
+    "cars": "રમકડાની ગાડીઓ",
+    "blocks": "બ્લોક્સ",
+    "tickles": "ગલીપચી",
+    "books": "ચિત્રોની ચોપડીઓ"
+  },
+  "triggers": {
+    "loud_sounds": "મોટા અવાજો",
+    "transitions": "એક કામથી બીજા કામે જવું",
+    "waiting": "રાહ જોવી",
+    "textures": "અમુક પ્રકારનો સ્પર્શ",
+    "crowds": "ભીડ",
+    "bright_lights": "તીવ્ર પ્રકાશ",
+    "being_touched": "કહ્યા વગર સ્પર્શ",
+    "change_in_routine": "દિનચર્યામાં ફેરફાર",
+    "hunger": "ભૂખ",
+    "tiredness": "થાક",
+    "no_answer": "‘ના’ સાંભળવું"
+  },
+  "calming": {
+    "deep_pressure": "ઊંડું દબાણ",
+    "quiet_corner": "શાંત ખૂણો",
+    "counting": "સાથે ગણવું",
+    "favourite_song": "મનપસંદ ગીત",
+    "weighted_blanket": "ભારે ચાદર",
+    "swinging": "ઝૂલવું",
+    "breathing": "ધીમા શ્વાસ",
+    "visual_timer": "ચિત્ર ટાઇમર",
+    "fidget": "ફિજેટ રમકડું",
+    "water_break": "પાણીનો વિરામ"
+  },
+  "antecedents": {
+    "transition": "કામ બદલવું",
+    "demand": "કામની માંગ",
+    "sensory": "સંવેદના સંબંધિત",
+    "waiting": "રાહ જોવી",
+    "denied_item": "જોઈતી વસ્તુ ન મળવી",
+    "peer": "બીજું બાળક",
+    "unknown": "સ્પષ્ટ નથી"
+  },
+  "worked": {
+    "visual_schedule": "ચિત્ર સમયપત્રક",
+    "first_then": "પહેલાં–પછી બોર્ડ",
+    "timer": "ટાઇમર",
+    "movement_break": "હલનચલનનો વિરામ",
+    "reinforcer_choice": "ઇનામની પસંદગી",
+    "modelling": "કરીને બતાવવું",
+    "short_tasks": "નાનાં કામ",
+    "quiet_room": "શાંત ઓરડો",
+    "parent_present": "વાલી સાથે",
+    "song_cue": "ગીતનો સંકેત",
+    "hand_over_hand": "હાથ પકડીને કરાવવું",
+    "choice_of_two": "બેમાંથી પસંદગી"
+  },
+  "notWorked": {
+    "long_tasks": "લાંબાં કામ",
+    "noisy_room": "ઘોંઘાટવાળો ઓરડો",
+    "verbal_only_instructions": "ફક્ત બોલીને સૂચના",
+    "waiting_turns": "વારાની રાહ",
+    "new_material": "નવી સામગ્રી",
+    "tablet_reinforcer": "ઇનામ તરીકે ટેબ્લેટ",
+    "group_activity": "જૂથ પ્રવૃત્તિ",
+    "touch_prompts": "સ્પર્શથી સંકેત"
+  },
+  "incidents": {
+    "meltdown": "ખૂબ અસ્વસ્થ થવું",
+    "aggression": "આક્રમકતા",
+    "self_injury": "પોતાને ઈજા",
+    "elopement": "ભાગી જવું",
+    "refusal": "ઇનકાર",
+    "other": "અન્ય"
+  },
+  "domains": {
+    "communication": "સંવાદ",
+    "fine_motor": "હાથનાં ઝીણાં કામ",
+    "gross_motor": "શરીરની મોટી હલનચલન",
+    "self_care": "પોતાની સંભાળ",
+    "social": "બીજા સાથે હળવું-મળવું",
+    "behaviour": "વર્તન",
+    "cognition": "શીખવું અને વિચારવું",
+    "sensory": "સંવેદનાનું સંતુલન"
+  },
+  "therapyTypes": {
+    "speech": "સ્પીચ થેરાપી",
+    "occupational": "ઑક્યુપેશનલ થેરાપી",
+    "behaviour": "બિહેવિયર થેરાપી (ABA)",
+    "special_ed": "વિશેષ શિક્ષણ",
+    "physio": "ફિઝિયોથેરાપી",
+    "audiology": "ઑડિયોલોજી સહાય"
+  },
+  "regulation": {
+    "under": "ઓછી ઊર્જા",
+    "regulated": "સંતુલિત",
+    "over": "વધુ પડતો ઉત્સાહ"
+  }
+}

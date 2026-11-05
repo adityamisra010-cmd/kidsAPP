@@ -1,0 +1,122 @@
+{
+  "_review": "TODO: machine-drafted, needs review by a native speaker",
+  "commTools": {
+    "speech": "କଥା କହି",
+    "sign": "ସାଙ୍କେତିକ ଭାଷା",
+    "pecs": "PECS (ଚିତ୍ର କାର୍ଡ)",
+    "aac_device": "AAC ଉପକରଣ",
+    "gestures": "ଇଙ୍ଗିତ",
+    "pointing": "ଆଙ୍ଗୁଠି ଦେଖାଇବା",
+    "visual_schedule": "ଚିତ୍ର ସମୟସୂଚୀ"
+  },
+  "commModes": {
+    "verbal": "କଥା କହେ",
+    "limited_verbal": "କିଛି ଶବ୍ଦ",
+    "non_verbal": "କଥା କହେ ନାହିଁ"
+  },
+  "reinforcers": {
+    "bubbles": "ଫୋଟକା",
+    "music": "ସଙ୍ଗୀତ",
+    "songs": "ଗୀତ",
+    "favourite_toy": "ପ୍ରିୟ ଖେଳନା",
+    "tablet_time": "ଟାବଲେଟ୍ ସମୟ",
+    "praise": "ପ୍ରଶଂସା",
+    "high_five": "ହାଇ ଫାଇଭ୍",
+    "stickers": "ଷ୍ଟିକର",
+    "swing": "ଦୋଳି",
+    "snack": "ଟିକେ ଜଳଖିଆ",
+    "cars": "ଖେଳନା ଗାଡ଼ି",
+    "blocks": "ବ୍ଲକ୍",
+    "tickles": "କୁତୁକୁତୁ",
+    "books": "ଚିତ୍ର ବହି"
+  },
+  "triggers": {
+    "loud_sounds": "ଜୋରରେ ଶବ୍ଦ",
+    "transitions": "ଗୋଟିଏ କାମରୁ ଆଉ ଗୋଟିଏକୁ ଯିବା",
+    "waiting": "ଅପେକ୍ଷା କରିବା",
+    "textures": "କିଛି ପ୍ରକାରର ସ୍ପର୍ଶ",
+    "crowds": "ଭିଡ଼",
+    "bright_lights": "ଉଜ୍ଜ୍ୱଳ ଆଲୋକ",
+    "being_touched": "ନ କହି ଛୁଇଁବା",
+    "change_in_routine": "ଦିନଚର୍ଯ୍ୟାରେ ପରିବର୍ତ୍ତନ",
+    "hunger": "ଭୋକ",
+    "tiredness": "କ୍ଲାନ୍ତି",
+    "no_answer": "‘ନା’ ଶୁଣିବା"
+  },
+  "calming": {
+    "deep_pressure": "ଗଭୀର ଚାପ",
+    "quiet_corner": "ଶାନ୍ତ କୋଣ",
+    "counting": "ଏକାଠି ଗଣିବା",
+    "favourite_song": "ପ୍ରିୟ ଗୀତ",
+    "weighted_blanket": "ଭାରି କମ୍ବଳ",
+    "swinging": "ଦୋହଲିବା",
+    "breathing": "ଧୀର ନିଶ୍ୱାସ",
+    "visual_timer": "ଚିତ୍ର ଟାଇମର",
+    "fidget": "ଫିଜେଟ୍ ଖେଳନା",
+    "water_break": "ପାଣି ବିରତି"
+  },
+  "antecedents": {
+    "transition": "କାମ ବଦଳ",
+    "demand": "କାମର ଚାହିଦା",
+    "sensory": "ଇନ୍ଦ୍ରିୟ ସମ୍ବନ୍ଧୀୟ",
+    "waiting": "ଅପେକ୍ଷା",
+    "denied_item": "ଚାହିଁଥିବା ଜିନିଷ ନ ମିଳିବା",
+    "peer": "ଅନ୍ୟ ପିଲା",
+    "unknown": "ସ୍ପଷ୍ଟ ନୁହେଁ"
+  },
+  "worked": {
+    "visual_schedule": "ଚିତ୍ର ସମୟସୂଚୀ",
+    "first_then": "ପ୍ରଥମେ–ତା’ପରେ ବୋର୍ଡ",
+    "timer": "ଟାଇମର",
+    "movement_break": "ଚଳନ ବିରତି",
+    "reinforcer_choice": "ପୁରସ୍କାର ବାଛିବା",
+    "modelling": "କରି ଦେଖାଇବା",
+    "short_tasks": "ଛୋଟ କାମ",
+    "quiet_room": "ଶାନ୍ତ କୋଠରି",
+    "parent_present": "ଅଭିଭାବକ ପାଖରେ",
+    "song_cue": "ଗୀତ ସଙ୍କେତ",
+    "hand_over_hand": "ହାତ ଧରି କରାଇବା",
+    "choice_of_two": "ଦୁଇଟିରୁ ଗୋଟିଏ ବାଛିବା"
+  },
+  "notWorked": {
+    "long_tasks": "ଲମ୍ବା କାମ",
+    "noisy_room": "କୋଳାହଳପୂର୍ଣ୍ଣ କୋଠରି",
+    "verbal_only_instructions": "କେବଳ ମୌଖିକ ନିର୍ଦ୍ଦେଶ",
+    "waiting_turns": "ପାଳି ପାଇଁ ଅପେକ୍ଷା",
+    "new_material": "ନୂଆ ସାମଗ୍ରୀ",
+    "tablet_reinforcer": "ପୁରସ୍କାର ଭାବେ ଟାବଲେଟ୍",
+    "group_activity": "ଦଳଗତ କାର୍ଯ୍ୟ",
+    "touch_prompts": "ସ୍ପର୍ଶ ସଙ୍କେତ"
+  },
+  "incidents": {
+    "meltdown": "ଅତ୍ୟଧିକ ଅସ୍ଥିରତା",
+    "aggression": "ଆକ୍ରମଣାତ୍ମକତା",
+    "self_injury": "ନିଜକୁ କ୍ଷତି",
+    "elopement": "ପଳାଇଯିବା",
+    "refusal": "ମନା କରିବା",
+    "other": "ଅନ୍ୟାନ୍ୟ"
+  },
+  "domains": {
+    "communication": "ଯୋଗାଯୋଗ",
+    "fine_motor": "ହାତର ସୂକ୍ଷ୍ମ କାମ",
+    "gross_motor": "ଶରୀରର ବଡ଼ ଚଳନ",
+    "self_care": "ନିଜ ଯତ୍ନ",
+    "social": "ଅନ୍ୟମାନଙ୍କ ସହ ମିଶିବା",
+    "behaviour": "ବ୍ୟବହାର",
+    "cognition": "ଶିଖିବା ଓ ଚିନ୍ତା",
+    "sensory": "ଇନ୍ଦ୍ରିୟ ସନ୍ତୁଳନ"
+  },
+  "therapyTypes": {
+    "speech": "ସ୍ପିଚ୍ ଥେରାପି",
+    "occupational": "ଅକ୍ୟୁପେସନାଲ୍ ଥେରାପି",
+    "behaviour": "ବିହେଭିଅର ଥେରାପି (ABA)",
+    "special_ed": "ବିଶେଷ ଶିକ୍ଷା",
+    "physio": "ଫିଜିଓଥେରାପି",
+    "audiology": "ଶ୍ରବଣ ସହାୟତା"
+  },
+  "regulation": {
+    "under": "କମ୍ ଶକ୍ତି",
+    "regulated": "ସନ୍ତୁଳିତ",
+    "over": "ଅତ୍ୟଧିକ ଉତ୍ସାହ"
+  }
+}

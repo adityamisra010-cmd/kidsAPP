@@ -1,0 +1,47 @@
+{
+  "_review": "TODO: machine-drafted, needs review by a native speaker",
+  "home": {
+    "greeting": {
+      "morning": "सुप्रभात, {{name}}",
+      "afternoon": "प्रणाम, {{name}}",
+      "evening": "शुभ साँझ, {{name}}"
+    },
+    "noChild": {
+      "title": "एखन धरि कोनो बच्चा नहि जुड़ल अछि",
+      "body": "विद्यालय केँ अहाँक बच्चा केँ एहि फोन नम्बर सँ जोड़बाक लेल कहू। तखन सत्र एतय देखाएत।"
+    },
+    "next": {
+      "title": "अगिला सत्र",
+      "titleFor": "{{name}} क अगिला सत्र",
+      "seeCalendar": "कैलेंडर देखू",
+      "emptyTitle": "एखन धरि कोनो सत्र तय नहि अछि",
+      "emptyBody": "जखन विद्यालय अगिला सत्र तय करत तखन दिन आ समय एतय देखाएत।"
+    },
+    "latest": {
+      "title": "पछिला सत्र",
+      "all": "सभ सत्र",
+      "emptyTitle": "एखन धरि सत्रक नोट नहि अछि",
+      "emptyBody": "प्रत्येक सत्रक बाद थेरेपिस्टक छोट नोट एतय देखाएत।"
+    },
+    "practice": {
+      "title": "एहि सप्ताहक अभ्यास",
+      "open": "खोलू",
+      "emptyTitle": "एहि सप्ताह कोनो अभ्यास नहि",
+      "emptyBody": "जखन थेरेपिस्ट घरक गतिविधि देताह तखन ओ सरल डेगक संग एतय देखाएत।"
+    },
+    "announcements": {
+      "title": "विद्यालय दिस सँ",
+      "all": "सभ देखू"
+    },
+    "links": {
+      "title": "झटपट लिंक",
+      "messages": "संदेश",
+      "resources": "सामग्री",
+      "contact": "विद्यालय सँ सम्पर्क"
+    },
+    "checkinMore": {
+      "title": "{{name}} क लेल सेहो दर्ज करू",
+      "subtitle": "{{time}} बजे {{therapy}}"
+    }
+  }
+}

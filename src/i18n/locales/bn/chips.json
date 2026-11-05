@@ -1,0 +1,122 @@
+{
+  "_review": "TODO: machine-drafted, needs review by a native speaker",
+  "commTools": {
+    "speech": "কথা বলে",
+    "sign": "সাংকেতিক ভাষা",
+    "pecs": "PECS (ছবির কার্ড)",
+    "aac_device": "AAC ডিভাইস",
+    "gestures": "ইশারা",
+    "pointing": "আঙুল দিয়ে দেখানো",
+    "visual_schedule": "ছবির সময়সূচি"
+  },
+  "commModes": {
+    "verbal": "কথা বলে",
+    "limited_verbal": "অল্প কথা বলে",
+    "non_verbal": "কথা বলে না"
+  },
+  "reinforcers": {
+    "bubbles": "বুদবুদ",
+    "music": "গান-বাজনা",
+    "songs": "গান",
+    "favourite_toy": "প্রিয় খেলনা",
+    "tablet_time": "ট্যাবলেটের সময়",
+    "praise": "প্রশংসা",
+    "high_five": "হাই ফাইভ",
+    "stickers": "স্টিকার",
+    "swing": "দোলনা",
+    "snack": "অল্প খাবার",
+    "cars": "খেলনা গাড়ি",
+    "blocks": "ব্লক",
+    "tickles": "কাতুকুতু",
+    "books": "ছবির বই"
+  },
+  "triggers": {
+    "loud_sounds": "জোরে আওয়াজ",
+    "transitions": "এক কাজ থেকে অন্য কাজে যাওয়া",
+    "waiting": "অপেক্ষা করা",
+    "textures": "কিছু বিশেষ গঠন বা ছোঁয়া",
+    "crowds": "ভিড়",
+    "bright_lights": "উজ্জ্বল আলো",
+    "being_touched": "না বলে ছোঁয়া",
+    "change_in_routine": "রুটিনে পরিবর্তন",
+    "hunger": "খিদে",
+    "tiredness": "ক্লান্তি",
+    "no_answer": "‘না’ শোনা"
+  },
+  "calming": {
+    "deep_pressure": "গভীর চাপ",
+    "quiet_corner": "শান্ত কোণ",
+    "counting": "একসঙ্গে গোনা",
+    "favourite_song": "প্রিয় গান",
+    "weighted_blanket": "ভারী কম্বল",
+    "swinging": "দোল খাওয়া",
+    "breathing": "ধীরে শ্বাস নেওয়া",
+    "visual_timer": "ছবির টাইমার",
+    "fidget": "ফিজেট খেলনা",
+    "water_break": "জল খাওয়ার বিরতি"
+  },
+  "antecedents": {
+    "transition": "কাজ বদল",
+    "demand": "কাজের চাহিদা",
+    "sensory": "ইন্দ্রিয়জনিত",
+    "waiting": "অপেক্ষা",
+    "denied_item": "কোনো জিনিস না পাওয়া",
+    "peer": "অন্য একটি শিশু",
+    "unknown": "স্পষ্ট নয়"
+  },
+  "worked": {
+    "visual_schedule": "ছবির সময়সূচি",
+    "first_then": "আগে–পরে বোর্ড",
+    "timer": "টাইমার",
+    "movement_break": "নড়াচড়ার বিরতি",
+    "reinforcer_choice": "পুরস্কার বেছে নেওয়া",
+    "modelling": "করে দেখানো",
+    "short_tasks": "ছোট কাজ",
+    "quiet_room": "শান্ত ঘর",
+    "parent_present": "অভিভাবক উপস্থিত",
+    "song_cue": "গানের সংকেত",
+    "hand_over_hand": "হাত ধরে করানো",
+    "choice_of_two": "দুটির মধ্যে বেছে নেওয়া"
+  },
+  "notWorked": {
+    "long_tasks": "লম্বা কাজ",
+    "noisy_room": "কোলাহলপূর্ণ ঘর",
+    "verbal_only_instructions": "শুধু মুখের নির্দেশ",
+    "waiting_turns": "পালার জন্য অপেক্ষা",
+    "new_material": "নতুন সামগ্রী",
+    "tablet_reinforcer": "পুরস্কার হিসেবে ট্যাবলেট",
+    "group_activity": "দলগত কাজ",
+    "touch_prompts": "ছুঁয়ে সংকেত"
+  },
+  "incidents": {
+    "meltdown": "খুব বেশি অস্থির হয়ে পড়া",
+    "aggression": "আক্রমণাত্মক আচরণ",
+    "self_injury": "নিজেকে আঘাত",
+    "elopement": "পালিয়ে যাওয়া",
+    "refusal": "অস্বীকার",
+    "other": "অন্যান্য"
+  },
+  "domains": {
+    "communication": "যোগাযোগ",
+    "fine_motor": "হাতের সূক্ষ্ম কাজ",
+    "gross_motor": "শরীরের বড় নড়াচড়া",
+    "self_care": "নিজের যত্ন",
+    "social": "অন্যদের সঙ্গে মেলামেশা",
+    "behaviour": "আচরণ",
+    "cognition": "শেখা ও ভাবা",
+    "sensory": "ইন্দ্রিয়ের ভারসাম্য"
+  },
+  "therapyTypes": {
+    "speech": "স্পিচ থেরাপি",
+    "occupational": "অকুপেশনাল থেরাপি",
+    "behaviour": "বিহেভিয়ার থেরাপি (ABA)",
+    "special_ed": "স্পেশাল এডুকেশন",
+    "physio": "ফিজিওথেরাপি",
+    "audiology": "অডিওলজি সহায়তা"
+  },
+  "regulation": {
+    "under": "কম শক্তি",
+    "regulated": "ভারসাম্যে",
+    "over": "অতি উত্তেজিত"
+  }
+}

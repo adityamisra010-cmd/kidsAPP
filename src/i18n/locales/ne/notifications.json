@@ -1,0 +1,18 @@
+{
+  "_review": "TODO: machine-drafted, needs review by a native speaker",
+  "bell": "अपडेट",
+  "title": "अपडेट",
+  "markAll": "सबै पढियो",
+  "markedAll": "सबै अपडेट पढिएको भनी चिन्ह लगाइयो",
+  "unread": "नपढिएका",
+  "unreadCount": "{{count}} नपढिएको",
+  "unreadCount_other": "{{count}} नपढिएका",
+  "groups": {
+    "today": "आज",
+    "earlier": "पहिलेका"
+  },
+  "empty": {
+    "title": "सबै हेरिसक्नुभयो",
+    "body": "सत्रको सम्झना, तालिका परिवर्तन र विद्यालयका सन्देश यहाँ देखिनेछन्।"
+  }
+}

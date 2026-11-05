@@ -1,0 +1,18 @@
+{
+  "_review": "TODO: machine-drafted, needs review by a native speaker",
+  "bell": "അപ്‌ഡേറ്റുകൾ",
+  "title": "അപ്‌ഡേറ്റുകൾ",
+  "markAll": "എല്ലാം വായിച്ചു",
+  "markedAll": "എല്ലാ അപ്‌ഡേറ്റുകളും വായിച്ചതായി അടയാളപ്പെടുത്തി",
+  "unread": "വായിക്കാത്തവ",
+  "unreadCount": "{{count}} വായിക്കാത്തത്",
+  "unreadCount_other": "{{count}} വായിക്കാത്തവ",
+  "groups": {
+    "today": "ഇന്ന്",
+    "earlier": "മുമ്പുള്ളവ"
+  },
+  "empty": {
+    "title": "എല്ലാം കണ്ടു",
+    "body": "സെഷൻ ഓർമ്മപ്പെടുത്തലുകൾ, ഷെഡ്യൂൾ മാറ്റങ്ങൾ, സ്കൂൾ സന്ദേശങ്ങൾ ഇവിടെ കാണാം."
+  }
+}

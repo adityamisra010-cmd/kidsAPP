@@ -1,0 +1,18 @@
+{
+  "_review": "TODO: machine-drafted, needs review by a native speaker",
+  "bell": "আপডেট",
+  "title": "আপডেট",
+  "markAll": "সকলো পঢ়া হ'ল",
+  "markedAll": "সকলো আপডেট পঢ়া বুলি চিহ্নিত",
+  "unread": "নপঢ়া",
+  "unreadCount": "{{count}} টা নপঢ়া",
+  "unreadCount_other": "{{count}} টা নপঢ়া",
+  "groups": {
+    "today": "আজি",
+    "earlier": "আগৰ"
+  },
+  "empty": {
+    "title": "সকলো চোৱা হ'ল",
+    "body": "ছেছনৰ সোঁৱৰণী, সময়সূচীৰ সলনি আৰু বিদ্যালয়ৰ বাৰ্তা ইয়াত দেখা যাব।"
+  }
+}

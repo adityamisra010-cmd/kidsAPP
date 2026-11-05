@@ -1,0 +1,131 @@
+{
+  "_review": "TODO: machine-drafted, needs review by a native speaker",
+  "actions": {
+    "save": "સેવ કરો",
+    "cancel": "રદ કરો",
+    "done": "થઈ ગયું",
+    "next": "આગળ",
+    "back": "પાછળ",
+    "close": "બંધ કરો",
+    "edit": "ફેરફાર કરો",
+    "delete": "કાઢી નાખો",
+    "retry": "ફરી પ્રયાસ કરો",
+    "confirm": "ખાતરી કરો",
+    "continue": "આગળ વધો",
+    "seeAll": "બધું જુઓ",
+    "add": "ઉમેરો",
+    "remove": "દૂર કરો",
+    "send": "મોકલો",
+    "share": "શેર કરો",
+    "search": "શોધો",
+    "filter": "ફિલ્ટર",
+    "apply": "લાગુ કરો",
+    "clear": "સાફ કરો",
+    "yes": "હા",
+    "no": "ના",
+    "ok": "બરાબર",
+    "view": "જુઓ",
+    "open": "ખોલો",
+    "call": "કૉલ કરો",
+    "download": "ડાઉનલોડ",
+    "upload": "અપલોડ",
+    "select": "પસંદ કરો",
+    "change": "બદલો",
+    "addCustom": "તમારું પોતાનું ઉમેરો",
+    "skip": "છોડો"
+  },
+  "time": {
+    "today": "આજે",
+    "tomorrow": "આવતીકાલે",
+    "yesterday": "ગઈકાલે",
+    "thisWeek": "આ અઠવાડિયે",
+    "minutes": "{{count}} મિનિટ",
+    "minutes_other": "{{count}} મિનિટ"
+  },
+  "roles": {
+    "platform_admin": "પ્લેટફોર્મ એડમિન",
+    "school_admin": "શાળા એડમિન",
+    "coordinator": "સંકલનકર્તા",
+    "therapist": "થેરાપિસ્ટ",
+    "parent": "વાલી"
+  },
+  "trend": {
+    "up": "સુધારો થઈ રહ્યો છે",
+    "flat": "સ્થિર",
+    "down": "ઘટી રહ્યું છે"
+  },
+  "change": {
+    "better": "ગયા વખત કરતાં સારું",
+    "same": "લગભગ એવું જ",
+    "harder": "આ વખતે થોડું અઘરું"
+  },
+  "changeShort": {
+    "better": "સારું",
+    "same": "સ્થિર",
+    "harder": "અઘરું"
+  },
+  "status": {
+    "confirmed": "નક્કી",
+    "rescheduled": "સમય બદલાયો",
+    "substitute": "બદલી થેરાપિસ્ટ",
+    "cancelled": "રદ",
+    "completed": "પૂર્ણ",
+    "absent": "ગેરહાજર",
+    "makeup": "ભરપાઈ સત્ર"
+  },
+  "logState": {
+    "upcoming": "આગામી",
+    "in_progress": "ચાલુ છે",
+    "logged": "નોંધાયું",
+    "not_logged": "નોંધાયું નથી"
+  },
+  "sync": {
+    "synced": "બધા ફેરફારો સેવ થયા",
+    "pending": "{{count}} સિંક બાકી",
+    "pending_other": "{{count}} સિંક બાકી",
+    "syncing": "સિંક થઈ રહ્યું છે…",
+    "offline": "તમે ઑફલાઇન છો. ફેરફારો આ ફોનમાં સેવ છે અને પછી સિંક થશે.",
+    "failed": "કેટલાક ફેરફારો સિંક થયા નથી",
+    "savedOffline": "આ ફોનમાં સેવ થયું. ઑનલાઇન આવતાં સિંક થશે."
+  },
+  "states": {
+    "loading": "લોડ થઈ રહ્યું છે…",
+    "errorTitle": "કંઈક ખોટું થયું",
+    "errorBody": "આ લોડ થઈ શક્યું નહીં. કનેક્શન તપાસીને ફરી પ્રયાસ કરો.",
+    "emptyTitle": "અહીં હજી કંઈ નથી",
+    "offlineBanner": "તમે ઑફલાઇન છો. સેવ કરેલી માહિતી બતાવીએ છીએ."
+  },
+  "a11y": {
+    "back": "પાછા જાઓ",
+    "close": "બંધ કરો",
+    "selected": "પસંદ કરેલું",
+    "notSelected": "પસંદ કરેલું નથી",
+    "opensDetails": "વિગતો ખોલે છે"
+  },
+  "demoBadge": "ડેમો",
+  "required": "જરૂરી",
+  "optional": "વૈકલ્પિક",
+  "tabs": {
+    "home": "હોમ",
+    "calendar": "કૅલેન્ડર",
+    "myChild": "મારું બાળક",
+    "practice": "અભ્યાસ",
+    "more": "વધુ",
+    "today": "આજે",
+    "caseload": "બાળકો",
+    "reviews": "તપાસ",
+    "dashboard": "ડેશબોર્ડ",
+    "schedule": "સમયપત્રક",
+    "people": "લોકો",
+    "reports": "અહેવાલો",
+    "schools": "શાળાઓ",
+    "templates": "નમૂના"
+  },
+  "age": {
+    "years": "{{count}} વર્ષ",
+    "years_other": "{{count}} વર્ષ",
+    "months": "{{count}} મહિનો",
+    "months_other": "{{count}} મહિના",
+    "yearsMonths": "{{years}} વર્ષ {{months}} મહિના"
+  }
+}

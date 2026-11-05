@@ -1,0 +1,126 @@
+{
+  "_review": "TODO: machine-drafted, needs review by a native speaker",
+  "actions": {
+    "save": "محفوظ ڪريو",
+    "cancel": "منسوخ ڪريو",
+    "done": "ٿي ويو",
+    "next": "اڳيون",
+    "back": "پوئتي",
+    "close": "بند ڪريو",
+    "edit": "ترميم ڪريو",
+    "delete": "ميٽيو",
+    "retry": "ٻيهر ڪوشش ڪريو",
+    "confirm": "تصديق ڪريو",
+    "continue": "جاري رکو",
+    "seeAll": "سڀ ڏسو",
+    "add": "شامل ڪريو",
+    "remove": "هٽايو",
+    "send": "موڪليو",
+    "share": "شيئر ڪريو",
+    "search": "ڳوليو",
+    "filter": "فلٽر",
+    "apply": "لاڳو ڪريو",
+    "clear": "صاف ڪريو",
+    "yes": "ها",
+    "no": "نه",
+    "ok": "ٺيڪ آهي",
+    "view": "ڏسو",
+    "open": "کوليو",
+    "call": "ڪال ڪريو",
+    "download": "ڊائونلوڊ",
+    "upload": "اپلوڊ",
+    "select": "چونڊيو",
+    "change": "بدلايو",
+    "addCustom": "پنهنجو شامل ڪريو",
+    "skip": "ڇڏيو"
+  },
+  "time": {
+    "today": "اڄ",
+    "tomorrow": "سڀاڻي",
+    "yesterday": "ڪالهه",
+    "thisWeek": "هن هفتي",
+    "minutes": "{{count}} منٽ",
+    "minutes_other": "{{count}} منٽ"
+  },
+  "roles": {
+    "platform_admin": "پليٽفارم ايڊمن",
+    "school_admin": "اسڪول ايڊمن",
+    "coordinator": "ڪوآرڊينيٽر",
+    "therapist": "ٿراپسٽ",
+    "parent": "والدين"
+  },
+  "trend": {
+    "up": "بهتري اچي رهي آهي",
+    "flat": "مستحڪم",
+    "down": "گهٽجي رهيو آهي"
+  },
+  "change": {
+    "better": "پوئين ڀيري کان بهتر",
+    "same": "لڳ ڀڳ ساڳيو",
+    "harder": "هن ڀيري ٿورو ڏکيو"
+  },
+  "changeShort": {
+    "better": "سٺو",
+    "same": "مستحڪم",
+    "harder": "ڏکيو"
+  },
+  "status": {
+    "confirmed": "پڪو",
+    "rescheduled": "وقت بدليو",
+    "substitute": "متبادل ٿراپسٽ",
+    "cancelled": "منسوخ",
+    "completed": "مڪمل",
+    "absent": "غير حاضر",
+    "makeup": "ڀرپائي سيشن"
+  },
+  "logState": {
+    "upcoming": "ايندڙ",
+    "in_progress": "جاري آهي",
+    "logged": "درج ٿيو",
+    "not_logged": "درج نه ٿيو"
+  },
+  "sync": {
+    "synced": "سڀ تبديليون محفوظ ٿي ويون",
+    "pending": "{{count}} سنڪ ٿيڻ باقي",
+    "pending_other": "{{count}} سنڪ ٿيڻ باقي",
+    "syncing": "سنڪ ٿي رهيو آهي…",
+    "offline": "توهان آف لائين آهيو. تبديليون هن فون تي محفوظ آهن ۽ پوءِ سنڪ ٿينديون."
+  },
+  "states": {
+    "loading": "لوڊ ٿي رهيو آهي…",
+    "errorTitle": "ڪجهه غلط ٿي ويو",
+    "emptyTitle": "هتي اڃا ڪجهه ناهي"
+  },
+  "a11y": {
+    "back": "واپس وڃو",
+    "close": "بند ڪريو",
+    "selected": "چونڊيل",
+    "notSelected": "چونڊيل ناهي"
+  },
+  "demoBadge": "ڊيمو",
+  "required": "ضروري",
+  "optional": "اختياري",
+  "tabs": {
+    "home": "گهر",
+    "calendar": "ڪئلينڊر",
+    "myChild": "منهنجو ٻار",
+    "practice": "مشق",
+    "more": "وڌيڪ",
+    "today": "اڄ",
+    "caseload": "ٻار",
+    "reviews": "جاچ",
+    "dashboard": "ڊيش بورڊ",
+    "schedule": "شيڊول",
+    "people": "ماڻهو",
+    "reports": "رپورٽون",
+    "schools": "اسڪول",
+    "templates": "نمونا"
+  },
+  "age": {
+    "years": "{{count}} سال",
+    "years_other": "{{count}} سال",
+    "months": "{{count}} مهينو",
+    "months_other": "{{count}} مهينا",
+    "yearsMonths": "{{years}} سال {{months}} مهينا"
+  }
+}

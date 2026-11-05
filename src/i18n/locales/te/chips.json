@@ -1,0 +1,122 @@
+{
+  "_review": "TODO: machine-drafted, needs review by a native speaker",
+  "commTools": {
+    "speech": "మాటల ద్వారా",
+    "sign": "సంకేత భాష",
+    "pecs": "PECS (చిత్ర కార్డులు)",
+    "aac_device": "AAC పరికరం",
+    "gestures": "హావభావాలు",
+    "pointing": "వేలితో చూపడం",
+    "visual_schedule": "చిత్ర షెడ్యూల్"
+  },
+  "commModes": {
+    "verbal": "మాట్లాడుతారు",
+    "limited_verbal": "కొన్ని మాటలు",
+    "non_verbal": "మాట్లాడరు"
+  },
+  "reinforcers": {
+    "bubbles": "బుడగలు",
+    "music": "సంగీతం",
+    "songs": "పాటలు",
+    "favourite_toy": "ఇష్టమైన బొమ్మ",
+    "tablet_time": "టాబ్లెట్ సమయం",
+    "praise": "మెచ్చుకోలు",
+    "high_five": "హై ఫైవ్",
+    "stickers": "స్టిక్కర్లు",
+    "swing": "ఊయల",
+    "snack": "చిన్న చిరుతిండి",
+    "cars": "బొమ్మ కార్లు",
+    "blocks": "బ్లాక్స్",
+    "tickles": "చక్కిలిగింతలు",
+    "books": "బొమ్మల పుస్తకాలు"
+  },
+  "triggers": {
+    "loud_sounds": "పెద్ద శబ్దాలు",
+    "transitions": "ఒక పని నుండి మరో పనికి మారడం",
+    "waiting": "ఎదురుచూడటం",
+    "textures": "కొన్ని రకాల స్పర్శ",
+    "crowds": "జనసమూహం",
+    "bright_lights": "కళ్లు చెదిరే వెలుతురు",
+    "being_touched": "చెప్పకుండా తాకడం",
+    "change_in_routine": "దినచర్యలో మార్పు",
+    "hunger": "ఆకలి",
+    "tiredness": "అలసట",
+    "no_answer": "‘వద్దు’ అని వినడం"
+  },
+  "calming": {
+    "deep_pressure": "గట్టి ఒత్తిడి",
+    "quiet_corner": "ప్రశాంతమైన మూల",
+    "counting": "కలిసి లెక్కపెట్టడం",
+    "favourite_song": "ఇష్టమైన పాట",
+    "weighted_blanket": "బరువైన దుప్పటి",
+    "swinging": "ఊగడం",
+    "breathing": "నెమ్మదిగా శ్వాస",
+    "visual_timer": "చిత్ర టైమర్",
+    "fidget": "ఫిడ్జెట్ బొమ్మ",
+    "water_break": "నీళ్ల విరామం"
+  },
+  "antecedents": {
+    "transition": "పని మార్పు",
+    "demand": "పని చెప్పడం",
+    "sensory": "ఇంద్రియ సంబంధం",
+    "waiting": "ఎదురుచూడటం",
+    "denied_item": "కావలసింది ఇవ్వకపోవడం",
+    "peer": "మరో బిడ్డ",
+    "unknown": "స్పష్టంగా తెలియదు"
+  },
+  "worked": {
+    "visual_schedule": "చిత్ర షెడ్యూల్",
+    "first_then": "ముందు–తర్వాత బోర్డు",
+    "timer": "టైమర్",
+    "movement_break": "కదలిక విరామం",
+    "reinforcer_choice": "బహుమతి ఎంపిక",
+    "modelling": "చేసి చూపించడం",
+    "short_tasks": "చిన్న పనులు",
+    "quiet_room": "ప్రశాంతమైన గది",
+    "parent_present": "తల్లి/తండ్రి దగ్గర ఉండటం",
+    "song_cue": "పాట సంకేతం",
+    "hand_over_hand": "చేయి పట్టి చేయించడం",
+    "choice_of_two": "రెండింటిలో ఎంపిక"
+  },
+  "notWorked": {
+    "long_tasks": "పెద్ద పనులు",
+    "noisy_room": "శబ్దం ఉన్న గది",
+    "verbal_only_instructions": "మాటలతో మాత్రమే సూచనలు",
+    "waiting_turns": "వంతు కోసం ఎదురుచూడటం",
+    "new_material": "కొత్త సామగ్రి",
+    "tablet_reinforcer": "బహుమతిగా టాబ్లెట్",
+    "group_activity": "గుంపు కార్యకలాపం",
+    "touch_prompts": "స్పర్శ సంకేతాలు"
+  },
+  "incidents": {
+    "meltdown": "తీవ్రమైన కలత",
+    "aggression": "దూకుడు",
+    "self_injury": "తనకు తాను హాని",
+    "elopement": "పారిపోవడం",
+    "refusal": "నిరాకరణ",
+    "other": "ఇతరం"
+  },
+  "domains": {
+    "communication": "సంభాషణ",
+    "fine_motor": "చేతి సూక్ష్మ పనులు",
+    "gross_motor": "శరీర పెద్ద కదలికలు",
+    "self_care": "స్వయం సంరక్షణ",
+    "social": "ఇతరులతో కలిసిపోవడం",
+    "behaviour": "ప్రవర్తన",
+    "cognition": "నేర్చుకోవడం, ఆలోచన",
+    "sensory": "ఇంద్రియ సమతుల్యత"
+  },
+  "therapyTypes": {
+    "speech": "స్పీచ్ థెరపీ",
+    "occupational": "ఆక్యుపేషనల్ థెరపీ",
+    "behaviour": "బిహేవియర్ థెరపీ (ABA)",
+    "special_ed": "ప్రత్యేక విద్య",
+    "physio": "ఫిజియోథెరపీ",
+    "audiology": "ఆడియాలజీ సహాయం"
+  },
+  "regulation": {
+    "under": "తక్కువ శక్తి",
+    "regulated": "సమతుల్యంగా",
+    "over": "అతి ఉత్సాహం"
+  }
+}

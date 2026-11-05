@@ -1,0 +1,18 @@
+{
+  "_review": "TODO: machine-drafted, needs review by a native speaker",
+  "bell": "अपडेट",
+  "title": "अपडेट",
+  "markAll": "सभ पढ़ि लेल",
+  "markedAll": "सभ अपडेट पढ़ल गेल चिन्हित",
+  "unread": "नहि पढ़ल",
+  "unreadCount": "{{count}} नहि पढ़ल",
+  "unreadCount_other": "{{count}} नहि पढ़ल",
+  "groups": {
+    "today": "आइ",
+    "earlier": "पहिलुक"
+  },
+  "empty": {
+    "title": "सभ देखि लेलहुँ",
+    "body": "सत्रक याद, समय-सारणीक बदलाव आ विद्यालयक संदेश एतय देखाएत।"
+  }
+}

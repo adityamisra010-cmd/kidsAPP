@@ -1,0 +1,18 @@
+{
+  "_review": "TODO: machine-drafted, needs review by a native speaker",
+  "bell": "અપડેટ",
+  "title": "અપડેટ",
+  "markAll": "બધું વાંચ્યું",
+  "markedAll": "બધાં અપડેટ વાંચેલાં તરીકે નોંધ્યાં",
+  "unread": "ન વાંચેલાં",
+  "unreadCount": "{{count}} ન વાંચેલું",
+  "unreadCount_other": "{{count}} ન વાંચેલાં",
+  "groups": {
+    "today": "આજે",
+    "earlier": "અગાઉનાં"
+  },
+  "empty": {
+    "title": "બધું જોઈ લીધું",
+    "body": "સત્રના રિમાઇન્ડર, સમયપત્રકના ફેરફારો અને શાળાના સંદેશા અહીં દેખાશે."
+  }
+}

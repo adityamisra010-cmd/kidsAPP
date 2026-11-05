@@ -1,0 +1,38 @@
+{
+  "_review": "TODO: machine-drafted, needs review by a native speaker",
+  "more": {
+    "title": "होर",
+    "sections": {
+      "school": "स्कूल"
+    },
+    "items": {
+      "messages": "सनेहे",
+      "language": "भाशा"
+    }
+  },
+  "language": {
+    "title": "भाशा"
+  },
+  "profile": {
+    "language": "भाशा"
+  },
+  "notifications": {
+    "groups": {
+      "messages": "सनेहे"
+    }
+  },
+  "switch": {
+    "children": "बच्चे"
+  },
+  "push": {
+    "today": "अज्ज",
+    "tomorrow": "कल",
+    "channels": {
+      "messages": "सनेहे"
+    }
+  },
+  "app": {
+    "language": "भाशा",
+    "school": "स्कूल"
+  }
+}

@@ -1,0 +1,122 @@
+{
+  "_review": "TODO: machine-drafted, needs review by a native speaker",
+  "commTools": {
+    "speech": "बाजि क'",
+    "sign": "संकेत भाषा",
+    "pecs": "PECS (चित्र कार्ड)",
+    "aac_device": "AAC उपकरण",
+    "gestures": "इशारा",
+    "pointing": "आँगुर सँ देखाएब",
+    "visual_schedule": "चित्र समय-सारणी"
+  },
+  "commModes": {
+    "verbal": "बजैत अछि",
+    "limited_verbal": "किछु शब्द",
+    "non_verbal": "नहि बजैत अछि"
+  },
+  "reinforcers": {
+    "bubbles": "फुक्का",
+    "music": "संगीत",
+    "songs": "गीत",
+    "favourite_toy": "पसंदीदा खेलौना",
+    "tablet_time": "टैबलेटक समय",
+    "praise": "प्रशंसा",
+    "high_five": "हाई फाइव",
+    "stickers": "स्टिकर",
+    "swing": "झूला",
+    "snack": "कनेक नाश्ता",
+    "cars": "खेलौना गाड़ी",
+    "blocks": "ब्लॉक",
+    "tickles": "गुदगुदी",
+    "books": "चित्रक किताब"
+  },
+  "triggers": {
+    "loud_sounds": "जोर आवाज",
+    "transitions": "एक काज सँ दोसर काज पर जाएब",
+    "waiting": "प्रतीक्षा करब",
+    "textures": "किछु तरहक स्पर्श",
+    "crowds": "भीड़",
+    "bright_lights": "तेज इजोत",
+    "being_touched": "बिना कहने छूब",
+    "change_in_routine": "दिनचर्या मे बदलाव",
+    "hunger": "भूख",
+    "tiredness": "थकान",
+    "no_answer": "‘नहि’ सुनब"
+  },
+  "calming": {
+    "deep_pressure": "गहींर दबाव",
+    "quiet_corner": "शांत कोन",
+    "counting": "संगे गिनब",
+    "favourite_song": "पसंदीदा गीत",
+    "weighted_blanket": "भारी कम्बल",
+    "swinging": "झूलब",
+    "breathing": "धीमा साँस",
+    "visual_timer": "चित्र टाइमर",
+    "fidget": "फिजेट खेलौना",
+    "water_break": "पानिक विराम"
+  },
+  "antecedents": {
+    "transition": "काज बदलब",
+    "demand": "काजक माँग",
+    "sensory": "इन्द्रिय सम्बन्धी",
+    "waiting": "प्रतीक्षा",
+    "denied_item": "चाहल वस्तु नहि भेटब",
+    "peer": "दोसर बच्चा",
+    "unknown": "स्पष्ट नहि"
+  },
+  "worked": {
+    "visual_schedule": "चित्र समय-सारणी",
+    "first_then": "पहिने–तखन बोर्ड",
+    "timer": "टाइमर",
+    "movement_break": "चलबा-फिरबाक विराम",
+    "reinforcer_choice": "इनामक चुनाव",
+    "modelling": "क' क' देखाएब",
+    "short_tasks": "छोट काज",
+    "quiet_room": "शांत कोठरी",
+    "parent_present": "अभिभावक संग",
+    "song_cue": "गीतक संकेत",
+    "hand_over_hand": "हाथ पकड़ि क' कराएब",
+    "choice_of_two": "दू मे सँ एक चुनाव"
+  },
+  "notWorked": {
+    "long_tasks": "नमगर काज",
+    "noisy_room": "हल्ला बला कोठरी",
+    "verbal_only_instructions": "केवल बाजि क' निर्देश",
+    "waiting_turns": "पारीक प्रतीक्षा",
+    "new_material": "नव सामग्री",
+    "tablet_reinforcer": "इनामक रूप मे टैबलेट",
+    "group_activity": "समूह गतिविधि",
+    "touch_prompts": "स्पर्श संकेत"
+  },
+  "incidents": {
+    "meltdown": "बहुत बेचैनी",
+    "aggression": "आक्रामकता",
+    "self_injury": "अपना केँ चोट",
+    "elopement": "भागि जाएब",
+    "refusal": "इनकार",
+    "other": "आन"
+  },
+  "domains": {
+    "communication": "संवाद",
+    "fine_motor": "हाथक बारीक काज",
+    "gross_motor": "शरीरक पैघ गतिविधि",
+    "self_care": "अपन देखभाल",
+    "social": "आन सँ मेल-जोल",
+    "behaviour": "व्यवहार",
+    "cognition": "सिखब आ सोचब",
+    "sensory": "इन्द्रिय संतुलन"
+  },
+  "therapyTypes": {
+    "speech": "स्पीच थेरेपी",
+    "occupational": "ऑक्यूपेशनल थेरेपी",
+    "behaviour": "बिहेवियर थेरेपी (ABA)",
+    "special_ed": "विशेष शिक्षा",
+    "physio": "फिजियोथेरेपी",
+    "audiology": "श्रवण सहायता"
+  },
+  "regulation": {
+    "under": "कम ऊर्जा",
+    "regulated": "संतुलित",
+    "over": "बेसी उत्साह"
+  }
+}

@@ -1,0 +1,122 @@
+{
+  "_review": "TODO: machine-drafted, needs review by a native speaker",
+  "commTools": {
+    "speech": "ಮಾತಿನ ಮೂಲಕ",
+    "sign": "ಸಂಜ್ಞಾ ಭಾಷೆ",
+    "pecs": "PECS (ಚಿತ್ರ ಕಾರ್ಡ್‌ಗಳು)",
+    "aac_device": "AAC ಸಾಧನ",
+    "gestures": "ಸನ್ನೆಗಳು",
+    "pointing": "ಬೆರಳಿನಿಂದ ತೋರಿಸುವುದು",
+    "visual_schedule": "ಚಿತ್ರ ವೇಳಾಪಟ್ಟಿ"
+  },
+  "commModes": {
+    "verbal": "ಮಾತನಾಡುತ್ತಾರೆ",
+    "limited_verbal": "ಕೆಲವು ಪದಗಳು",
+    "non_verbal": "ಮಾತನಾಡುವುದಿಲ್ಲ"
+  },
+  "reinforcers": {
+    "bubbles": "ಗುಳ್ಳೆಗಳು",
+    "music": "ಸಂಗೀತ",
+    "songs": "ಹಾಡುಗಳು",
+    "favourite_toy": "ಇಷ್ಟದ ಆಟಿಕೆ",
+    "tablet_time": "ಟ್ಯಾಬ್ಲೆಟ್ ಸಮಯ",
+    "praise": "ಹೊಗಳಿಕೆ",
+    "high_five": "ಹೈ ಫೈವ್",
+    "stickers": "ಸ್ಟಿಕ್ಕರ್‌ಗಳು",
+    "swing": "ಉಯ್ಯಾಲೆ",
+    "snack": "ಸ್ವಲ್ಪ ತಿಂಡಿ",
+    "cars": "ಆಟಿಕೆ ಕಾರುಗಳು",
+    "blocks": "ಬ್ಲಾಕ್‌ಗಳು",
+    "tickles": "ಕಚಗುಳಿ",
+    "books": "ಚಿತ್ರ ಪುಸ್ತಕಗಳು"
+  },
+  "triggers": {
+    "loud_sounds": "ಜೋರಾದ ಶಬ್ದಗಳು",
+    "transitions": "ಒಂದು ಕೆಲಸದಿಂದ ಇನ್ನೊಂದಕ್ಕೆ ಬದಲಾಗುವುದು",
+    "waiting": "ಕಾಯುವುದು",
+    "textures": "ಕೆಲವು ಬಗೆಯ ಸ್ಪರ್ಶ",
+    "crowds": "ಜನಸಂದಣಿ",
+    "bright_lights": "ಪ್ರಖರ ಬೆಳಕು",
+    "being_touched": "ಹೇಳದೆ ಮುಟ್ಟುವುದು",
+    "change_in_routine": "ದಿನಚರಿಯಲ್ಲಿ ಬದಲಾವಣೆ",
+    "hunger": "ಹಸಿವು",
+    "tiredness": "ಆಯಾಸ",
+    "no_answer": "‘ಬೇಡ’ ಎಂದು ಕೇಳುವುದು"
+  },
+  "calming": {
+    "deep_pressure": "ಆಳವಾದ ಒತ್ತಡ",
+    "quiet_corner": "ಶಾಂತ ಮೂಲೆ",
+    "counting": "ಜೊತೆಯಾಗಿ ಎಣಿಸುವುದು",
+    "favourite_song": "ಇಷ್ಟದ ಹಾಡು",
+    "weighted_blanket": "ಭಾರದ ಹೊದಿಕೆ",
+    "swinging": "ತೂಗುವುದು",
+    "breathing": "ನಿಧಾನ ಉಸಿರಾಟ",
+    "visual_timer": "ಚಿತ್ರ ಟೈಮರ್",
+    "fidget": "ಫಿಜೆಟ್ ಆಟಿಕೆ",
+    "water_break": "ನೀರಿನ ವಿರಾಮ"
+  },
+  "antecedents": {
+    "transition": "ಕೆಲಸ ಬದಲಾವಣೆ",
+    "demand": "ಕೆಲಸದ ಬೇಡಿಕೆ",
+    "sensory": "ಇಂದ್ರಿಯ ಸಂಬಂಧಿ",
+    "waiting": "ಕಾಯುವುದು",
+    "denied_item": "ಬೇಕಾದದ್ದು ಸಿಗದಿರುವುದು",
+    "peer": "ಇನ್ನೊಂದು ಮಗು",
+    "unknown": "ಸ್ಪಷ್ಟವಿಲ್ಲ"
+  },
+  "worked": {
+    "visual_schedule": "ಚಿತ್ರ ವೇಳಾಪಟ್ಟಿ",
+    "first_then": "ಮೊದಲು–ನಂತರ ಫಲಕ",
+    "timer": "ಟೈಮರ್",
+    "movement_break": "ಚಲನೆಯ ವಿರಾಮ",
+    "reinforcer_choice": "ಬಹುಮಾನದ ಆಯ್ಕೆ",
+    "modelling": "ಮಾಡಿ ತೋರಿಸುವುದು",
+    "short_tasks": "ಸಣ್ಣ ಕೆಲಸಗಳು",
+    "quiet_room": "ಶಾಂತ ಕೋಣೆ",
+    "parent_present": "ಪೋಷಕರು ಜೊತೆಗಿರುವುದು",
+    "song_cue": "ಹಾಡಿನ ಸುಳಿವು",
+    "hand_over_hand": "ಕೈ ಹಿಡಿದು ಮಾಡಿಸುವುದು",
+    "choice_of_two": "ಎರಡರಲ್ಲಿ ಒಂದು ಆಯ್ಕೆ"
+  },
+  "notWorked": {
+    "long_tasks": "ದೀರ್ಘ ಕೆಲಸಗಳು",
+    "noisy_room": "ಗದ್ದಲದ ಕೋಣೆ",
+    "verbal_only_instructions": "ಮಾತಿನ ಸೂಚನೆ ಮಾತ್ರ",
+    "waiting_turns": "ಸರದಿಗಾಗಿ ಕಾಯುವುದು",
+    "new_material": "ಹೊಸ ಸಾಮಗ್ರಿಗಳು",
+    "tablet_reinforcer": "ಬಹುಮಾನವಾಗಿ ಟ್ಯಾಬ್ಲೆಟ್",
+    "group_activity": "ಗುಂಪು ಚಟುವಟಿಕೆ",
+    "touch_prompts": "ಸ್ಪರ್ಶದ ಸುಳಿವುಗಳು"
+  },
+  "incidents": {
+    "meltdown": "ತೀವ್ರ ಅಸಮಾಧಾನ",
+    "aggression": "ಆಕ್ರಮಣಶೀಲತೆ",
+    "self_injury": "ತನಗೆ ತಾನೇ ಹಾನಿ",
+    "elopement": "ಓಡಿಹೋಗುವುದು",
+    "refusal": "ನಿರಾಕರಣೆ",
+    "other": "ಇತರೆ"
+  },
+  "domains": {
+    "communication": "ಸಂವಹನ",
+    "fine_motor": "ಕೈಯ ಸೂಕ್ಷ್ಮ ಚಲನೆ",
+    "gross_motor": "ದೇಹದ ದೊಡ್ಡ ಚಲನೆ",
+    "self_care": "ಸ್ವ-ಆರೈಕೆ",
+    "social": "ಇತರರೊಂದಿಗೆ ಬೆರೆಯುವುದು",
+    "behaviour": "ನಡವಳಿಕೆ",
+    "cognition": "ಕಲಿಕೆ ಮತ್ತು ಆಲೋಚನೆ",
+    "sensory": "ಇಂದ್ರಿಯ ಸಮತೋಲನ"
+  },
+  "therapyTypes": {
+    "speech": "ಸ್ಪೀಚ್ ಥೆರಪಿ",
+    "occupational": "ಆಕ್ಯುಪೇಷನಲ್ ಥೆರಪಿ",
+    "behaviour": "ಬಿಹೇವಿಯರ್ ಥೆರಪಿ (ABA)",
+    "special_ed": "ವಿಶೇಷ ಶಿಕ್ಷಣ",
+    "physio": "ಫಿಸಿಯೋಥೆರಪಿ",
+    "audiology": "ಶ್ರವಣ ಸಹಾಯ"
+  },
+  "regulation": {
+    "under": "ಕಡಿಮೆ ಶಕ್ತಿ",
+    "regulated": "ಸಮತೋಲಿತ",
+    "over": "ಅತಿ ಉತ್ಸಾಹ"
+  }
+}

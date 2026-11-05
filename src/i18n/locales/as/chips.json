@@ -1,0 +1,122 @@
+{
+  "_review": "TODO: machine-drafted, needs review by a native speaker",
+  "commTools": {
+    "speech": "কথা কৈ",
+    "sign": "সংকেত ভাষা",
+    "pecs": "PECS (ছবি কাৰ্ড)",
+    "aac_device": "AAC সঁজুলি",
+    "gestures": "ইংগিত",
+    "pointing": "আঙুলিৰে দেখুওৱা",
+    "visual_schedule": "ছবি সময়সূচী"
+  },
+  "commModes": {
+    "verbal": "কথা কয়",
+    "limited_verbal": "কিছু শব্দ",
+    "non_verbal": "কথা নকয়"
+  },
+  "reinforcers": {
+    "bubbles": "বুৰবুৰণি",
+    "music": "সংগীত",
+    "songs": "গীত",
+    "favourite_toy": "প্ৰিয় খেলনা",
+    "tablet_time": "টেবলেটৰ সময়",
+    "praise": "প্ৰশংসা",
+    "high_five": "হাই ফাইভ",
+    "stickers": "ষ্টিকাৰ",
+    "swing": "দোলনা",
+    "snack": "অলপ জলপান",
+    "cars": "খেলনা গাড়ী",
+    "blocks": "ব্লক",
+    "tickles": "কুতকুতি",
+    "books": "ছবিৰ কিতাপ"
+  },
+  "triggers": {
+    "loud_sounds": "উচ্চ শব্দ",
+    "transitions": "এটা কামৰ পৰা আন এটালৈ যোৱা",
+    "waiting": "অপেক্ষা কৰা",
+    "textures": "কিছুমান প্ৰকাৰৰ স্পৰ্শ",
+    "crowds": "ভিৰ",
+    "bright_lights": "উজ্জ্বল পোহৰ",
+    "being_touched": "নোকোৱাকৈ চুই দিয়া",
+    "change_in_routine": "দৈনন্দিন ৰুটিনত সলনি",
+    "hunger": "ভোক",
+    "tiredness": "ভাগৰ",
+    "no_answer": "‘নহয়’ শুনা"
+  },
+  "calming": {
+    "deep_pressure": "গভীৰ চাপ",
+    "quiet_corner": "শান্ত চুক",
+    "counting": "একেলগে গণা",
+    "favourite_song": "প্ৰিয় গীত",
+    "weighted_blanket": "গধুৰ কম্বল",
+    "swinging": "দোলা খোৱা",
+    "breathing": "লাহে লাহে উশাহ",
+    "visual_timer": "ছবি টাইমাৰ",
+    "fidget": "ফিজেট খেলনা",
+    "water_break": "পানীৰ বিৰতি"
+  },
+  "antecedents": {
+    "transition": "কাম সলনি",
+    "demand": "কামৰ দাবী",
+    "sensory": "ইন্দ্ৰিয় সম্বন্ধীয়",
+    "waiting": "অপেক্ষা",
+    "denied_item": "বিচৰা বস্তু নোপোৱা",
+    "peer": "আন এটা শিশু",
+    "unknown": "স্পষ্ট নহয়"
+  },
+  "worked": {
+    "visual_schedule": "ছবি সময়সূচী",
+    "first_then": "প্ৰথমে–তাৰ পিছত ব'ৰ্ড",
+    "timer": "টাইমাৰ",
+    "movement_break": "লৰচৰৰ বিৰতি",
+    "reinforcer_choice": "পুৰস্কাৰ বাছনি",
+    "modelling": "কৰি দেখুওৱা",
+    "short_tasks": "সৰু কাম",
+    "quiet_room": "শান্ত কোঠা",
+    "parent_present": "অভিভাৱক কাষত",
+    "song_cue": "গীতৰ সংকেত",
+    "hand_over_hand": "হাতত ধৰি কৰোৱা",
+    "choice_of_two": "দুটাৰ পৰা এটা বাছনি"
+  },
+  "notWorked": {
+    "long_tasks": "দীঘলীয়া কাম",
+    "noisy_room": "হুলস্থুলীয়া কোঠা",
+    "verbal_only_instructions": "কেৱল মৌখিক নিৰ্দেশ",
+    "waiting_turns": "পাল পাবলৈ অপেক্ষা",
+    "new_material": "নতুন সামগ্ৰী",
+    "tablet_reinforcer": "পুৰস্কাৰ হিচাপে টেবলেট",
+    "group_activity": "দলীয় কাম",
+    "touch_prompts": "স্পৰ্শ সংকেত"
+  },
+  "incidents": {
+    "meltdown": "অত্যধিক অস্থিৰতা",
+    "aggression": "আক্ৰমণাত্মক আচৰণ",
+    "self_injury": "নিজকে আঘাত",
+    "elopement": "পলাই যোৱা",
+    "refusal": "অস্বীকাৰ",
+    "other": "অন্যান্য"
+  },
+  "domains": {
+    "communication": "যোগাযোগ",
+    "fine_motor": "হাতৰ সূক্ষ্ম কাম",
+    "gross_motor": "শৰীৰৰ ডাঙৰ লৰচৰ",
+    "self_care": "নিজৰ যত্ন",
+    "social": "আনৰ সৈতে মিলামিচা",
+    "behaviour": "আচৰণ",
+    "cognition": "শিকা আৰু চিন্তা",
+    "sensory": "ইন্দ্ৰিয় সন্তুলন"
+  },
+  "therapyTypes": {
+    "speech": "স্পীচ থেৰাপি",
+    "occupational": "অকুপেশ্যনেল থেৰাপি",
+    "behaviour": "বিহেভিয়েৰ থেৰাপি (ABA)",
+    "special_ed": "বিশেষ শিক্ষা",
+    "physio": "ফিজিঅ'থেৰাপি",
+    "audiology": "শ্ৰৱণ সহায়"
+  },
+  "regulation": {
+    "under": "কম শক্তি",
+    "regulated": "সন্তুলিত",
+    "over": "অতিৰিক্ত উৎসাহ"
+  }
+}

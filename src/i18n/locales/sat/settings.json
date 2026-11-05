@@ -1,0 +1,28 @@
+{
+  "_review": "TODO: machine-drafted, needs review by a native speaker",
+  "more": {
+    "sections": {
+      "school": "ᱤᱥᱠᱩᱞ"
+    },
+    "items": {
+      "language": "ᱯᱟᱹᱨᱥᱤ"
+    }
+  },
+  "language": {
+    "title": "ᱯᱟᱹᱨᱥᱤ"
+  },
+  "profile": {
+    "language": "ᱯᱟᱹᱨᱥᱤ"
+  },
+  "switch": {
+    "children": "ᱜᱤᱫᱽᱨᱤ ᱠᱚ"
+  },
+  "push": {
+    "today": "ᱛᱮᱦᱮᱧ",
+    "tomorrow": "ᱜᱟᱯᱟ"
+  },
+  "app": {
+    "language": "ᱯᱟᱹᱨᱥᱤ",
+    "school": "ᱤᱥᱠᱩᱞ"
+  }
+}

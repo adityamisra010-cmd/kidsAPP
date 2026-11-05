@@ -1,0 +1,124 @@
+{
+  "_review": "TODO: machine-drafted, needs review by a native speaker",
+  "actions": {
+    "save": "सेव करात",
+    "cancel": "रद्द करात",
+    "done": "जालें",
+    "next": "फुडलें",
+    "back": "फाटीं",
+    "close": "बंद करात",
+    "edit": "बदल करात",
+    "delete": "काडून उडयात",
+    "retry": "परत यत्न करात",
+    "confirm": "खात्री करात",
+    "continue": "फुडें वचात",
+    "seeAll": "सगळें पळयात",
+    "add": "जोडात",
+    "remove": "काडात",
+    "send": "धाडात",
+    "share": "वांटून घेयात",
+    "search": "सोदात",
+    "filter": "फिल्टर",
+    "apply": "लागू करात",
+    "yes": "हय",
+    "no": "ना",
+    "ok": "बरें",
+    "view": "पळयात",
+    "open": "उगडात",
+    "call": "फोन करात",
+    "download": "डाउनलोड",
+    "upload": "अपलोड",
+    "select": "वेंचात",
+    "change": "बदलात",
+    "addCustom": "तुमचें जोडात",
+    "skip": "सोडात"
+  },
+  "time": {
+    "today": "आयज",
+    "tomorrow": "फाल्यां",
+    "yesterday": "काल",
+    "thisWeek": "ह्या सप्तकांत",
+    "minutes": "{{count}} मिनीट",
+    "minutes_other": "{{count}} मिनीटां"
+  },
+  "roles": {
+    "platform_admin": "प्लॅटफॉर्म ॲडमिन",
+    "school_admin": "शाळा ॲडमिन",
+    "coordinator": "समन्वयक",
+    "therapist": "थेरपिस्ट",
+    "parent": "पालक"
+  },
+  "trend": {
+    "up": "सुदारणा जाता",
+    "flat": "थीर",
+    "down": "उणें जाता"
+  },
+  "change": {
+    "better": "फाटल्या खेपे परस बरें",
+    "same": "सुमार तशेंच",
+    "harder": "ह्या खेपे इल्लें कठीण"
+  },
+  "changeShort": {
+    "better": "बरें",
+    "same": "थीर",
+    "harder": "कठीण"
+  },
+  "status": {
+    "confirmed": "निश्चित",
+    "rescheduled": "वेळ बदलली",
+    "substitute": "बदली थेरपिस्ट",
+    "cancelled": "रद्द",
+    "completed": "पूर्ण",
+    "absent": "गैरहाजीर",
+    "makeup": "भरपाय सत्र"
+  },
+  "logState": {
+    "upcoming": "फुडलें",
+    "in_progress": "चालू आसा",
+    "logged": "नोंद जाली",
+    "not_logged": "नोंद जावंक ना"
+  },
+  "sync": {
+    "synced": "सगळे बदल सेव जाले",
+    "pending": "{{count}} सिंक जावपाचो उरला",
+    "pending_other": "{{count}} सिंक जावपाचे उरल्यात",
+    "syncing": "सिंक जाता…"
+  },
+  "states": {
+    "loading": "लोड जाता…",
+    "errorTitle": "कितें तरी चुकलें",
+    "emptyTitle": "हांगा अजून कांयच ना"
+  },
+  "a11y": {
+    "back": "फाटीं वचात",
+    "close": "बंद करात",
+    "selected": "वेंचलां",
+    "notSelected": "वेंचूंक ना"
+  },
+  "demoBadge": "डेमो",
+  "required": "गरजेचें",
+  "optional": "पर्यायी",
+  "tabs": {
+    "home": "घर",
+    "calendar": "कॅलेंडर",
+    "myChild": "म्हजें भुरगें",
+    "practice": "सराव",
+    "more": "आनीक",
+    "today": "आयज",
+    "caseload": "भुरगीं",
+    "reviews": "तपासणी",
+    "dashboard": "डॅशबोर्ड",
+    "schedule": "वेळापत्रक",
+    "people": "लोक",
+    "reports": "अहवाल",
+    "schools": "शाळा",
+    "templates": "नमुने"
+  },
+  "age": {
+    "years": "{{count}} वर्स",
+    "years_other": "{{count}} वर्सां",
+    "months": "{{count}} म्हयनो",
+    "months_other": "{{count}} म्हयने",
+    "yearsMonths": "{{years}} वर्सां {{months}} म्हयने"
+  }
+}

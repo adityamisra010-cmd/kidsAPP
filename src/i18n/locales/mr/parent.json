@@ -1,0 +1,47 @@
+{
+  "_review": "TODO: machine-drafted, needs review by a native speaker",
+  "home": {
+    "greeting": {
+      "morning": "सुप्रभात, {{name}}",
+      "afternoon": "नमस्कार, {{name}}",
+      "evening": "शुभ संध्याकाळ, {{name}}"
+    },
+    "noChild": {
+      "title": "अजून कोणतेही मूल जोडलेले नाही",
+      "body": "या फोन नंबरशी तुमचे मूल जोडायला शाळेला सांगा. मग त्याची सत्रे इथे दिसतील."
+    },
+    "next": {
+      "title": "पुढचे सत्र",
+      "titleFor": "{{name}} चे पुढचे सत्र",
+      "seeCalendar": "कॅलेंडर पहा",
+      "emptyTitle": "अजून कोणतेही सत्र ठरलेले नाही",
+      "emptyBody": "शाळा पुढचे सत्र ठरवेल तेव्हा दिवस आणि वेळ इथे दिसेल."
+    },
+    "latest": {
+      "title": "मागचे सत्र",
+      "all": "सर्व सत्रे",
+      "emptyTitle": "अजून सत्राची नोंद नाही",
+      "emptyBody": "प्रत्येक सत्रानंतर थेरपिस्टची छोटी नोंद इथे दिसेल."
+    },
+    "practice": {
+      "title": "या आठवड्याचा सराव",
+      "open": "उघडा",
+      "emptyTitle": "या आठवड्यात सराव नाही",
+      "emptyBody": "थेरपिस्ट घरचा उपक्रम देतील तेव्हा तो सोप्या पायऱ्यांसह इथे दिसेल."
+    },
+    "announcements": {
+      "title": "शाळेकडून",
+      "all": "सर्व पहा"
+    },
+    "links": {
+      "title": "झटपट लिंक",
+      "messages": "संदेश",
+      "resources": "साहित्य",
+      "contact": "शाळेशी संपर्क"
+    },
+    "checkinMore": {
+      "title": "{{name}} साठीही चेक-इन करा",
+      "subtitle": "{{time}} वाजता {{therapy}}"
+    }
+  }
+}

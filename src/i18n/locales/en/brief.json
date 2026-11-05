@@ -1,0 +1,72 @@
+{
+  "title": "Handover brief",
+  "subtitle": "{{therapy}} · {{time}}",
+  "substitute": "You are covering",
+  "newToChild": "New to you",
+  "years": "{{age}}",
+  "communication": "Communication",
+  "tools": "Uses",
+  "alerts": "Needs attention",
+  "plan": {
+    "title": "Plan for this session",
+    "by": "From {{name}} · {{date}}",
+    "goals": "Goals to target",
+    "empty": "No plan was written after the last session. Start with the active goals below."
+  },
+  "dos": "Do",
+  "donts": "Don't",
+  "doA11y": "Do: {{rule}}",
+  "dontA11y": "Don't: {{rule}}",
+  "noRules": "No do or don't rules written yet.",
+  "reinforcers": "Motivated by",
+  "triggers": "Watch out for",
+  "calming": "What calms",
+  "none": "Nothing noted yet",
+  "allergies": "Allergies",
+  "goals": {
+    "title": "Active goals",
+    "empty": "No active goals for this therapy yet.",
+    "last": "Last time {{value}}%",
+    "noData": "Not tracked yet",
+    "masterySuggested": "Mastery reached",
+    "planned": "Planned today"
+  },
+  "goalStatus": {
+    "not_started": "Not started",
+    "emerging": "Emerging",
+    "progressing": "Progressing",
+    "mastered": "Mastered",
+    "maintenance": "Maintenance",
+    "paused": "Paused"
+  },
+  "recent": {
+    "title": "Last 3 sessions",
+    "empty": "No sessions logged yet for this therapy.",
+    "scoreA11y": "Session score {{score}}",
+    "rowA11y": "{{date}}, {{therapist}}, score {{score}}. {{dims}}",
+    "sub": "Sub"
+  },
+  "worked": "What worked",
+  "didnt": "What didn't work",
+  "nothingYet": "Nothing recorded yet",
+  "checkin": {
+    "none": "No check-in from the parent today."
+  },
+  "home": {
+    "title": "Home practice",
+    "empty": "No home tasks right now.",
+    "perWeek": "{{count}}× a week",
+    "latestFeedback": "Latest from home",
+    "outcome": { "done": "Done", "partly": "Partly done", "could_not": "Couldn't do" },
+    "difficulty": { "easy": "Easy", "ok": "OK", "hard": "Hard" },
+    "useInSession": "Flagged to use in this session"
+  },
+  "footer": {
+    "acknowledge": "I've read this",
+    "acknowledged": "Thank you. You can log the session now.",
+    "mustRead": "Please read this brief before the session. Logging opens after you confirm.",
+    "log": "Log session",
+    "viewLog": "View session log"
+  },
+  "fullProfile": "Open full profile"
+}

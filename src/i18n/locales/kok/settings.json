@@ -1,0 +1,157 @@
+{
+  "_review": "TODO: machine-drafted, needs review by a native speaker",
+  "more": {
+    "title": "आनीक",
+    "sections": {
+      "family": "तुमच्या कुटुंबाखातीर",
+      "work": "काम",
+      "school": "शाळा",
+      "schoolSettings": "शाळेच्यो सेटिंग्ज",
+      "platform": "प्लॅटफॉर्म",
+      "me": "तुमी",
+      "help": "मदत आनी खाजगीपण"
+    },
+    "items": {
+      "messages": "संदेश",
+      "resources": "साहित्य",
+      "notifications": "सुचोवण्यो",
+      "availability": "उपलब्धताय आनी रजा",
+      "language": "भास",
+      "privacy": "सम्मती आनी खाजगीपण",
+      "contact": "शाळेकडेन संपर्क",
+      "notificationSettings": "सुचोवणेच्यो सेटिंग्ज",
+      "profile": "प्रोफायल",
+      "switchChild": "भुरगें बदलात",
+      "switchRole": "भुमिका वा शाळा बदलात",
+      "about": "विशीं",
+      "announcements": "घोशणां",
+      "alerts": "शिटकावण्यो",
+      "substitutions": "बदली वेवस्था",
+      "reschedule": "वेळ बदलपाच्यो विनंत्यो",
+      "import": "Excel सावन आयात",
+      "schoolSettings": "शाळेच्यो सेटिंग्ज",
+      "therapyTypes": "थेरपीचे प्रकार",
+      "dataRequests": "म्हायतीच्यो विनंत्यो",
+      "templates": "नमुने",
+      "settings": "सेटिंग्ज"
+    },
+    "hints": {
+      "profile": "नांव, ईमेल आनी फोन",
+      "switchRole": "सद्या: {{role}}",
+      "settings": "भास, दिसणें, ॲप आवृत्ती"
+    },
+    "viewOnly": "फकत पळोवंक",
+    "signOut": "सायन आउट",
+    "allSchools": "सगळ्यो शाळा"
+  },
+  "signOut": {
+    "title": "सायन आउट करचें?",
+    "confirm": "सायन आउट"
+  },
+  "language": {
+    "title": "भास",
+    "search": "भास सोदात",
+    "restartConfirm": "आतांच परत सुरू करात"
+  },
+  "profile": {
+    "sectionProfile": "तुमचो तपशील",
+    "name": "पुराय नांव",
+    "nameRequired": "उपकार करून तुमचें नांव बरयात.",
+    "email": "ईमेल",
+    "phone": "मोबायल नंबर",
+    "phoneLocked": "नंबर बदलपाक शाळेक सांगात.",
+    "save": "तपशील सेव करात",
+    "saved": "तुमचो तपशील सेव जालो.",
+    "sectionApp": "ॲप सेटिंग्ज",
+    "language": "भास",
+    "theme": "दिसणें",
+    "themeSystem": "फोनाची सेटिंग",
+    "themeLight": "फिकट",
+    "themeDark": "गाड",
+    "version": "ॲप आवृत्ती",
+    "versionValue": "{{version}} (बिल्ड {{build}})"
+  },
+  "notifications": {
+    "title": "सुचोवणेच्यो सेटिंग्ज",
+    "groups": {
+      "schedule": "वेळापत्रक",
+      "sessions": "सत्रां",
+      "practice": "घरचो सराव",
+      "messages": "संदेश",
+      "announcements": "घोशणां"
+    },
+    "kinds": {
+      "new_message": "नवे संदेश",
+      "announcement": "शाळेच्यो घोशणां"
+    },
+    "turnOn": "सुचोवण्यो सुरू करात",
+    "openSettings": "फोनाच्यो सेटिंग्ज उगडात"
+  },
+  "privacy": {
+    "title": "सम्मती आनी खाजगीपण",
+    "withdrawConfirm": "बंद करात",
+    "sendRequest": "विनंती धाडात"
+  },
+  "contact": {
+    "title": "शाळेकडेन संपर्क",
+    "address": "पत्तो",
+    "phone": "फोन",
+    "call": "फोन करात",
+    "email": "ईमेल",
+    "write": "बरयात",
+    "hoursLabel": "कामाचीं वरां",
+    "message": "संदेश उगडात",
+    "supportTitle": "मदत जाय?",
+    "supportBody": "आमकां बरयात, आमी जाप दितले."
+  },
+  "about": {
+    "title": "विशीं",
+    "version": "आवृत्ती {{version}}",
+    "versionBuild": "आवृत्ती {{version}} (बिल्ड {{build}})",
+    "madeFor": "भारतांतल्या शाळांखातीर तयार केलां",
+    "privacy": "खाजगीपण धोरण",
+    "support": "मदतीखातीर संपर्क",
+    "demoMode": "डेमो मोड, नमुनो म्हायती"
+  },
+  "switch": {
+    "title": "भुमिका वा शाळा बदलात",
+    "titleChild": "भुरगें बदलात",
+    "roles": "भुमिका आनी शाळा",
+    "children": "भुरगीं",
+    "current": "सद्याचें"
+  },
+  "push": {
+    "today": "आयज",
+    "tomorrow": "फाल्यां",
+    "agenda": {
+      "title_one": "आयज: {{count}} सत्र",
+      "title_other": "आयज: {{count}} सत्रां"
+    },
+    "channels": {
+      "messages": "संदेश"
+    },
+    "sheet": {
+      "allow": "सुचोवण्यो सुरू करात",
+      "notNow": "आतां न्हय"
+    }
+  },
+  "app": {
+    "title": "सेटिंग्ज",
+    "sectionGeneral": "सामान्य",
+    "language": "भास",
+    "appearance": "दिसणें",
+    "sectionAbout": "ह्या ॲपा विशीं",
+    "version": "आवृत्ती",
+    "build": "बिल्ड",
+    "data": "म्हायती",
+    "school": "शाळा",
+    "device": "उपकरण",
+    "appLanguage": "ॲपाची भास",
+    "sync": "सिंक",
+    "synced": "सगळे बदल सेव जाले",
+    "pending": "{{count}} सिंक जावपाचो उरला",
+    "pending_other": "{{count}} सिंक जावपाचे उरल्यात",
+    "privacy": "खाजगीपण धोरण",
+    "support": "मदतीखातीर संपर्क"
+  }
+}

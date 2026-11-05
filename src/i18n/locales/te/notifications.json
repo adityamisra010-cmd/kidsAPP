@@ -1,0 +1,18 @@
+{
+  "_review": "TODO: machine-drafted, needs review by a native speaker",
+  "bell": "అప్‌డేట్లు",
+  "title": "అప్‌డేట్లు",
+  "markAll": "అన్నీ చదివినట్లు",
+  "markedAll": "అన్ని అప్‌డేట్లు చదివినట్లు గుర్తించాం",
+  "unread": "చదవనివి",
+  "unreadCount": "{{count}} చదవనిది",
+  "unreadCount_other": "{{count}} చదవనివి",
+  "groups": {
+    "today": "ఈ రోజు",
+    "earlier": "ఇంతకు ముందు"
+  },
+  "empty": {
+    "title": "అన్నీ చూశారు",
+    "body": "సెషన్ రిమైండర్లు, షెడ్యూల్ మార్పులు, పాఠశాల సందేశాలు ఇక్కడ కనిపిస్తాయి."
+  }
+}

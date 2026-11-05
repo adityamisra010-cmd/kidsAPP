@@ -1,0 +1,48 @@
+{
+  "today": {
+    "greeting": {
+      "morning": "Good morning, {{name}}",
+      "afternoon": "Good afternoon, {{name}}",
+      "evening": "Good evening, {{name}}"
+    },
+    "title": "Today · {{date}}",
+    "tiles": {
+      "reviews": "Reviews waiting",
+      "reviewsHint": "Opens parent logs and videos to review",
+      "messages": "Unread messages",
+      "messagesHint": "Opens messages",
+      "unlogged": "Not logged",
+      "unloggedHint": "Shows only sessions still to log. Tap again to show all."
+    },
+    "progress": "{{logged}} of {{total}} sessions logged today",
+    "filterActive": "Showing sessions still to log",
+    "showAll": "Show all",
+    "agenda": "Your sessions",
+    "agendaHint": "Read the brief, run the session, then log it.",
+    "now": "Now",
+    "upNext": "Up next",
+    "room": "{{room}}",
+    "substitute": "Substitute",
+    "briefRequired": "Brief required",
+    "briefRead": "Brief read",
+    "checkinReceived": "Check-in received",
+    "coveringFor": "Covering for {{name}}",
+    "brief": "Brief",
+    "log": "Log",
+    "viewLog": "View log",
+    "readBriefFirst": "Read the brief first",
+    "empty": {
+      "title": "No sessions today",
+      "body": "Your calendar shows what's coming up next.",
+      "action": "Open calendar"
+    },
+    "allLogged": {
+      "title": "Everything is logged",
+      "body": "No sessions are waiting to be logged."
+    },
+    "earlier": {
+      "title": "Earlier days",
+      "subtitle": "Attended but not logged yet. Logs lock {{hours}} hours after the session."
+    }
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "_review": "TODO: machine-drafted, needs review by a native speaker",
+  "home": {
+    "greeting": {
+      "morning": "नमस्ते, {{name}}",
+      "afternoon": "नमस्ते, {{name}}",
+      "evening": "नमस्ते, {{name}}"
+    },
+    "practice": {
+      "open": "खोलो"
+    },
+    "announcements": {
+      "all": "सारे दिक्खो"
+    },
+    "links": {
+      "messages": "सनेहे"
+    }
+  }
+}

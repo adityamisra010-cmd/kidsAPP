@@ -1,0 +1,122 @@
+{
+  "_review": "TODO: machine-drafted, needs review by a native speaker",
+  "commTools": {
+    "speech": "ਬੋਲ ਕੇ",
+    "sign": "ਸੰਕੇਤਕ ਭਾਸ਼ਾ",
+    "pecs": "PECS (ਤਸਵੀਰ ਕਾਰਡ)",
+    "aac_device": "AAC ਉਪਕਰਣ",
+    "gestures": "ਇਸ਼ਾਰੇ",
+    "pointing": "ਉਂਗਲ ਨਾਲ ਇਸ਼ਾਰਾ",
+    "visual_schedule": "ਤਸਵੀਰ ਸਮਾਂ-ਸਾਰਣੀ"
+  },
+  "commModes": {
+    "verbal": "ਬੋਲਦਾ ਹੈ",
+    "limited_verbal": "ਕੁਝ ਸ਼ਬਦ",
+    "non_verbal": "ਨਹੀਂ ਬੋਲਦਾ"
+  },
+  "reinforcers": {
+    "bubbles": "ਬੁਲਬੁਲੇ",
+    "music": "ਸੰਗੀਤ",
+    "songs": "ਗੀਤ",
+    "favourite_toy": "ਮਨਪਸੰਦ ਖਿਡੌਣਾ",
+    "tablet_time": "ਟੈਬਲੈੱਟ ਦਾ ਸਮਾਂ",
+    "praise": "ਸ਼ਾਬਾਸ਼",
+    "high_five": "ਹਾਈ ਫਾਈਵ",
+    "stickers": "ਸਟਿੱਕਰ",
+    "swing": "ਝੂਟਾ",
+    "snack": "ਥੋੜ੍ਹਾ ਨਾਸ਼ਤਾ",
+    "cars": "ਖਿਡੌਣਾ ਗੱਡੀਆਂ",
+    "blocks": "ਬਲਾਕ",
+    "tickles": "ਕੁਤਕੁਤਾਰੀਆਂ",
+    "books": "ਤਸਵੀਰਾਂ ਵਾਲੀਆਂ ਕਿਤਾਬਾਂ"
+  },
+  "triggers": {
+    "loud_sounds": "ਉੱਚੀਆਂ ਆਵਾਜ਼ਾਂ",
+    "transitions": "ਇੱਕ ਕੰਮ ਤੋਂ ਦੂਜੇ ਕੰਮ 'ਤੇ ਜਾਣਾ",
+    "waiting": "ਉਡੀਕ ਕਰਨਾ",
+    "textures": "ਕੁਝ ਤਰ੍ਹਾਂ ਦੀ ਛੋਹ",
+    "crowds": "ਭੀੜ",
+    "bright_lights": "ਤੇਜ਼ ਰੌਸ਼ਨੀ",
+    "being_touched": "ਬਿਨਾਂ ਦੱਸੇ ਛੂਹਣਾ",
+    "change_in_routine": "ਰੋਜ਼ਾਨਾ ਰੁਟੀਨ ਵਿੱਚ ਤਬਦੀਲੀ",
+    "hunger": "ਭੁੱਖ",
+    "tiredness": "ਥਕਾਵਟ",
+    "no_answer": "‘ਨਹੀਂ’ ਸੁਣਨਾ"
+  },
+  "calming": {
+    "deep_pressure": "ਡੂੰਘਾ ਦਬਾਅ",
+    "quiet_corner": "ਸ਼ਾਂਤ ਕੋਨਾ",
+    "counting": "ਮਿਲ ਕੇ ਗਿਣਨਾ",
+    "favourite_song": "ਮਨਪਸੰਦ ਗੀਤ",
+    "weighted_blanket": "ਭਾਰੀ ਕੰਬਲ",
+    "swinging": "ਝੂਲਣਾ",
+    "breathing": "ਹੌਲੀ ਸਾਹ",
+    "visual_timer": "ਤਸਵੀਰ ਟਾਈਮਰ",
+    "fidget": "ਫਿਜੇਟ ਖਿਡੌਣਾ",
+    "water_break": "ਪਾਣੀ ਦੀ ਬ੍ਰੇਕ"
+  },
+  "antecedents": {
+    "transition": "ਕੰਮ ਦੀ ਤਬਦੀਲੀ",
+    "demand": "ਕੰਮ ਦੀ ਮੰਗ",
+    "sensory": "ਇੰਦਰੀਆਂ ਨਾਲ ਸਬੰਧਤ",
+    "waiting": "ਉਡੀਕ",
+    "denied_item": "ਮਨਚਾਹੀ ਚੀਜ਼ ਨਾ ਮਿਲਣਾ",
+    "peer": "ਹੋਰ ਬੱਚਾ",
+    "unknown": "ਸਪਸ਼ਟ ਨਹੀਂ"
+  },
+  "worked": {
+    "visual_schedule": "ਤਸਵੀਰ ਸਮਾਂ-ਸਾਰਣੀ",
+    "first_then": "ਪਹਿਲਾਂ–ਫਿਰ ਬੋਰਡ",
+    "timer": "ਟਾਈਮਰ",
+    "movement_break": "ਹਿੱਲਣ-ਜੁੱਲਣ ਦੀ ਬ੍ਰੇਕ",
+    "reinforcer_choice": "ਇਨਾਮ ਦੀ ਚੋਣ",
+    "modelling": "ਕਰਕੇ ਵਿਖਾਉਣਾ",
+    "short_tasks": "ਛੋਟੇ ਕੰਮ",
+    "quiet_room": "ਸ਼ਾਂਤ ਕਮਰਾ",
+    "parent_present": "ਮਾਪੇ ਨਾਲ",
+    "song_cue": "ਗੀਤ ਦਾ ਸੰਕੇਤ",
+    "hand_over_hand": "ਹੱਥ ਫੜ ਕੇ ਕਰਵਾਉਣਾ",
+    "choice_of_two": "ਦੋ ਵਿੱਚੋਂ ਚੋਣ"
+  },
+  "notWorked": {
+    "long_tasks": "ਲੰਬੇ ਕੰਮ",
+    "noisy_room": "ਰੌਲੇ ਵਾਲਾ ਕਮਰਾ",
+    "verbal_only_instructions": "ਸਿਰਫ਼ ਬੋਲ ਕੇ ਹਦਾਇਤਾਂ",
+    "waiting_turns": "ਵਾਰੀ ਦੀ ਉਡੀਕ",
+    "new_material": "ਨਵੀਂ ਸਮੱਗਰੀ",
+    "tablet_reinforcer": "ਇਨਾਮ ਵਜੋਂ ਟੈਬਲੈੱਟ",
+    "group_activity": "ਸਮੂਹ ਗਤੀਵਿਧੀ",
+    "touch_prompts": "ਛੋਹ ਨਾਲ ਸੰਕੇਤ"
+  },
+  "incidents": {
+    "meltdown": "ਬਹੁਤ ਜ਼ਿਆਦਾ ਪਰੇਸ਼ਾਨੀ",
+    "aggression": "ਹਮਲਾਵਰਤਾ",
+    "self_injury": "ਆਪਣੇ-ਆਪ ਨੂੰ ਸੱਟ",
+    "elopement": "ਭੱਜ ਜਾਣਾ",
+    "refusal": "ਇਨਕਾਰ",
+    "other": "ਹੋਰ"
+  },
+  "domains": {
+    "communication": "ਗੱਲਬਾਤ",
+    "fine_motor": "ਹੱਥਾਂ ਦੇ ਬਾਰੀਕ ਕੰਮ",
+    "gross_motor": "ਸਰੀਰ ਦੀਆਂ ਵੱਡੀਆਂ ਹਰਕਤਾਂ",
+    "self_care": "ਆਪਣੀ ਦੇਖਭਾਲ",
+    "social": "ਦੂਜਿਆਂ ਨਾਲ ਮਿਲਣਾ-ਜੁਲਣਾ",
+    "behaviour": "ਵਿਵਹਾਰ",
+    "cognition": "ਸਿੱਖਣਾ ਅਤੇ ਸੋਚਣਾ",
+    "sensory": "ਇੰਦਰੀਆਂ ਦਾ ਸੰਤੁਲਨ"
+  },
+  "therapyTypes": {
+    "speech": "ਸਪੀਚ ਥੈਰੇਪੀ",
+    "occupational": "ਆਕੂਪੇਸ਼ਨਲ ਥੈਰੇਪੀ",
+    "behaviour": "ਬਿਹੇਵੀਅਰ ਥੈਰੇਪੀ (ABA)",
+    "special_ed": "ਵਿਸ਼ੇਸ਼ ਸਿੱਖਿਆ",
+    "physio": "ਫਿਜ਼ੀਓਥੈਰੇਪੀ",
+    "audiology": "ਸੁਣਨ ਸਬੰਧੀ ਸਹਾਇਤਾ"
+  },
+  "regulation": {
+    "under": "ਘੱਟ ਊਰਜਾ",
+    "regulated": "ਸੰਤੁਲਿਤ",
+    "over": "ਜ਼ਿਆਦਾ ਜੋਸ਼"
+  }
+}

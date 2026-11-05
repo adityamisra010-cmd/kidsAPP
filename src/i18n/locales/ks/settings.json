@@ -1,0 +1,28 @@
+{
+  "_review": "TODO: machine-drafted, needs review by a native speaker",
+  "more": {
+    "sections": {
+      "school": "سکول"
+    },
+    "items": {
+      "language": "زبان"
+    }
+  },
+  "language": {
+    "title": "زبان"
+  },
+  "profile": {
+    "language": "زبان"
+  },
+  "switch": {
+    "children": "شُری"
+  },
+  "push": {
+    "today": "اَز",
+    "tomorrow": "پگاہ"
+  },
+  "app": {
+    "language": "زبان",
+    "school": "سکول"
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "_review": "TODO: machine-drafted, needs review by a native speaker",
+  "actions": {
+    "yes": "नंगौ",
+    "no": "नङा"
+  },
+  "time": {
+    "today": "दिनै",
+    "tomorrow": "गाबोन",
+    "yesterday": "मैया",
+    "minutes": "{{count}} मिनिट",
+    "minutes_other": "{{count}} मिनिट"
+  },
+  "tabs": {
+    "myChild": "आंनि गथ'",
+    "today": "दिनै",
+    "caseload": "गथ'फोर",
+    "people": "सुबुंफोर",
+    "schools": "फरायसालिफोर"
+  },
+  "age": {
+    "years": "{{count}} बोसोर",
+    "years_other": "{{count}} बोसोर",
+    "months": "{{count}} दान",
+    "months_other": "{{count}} दान",
+    "yearsMonths": "{{years}} बोसोर {{months}} दान"
+  }
+}

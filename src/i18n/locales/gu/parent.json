@@ -1,0 +1,47 @@
+{
+  "_review": "TODO: machine-drafted, needs review by a native speaker",
+  "home": {
+    "greeting": {
+      "morning": "સુપ્રભાત, {{name}}",
+      "afternoon": "નમસ્તે, {{name}}",
+      "evening": "શુભ સાંજ, {{name}}"
+    },
+    "noChild": {
+      "title": "હજી કોઈ બાળક જોડાયેલું નથી",
+      "body": "આ ફોન નંબર સાથે તમારું બાળક જોડવા શાળાને કહો. પછી તેનાં સત્રો અહીં દેખાશે."
+    },
+    "next": {
+      "title": "આગલું સત્ર",
+      "titleFor": "{{name}} નું આગલું સત્ર",
+      "seeCalendar": "કૅલેન્ડર જુઓ",
+      "emptyTitle": "હજી કોઈ સત્ર નક્કી નથી",
+      "emptyBody": "શાળા આગલું સત્ર નક્કી કરશે ત્યારે દિવસ અને સમય અહીં દેખાશે."
+    },
+    "latest": {
+      "title": "છેલ્લું સત્ર",
+      "all": "બધાં સત્રો",
+      "emptyTitle": "હજી સત્રની નોંધ નથી",
+      "emptyBody": "દરેક સત્ર પછી થેરાપિસ્ટની ટૂંકી નોંધ અહીં દેખાશે."
+    },
+    "practice": {
+      "title": "આ અઠવાડિયાનો અભ્યાસ",
+      "open": "ખોલો",
+      "emptyTitle": "આ અઠવાડિયે અભ્યાસ નથી",
+      "emptyBody": "થેરાપિસ્ટ ઘરની પ્રવૃત્તિ આપશે ત્યારે તે સરળ પગલાં સાથે અહીં દેખાશે."
+    },
+    "announcements": {
+      "title": "શાળા તરફથી",
+      "all": "બધું જુઓ"
+    },
+    "links": {
+      "title": "ઝડપી લિંક",
+      "messages": "સંદેશા",
+      "resources": "સામગ્રી",
+      "contact": "શાળાનો સંપર્ક"
+    },
+    "checkinMore": {
+      "title": "{{name}} માટે પણ નોંધ કરો",
+      "subtitle": "{{time}} વાગ્યે {{therapy}}"
+    }
+  }
+}

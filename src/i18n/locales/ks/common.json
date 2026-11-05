@@ -1,0 +1,27 @@
+{
+  "_review": "TODO: machine-drafted, needs review by a native speaker",
+  "actions": {
+    "yes": "آ",
+    "no": "نہ"
+  },
+  "time": {
+    "today": "اَز",
+    "tomorrow": "پگاہ",
+    "yesterday": "راتھ",
+    "minutes": "{{count}} مِنَٹ",
+    "minutes_other": "{{count}} مِنَٹ"
+  },
+  "tabs": {
+    "myChild": "میون شُر",
+    "today": "اَز",
+    "caseload": "شُری",
+    "schools": "سکول"
+  },
+  "age": {
+    "years": "{{count}} ؤری",
+    "years_other": "{{count}} ؤری",
+    "months": "{{count}} رؠتھ",
+    "months_other": "{{count}} رؠتھ",
+    "yearsMonths": "{{years}} ؤری {{months}} رؠتھ"
+  }
+}

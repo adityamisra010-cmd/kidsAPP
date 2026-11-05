@@ -1,0 +1,47 @@
+{
+  "_review": "TODO: machine-drafted, needs review by a native speaker",
+  "home": {
+    "greeting": {
+      "morning": "ਸ਼ੁਭ ਸਵੇਰ, {{name}}",
+      "afternoon": "ਸਤਿ ਸ੍ਰੀ ਅਕਾਲ, {{name}}",
+      "evening": "ਸ਼ੁਭ ਸ਼ਾਮ, {{name}}"
+    },
+    "noChild": {
+      "title": "ਅਜੇ ਕੋਈ ਬੱਚਾ ਜੁੜਿਆ ਨਹੀਂ",
+      "body": "ਸਕੂਲ ਨੂੰ ਆਪਣੇ ਬੱਚੇ ਨੂੰ ਇਸ ਫ਼ੋਨ ਨੰਬਰ ਨਾਲ ਜੋੜਨ ਲਈ ਕਹੋ। ਫਿਰ ਸੈਸ਼ਨ ਇੱਥੇ ਦਿਸਣਗੇ।"
+    },
+    "next": {
+      "title": "ਅਗਲਾ ਸੈਸ਼ਨ",
+      "titleFor": "{{name}} ਦਾ ਅਗਲਾ ਸੈਸ਼ਨ",
+      "seeCalendar": "ਕੈਲੰਡਰ ਵੇਖੋ",
+      "emptyTitle": "ਅਜੇ ਕੋਈ ਸੈਸ਼ਨ ਤੈਅ ਨਹੀਂ",
+      "emptyBody": "ਜਦੋਂ ਸਕੂਲ ਅਗਲਾ ਸੈਸ਼ਨ ਤੈਅ ਕਰੇਗਾ ਤਾਂ ਦਿਨ ਅਤੇ ਸਮਾਂ ਇੱਥੇ ਦਿਸੇਗਾ।"
+    },
+    "latest": {
+      "title": "ਪਿਛਲਾ ਸੈਸ਼ਨ",
+      "all": "ਸਾਰੇ ਸੈਸ਼ਨ",
+      "emptyTitle": "ਅਜੇ ਸੈਸ਼ਨ ਨੋਟਸ ਨਹੀਂ",
+      "emptyBody": "ਹਰ ਸੈਸ਼ਨ ਤੋਂ ਬਾਅਦ ਥੈਰੇਪਿਸਟ ਦਾ ਛੋਟਾ ਨੋਟ ਇੱਥੇ ਦਿਸੇਗਾ।"
+    },
+    "practice": {
+      "title": "ਇਸ ਹਫ਼ਤੇ ਦਾ ਅਭਿਆਸ",
+      "open": "ਖੋਲ੍ਹੋ",
+      "emptyTitle": "ਇਸ ਹਫ਼ਤੇ ਕੋਈ ਅਭਿਆਸ ਨਹੀਂ",
+      "emptyBody": "ਜਦੋਂ ਥੈਰੇਪਿਸਟ ਘਰ ਦੀ ਗਤੀਵਿਧੀ ਦੇਵੇਗਾ ਤਾਂ ਉਹ ਸੌਖੇ ਕਦਮਾਂ ਨਾਲ ਇੱਥੇ ਦਿਸੇਗੀ।"
+    },
+    "announcements": {
+      "title": "ਸਕੂਲ ਵੱਲੋਂ",
+      "all": "ਸਭ ਵੇਖੋ"
+    },
+    "links": {
+      "title": "ਤੇਜ਼ ਲਿੰਕ",
+      "messages": "ਸੁਨੇਹੇ",
+      "resources": "ਸਮੱਗਰੀ",
+      "contact": "ਸਕੂਲ ਨਾਲ ਸੰਪਰਕ"
+    },
+    "checkinMore": {
+      "title": "{{name}} ਲਈ ਵੀ ਦਰਜ ਕਰੋ",
+      "subtitle": "{{time}} ਵਜੇ {{therapy}}"
+    }
+  }
+}

@@ -1,0 +1,122 @@
+{
+  "_review": "TODO: machine-drafted, needs review by a native speaker",
+  "commTools": {
+    "speech": "பேச்சு மூலம்",
+    "sign": "சைகை மொழி",
+    "pecs": "PECS (பட அட்டைகள்)",
+    "aac_device": "AAC சாதனம்",
+    "gestures": "சைகைகள்",
+    "pointing": "சுட்டிக்காட்டுதல்",
+    "visual_schedule": "பட அட்டவணை"
+  },
+  "commModes": {
+    "verbal": "பேசுவார்",
+    "limited_verbal": "சில வார்த்தைகள்",
+    "non_verbal": "பேசமாட்டார்"
+  },
+  "reinforcers": {
+    "bubbles": "குமிழிகள்",
+    "music": "இசை",
+    "songs": "பாடல்கள்",
+    "favourite_toy": "பிடித்த பொம்மை",
+    "tablet_time": "டேப்லெட் நேரம்",
+    "praise": "பாராட்டு",
+    "high_five": "ஹை ஃபைவ்",
+    "stickers": "ஸ்டிக்கர்கள்",
+    "swing": "ஊஞ்சல்",
+    "snack": "சிறு தின்பண்டம்",
+    "cars": "பொம்மைக் கார்கள்",
+    "blocks": "கட்டைகள்",
+    "tickles": "கிச்சுகிச்சு",
+    "books": "படப் புத்தகங்கள்"
+  },
+  "triggers": {
+    "loud_sounds": "பெரிய சத்தங்கள்",
+    "transitions": "ஒரு செயலிலிருந்து மற்றொன்றுக்கு மாறுவது",
+    "waiting": "காத்திருப்பது",
+    "textures": "சில வகைத் தொடுதல்",
+    "crowds": "கூட்டம்",
+    "bright_lights": "கண்கூசும் வெளிச்சம்",
+    "being_touched": "சொல்லாமல் தொடுவது",
+    "change_in_routine": "வழக்கத்தில் மாற்றம்",
+    "hunger": "பசி",
+    "tiredness": "சோர்வு",
+    "no_answer": "‘வேண்டாம்’ எனக் கேட்பது"
+  },
+  "calming": {
+    "deep_pressure": "ஆழ்ந்த அழுத்தம்",
+    "quiet_corner": "அமைதியான மூலை",
+    "counting": "சேர்ந்து எண்ணுதல்",
+    "favourite_song": "பிடித்த பாடல்",
+    "weighted_blanket": "கனமான போர்வை",
+    "swinging": "ஆடுதல்",
+    "breathing": "மெதுவான மூச்சு",
+    "visual_timer": "பட டைமர்",
+    "fidget": "ஃபிட்ஜெட் பொம்மை",
+    "water_break": "தண்ணீர் இடைவேளை"
+  },
+  "antecedents": {
+    "transition": "செயல் மாற்றம்",
+    "demand": "வேலை கொடுப்பது",
+    "sensory": "புலன் சார்ந்தது",
+    "waiting": "காத்திருப்பது",
+    "denied_item": "வேண்டியது மறுக்கப்பட்டது",
+    "peer": "வேறொரு குழந்தை",
+    "unknown": "தெளிவில்லை"
+  },
+  "worked": {
+    "visual_schedule": "பட அட்டவணை",
+    "first_then": "முதலில்–பிறகு அட்டை",
+    "timer": "டைமர்",
+    "movement_break": "அசைவு இடைவேளை",
+    "reinforcer_choice": "பரிசுத் தேர்வு",
+    "modelling": "செய்து காட்டுதல்",
+    "short_tasks": "சிறு வேலைகள்",
+    "quiet_room": "அமைதியான அறை",
+    "parent_present": "பெற்றோர் அருகில்",
+    "song_cue": "பாடல் குறிப்பு",
+    "hand_over_hand": "கையைப் பிடித்துச் செய்வித்தல்",
+    "choice_of_two": "இரண்டில் ஒன்று தேர்வு"
+  },
+  "notWorked": {
+    "long_tasks": "நீண்ட வேலைகள்",
+    "noisy_room": "சத்தமான அறை",
+    "verbal_only_instructions": "வாய்மொழி அறிவுறுத்தல் மட்டும்",
+    "waiting_turns": "முறைக்காகக் காத்திருத்தல்",
+    "new_material": "புதிய பொருட்கள்",
+    "tablet_reinforcer": "பரிசாக டேப்லெட்",
+    "group_activity": "குழுச் செயல்பாடு",
+    "touch_prompts": "தொடு குறிப்புகள்"
+  },
+  "incidents": {
+    "meltdown": "கடும் உணர்ச்சி வெடிப்பு",
+    "aggression": "ஆக்ரோஷம்",
+    "self_injury": "தன்னைத் தானே காயப்படுத்துதல்",
+    "elopement": "ஓடிவிடுதல்",
+    "refusal": "மறுப்பு",
+    "other": "மற்றவை"
+  },
+  "domains": {
+    "communication": "தொடர்பாடல்",
+    "fine_motor": "கை நுண் இயக்கம்",
+    "gross_motor": "உடல் பெரும் இயக்கம்",
+    "self_care": "சுய பராமரிப்பு",
+    "social": "பிறருடன் பழகுதல்",
+    "behaviour": "நடத்தை",
+    "cognition": "கற்றலும் சிந்தனையும்",
+    "sensory": "புலன் சமநிலை"
+  },
+  "therapyTypes": {
+    "speech": "பேச்சு சிகிச்சை",
+    "occupational": "தொழில்சார் சிகிச்சை (OT)",
+    "behaviour": "நடத்தை சிகிச்சை (ABA)",
+    "special_ed": "சிறப்புக் கல்வி",
+    "physio": "இயன்முறை சிகிச்சை (பிசியோதெரபி)",
+    "audiology": "செவியியல் உதவி"
+  },
+  "regulation": {
+    "under": "குறைந்த ஆற்றல்",
+    "regulated": "சமநிலையில்",
+    "over": "அதிக உற்சாகம்"
+  }
+}

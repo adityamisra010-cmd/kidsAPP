@@ -1,0 +1,37 @@
+{
+  "_review": "TODO: machine-drafted, needs review by a native speaker",
+  "home": {
+    "greeting": {
+      "morning": "صبح بخير، {{name}}",
+      "afternoon": "آداب، {{name}}",
+      "evening": "شام بخير، {{name}}"
+    },
+    "next": {
+      "title": "ايندڙ سيشن",
+      "titleFor": "{{name}} جو ايندڙ سيشن",
+      "seeCalendar": "ڪئلينڊر ڏسو"
+    },
+    "latest": {
+      "title": "پويون سيشن",
+      "all": "سڀ سيشن"
+    },
+    "practice": {
+      "title": "هن هفتي جي مشق",
+      "open": "کوليو",
+      "emptyTitle": "هن هفتي ڪا مشق ناهي"
+    },
+    "announcements": {
+      "title": "اسڪول طرفان",
+      "all": "سڀ ڏسو"
+    },
+    "links": {
+      "title": "تڪڙا لنڪ",
+      "messages": "پيغام",
+      "resources": "مواد",
+      "contact": "اسڪول سان رابطو"
+    },
+    "checkinMore": {
+      "subtitle": "{{time}} وڳي {{therapy}}"
+    }
+  }
+}

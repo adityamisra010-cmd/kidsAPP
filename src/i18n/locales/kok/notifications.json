@@ -1,0 +1,16 @@
+{
+  "_review": "TODO: machine-drafted, needs review by a native speaker",
+  "bell": "अपडेट",
+  "title": "अपडेट",
+  "markAll": "सगळें वाचलें",
+  "unread": "वाचूंक नाशिल्लें",
+  "unreadCount": "{{count}} वाचूंक नाशिल्लें",
+  "unreadCount_other": "{{count}} वाचूंक नाशिल्लीं",
+  "groups": {
+    "today": "आयज",
+    "earlier": "आदलें"
+  },
+  "empty": {
+    "title": "सगळें पळयलें"
+  }
+}

@@ -1,0 +1,131 @@
+{
+  "_review": "TODO: machine-drafted, needs review by a native speaker",
+  "actions": {
+    "save": "ಉಳಿಸಿ",
+    "cancel": "ರದ್ದುಮಾಡಿ",
+    "done": "ಮುಗಿಯಿತು",
+    "next": "ಮುಂದೆ",
+    "back": "ಹಿಂದೆ",
+    "close": "ಮುಚ್ಚಿ",
+    "edit": "ಬದಲಿಸಿ",
+    "delete": "ಅಳಿಸಿ",
+    "retry": "ಮತ್ತೆ ಪ್ರಯತ್ನಿಸಿ",
+    "confirm": "ಖಚಿತಪಡಿಸಿ",
+    "continue": "ಮುಂದುವರಿಸಿ",
+    "seeAll": "ಎಲ್ಲವನ್ನೂ ನೋಡಿ",
+    "add": "ಸೇರಿಸಿ",
+    "remove": "ತೆಗೆದುಹಾಕಿ",
+    "send": "ಕಳುಹಿಸಿ",
+    "share": "ಹಂಚಿಕೊಳ್ಳಿ",
+    "search": "ಹುಡುಕಿ",
+    "filter": "ಫಿಲ್ಟರ್",
+    "apply": "ಅನ್ವಯಿಸಿ",
+    "clear": "ತೆರವುಗೊಳಿಸಿ",
+    "yes": "ಹೌದು",
+    "no": "ಇಲ್ಲ",
+    "ok": "ಸರಿ",
+    "view": "ನೋಡಿ",
+    "open": "ತೆರೆಯಿರಿ",
+    "call": "ಕರೆ ಮಾಡಿ",
+    "download": "ಡೌನ್‌ಲೋಡ್",
+    "upload": "ಅಪ್‌ಲೋಡ್",
+    "select": "ಆಯ್ಕೆಮಾಡಿ",
+    "change": "ಬದಲಾಯಿಸಿ",
+    "addCustom": "ನಿಮ್ಮದನ್ನು ಸೇರಿಸಿ",
+    "skip": "ಬಿಟ್ಟುಬಿಡಿ"
+  },
+  "time": {
+    "today": "ಇಂದು",
+    "tomorrow": "ನಾಳೆ",
+    "yesterday": "ನಿನ್ನೆ",
+    "thisWeek": "ಈ ವಾರ",
+    "minutes": "{{count}} ನಿಮಿಷ",
+    "minutes_other": "{{count}} ನಿಮಿಷಗಳು"
+  },
+  "roles": {
+    "platform_admin": "ಪ್ಲಾಟ್‌ಫಾರ್ಮ್ ಅಡ್ಮಿನ್",
+    "school_admin": "ಶಾಲಾ ಅಡ್ಮಿನ್",
+    "coordinator": "ಸಂಯೋಜಕರು",
+    "therapist": "ಥೆರಪಿಸ್ಟ್",
+    "parent": "ಪೋಷಕರು"
+  },
+  "trend": {
+    "up": "ಸುಧಾರಿಸುತ್ತಿದೆ",
+    "flat": "ಸ್ಥಿರವಾಗಿದೆ",
+    "down": "ಇಳಿಯುತ್ತಿದೆ"
+  },
+  "change": {
+    "better": "ಕಳೆದ ಬಾರಿಗಿಂತ ಉತ್ತಮ",
+    "same": "ಸುಮಾರು ಅಷ್ಟೇ",
+    "harder": "ಈ ಬಾರಿ ಸ್ವಲ್ಪ ಕಷ್ಟ"
+  },
+  "changeShort": {
+    "better": "ಚೆನ್ನಾಗಿದೆ",
+    "same": "ಸ್ಥಿರ",
+    "harder": "ಕಷ್ಟ"
+  },
+  "status": {
+    "confirmed": "ಖಚಿತವಾಗಿದೆ",
+    "rescheduled": "ಸಮಯ ಬದಲಾಗಿದೆ",
+    "substitute": "ಬದಲಿ ಥೆರಪಿಸ್ಟ್",
+    "cancelled": "ರದ್ದಾಗಿದೆ",
+    "completed": "ಪೂರ್ಣಗೊಂಡಿದೆ",
+    "absent": "ಗೈರುಹಾಜರು",
+    "makeup": "ಬದಲಿ ಅವಧಿ"
+  },
+  "logState": {
+    "upcoming": "ಮುಂಬರುವ",
+    "in_progress": "ನಡೆಯುತ್ತಿದೆ",
+    "logged": "ದಾಖಲಾಗಿದೆ",
+    "not_logged": "ದಾಖಲಾಗಿಲ್ಲ"
+  },
+  "sync": {
+    "synced": "ಎಲ್ಲಾ ಬದಲಾವಣೆಗಳು ಉಳಿದಿವೆ",
+    "pending": "{{count}} ಸಿಂಕ್ ಆಗಬೇಕಿದೆ",
+    "pending_other": "{{count}} ಸಿಂಕ್ ಆಗಬೇಕಿವೆ",
+    "syncing": "ಸಿಂಕ್ ಆಗುತ್ತಿದೆ…",
+    "offline": "ನೀವು ಆಫ್‌ಲೈನ್‌ನಲ್ಲಿದ್ದೀರಿ. ಬದಲಾವಣೆಗಳು ಈ ಫೋನ್‌ನಲ್ಲಿ ಉಳಿದಿವೆ, ನಂತರ ಸಿಂಕ್ ಆಗುತ್ತವೆ.",
+    "failed": "ಕೆಲವು ಬದಲಾವಣೆಗಳು ಸಿಂಕ್ ಆಗಿಲ್ಲ",
+    "savedOffline": "ಈ ಫೋನ್‌ನಲ್ಲಿ ಉಳಿಸಲಾಗಿದೆ. ಆನ್‌ಲೈನ್‌ಗೆ ಬಂದಾಗ ಸಿಂಕ್ ಆಗುತ್ತದೆ."
+  },
+  "states": {
+    "loading": "ಲೋಡ್ ಆಗುತ್ತಿದೆ…",
+    "errorTitle": "ಏನೋ ತಪ್ಪಾಗಿದೆ",
+    "errorBody": "ಇದು ಲೋಡ್ ಆಗಲಿಲ್ಲ. ಸಂಪರ್ಕ ಪರಿಶೀಲಿಸಿ ಮತ್ತೆ ಪ್ರಯತ್ನಿಸಿ.",
+    "emptyTitle": "ಇಲ್ಲಿ ಇನ್ನೂ ಏನೂ ಇಲ್ಲ",
+    "offlineBanner": "ನೀವು ಆಫ್‌ಲೈನ್‌ನಲ್ಲಿದ್ದೀರಿ. ಉಳಿಸಿದ ಮಾಹಿತಿಯನ್ನು ತೋರಿಸುತ್ತಿದ್ದೇವೆ."
+  },
+  "a11y": {
+    "back": "ಹಿಂದಕ್ಕೆ ಹೋಗಿ",
+    "close": "ಮುಚ್ಚಿ",
+    "selected": "ಆಯ್ಕೆಯಾಗಿದೆ",
+    "notSelected": "ಆಯ್ಕೆಯಾಗಿಲ್ಲ",
+    "opensDetails": "ವಿವರಗಳನ್ನು ತೆರೆಯುತ್ತದೆ"
+  },
+  "demoBadge": "ಡೆಮೊ",
+  "required": "ಕಡ್ಡಾಯ",
+  "optional": "ಐಚ್ಛಿಕ",
+  "tabs": {
+    "home": "ಮುಖಪುಟ",
+    "calendar": "ಕ್ಯಾಲೆಂಡರ್",
+    "myChild": "ನನ್ನ ಮಗು",
+    "practice": "ಅಭ್ಯಾಸ",
+    "more": "ಇನ್ನಷ್ಟು",
+    "today": "ಇಂದು",
+    "caseload": "ಮಕ್ಕಳು",
+    "reviews": "ಪರಿಶೀಲನೆ",
+    "dashboard": "ಡ್ಯಾಶ್‌ಬೋರ್ಡ್",
+    "schedule": "ವೇಳಾಪಟ್ಟಿ",
+    "people": "ಜನರು",
+    "reports": "ವರದಿಗಳು",
+    "schools": "ಶಾಲೆಗಳು",
+    "templates": "ಮಾದರಿಗಳು"
+  },
+  "age": {
+    "years": "{{count}} ವರ್ಷ",
+    "years_other": "{{count}} ವರ್ಷ",
+    "months": "{{count}} ತಿಂಗಳು",
+    "months_other": "{{count}} ತಿಂಗಳು",
+    "yearsMonths": "{{years}} ವರ್ಷ {{months}} ತಿಂಗಳು"
+  }
+}
